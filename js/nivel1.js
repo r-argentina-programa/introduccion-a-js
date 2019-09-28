@@ -19,7 +19,6 @@
 
     Cuando estás escribiendo código que querés que la máquina ejecute, ponelos AFUERA de los bloques de comentario.
 */
-console.log('hola');
 
 /*
     Mostrando texto
