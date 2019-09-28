@@ -252,7 +252,7 @@
 
 
 /*
-    Bucles for
+    Bucles for (para)
     ==========
 
     Los bucles for son muy similares al 'bucle while'. En un bucle for
