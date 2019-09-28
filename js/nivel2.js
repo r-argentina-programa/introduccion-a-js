@@ -316,7 +316,7 @@
 
     for (let i = 10; i >= 0; i = i - 1) {
         if (i === 5) {
-            console.log('WooHoo, estamos en el medio!');
+            console.log('Estamos en el medio!');
         } else {
             console.log(i);
         }
