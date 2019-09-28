@@ -2,17 +2,12 @@
 
 Este repositorio es una traducción casi literal de https://github.com/muses-code-js/js-intro-workshop, de [MusesCodeJS](https://musescodejs.org/) y su autora Tanya Butenko.
 
-[El post de reddit](https://www.reddit.com/r/argentina/comments/d9wzkh/alguno_que_ande_corto_de_guita_pero_muy/)
-[El canal de slack](https://rargentinaprograma.slack.com)
+* [El post de reddit](https://www.reddit.com/r/argentina/comments/d9wzkh/alguno_que_ande_corto_de_guita_pero_muy/)
+* [El canal de slack](https://rargentinaprograma.slack.com)
 
 ## Introducción a JavaScript
 
-Un taller de JavaScript introductorio para principiantes
-
-### Diapositivas
-
-### Opiniones/Críticas
-[Estas son las diapositivas para el nivel inicial de JavaSCript]()
+Un taller de JavaScript introductorio, para principiantes.
 
 
 ### Cómo usar este repositorio.
@@ -23,12 +18,13 @@ Si no sabés lo que es Git, relajate:
 * Podés hacer click en "Download Zip". ![Imagen de cómo bajarse un repositorio de GitHub en formato .ZIP](https://github.com/r-argentina-programa/introduccion-a-js/raw/master/doc/download_repo.png "Download Repo")
 * Ó [te lo podés bajar directamente](https://github.com/r-argentina-programa/introduccion-a-js/archive/master.zip).
 
+El archivo está zippeado (comprimido), así que primero hay que extraerlo. No abran los archivos dentro del .zip directamente, primero los tienen que extraer.
 
-Arranca por el archivo `README.md` y después abrí `js/level1.js`.
+Arranca por el archivo `README.md` y después abrí `js/nivel1.js`.
 
 Para ver la página web en tu buscador, abrí `index.html` haciéndole doble click, si te sale la opción ‘abrir en navegador’, elegila. De preferencia usar Chrome, pero Firefox también funciona.
 
-Seguí las intrucciones en `js/level1.js` y escribí tu código en tu editor de texto (acá es donde vive tu código y vos podés escribirlo, editarlo y borrarlo).
+Seguí las intrucciones en `js/nivel1.js` y escribí tu código en tu editor de texto (acá es donde vive tu código y vos podés escribirlo, editarlo y borrarlo).
 
 Para ver cualquier cosa que edites, vas a necesitar guardar los cambios en el archivo y actualizar la página web en el navegador. El resultado de cualquier `console.log()` va a aparecer en la consola de tu navegador.
 
@@ -56,12 +52,16 @@ Podés escribir código de JavaScript directamente acá y ver los resultados de 
 |Carpeta CSS|contiene los archivos css responsables de los estilos y cómo se ve (estéticamente) nuestro proyecto en la web|
 |Carpeta img|un lugar donde podemos almacenar imágenes para utilizar en nuestra página web.|
 |Carpeta js|contiene los archivos JavaScript que hacen funcionar a nuestro proyecto, define el contenido y hace funcional a una página estatica. Contiene 3 archivos:|
-|\|-- level1.js|basicas con explicaciones (comentarios, variables, funciones, declaraciones if/else)|
-|\|-- level2.js|JavaScript más complejo con explicaciones (arrays, loops)|
-|\|-- level3.js|html, css y cómo manipularlos con JavaScript (selectores)|
+|\|-- nivel1.js|basicas con explicaciones (comentarios, variables, funciones, declaraciones if/else)|
+|\|-- nivel2.js|JavaScript más complejo con explicaciones (arrays, loops)|
+|\|-- nivel3.js|html, css y cómo manipularlos con JavaScript (selectores)|
 |index.html|archivo responsable de la estructura de nuestro proyecto|
 |README.md|archivo con explicaciones e información acerca del proyecto, como correrlo, para qué es, etc. (este archivo que estás leyendo ahora)|
-|cheat-sheet.md|archivo con una vista rá[ida a los nombres claves y sus explicaciones|
+|cheat-sheet.md|archivo con una vista rápida a los nombres claves y sus explicaciones|
 
 
 Autora original: Tanya Butenko github: https://github.com/ButenkoT twitter: @ButenkoMe
+
+### Recursos:
+
+[Manual de HTML en español](https://github.com/zetta102/html-handbook-es)
