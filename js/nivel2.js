@@ -310,7 +310,7 @@
 
 
     Contemos de 10 a 0 e imprimamos todos los números. Pero cuando lleguemos al
-    medio (5) imprimimos 'Woohoo, estamos en el medio!'.
+    medio (5) imprimimos 'Estamos en el medio!'.
 
     Ejemplo:
 
