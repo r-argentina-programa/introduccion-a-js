@@ -16,10 +16,10 @@
     Este proyecto tiene un archivo llamado index.html. Al final de index.html usted
     verá la siguiente etiqueta:
 
-    <script src="js/level1.js"></script>
+    <script src="js/nivel1.js"></script>
 
-    Así es como has estado ejecutando el archivo level1.js en un navegador. Ahora cambia
-    level1.js para apuntar a este archivo - level2.js.
+    Así es como has estado ejecutando el archivo nivel1.js en un navegador. Ahora cambia
+     nivel1.js para apuntar a este archivo - nivel2.js.
 
     ¡Ahora estás listo para comenzar!
 */
@@ -76,7 +76,7 @@
     Es útil mantener todos estos valores en un solo lugar. Pero, y si queremos
     utilizar solo 1 elemento del array?
 
-    Podemos sacarlos usando 'notación de corchetes'. Gracias a un chico llamado Edsger
+    Podemos sacarlos usando 'notación de corchetes'. Gracias a un tipo llamado Edsger
     Dijkstra *, los índices del array se comienzan a contar desde 0. El uso se ve así.
 
     Ejemplo:
@@ -88,7 +88,7 @@
     * https://www.cs.utexas.edu/users/EWD/transcriptions/EWD08xx/EWD831.html
 */
 
-// TODO: Obtené el tercer elemento de tu array comidasFavoritas e imprimilas utilizando console.log.
+// TODO: Obtené el tercer elemento de tu array comidasFavoritas e imprimilo utilizando console.log.
 
 
 
@@ -106,7 +106,7 @@
 
     let animales = ['gato', 'perro', 'caballo'];
 
-    // reemplazemos 'perro' con 'pez'
+    // reemplacemos 'perro' con 'pez'
     animales[1] = 'pez';
 
     // ahora nuestro array de animales sera ['gato', 'pez', 'caballo'];
@@ -170,7 +170,7 @@
 
     const animales = ['gato', 'perro', 'caballo'];
 
-    // Estos es legal y funciona de la misma manera que cuando los animales son una variable:
+    // Esto es legal y funciona de la misma manera que cuando los animales son una variable:
     animales[1] = 'pez';
     animales.push('conejo');
 
@@ -266,7 +266,7 @@
     }
 */
 
-// TODO: Registre cada 3er número del 3 al 22 usando un 'bucle for'.
+// TODO: Imprimí cada 3er número del 3 al 22 usando un 'bucle for'.
 
 
 
@@ -290,7 +290,7 @@
     const animales = ['gatos', 'perros', 'caballos'];
 
     for(let i = 0; i < animales.length; i++){
-        console.log('Me gustan los ' + animales[i]);
+        console.log('Me gustan los ' + animales[i]); //animales[i] se lee "animales en i"
     }
 */
 
@@ -332,7 +332,7 @@
 // * Si es un múltiplo de 3 y 5, imprime 'FizzBuzz'.
 // * Para todo lo demás, imprime el número mismo.
 
-// P.S. Es posible que desees utilizar el operador aritmético modulo (%):
+// NOTA: Es posible que desees utilizar el operador aritmético modulo (%):
 // Calcula el resto al dividir.
 //
 // 10% 3 = 1 - en 10 tenemos 3 * 3 + 1
@@ -347,5 +347,5 @@
 //////////////////////////////////////////////////////////////////////////////
 // ¡Felicidades! ¡Has terminado el Nivel 2 de JavaScript Básico!            //
 // Levántate, estira las piernas y celebra tu logro.                        //
-// El siguiente paso será seguir las instrucciones en el archivo level3.js. //
+// El siguiente paso será seguir las instrucciones en el archivo nivel3.js. //
 //////////////////////////////////////////////////////////////////////////////
