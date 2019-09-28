@@ -262,7 +262,7 @@
 
     let i;
     for (i = 0; i <= 5; i = i + 1) {  // (punto de partida; condicion; paso)
-      console.log('Purr');
+      console.log('Hola!');
     }
 */
 
