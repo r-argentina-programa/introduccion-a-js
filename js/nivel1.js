@@ -20,6 +20,7 @@
     Cuando estás escribiendo código que querés que la máquina ejecute, ponelos AFUERA de los bloques de comentario.
 */
 
+
 /*
     Mostrando texto
     ===============
@@ -402,6 +403,6 @@
 
 
 ////////////////////////////////////////////////////////////////////////////
-// Felicitacioens! Terminaste el Nivel 1 de la introducción a JavaScript! //
+// Felicitaciones! Terminaste el Nivel 1 de la introducción a JavaScript! //
 // El siguiente nivel es el que está en level2.js                         //
 ////////////////////////////////////////////////////////////////////////////
