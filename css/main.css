@@ -125,8 +125,3 @@ footer a:hover {
     }
 }
 
-@media only screen and (min-width: 1024px) {
-    body {
-        background: #EFEFEF url(../img/woman_bw.jpg) no-repeat bottom right;
-    }
-}
