@@ -112,8 +112,8 @@
     // ahora nuestro array de animales sera ['gato', 'pez', 'caballo'];
 */
 
-    // TAREA: Toma tu array de comidasFavoritas y reemplaza el primer valor
-    // con cualquier otra cosa.
+// TAREA: Toma tu array de comidasFavoritas y reemplaza el primer valor
+// con cualquier otra cosa.
 
 
 
