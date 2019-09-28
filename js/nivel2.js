@@ -223,7 +223,7 @@
 */
 
 /*
-    Bucles while
+    Bucles while (mientras)
     ============
 
     El bucle 'While' hará una acción para siempre hasta que se cumpla alguna condición.
