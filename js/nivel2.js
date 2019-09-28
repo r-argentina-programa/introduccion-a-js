@@ -39,7 +39,7 @@
     let numeros = [1, 2, 8, 19];
 */
 
-// TODO: Crea tu propio array, llamado comidasFavoritas, y escribi dentro algunas
+// TAREA: Crea tu propio array, llamado comidasFavoritas, y escribi dentro algunas
 //       cosas que te gustan.
 
 
@@ -61,7 +61,7 @@
     console.log(cosasAleatorias.length); // Obtendremos 4.
 */
 
-// TODO: Verifique cuántos valores tiene en su array comidasFavoritas.
+// TAREA: Verifique cuántos valores tiene en su array comidasFavoritas.
 // imprimi utilizando console.log el resultado.
 
 
@@ -88,7 +88,7 @@
     * https://www.cs.utexas.edu/users/EWD/transcriptions/EWD08xx/EWD831.html
 */
 
-// TODO: Obtené el tercer elemento de tu array comidasFavoritas e imprimilo utilizando console.log.
+// TAREA: Obtené el tercer elemento de tu array comidasFavoritas e imprimilo utilizando console.log.
 
 
 
@@ -112,7 +112,7 @@
     // ahora nuestro array de animales sera ['gato', 'pez', 'caballo'];
 */
 
-    // TODO: Toma tu array de comidasFavoritas y reemplaza el primer valor
+    // TAREA: Toma tu array de comidasFavoritas y reemplaza el primer valor
     // con cualquier otra cosa.
 
 
@@ -120,7 +120,7 @@
 
 
 
-// TODO: console.log todo el array para verificar.
+// TAREA: console.log todo el array para verificar.
 
 
 
@@ -144,14 +144,14 @@
     // nuestro array de animales sera ['gato', 'perro', 'caballo', 'conejo'];
 */
 
-// TODO: Extendamos tu lista de comidasFavoritas y agreguemos un valor más.
+// TAREA: Extendamos tu lista de comidasFavoritas y agreguemos un valor más.
 
 
 
 
 
 
-// TODO: console.log todo el array para verificar.
+// TAREA: console.log todo el array para verificar.
 
 
 
@@ -179,7 +179,7 @@
     animales = [ 'mouse', 'elephant' ];
  */
 
-// TODO: Intenta crear un array como una constante y modifica los valores que contiene.
+// TAREA: Intenta crear un array como una constante y modifica los valores que contiene.
 
 
 
@@ -187,7 +187,7 @@
 
 
 
-// TODO: Observa lo que sucede si agregas algo con.push(), cambias algo
+// TAREA: Observa lo que sucede si agregas algo con.push(), cambias algo
 //       con notación de corchetes (array[1]) y
 //       asigna un nuevo array completamente nuevo a la constante
 
@@ -243,7 +243,7 @@
     }
 */
 
-// TODO: Usando un bucle 'while', decile a tu computadora que registre los números de
+// TAREA: Usando un bucle 'while', decile a tu computadora que registre los números de
 //       diez a uno.
 
 
@@ -266,7 +266,7 @@
     }
 */
 
-// TODO: Imprimí cada 3er número del 3 al 22 usando un 'bucle for'.
+// TAREA: Imprimí cada 3er número del 3 al 22 usando un 'bucle for'.
 
 
 
@@ -294,7 +294,7 @@
     }
 */
 
-// TODO: Probalo con tu comidasFavoritas array.
+// TAREA: Probalo con tu comidasFavoritas array.
 
 
 
@@ -323,7 +323,7 @@
     }
 */
 
-// TODO: Ha llegado el momento de un ejercicio clásico: 'FizzBuzz'.
+// TAREA: Ha llegado el momento de un ejercicio clásico: 'FizzBuzz'.
 
 // Cuenta del 1 al 50 e imprime los números:
 //
