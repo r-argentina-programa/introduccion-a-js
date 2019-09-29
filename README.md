@@ -55,6 +55,7 @@ Podés escribir código de JavaScript directamente acá y ver los resultados de 
 |\|-- nivel1.js|basicas con explicaciones (comentarios, variables, funciones, declaraciones if/else)|
 |\|-- nivel2.js|JavaScript más complejo con explicaciones (arrays, loops)|
 |\|-- nivel3.js|En proceso de traducción. HTML, CSS y cómo manipularlos con JavaScript (selectores)|
+|Carpeta tareas|Contiene las tareas del curso. Cada uno viene en una subcarpeta con un index.html, abran ese index.html para hacer funcionar el código!|
 |index.html|archivo responsable de la estructura de nuestro proyecto|
 |README.md|archivo con explicaciones e información acerca del proyecto, como correrlo, para qué es, etc. (este archivo que estás leyendo ahora)|
 |machete.md|archivo con una vista rápida a los nombres claves y sus explicaciones|
