@@ -3,11 +3,15 @@
 Este repositorio es una traducción casi literal de https://github.com/muses-code-js/js-intro-workshop, de [MusesCodeJS](https://musescodejs.org/) y su autora Tanya Butenko.
 
 * [El post de reddit](https://www.reddit.com/r/argentina/comments/d9wzkh/alguno_que_ande_corto_de_guita_pero_muy/)
-* [El canal de slack](https://rargentinaprograma.slack.com)
+* [El workspace de Slack](https://rargentinaprograma.slack.com)
+* [El canal de YouTube](https://www.youtube.com/channel/UCXfQLgiBQPIzBp8-nRsG0KA)
+* [El canal de Twitch](https://www.twitch.tv/rargentinaprograma/)
 
 ## Introducción a JavaScript
 
 Un taller de JavaScript introductorio, para principiantes.
+
+Outline general del curso https://docs.google.com/document/d/1D-7fi5afo_kgDFLi_n8czyLFN9jusY9F5PrtHXo5ZSg/edit
 
 
 ### Cómo usar este repositorio.
