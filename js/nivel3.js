@@ -7,7 +7,7 @@
     Bieeeeen, has llegado lejos en tan poco tiempo!
 
     Pero todavía tenemos más cosas para vos. Antes de comenzar, abrí index.html, y
-    remplaza nuestro script de level2.js al que vamos a utilizar ahora, — level3.js.
+    reemplazá nuestro script de nivel2.js al que vamos a utilizar ahora, — nivel3.js.
 
     TIP: Si querés utilizar multiples archivos .js, simplemente
     agregá más etiquetas <script>.
