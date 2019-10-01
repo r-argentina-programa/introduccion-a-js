@@ -83,8 +83,7 @@
       text-align: center;
     }
 
-    La lista de las propiedades de CSS es muy grande, podés leer algo más 
-    acá si estás interesado:
+    La lista de las propiedades de CSS es muy grande, podés leer más acá:
     https://www.w3.org/TR/CSS21/propidx.html
 
     No te preocupés, no hace falta recordar todo esto ahora mismo!
