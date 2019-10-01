@@ -136,7 +136,7 @@
     También podemos obtener todos los elementos con la misma etiqueta. En nuestro
     pie de página tenemos una lista desordenada (<ul>), con tres elementos de lista (<li>) adentro.
     Obtengamoslos todos con un array de los elementos de la página. Cuando querramos obtener multiples elementos,
-    podemos utilizar el método '.querySelectorAll', el cual nos dara una lista con las coincidencias.
+    podemos utilizar el método '.querySelectorAll', el cual nos dará una lista con las coincidencias.
 
     Ejemplo:
 
