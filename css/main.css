@@ -9,7 +9,7 @@ html {
 
 body {
     align-items: center;
-    background: #1fab44;
+    background: #EFEFEF;
     display: flex;
     flex-direction: column;
     font-family: Avenir, 'Source Sans Pro', sans-serif;
@@ -45,7 +45,7 @@ img {
 }
 
 a {
-    color: #353d37;
+    color: #DA3296;
     text-decoration: none;
 }
 
