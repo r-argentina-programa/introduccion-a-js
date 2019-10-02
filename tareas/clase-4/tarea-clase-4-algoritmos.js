@@ -63,23 +63,76 @@ El resultado debería ser: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55
 
 Desafío de programación #15: Crear una función que encuentre el número n de Fibonacci usando recursión
 
+Desafío de programación #16: Create una función que dado un número retorne un Boolean (true/false) dependiendo si es primo o no.
+Aclaración: Los números primos son aquellos que tienen exactamente 4 divisores enteros.
+Ejemplo:
+   1 NO es primo porque tiene 2 divisores enteros (1, -1)
+   2 es primo porque sólo puede dividirse por (1,-1,2,-2)
+   3 es primo porque sólo puede dividirse por (1,-1,3,-3)
+   4 NO es primo porque se puede dividir por (1,-1,2,-2,4,-4)
+   5 es primo porque sólo puede dividirse por (1,-1,5,-5)
+   6 NO es primo porque se puede dividir por (1,-1,2,-2,3,-3,6,-6)
+   ... y así
 
+
+Desafío de programación #17: Calcular la suma de los dígitos positivos de un número entero positivo
+Ejemplo:
+   123 = 1 + 2 + 3 = 6
+   2 = 2
+   1234 = 1 + 2 + 3 + 4 = 10
+
+Desafío de programación #18: Imprimir los primeros 100 números primos
+
+Desafío de programación #19: Crear una función que retorne un array con los primeros números "n-primos" mayores que un número particular definido "alComienzo"
+Ejemplo:
+  Quiero los primeros 4 números primos mayores que 5, el resultado debería ser: [7,11,13,17,19]
+
+Desafío de programación #20: Rotar un array hacia la izquierda una posición
+Ejemplo:
+  [9,1,2,3,4] debería quedar como [1,2,3,4,9]
+  [5] debería quedar como [5]
+  [4,3,2,1] debería quedar como [3,2,1,4]
+
+Desafío de programación #21: Rotar un array a la derecha una posición
+Ejemplo:
+  [2,3,4,1] debería quedar como [1,2,3,4]
+  [2,3] debería quedar como [3,2]
+
+Desafío de programación #22: Invertir un array
+Ejemplo:
+  [1,2,3,4] debería quedar como [4,3,2,1]
+  [6,5,4,3,2,1] debería quedar como [1,2,3,4,5,6]
+  [5,6,3] debería quedar como [3,6,5]
+
+Desafío de programación #23: Invertir una cadena de caracteres
+Ejemplo:
+  "dabale arroz a la zorra el abad" debería quedar como "daba le arroz al a zorra elabad"
+  "bienvenido" debería quedar como "odinevneib"
+
+Desafío de programación #24: Crear una función que reciba dos dos arrays (arreglos) como argumentos y returne el resultado en un nuevo arreglo
+Ejemplo:
+  [1,2,3] con ["a","b","c"] debería quedar como [1,2,3,"a","b","c"]
+
+
+Desafío de programación #25: Crear una función que reciba dos arrays (arreglos) de números como argumentos y retorne un array con números que estén en uno u otro array, pero NO en ambos.
+Nota: Esto se llama "diferencia simétrica" entre conjuntos
+
+Desafío de programación #25: Crear una función que reciba dos arrays (arreglos) de números como argumentos y retorne un array con números que estén en uno u otro array, pero NO en ambos.
+Ejemplo:
+  [1,2,3] y [3,7,11] debería devolver [1,2,7,11]
+  [5,10,3] y [10,1] debería quedar como [5,3,1]
+
+Desafío de programación #26: Crear una función que reciba dos arrays de números y retorne un nuevo array con los elementos que se encuentren en el primer array, pero no en el segundo
+Nota; Esto se llama "resta" entre conjuntos
+Ejemplo:
+  [5,1,2,3,4] y [3,4] debería devolver [5,1,2]
+
+Desafío de programación #27: Crear una función que reciba un array de números como argumento y retorne un array con los elementos distintos
+Ejemplo:
+   [1,2,3,4,5,4,3,2,1,0] debería retornar [1,2,3,4,5,0]
 
 
 ==== FALTAN TRADUCIR
-Desafío de programación #16: Create a function that will return a Boolean specifying if a number is prime
-Desafío de programación #17: Calculate the sum of digits of a positive integer number
-Desafío de programación #18: Print the first 100 prime numbers
-Desafío de programación #19: Create a function that will return in an array the first "nPrimes" prime numbers greater than a particular number "startAt"
-Desafío de programación #20: Rotate an array to the left 1 position
-Desafío de programación #21: Rotate an array to the right 1 position
-Desafío de programación #22: Reverse an array
-Desafío de programación #23: Reverse a string
-Desafío de programación #24: Create a function that will merge two arrays and return the result as a new array
-Desafío de programación #25: Create a function that will receive two arrays of numbers as arguments and return an array composed of all the numbers that are either in the first array or second array but not in both
-Desafío de programación #26: Create a function that will receive two arrays and will return an array with elements that are in the first array but not in the second
-Desafío de programación #27: Create a function that will receive an array of numbers as argument and will return a new array with distinct elements
-Desafío de programación #27: Create a function that will receive an array of numbers as argument and will return a new array with distinct elements
 Desafío de programación #28: Calculate the sum of first 100 prime numbers
 Desafío de programación #29: Print the distance between the first 100 prime numbers
 Desafío de programación #30-a: Create a function that will add two positive numbers of indefinite size. The numbers are received as strings and the result should be also provided as string.
