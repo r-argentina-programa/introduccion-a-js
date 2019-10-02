@@ -131,24 +131,77 @@ Desafío de programación #27: Crear una función que reciba un array de número
 Ejemplo:
    [1,2,3,4,5,4,3,2,1,0] debería retornar [1,2,3,4,5,0]
 
+Desafío de programación #28: Calcular la suma de los primeros 100 números primos
+
+Desafío de programación #29: Primir la distancia entre los primeros 100 números primos
+
+Desafío de programación #30:
+Crear una función que calcule la suma de dos números positivos de tamaño arbitrario. Los números serán pasados como argumentos como cadena y el resiltado también tiene que ser una cadena.
+
+Desafío de programación #31: Crear una función que retorne el número de palabras en un texto
+Ejemplo:
+  "mi mama me mima" => debería devolver 4
+  "hola mundo" => debería devolver 2
+  "r-argentina-programa" => debería devolver 1
+
+Desafío de programación #32. Crear una función que ponga mayúsculas a la primera letra de cada palabra en un texto
+Ejemplo:
+  "yo tengo un elefante que se llama trompita" => debería devolver "Yo Tengo Un Elefante Que Se Llama Trompita"
+
+Desafío de programación #33: Calcular la suma de los números dentro de una cadena separada por comas.
+Ejemplo:
+  "1,2,3,4,5" => debería devolver 15
+  "0,5,-1" => debería devolver 4
+
+Desafío de programación #34. Crear una función que devuelva las palabras de un texto de una cadena pero dentro de un array.
+Ejemplo:
+  "reddit argentina programa" => debería devolver ["reddit", "argentina", "programa"]
+
+Desafío de programación #35. Crear una función que convierta un texto CSV a un array “bi-dimensional”
+Ejemplo:
+estoy,practicando,javascript
+5,6,7,8
+esto,tambien,puede,suceder,10
+
+[["estoy","practicando","javascript"],["5","6","7","8"],["esto","tambien","puede","suceder","10"]]
+
+Desafío de programación #36. Crear una función que convierta un string en un array de caracteres
+
+Ejemplo:
+"Saludos Terricolas" => deberia devolver ["S","a","l","u","d","o","s"," ","T","e","r","r","i","c","o","l","a","s"]
+
+Desafío de programación #37. Crear una función que convierta un string en un array que contenga los códigos ASCII de cada caracter:
+Nota: Lean esto https://es.wikipedia.org/wiki/ASCII
+Ejemplo:
+"AEIOU" => Debería devolver [65,105,111,117,125]
+
+Desafío de programación #38. Crear una función que convierta un array de códigos ASCII en un string
+Nota: Lean esto https://es.wikipedia.org/wiki/ASCII
+Ejemplo:
+[65,105,111,117,125] => Debería devolver "AEIOU"
+
+Desafío de programación #39. Implementar el cifrado del César
+Nota: El cifrado del césar es correr el alfabeto n posiciones hacia un lado (por ejemplo corrido 7 posiciones)
+Alfabeto normal : ABCDEFGHIJKLMNOPQRSTUVWXYZ
+Alfabeto Cesar  : HIJKLMNOPQRSTUVWXYZABCDEFG
+
+Ejemplo:
+"ESTOY PROGRAMANDO JS" => debería devolver "LZAVF WYVNYHTHUKV QZ"
+"CL XL VHHE" => debería devolver "JS ES COOL"
+
+Desafío de programación #40. Implementar el algoritmo de ordenamiento de burbuja (bubble sort) en un array de números
+Nota: Leer https://es.wikipedia.org/wiki/Ordenamiento_de_burbuja
+Ejemplo:
+[5,4,9,1] => debería devolver [1,4,5,9]
+
+
+Desafío de programación #41. Crear una función que calcule la distancia entre dos puntos definida por sus ejes (x,y) de coordenadas.
+Nota: Leer https://es.wikipedia.org/wiki/Distancia#Distancia_de_dos_puntos_en_el_plano
+Ejemplo:
+[0,0] y [1,1] deberían devolver => 1.414214
+
 
 ==== FALTAN TRADUCIR
-Desafío de programación #28: Calculate the sum of first 100 prime numbers
-Desafío de programación #29: Print the distance between the first 100 prime numbers
-Desafío de programación #30-a: Create a function that will add two positive numbers of indefinite size. The numbers are received as strings and the result should be also provided as string.
-Desafío de programación #30-b: Create a function that will add two positive numbers of indefinite size. The numbers are received as strings and the result should be also provided as string.
-Desafío de programación #31-a. Create a function that will return the number of words in a text
-Desafío de programación #31-b. Create a function that will return the number of words in a text
-Desafío de programación #32. Create a function that will capitalize the first letter of each word in a text
-Desafío de programación #33. Calculate the sum of numbers received in a comma delimited string
-Desafío de programación #34. Create a function that will return an array with words inside a text
-Desafío de programación #35. Create a function to convert a CSV text to a “bi-dimensional” array
-Desafío de programación #36. Create a function that converts a string to an array of characters
-Desafío de programación #37. Create a function that will convert a string in an array containing the ASCII codes of each character
-Desafío de programación #38. Create a function that will convert an array containing ASCII codes in a string
-Desafío de programación #39. Implement the Caesar cypher
-Desafío de programación #40. Implement the bubble sort algorithm for an array of numbers
-Desafío de programación #41. Create a function to calculate the distance between two points defined by their x, y coordinates
 Desafío de programación #42. Create a function that will return a Boolean value indicating if two circles defined by center coordinates and radius are intersecting
 Desafío de programación 43. Create a function that will receive a bi-dimensional array as argument and a number and will extract as a unidimensional array the column specified by the number
 Desafío de programación #44. Create a function that will convert a string containing a binary number into a number
