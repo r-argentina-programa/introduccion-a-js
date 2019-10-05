@@ -153,7 +153,9 @@ Ejemplo:
   "1,2,3,4,5" => debería devolver 15
   "0,5,-1" => debería devolver 4
 
-Desafío de programación #34. Crear una función que devuelva las palabras de un texto de una cadena pero dentro de un array.
+Desafío de programación #34.
+Crear una función que devuelva las palabras de un texto 
+de una cadena pero dentro de un array.
 Ejemplo:
   "reddit argentina programa" => debería devolver ["reddit", "argentina", "programa"]
 
