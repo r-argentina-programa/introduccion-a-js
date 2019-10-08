@@ -42,11 +42,7 @@
 // TAREA: Crea tu propio array, llamado comidasFavoritas, y escribi dentro algunas
 //       cosas que te gustan.
 
-
-
-
-
-
+// let comidasFavoritas = ['Pizza', 'Asado', 'Milanga', 'Helado']
 
 /*
     Tamaño del Array
@@ -64,10 +60,9 @@
 // TAREA: Verifique cuántos valores tiene en su array comidasFavoritas.
 // imprimi utilizando console.log el resultado.
 
-
-
-
-
+//let comidasFavoritas = ['Pizza', 'Asado', 'Milanga', 'Helado'];
+//console.log(comidasFavoritas);
+//console.log(comidasFavoritas.length);
 
 /*
     Uso del Array
@@ -90,8 +85,8 @@
 
 // TAREA: Obtené el tercer elemento de tu array comidasFavoritas e imprimilo utilizando console.log.
 
-
-
+//let comidasFavoritas = ['Pizza', 'Asado', 'Milanga', 'Helado'];
+//console.log(comidasFavoritas[2])
 
 
 
@@ -115,7 +110,8 @@
 // TAREA: Toma tu array de comidasFavoritas y reemplaza el primer valor
 // con cualquier otra cosa.
 
-
+//let comidasFavoritas = ['Pizza', 'Asado', 'Milanga', 'Helado'];
+//comidasFavoritas[0] = 'Pastel de papa'
 
 
 
@@ -123,7 +119,7 @@
 // TAREA: console.log todo el array para verificar.
 
 
-
+//console.log(comidasFavoritas)
 
 
 
@@ -146,14 +142,15 @@
 
 // TAREA: Extendamos tu lista de comidasFavoritas y agreguemos un valor más.
 
-
+//let comidasFavoritas = ['Pizza', 'Asado', 'Milanga', 'Helado'];
+//comidasFavoritas.push('Guiso')
 
 
 
 
 // TAREA: console.log todo el array para verificar.
 
-
+//console.log(comidasFavoritas)
 
 
 
@@ -181,7 +178,11 @@
 
 // TAREA: Intenta crear un array como una constante y modifica los valores que contiene.
 
+//const instrumentos = ['Guitarra', 'Bateria', 'Bajo', 'Piano']
 
+//instrumentos[0] = 'Triangulo'
+
+//console.log(instrumentos)
 
 
 
@@ -192,7 +193,8 @@
 //       asigna un nuevo array completamente nuevo a la constante
 
 
-
+//instrumentos.push('Percusion')
+//console.log(instrumentos)
 
 
 
@@ -245,10 +247,20 @@
 
 // TAREA: Usando un bucle 'while', decile a tu computadora que registre los números de
 //       diez a uno.
+/*
+let numero = 10;
+while (numero) {
+  console.log(numero);
+  numero--;
+}
 
+let numero1 = 10
 
-
-
+while (numero1 > 0) {
+    console.log(numero1);
+    numero1 = numero1 - 1;
+}
+*/
 
 
 /*
@@ -268,7 +280,10 @@
 
 // TAREA: Imprimí cada 3er número del 3 al 22 usando un 'bucle for'.
 
-
+let contador;
+for (contador = 3; contador <= 22; contador = contador + 3) {
+    console.log(contador)
+}
 
 
 
