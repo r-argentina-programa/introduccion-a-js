@@ -11,6 +11,17 @@
 // mostrar toda la información junta en un campo de texto
 // Y va a cambiar el <h1> para decir "Bienvenido, nombreDeUsuario"!
 
+/*
+Ejemplo form:
+  <form id="entrada-bar" onsubmit="return false;">
+    <input type="text" placeholder="Ingresá tu nombre" id="nombre-usuario"/>
+    <input type="number" placeholder="Ingresá tu edad" id="edad-usuario" />
+    <input type="submit" value="Ingresar" id="ingresar"/>
+  </form>
+
+  <div id="resultado">Hola</div>
+*
+* */
 
 
 //TAREA: En otro archivo distinto,
