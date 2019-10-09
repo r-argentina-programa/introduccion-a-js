@@ -18,14 +18,14 @@
 
 // TAREA: Cambiar el operador a '-', y fijarse que llame a la función 'restar' en vez de a la de 'sumar'.
 
+/* 
 function sumar(numero1, numero2) {
-    return numero1 + numero2;
+  return numero1 + numero2;
 }
 
 function restar(numero1, numero2) {
-    return numero1 - numero2;
+  return numero1 - numero2;
 }
-
 const operador = prompt('Ingrese + o -');
 const numero1 = 1;
 const numero2 = 2;
@@ -37,8 +37,43 @@ if (operador === '+') {
     resultado = restar(numero1, numero2);
 }
 
-//https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/template_strings
 console.log(
     `El resultado de ${numero1} ${operador} ${numero2} es ${resultado}`
 );
+*/
 
+function sumar(numero1, numero2) {
+  return numero1 + numero2;
+}
+
+function restar(numero1, numero2) {
+  return numero1 - numero2;
+}
+
+function multiplicar(numero1, numero2) {
+  return numero1 * numero2;
+}
+function dividir(numero1, numero2) {
+  return numero1 / numero2;
+}
+
+const operador = prompt('Ingrese un operador aritmetico: (+, -, *, /)');
+const numUno = 25;
+const numDos = 5;
+
+let resultado; // empieza siendo undefined
+if (operador === '+') {
+  resultado = sumar(numUno, numDos);
+} else if (operador === '-') {
+  resultado = restar(numUno, numDos);
+} else if (operador === '*') {
+  resultado = multiplicar(numUno, numDos);
+} else if (operador === '/') {
+  resultado = dividir(numUno, numDos);
+} else {
+  console.log(`No entiendo el ${operador}`);
+}
+
+console.log(`El resultado de ${numUno} ${operador} ${numDos} es ${resultado}`);
+
+//https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/template_strings
