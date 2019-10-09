@@ -54,6 +54,9 @@
     declaración está compuesto de un "selector" y de un conjunto de reglas de estilo
     visuales. Una declaración se ve así:
     
+
+
+
     [selector] {
       nombre-de-estilo: valor;
       nombre-de-estilo: valor;
@@ -111,7 +114,7 @@
 
     Ejemplo:
 
-    const nuestroTwitter = document.querySelector('.twitter');
+    const nuestroTwitter = document.querySelector('.twitter'); //dame el primer elemento que encuentres que tenga clase .twitter
 
     // Podemos guardar elementos de la página en variables, al igual que como cualquier otro valor!
     // De todas formas, fijate que un elemento de página es un objeto,
@@ -148,7 +151,7 @@ console.log(nuestroTitulo);
 
 // TAREA: Obtené todos los elementos <li> de la página en una variable llamada mediaLinks.
 
-const mediaLinks = document.querySelectorAll('li');
+const mediaLinks = document.querySelectorAll('li'); // te da todos los elementos que cumplen con la regla li (list items)
 console.log(mediaLinks);
 
 
@@ -190,7 +193,7 @@ for (let i = 0; i < mediaLinks.length; i++) {
 // y utilizá console.log para mostrarlo.
 
 
-console.log(nuestroTwitter.textContent);
+console.log(nuestroTitulo.textContent);
 
 
 
@@ -210,9 +213,11 @@ console.log(nuestroTwitter.textContent);
 
 // TAREA: Hagamos un nuevo título! Cambiá el contenido de nuestro 'h1' y ponele lo que quieras.
 
+const nombre = prompt("como te llamas?")
 
-nuestroTitulo.textContent = "Hooooola vieja";
+nuestroTitulo.textContent = "Hooooola " + nombre;
 console.log(nuestroTitulo.textContent);
+
 
 
 /*
@@ -229,8 +234,8 @@ console.log(nuestroTitulo.textContent);
 
 // TAREA: Actualizá el valor del atributo 'src' de nuestra etiqueta 'img' a "img/kittens.jpeg".
 
-// const nuestraImagen = document.querySelector('.img');
-// nuestraImagen.src = "img/kittens.jpeg";
+const nuestraImagen = document.querySelector('img');
+nuestraImagen.src = "img/kittens.jpeg";
 
 // QUe onda aca? me parece que colgaron en un poner una imagen para que ande esto
 //Sí, colgaron.
@@ -258,8 +263,9 @@ console.log(nuestroTitulo.textContent);
 // Tarea: Obtené cualquier elemento de la página y cambiale algunos estilos.
 
 
-nuestroTwitter.style.backgroundColor = 'red';
 
+nuestroTwitter.style.backgroundColor = 'green';
+nuestroTitulo.style.backgroundColor = "blue";
 
 
 
@@ -289,6 +295,10 @@ nuestroTwitter.style.backgroundColor = 'red';
 // P.S. También les podés dar estilos al nuevo nodo que creaste.
 
 
+const imagenHead = document.querySelector('header'); //elegis el lugar, el header
+const nuevaImagen = document.createElement ('img'); //creas el elemento <img /> vacio
+nuevaImagen.src = "img/kittens.jpeg"; //le indicas el elemento
+imagenHead.appendChild(nuevaImagen); //le insertas el elemento al lugar
 
 
 
