@@ -20,7 +20,7 @@ $botonSubmit.onclick = function() {
   const $apellidos = document.querySelector('#apellido').value;
   const $edad = document.querySelector('#edad').value;
 
-  $info.value = `${$primerNombre} ${$segundoNombre} ${$apellidos}\n${$edad} `;
+  $info.value = `${$primerNombre}${$segundoNombre}${$apellidos}\n${$edad} `;
 
   return false;
 };
