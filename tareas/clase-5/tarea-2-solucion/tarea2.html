@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Clase 5: Tarea 2</title>
+    <style>
+      h1 {
+        color: firebrick;
+        text-align: center;
+        margin: auto;
+        width: 300px;
+      }
+      form {
+        margin: 20px auto;
+        width: 300px;
+        padding: 1em;
+        border: 1px solid #ccc;
+        border-radius: 1em;
+      }
+      input[type='text'],
+      input[type='number'] {
+        width: 92%;
+        padding: 10px;
+        margin: 5px 0 16px 0;
+        display: inline-block;
+        border: none;
+        background: #f1f1f1;
+      }
+
+      textarea {
+        resize: none;
+      }
+      #submit,
+      #reset {
+        background: firebrick;
+        color: white;
+        font-size: 15px;
+        width: 100%;
+        padding: 10px;
+        margin: 5px 0 16px 0;
+      }
+      #reset {
+        margin: 0;
+        background: rgba(178, 34, 34, 0.241);
+        color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="saludo">Bienvenida!</h1>
+    <form id="formulario">
+      <label for="primerNombre">Primer Nombre</label>
+      <input type="text" name="primer-nombre" id="primerNombre" />
+      <label for="segundonombre">Segundo Nombre</label>
+      <input type="text" name="segundo-nombre" id="segundoNombre" />
+      <label for="apellido">Apellidos</label>
+      <input type="text" name="apellido" id="apellido" />
+      <label for="edad">Edad</label>
+      <input type="number" name="edad" id="edad" min="10" max="100" />
+      <textarea name="info" id="info" cols="50" rows="4" disabled></textarea>
+      <button id="submit">Ingresar</button>
+      <input id="reset" type="reset" value="Borrar todo" />
+    </form>
+
+    <script src="tarea2.js"></script>
+  </body>
+</html>
