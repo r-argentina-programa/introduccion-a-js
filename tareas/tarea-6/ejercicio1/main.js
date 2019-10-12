@@ -16,13 +16,16 @@ document.querySelector("#submit-cantidad-familiares").onclick = function(e) {
 function agregarElementos(cantidad) {
 	for (let i = 0; i < cantidad; i++) {
 		const newLabel = document.createElement("label");
-		newLabel.for = `Familiar ${i}`;
-		newLabel.innerHTML = `Familiar ${i}`;
+		newLabel.for = `Familiar ${i + 1}`;
+		newLabel.innerHTML = `Familiar ${i + 1}`;
+		newLabel.classList.add("generated-element");
 		const newInput = document.createElement("input");
-		newInput.id = `familiar-${i}`;
+		newInput.id = `familiar-${i + 1}`;
+		newInput.classList.add("generated-element");
 		document.querySelector("#element-container").appendChild(newLabel);
 		document.querySelector("#element-container").appendChild(newInput);
 	}
+	document.querySelector("#calcular").hidden = false;
 }
 /* 
 Tomar valor de familiares

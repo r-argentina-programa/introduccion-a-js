@@ -71,6 +71,18 @@ button {
   color: white;
 }
 
+button:disabled {
+  background-color: #cfcfcf;
+  cursor: default;
+  color: black;
+}
+
+button:disabled:active {
+  background-color: #cfcfcf;
+  cursor: default;
+  color: black;
+}
+
 .btn-main {
   background-color: lightskyblue;
 }

@@ -50,6 +50,16 @@ button {
 	cursor: pointer;
 	font-weight: 700;
 	color: white;
+	&:disabled {
+		background-color: rgb(207, 207, 207);
+		cursor: default;
+		color: black;
+		&:active {
+			background-color: rgb(207, 207, 207);
+			cursor: default;
+			color: black;
+		}
+	}
 }
 
 .btn-main {
