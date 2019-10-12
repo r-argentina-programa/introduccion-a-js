@@ -7,6 +7,19 @@
 // Imprimir "Hola " y el nombre, " te llamás igual que mi ..."
 // Si no, simplemente imprimir "Hola " + nombre!
 
+let nombreUsuario = prompt('¿Cuál es tu nombre?');
+const miNombre = 'Lucas';
+const nombreHijo = 'Agustín';
+
+if (nombreUsuario === miNombre) {
+    alert('Hola tocayo, yo también me llamo ' + miNombre);
+}
+if (nombreUsuario === nombreHijo) {
+    alert('Hola ' + nombreUsuario + ', te llamás igual a mi hijo');
+}
+else ('Hola' + nombreUsuario);
+
+
 //Tarea 2:
 // Preguntar la edad del usuario
 // Hacerle saber si tiene más, menos ó la misma edad que nosotros.
