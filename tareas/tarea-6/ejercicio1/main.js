@@ -30,6 +30,13 @@ function agregarElementos(cantidad) {
 	document.querySelector("#submit-cantidad-familiares").disabled = true;
 }
 
+function calcularEdadPromedio(arrayEdades) {
+	let edadPromedio = 0;
+	for (let i = 0; i < arrayEdades.length; i++) {
+		edadPromedio += arrayEdades[i];
+	}
+	return edadPromedio / arrayEdades.length;
+}
 /* 
 Tomar valor de familiares
 generar n cantidad de elementos (función)
