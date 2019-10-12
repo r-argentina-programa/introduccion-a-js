@@ -100,4 +100,8 @@ button:disabled:active {
       -ms-flex-direction: column;
           flex-direction: column;
 }
+
+.output p {
+  text-align: left;
+}
 /*# sourceMappingURL=style.css.map */
