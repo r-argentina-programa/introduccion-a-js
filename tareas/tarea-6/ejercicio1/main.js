@@ -17,18 +17,27 @@ function agregarElementos(cantidad) {
 	for (let i = 0; i < cantidad; i++) {
 		const newLabel = document.createElement("label");
 		newLabel.for = `Familiar ${i + 1}`;
-		newLabel.innerHTML = `Familiar ${i + 1}`;
-		newLabel.classList.add("generated-element");
+		newLabel.innerHTML = `Edad familiar ${i + 1}`;
+		newLabel.classList.add("generated-element-label");
 		const newInput = document.createElement("input");
 		newInput.id = `familiar-${i + 1}`;
-		newInput.classList.add("generated-element");
+		newInput.classList.add("generated-element-input");
 		document.querySelector("#element-container").appendChild(newLabel);
 		document.querySelector("#element-container").appendChild(newInput);
 	}
-	document.querySelector("#calcular").hidden = false;
+	document.querySelector("#calcular-edades").hidden = false;
 	document.querySelector("#cantidad-familiares").disabled = true;
 	document.querySelector("#submit-cantidad-familiares").disabled = true;
 }
+
+document.querySelector("#calcular-edades").onclick = function(e) {
+	e.preventDefault();
+	const inputsEdadesCrudo = document.querySelectorAll(".generated-element-input");
+	const inputsEdades = [];
+	for (let elemento of inputsEdadesCrudo) {
+		inputsEdades.push(Number(elemento.value));
+	}
+};
 
 function calcularEdadPromedio(arrayEdades) {
 	let edadPromedio = 0;
