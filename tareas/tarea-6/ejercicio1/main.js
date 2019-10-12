@@ -38,9 +38,9 @@ document.querySelector("#calcular-edades").onclick = function(e) {
 		inputsEdades.push(Number(elemento.value));
 	}
 	const contenedorOutput = document.querySelector("#output");
-	contenedorOutput.appendChild(crearElementoParrafo(calcularEdadPromedio(inputsEdades)));
-	contenedorOutput.appendChild(crearElementoParrafo(calcularEdadMinima(inputsEdades)));
-	contenedorOutput.appendChild(crearElementoParrafo(calcularEdadMaxima(inputsEdades)));
+	contenedorOutput.appendChild(crearElementoParrafo(calcularEdadPromedio(inputsEdades), "promedio"));
+	contenedorOutput.appendChild(crearElementoParrafo(calcularEdadMinima(inputsEdades), "máxima"));
+	contenedorOutput.appendChild(crearElementoParrafo(calcularEdadMaxima(inputsEdades), "mínima"));
 };
 
 function calcularEdadPromedio(arrayEdades) {
@@ -68,8 +68,8 @@ function calcularEdadMaxima(arrayEdades) {
 	}
 	return edadMaxima;
 }
-function crearElementoParrafo(valorInterno) {
+function crearElementoParrafo(valorInterno, nombreFuncion) {
 	const nuevoParrafo = document.createElement("p");
-	nuevoParrafo.innerHTML = valorInterno;
+	nuevoParrafo.innerHTML = `La edad ${nombreFuncion} es ${valorInterno}`;
 	return nuevoParrafo;
 }
