@@ -37,6 +37,17 @@ document.querySelector("#calcular-edades").onclick = function(e) {
 	for (let elemento of inputsEdadesCrudo) {
 		inputsEdades.push(Number(elemento.value));
 	}
+	// const pEdadPromedio = crearElementoParrafo(calcularEdadPromedio(inputsEdades));
+	// const pEdadMinima = crearElementoParrafo(calcularEdadMinima(inputsEdades));
+	// const pEdadMaxima = crearElementoParrafo(calcularEdadMaxima(inputsEdades));
+
+	// document.querySelector("#output").appendChild(pEdadMaxima);
+	// document.querySelector("#output").appendChild(pEdadMinima);
+	// document.querySelector("#output").appendChild(pEdadPromedio);
+	const nodoPagina = document.querySelector("#output");
+	nodoPagina.appendChild(crearElementoParrafo(calcularEdadPromedio(inputsEdades)));
+	nodoPagina.appendChild(crearElementoParrafo(calcularEdadMinima(inputsEdades)));
+	nodoPagina.appendChild(crearElementoParrafo(calcularEdadMaxima(inputsEdades)));
 };
 
 function calcularEdadPromedio(arrayEdades) {
@@ -66,15 +77,6 @@ function calcularEdadMaxima(arrayEdades) {
 }
 function crearElementoParrafo(valorInterno) {
 	const nuevoParrafo = document.createElement("p");
-	nuevoParrafo.innerHTML = valorInterno;
+	const textoParrafo = document.createTextNode(valorInterno);
+	return nuevoParrafo.appendChild(textoParrafo);
 }
-
-/* 
-Tomar valor de familiares
-generar n cantidad de elementos (función)
-*deshabilitar primera etapa
-*habilitar 2da etapa
-completar campos
-calcular
-mostrar resultados en #output
-*/
