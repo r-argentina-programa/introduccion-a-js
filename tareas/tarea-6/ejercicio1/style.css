@@ -61,7 +61,6 @@ label {
 }
 
 button {
-  display: inline;
   border: none;
   background-color: #9c9d9e;
   border-radius: 0.5rem;
