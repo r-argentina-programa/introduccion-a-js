@@ -13,7 +13,17 @@ document.querySelector("#submit-cantidad-familiares").onclick = function(e) {
 	}
 	agregarElementos(cantidadFamiliares);
 };
-
+function agregarElementos(cantidad) {
+	for (let i = 0; i < cantidad; i++) {
+		const newLabel = document.createElement("label");
+		newLabel.for = `Familiar ${i}`;
+		newLabel.innerHTML = `Familiar ${i}`;
+		const newInput = document.createElement("input");
+		newInput.id = `familiar-${i}`;
+		document.querySelector("#element-container").appendChild(newLabel);
+		document.querySelector("#element-container").appendChild(newInput);
+	}
+}
 /* 
 Tomar valor de familiares
 generar n cantidad de elementos (función)
