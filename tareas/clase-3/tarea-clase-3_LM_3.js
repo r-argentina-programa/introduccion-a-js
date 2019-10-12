@@ -52,7 +52,7 @@ let respuestaLower = preguntarUsuario.toLocaleLowerCase();
 let edadUsuario;
 
 if (respuestaLower === 'si') {
-    edadUsuario = prompt('¿Qué edad tenés?');
+    edadUsuario = Number(prompt('¿Qué edad tenés?')); //faltaba el Number
 
     if (edadUsuario > 18) {
         alert('Bienvenido!!!');
@@ -63,7 +63,7 @@ if (respuestaLower === 'si') {
 }
 if (respuestaLower === 'no') {
     alert('Sin documentos no puedo dejarte entrar!!!')
-} 
+}
 else {
     alert('No te entiendo. Hablá bien!!!');
 }
