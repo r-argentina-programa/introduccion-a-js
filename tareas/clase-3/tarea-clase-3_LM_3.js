@@ -61,7 +61,7 @@ if (respuestaLower === 'si') {
         alert('No te puedo dejar pasar');
     }
 }
-if (respuestaLower === 'no') {
+else if (respuestaLower === 'no') {
     alert('Sin documentos no puedo dejarte entrar!!!')
 }
 else {
