@@ -158,7 +158,29 @@ console.log(promedio);
 */
 //
 //Desafío de programación #12: Crea una función que reciba un array de números
-// y devuelva un array conteniendo solo los números positivos.
+//Y devuelva un array conteniendo solo los números positivos.
+/*
+let arrayNumeros = [10, -10, 5, -5];
+
+function devolverNumerosPositivos(arrayNumeros) {
+	for (let i = 0; i < arrayNumeros.length; i++) {
+		if (arrayNumeros[i] >= 1) {
+			console.log(arrayNumeros[i]);
+		}
+	}
+}
+devolverNumerosPositivos(arrayNumeros);
+*/
+//Desafío de programación #13: Encontrar el número de mayor valor en un arreglo(array) de números.
+
+let mayorNumeroArray = 0;
+let numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 5, 27, 10];
+for (let i = 0; i < numeros.length; i++) {
+	if (numeros[i] > mayorNumeroArray) {
+		mayorNumeroArray = numeros[i];
+	}
+}
+console.log(mayorNumeroArray);
 
 /*
  Desafío de programación #1: Imprimí los números del 1 al 10
