@@ -26,7 +26,10 @@ function agregarElementos(cantidad) {
 		document.querySelector("#element-container").appendChild(newInput);
 	}
 	document.querySelector("#calcular").hidden = false;
+	document.querySelector("#cantidad-familiares").disabled = true;
+	document.querySelector("#submit-cantidad-familiares").disabled = true;
 }
+
 /* 
 Tomar valor de familiares
 generar n cantidad de elementos (función)
