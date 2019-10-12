@@ -58,3 +58,7 @@ button {
 		background-color: rgb(174, 224, 255);
 	}
 }
+.element-container {
+	display: flex;
+	flex-direction: column;
+}
