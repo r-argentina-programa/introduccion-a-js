@@ -64,6 +64,10 @@ function calcularEdadMaxima(arrayEdades) {
 	}
 	return edadMaxima;
 }
+function crearElementoParrafo(valorInterno) {
+	const nuevoParrafo = document.createElement("p");
+	nuevoParrafo.innerHTML = valorInterno;
+}
 
 /* 
 Tomar valor de familiares
