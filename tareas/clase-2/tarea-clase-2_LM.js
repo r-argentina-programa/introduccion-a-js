@@ -25,20 +25,37 @@ function sumar(numero1, numero2) {
 function restar(numero1, numero2) {
     return numero1 - numero2;
 }
+function multiplicar(numero1, numero2) {
+    return numero1 * numero2;
+}
+function dividir(numero1, numero2) {
+    return numero1 / numero2;
+}
 
-const operador = prompt('Ingrese + o -');
-const numero1 = 1;
-const numero2 = 2;
-
+let operador = prompt('Ingrese el tipo de operación que desea realizar');
+let numero1 = Number (prompt('Ingrese el primer número'));
+let numero2 = Number (prompt('Ingrese el segundo número'));
 let resultado;
+
 if (operador === '+') {
     resultado = sumar(numero1, numero2);
-} else {
+}
+if (operador === '-') {
     resultado = restar(numero1, numero2);
 }
+if (operador === '*') {
+    resultado = multiplicar(numero1, numero2);
+}
+if (operador === '/') {
+    resultado = dividir(numero1, numero2);
+}
+// else {
+//     console.log(
+//         `No sé qué quisiste hacer`
+//     );
+// }
 
 //https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/template_strings
 console.log(
     `El resultado de ${numero1} ${operador} ${numero2} es ${resultado}`
 );
-
