@@ -37,7 +37,24 @@ function calcularEdadPromedio(arrayEdades) {
 	}
 	return edadPromedio / arrayEdades.length;
 }
-function calcularEdadMaxima(arrayEdades) {}
+function calcularEdadMinima(arrayEdades) {
+	let edadMinima = arrayEdades[0];
+	for (let i = 0; i < arrayEdades.length; i++) {
+		if (arrayEdades[i] < edadMinima) {
+			edadMinima = arrayEdades[i];
+		}
+	}
+	return edadMinima;
+}
+function calcularEdadMaxima(arrayEdades) {
+	let edadMaxima = arrayEdades[0];
+	for (let i = 0; i < arrayEdades.length; i++) {
+		if (arrayEdades[i] > edadMaxima) {
+			edadMaxima = arrayEdades[i];
+		}
+	}
+	return edadMaxima;
+}
 
 /* 
 Tomar valor de familiares
