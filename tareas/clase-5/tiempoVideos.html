@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset='utf-8'>
+        <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+        <title>tiempoVideosa</title>
+        <meta name='viewport' content='width=device-width, initial-scale=1'>
+        <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+        <script src='main.js'></script>
+    </head>
+
+    <body>
+        <div>
+            <form>
+                <div><label for="horas">Horas</label>
+                    <input type="text" required id="horas" required>
+                </div>
+
+                <div><label for="minutos">Minutos</label>
+                    <input type="text" required id="minutos">
+                </div>
+                <div><label for="segundos">Segundos</label>
+                    <input type="text" required id="segundos">
+                </div>
+                <div class="button">
+                    <button id="boton-agregar-tiempo-video">agregar</button>
+                </div>
+                
+                
+            </form>
+
+            <div class="button">
+                    <button id="boton-calcular-total">calcular total</button>
+                </div>
+
+            <div><label for="resultado">resultado</label>
+                <input type="text" disabled id="resultado">
+            </div>
+
+
+
+        </div>
+
+        <script src="tiempoVideos.js"></script>
+    </body>
+
+</html>
