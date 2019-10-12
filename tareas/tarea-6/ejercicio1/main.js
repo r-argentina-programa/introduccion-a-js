@@ -37,6 +37,8 @@ function calcularEdadPromedio(arrayEdades) {
 	}
 	return edadPromedio / arrayEdades.length;
 }
+function calcularEdadMaxima(arrayEdades) {}
+
 /* 
 Tomar valor de familiares
 generar n cantidad de elementos (función)
