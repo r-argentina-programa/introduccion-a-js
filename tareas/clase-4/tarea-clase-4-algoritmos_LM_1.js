@@ -18,7 +18,9 @@ Desafío de programación #1: Imprimí los números del 1 al 10
  Desafìo de programación  #2: Imprimí los números impares del 1 al 100
 
  1 3 5 ... 99
+*/
 
+/*
 Desafío de programación #3: Imprimí la tabla de multiplicación del 7
 
  7x0 = 0
@@ -26,6 +28,9 @@ Desafío de programación #3: Imprimí la tabla de multiplicación del 7
  ...
  7x9 = 63
 
+*/
+
+/*
 Desafío de programación #4: Imprimí todas las tablas de multiplicación del 1 al 9
 
  1x0 = 0
@@ -38,16 +43,16 @@ Desafío de programación #4: Imprimí todas las tablas de multiplicación del 1
  ...
  9x9 = 81
 
- */
+*/
 
-for (let j=1; j<=10; j++){
-  let contador = 0;
-  const numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-  for (let i = 0; i <= numeros.length; i++) {
-   contador = i * j;
-   console.log (j + " x " + i + " = " + contador);
-  }
-  }
+// for (let j=1; j<=10; j++){
+//   let contador = 0;
+//   const numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+//   for (let i = 0; i <= numeros.length; i++) {
+//    contador = i * j;
+//    console.log (j + " x " + i + " = " + contador);
+//   }
+//   }
 
  /*
 
