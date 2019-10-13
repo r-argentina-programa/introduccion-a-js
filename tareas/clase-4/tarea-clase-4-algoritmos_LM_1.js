@@ -7,27 +7,25 @@ usando  elementos de programación simples y clásicos.
 
 /*
 Desafío de programación #1: Imprimí los números del 1 al 10
-Resultado: 10 9 8 7 6 5 4 3 2 1
 
-
-let i;
-for (i = 1; i <= 10; i++) {
-  console.log(i);
-}
+ Resultado: 10 9 8 7 6 5 4 3 2 1
 */
+
+for (var i = 1; i <= 10; i++) {
+  console.log (println(i));
+}
+
+
+
+
+
 
 /*
 
  Desafìo de programación  #2: Imprimí los números impares del 1 al 100
+
  1 3 5 ... 99
 
-let i;
-for (i = 1; i <= 100; i = i + 2) {
-  console.log(i);
-}
-*/
-
-/*
 Desafío de programación #3: Imprimí la tabla de multiplicación del 7
 
  7x0 = 0
@@ -35,14 +33,6 @@ Desafío de programación #3: Imprimí la tabla de multiplicación del 7
  ...
  7x9 = 63
 
-let i;
-for (i = 7; i <= 70; i = i + 7) {
-  console.log(i);
-}
-*/
-
-
-/*
 Desafío de programación #4: Imprimí todas las tablas de multiplicación del 1 al 9
 
  1x0 = 0
@@ -54,18 +44,7 @@ Desafío de programación #4: Imprimí todas las tablas de multiplicación del 1
  ...
  ...
  9x9 = 81
-*/
 
-for (let j=1; j<=10; j++){
-  let contador = 0;
-  const numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-  for (let i = 0; i <= numeros.length; i++) {
-   contador = i * j;
-   console.log (j + " x " + i + " = " + contador);
-  }
-  }
-
-/*
 Desafío de programación #5: Calcula el resultado de la suma de los numeros del 1 al 10 en un array.
  [1,2,3,4,5,6,7,8,9,10]
 
