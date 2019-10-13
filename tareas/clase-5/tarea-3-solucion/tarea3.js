@@ -6,14 +6,12 @@
 // al apretar el botón "Calcular tiempo total", debe mostrar en un
 // <strong> pre-creado el tiempo total de los videos.
 
-const $agregarClase = document.querySelector('#agregarClase');
+const $agregarClase = document.querySelector('#agregar-clase');
 const $calcular = document.querySelector('#calcular');
-const $borrar = document.querySelector('#borrarTodo');
+const $borrar = document.querySelector('#borrar-todo');
 const $total = '';
 
-$agregarClase.onclick = function() {
-  agregaClase();
-};
+$agregarClase.onclick = agregaClase;
 
 $calcular.onclick = function() {
   calculaTotal();
@@ -29,7 +27,7 @@ function agregaClase() {
   const copiaClase = $li.cloneNode(true);
   $li.after(copiaClase);
   const $ol = document.querySelector('ol');
-  const newClass = $ol.appendChild($li)[0];
+  const nuevaClase = $ol.appendChild($li)[0];
   $calcular.disabled = false;
 }
 
