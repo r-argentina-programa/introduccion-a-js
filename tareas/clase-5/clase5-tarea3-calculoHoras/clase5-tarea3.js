@@ -24,7 +24,7 @@ function calcularDuracion(horasArray, minutosArray, segundosArray) {
     if (resultadoMinutos >= 60) {
         resultadoHoras += Math.floor(resultadoMinutos/60);
         resultadoMinutos = resultadoMinutos % 60;
-        } 
+    } 
     for (let i = 0; i<segundosArray.length; i++) {
         if (parseInt(segundosArray[i].value)) {
             resultadoSegundos = totalSegundos += (parseInt(segundosArray[i].value));
