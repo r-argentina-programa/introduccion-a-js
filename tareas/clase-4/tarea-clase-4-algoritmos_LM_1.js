@@ -11,13 +11,6 @@ Desafío de programación #1: Imprimí los números del 1 al 10
  Resultado: 10 9 8 7 6 5 4 3 2 1
 */
 
-for (var i = 1; i <= 10; i++) {
-  console.log (println(i));
-}
-
-
-
-
 
 
 /*
@@ -44,6 +37,19 @@ Desafío de programación #4: Imprimí todas las tablas de multiplicación del 1
  ...
  ...
  9x9 = 81
+
+ */
+
+for (let j=1; j<=10; j++){
+  let contador = 0;
+  const numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+  for (let i = 0; i <= numeros.length; i++) {
+   contador = i * j;
+   console.log (j + " x " + i + " = " + contador);
+  }
+  }
+
+ /*
 
 Desafío de programación #5: Calcula el resultado de la suma de los numeros del 1 al 10 en un array.
  [1,2,3,4,5,6,7,8,9,10]
