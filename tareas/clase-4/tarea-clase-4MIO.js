@@ -172,19 +172,23 @@ function devolverNumerosPositivos(arrayNumeros) {
 devolverNumerosPositivos(arrayNumeros);
 */
 //Desafío de programación #13: Encontrar el número de mayor valor en un arreglo(array) de números.
-/*
-let mayorNumeroArray = 0;
+
 let numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 5, 27, 10];
-for (let i = 0; i < numeros.length; i++) {
-	if (numeros[i] > mayorNumeroArray) {
-		mayorNumeroArray = numeros[i];
+let array2 = [4, 200, 1, 5, 3];
+function mayorValorEnArray(numeros) {
+	let mayorNumeroArray = 0;
+	for (let i = 0; i < numeros.length; i++) {
+		if (numeros[i] > mayorNumeroArray) {
+			mayorNumeroArray = numeros[i];
+		}
 	}
+	return mayorNumeroArray;
 }
-console.log(mayorNumeroArray);
-*/
+console.log(mayorValorEnArray(array2));
+
 //Desafío de programación #14: Mostrar en pantalla(imprimir) los 10 primeros numeros
 //De la sucesión de Fibonacci sin utilizar recursividad.
-
+/*
 let numerosFibonacci = [];
 let contadorFibonacci1 = 0;
 let contadorFibonacci2 = 1;
@@ -194,6 +198,7 @@ for (let i = 0; i <= 10; i++) {
 	contadorFibonacci1 = numerosFibonacci[i];
 }
 console.log(numerosFibonacci);
+*/
 /*
  Desafío de programación #1: Imprimí los números del 1 al 10
  Desafìo de programación  #2: Imprimí los números impares del 1 al 100
