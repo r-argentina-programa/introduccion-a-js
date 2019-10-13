@@ -8,22 +8,17 @@
 
 
 
-function calcularHoras(horasClases) {
-    let totalHoras = 0;
-    for (let i = 0; i<=horasClases.length; i++) {
-        totalHoras += totalHoras[i];
-    }
-}
 
 const $calculoHoras = document.querySelector('#calculo-tiempo-total');
 
 $calculoHoras.onclick = function(){
-    let horas = document.querySelectorAll('#horas');
-    let horasArray = Array.from(horas);
-    console.log(resultado);
-   
-
-    return false;
+    let horasArray = document.getElementsByClassName('tiempo-horas');
+    let totalHoras = 0;
+    for (let i = 0; i<horasArray.length; i++) {
+        if (parseInt(horasArray[i].value))
+            totalHoras += (parseInt(horasArray[i].value));
+    }
+    document.querySelector('#resultado').innerText = totalHoras + " horas";
 }
 
 
