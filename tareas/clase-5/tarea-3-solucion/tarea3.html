@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Clase 5 Tarea 3</title>
+    <link rel="stylesheet" href="tarea3.css" />
+  </head>
+  <body>
+    <div id="container">
+      <h1>Tiempo total del programa r/argentina</h1>
+
+      <form id="tiempoTotalDelCurso" onsubmit="return false;">
+        <h2>Ingresa la duracion de la clase</h2>
+        <ol>
+          <li>
+            <label for="horas">Horas:</label>
+            <input type="number" class="horas" min="0" max="12" />
+            <label for="minutos">Minutos:</label>
+            <input type="number" class="minutos" min="0" max="60" />
+            <label for="segundos">Segundos:</label>
+            <input type="number" class="segundos" min="0" max="60" />
+          </li>
+          <!-- <li>
+            <label for="horas">Horas:</label>
+            <input type="number" class="horas" min="0" max="12" />
+            <label for="minutos">Minutos:</label>
+            <input type="number" class="minutos" min="0" max="60" />
+            <label for="segundos">Segundos:</label>
+            <input type="number" class="segundos" min="0" max="60" />
+          </li> -->
+        </ol>
+        <input type="submit" value="calcular" id="calcular" />
+        <button id="agregarClase">Agregar Clase</button>
+        <button type="reset" id="borrarTodo">Borrar todo</button>
+      </form>
+
+      <!-- <strong id="">Tiempo total = <strong id="total">h : m : s</strong></p> -->
+      <p id="total">Tiempo total:</p>
+    </div>
+    <script src="tarea3.js"></script>
+  </body>
+</html>
