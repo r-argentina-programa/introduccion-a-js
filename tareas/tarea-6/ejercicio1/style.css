@@ -103,5 +103,10 @@ button:disabled:active {
 
 .output p {
   text-align: left;
+  margin-bottom: 0.25rem;
+}
+
+.output p:last-child {
+  margin-bottom: 0.75rem;
 }
 /*# sourceMappingURL=style.css.map */

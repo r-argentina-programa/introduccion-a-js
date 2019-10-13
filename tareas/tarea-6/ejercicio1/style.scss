@@ -75,5 +75,9 @@ button {
 .output {
 	p {
 		text-align: left;
+		margin-bottom: 0.25rem;
+		&:last-child {
+			margin-bottom: 0.75rem;
+		}
 	}
 }

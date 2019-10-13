@@ -73,3 +73,19 @@ function crearElementoParrafo(valorInterno, nombreFuncion) {
 	nuevoParrafo.innerHTML = `La edad ${nombreFuncion} es ${valorInterno}`;
 	return nuevoParrafo;
 }
+
+document.querySelector("#reset").onclick = function(e) {
+	e.preventDefault();
+	const inputs = document.querySelectorAll(".generated-element-input");
+	inputs.forEach(element => {
+		element.remove();
+	});
+	const labels = document.querySelectorAll(".generated-element-label");
+	labels.forEach(element => {
+		element.remove();
+	});
+	document.querySelector("#submit-cantidad-familiares").disabled = false;
+	document.querySelector("#cantidad-familiares").disabled = false;
+	document.querySelector("#cantidad-familiares").value = "";
+	document.querySelector("#calcular-edades").hidden = true;
+};
