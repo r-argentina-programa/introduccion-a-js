@@ -42,12 +42,6 @@
 // TAREA: Crea tu propio array, llamado comidasFavoritas, y escribi dentro algunas
 //       cosas que te gustan.
 
-
-
-
-
-
-
 /*
     Tamaño del Array
     ================
@@ -63,11 +57,6 @@
 
 // TAREA: Verifique cuántos valores tiene en su array comidasFavoritas.
 // imprimi utilizando console.log el resultado.
-
-
-
-
-
 
 /*
     Uso del Array
@@ -90,11 +79,6 @@
 
 // TAREA: Obtené el tercer elemento de tu array comidasFavoritas e imprimilo utilizando console.log.
 
-
-
-
-
-
 /*
     Cambio de Valores en Arrays
     =========================
@@ -115,17 +99,7 @@
 // TAREA: Toma tu array de comidasFavoritas y reemplaza el primer valor
 // con cualquier otra cosa.
 
-
-
-
-
-
 // TAREA: console.log todo el array para verificar.
-
-
-
-
-
 
 // TIP: ¡No te olvides que las posiciones de índice comienzan desde 0!
 
@@ -146,17 +120,7 @@
 
 // TAREA: Extendamos tu lista de comidasFavoritas y agreguemos un valor más.
 
-
-
-
-
-
 // TAREA: console.log todo el array para verificar.
-
-
-
-
-
 
 /*
     Nota acerca Arrays constantes
@@ -181,20 +145,9 @@
 
 // TAREA: Intenta crear un array como una constante y modifica los valores que contiene.
 
-
-
-
-
-
-
 // TAREA: Observa lo que sucede si agregas algo con.push(), cambias algo
 //       con notación de corchetes (array[1]) y
 //       asigna un nuevo array completamente nuevo a la constante
-
-
-
-
-
 
 /*
     Bucles
@@ -246,11 +199,6 @@
 // TAREA: Usando un bucle 'while', decile a tu computadora que registre los números de
 //       diez a uno.
 
-
-
-
-
-
 /*
     Bucles for (para)
     ==========
@@ -268,10 +216,11 @@
 
 // TAREA: Imprimí cada 3er número del 3 al 22 usando un 'bucle for'.
 
-
-
-
-
+/*
+for (let i = 3; i <= 23; i = i + 3) {
+	console.log(i);
+}
+*/
 
 /*
     Iterando a traves de Arrays
@@ -295,11 +244,6 @@
 */
 
 // TAREA: Probalo con tu comidasFavoritas array.
-
-
-
-
-
 
 /*
     Bucles y Logica
@@ -332,17 +276,24 @@
 // * Si es un múltiplo de 3 y 5, imprime 'FizzBuzz'.
 // * Para todo lo demás, imprime el número mismo.
 
+for (let i = 1; i <= 50; i++) {
+	if (i % 3 === 0 && i % 5 === 0) {
+		console.log("FizzBuzz");
+	} else if (i % 5 === 0) {
+		console.log("Buzz");
+	} else if (i % 3 === 0) {
+		console.log("Fizz");
+	} else {
+		console.log(i);
+	}
+}
+
 // NOTA: Es posible que desees utilizar el operador aritmético modulo (%):
 // Calcula el resto al dividir.
 //
 // 10% 3 = 1 - en 10 tenemos 3 * 3 + 1
 // 16% 4 = 0 - en 16 tenemos 4 * 4
 // 19% 4 = 3 - en 19 tenemos 4 * 4 + 3, etc.
-
-
-
-
-
 
 //////////////////////////////////////////////////////////////////////////////
 // ¡Felicidades! ¡Has terminado el Nivel 2 de JavaScript Básico!            //
