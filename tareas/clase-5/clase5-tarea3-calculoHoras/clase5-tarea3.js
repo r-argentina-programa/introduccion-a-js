@@ -8,7 +8,6 @@
 
 
 
-
 const $calculoHoras = document.querySelector('#calculo-tiempo-total');
 
 $calculoHoras.onclick = function(){
@@ -20,56 +19,3 @@ $calculoHoras.onclick = function(){
     }
     document.querySelector('#resultado').innerText = totalHoras + " horas";
 }
-
-
-//document.querySelector('#resultado') = "La duración es " + resultadoHoras;
-
-/*
-
-EN EL .HTML HACER:
-
-
-
-
-
-
-
-EN EL .JS HACER:
-
-
-
-
-
-
-
-
-
-
-
-*/
-
-/*
-Ejemplo para sumar horas:
-
-var totalH;
-var totalM;
-
-addTimes = function(timeMap) {
-
-    // First simply adding all of it together, total hours and total minutes
-    for (var x in timeMap) {
-        totalH += parseInt(timeMap[x].hour, 10);
-        totalM += parseInt(timeMap[x].minutes, 10);
-    }
-
-    // If the minutes exceed 60
-    if (totalM >= 60) {
-        // Divide minutes by 60 and add result to hours
-        totalH += Math.floor(totalM / 60);
-        // Add remainder of totalM / 60 to minutes
-        totalM = totalM % 60;
-    }
-
-    return totalH + "h" + totalM;
-}
-*/
