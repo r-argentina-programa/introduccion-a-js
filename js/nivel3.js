@@ -243,7 +243,11 @@
     Ejemplo:
 
     const nuestroTwitter = document.querySelector('.twitter');
+<<<<<<< HEAD
     ourTwitter.style.backgroundColor = 'white';
+=======
+    nuestroTwitter.style.backgroundColor = 'white';
+>>>>>>> upstream/master
 */
 
 // Tarea: Obtené cualquier elemento de la página y cambiale algunos estilos.
