@@ -13,7 +13,6 @@ for (let i = 1; i <=NumeroDeFamiliares; i++){
     const label = document.createElement('label')
     const input = document.createElement('input')
     input.type = 'number'
-    input.class = 'edad'
     const edadIntegrante = document.createTextNode('Edad Integrante '  + i + ':')
     const bajarRenglon = document.createElement('br')
 
@@ -22,7 +21,7 @@ for (let i = 1; i <=NumeroDeFamiliares; i++){
     form.appendChild(label)
     form.appendChild(input)
     form.appendChild(bajarRenglon)
-
+    input.class = 'edad'
 }
 
 
@@ -30,7 +29,7 @@ const edadMaxima = Math.max()
 
 const edadMinima = Math.min()
 
-const botonCalcular = document.querySelector('button')
+const botonCalcular = document.querySelector('#calcular')
 
 
 
@@ -39,7 +38,7 @@ const botonCalcular = document.querySelector('button')
 
 
 botonCalcular.onclick = function(){
-    const edadesTodos = document.querySelector('#edad').value;
+    const edadesTodos = document.querySelector('.edad').value;
     console.log('click')
     console.log(edadesTodos)
 }
