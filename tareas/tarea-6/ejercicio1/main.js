@@ -8,7 +8,7 @@ Punto bonus: Crear un botón para "empezar de nuevo" que empiece el proceso nuev
 document.querySelector("#submit-cantidad-familiares").onclick = function(e) {
 	e.preventDefault();
 	const cantidadFamiliares = Number(document.querySelector("#cantidad-familiares").value);
-	if (cantidadFamiliares === 0) {
+	if (cantidadFamiliares === 0 || cantidadFamiliares < 0) {
 		return false;
 	}
 	agregarElementos(cantidadFamiliares);
@@ -39,8 +39,8 @@ document.querySelector("#calcular-edades").onclick = function(e) {
 	}
 	const contenedorOutput = document.querySelector("#output");
 	contenedorOutput.appendChild(crearElementoParrafo(calcularEdadPromedio(inputsEdades), "promedio"));
-	contenedorOutput.appendChild(crearElementoParrafo(calcularEdadMinima(inputsEdades), "máxima"));
-	contenedorOutput.appendChild(crearElementoParrafo(calcularEdadMaxima(inputsEdades), "mínima"));
+	contenedorOutput.appendChild(crearElementoParrafo(calcularEdadMinima(inputsEdades), "mínima"));
+	contenedorOutput.appendChild(crearElementoParrafo(calcularEdadMaxima(inputsEdades), "máxima"));
 };
 
 function calcularEdadPromedio(arrayEdades) {
@@ -70,6 +70,7 @@ function calcularEdadMaxima(arrayEdades) {
 }
 function crearElementoParrafo(valorInterno, nombreFuncion) {
 	const nuevoParrafo = document.createElement("p");
+	nuevoParrafo.classList.add("paragraph-element");
 	nuevoParrafo.innerHTML = `La edad ${nombreFuncion} es ${valorInterno}`;
 	return nuevoParrafo;
 }
@@ -82,6 +83,10 @@ document.querySelector("#reset").onclick = function(e) {
 	});
 	const labels = document.querySelectorAll(".generated-element-label");
 	labels.forEach(element => {
+		element.remove();
+	});
+	const paragraphs = document.querySelectorAll(".paragraph-element");
+	paragraphs.forEach(element => {
 		element.remove();
 	});
 	document.querySelector("#submit-cantidad-familiares").disabled = false;
