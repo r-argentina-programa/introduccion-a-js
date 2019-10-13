@@ -21,7 +21,7 @@ function calcularDuracion(horasArray, minutosArray, segundosArray) {
             resultadoMinutos = totalMinutos += (parseInt(minutosArray[i].value));
         }
     } 
-        if (resultadoMinutos >= 60) {
+    if (resultadoMinutos >= 60) {
         resultadoHoras += Math.floor(resultadoMinutos/60);
         resultadoMinutos = resultadoMinutos % 60;
         } 
@@ -30,7 +30,7 @@ function calcularDuracion(horasArray, minutosArray, segundosArray) {
             resultadoSegundos = totalSegundos += (parseInt(segundosArray[i].value));
         }
     } 
-        if (resultadoSegundos >= 60) {
+    if (resultadoSegundos >= 60) {
             resultadoMinutos += Math.floor(resultadoSegundos/60);
             resultadoSegundos = resultadoSegundos % 60;
     } 
