@@ -5,10 +5,41 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Page Title</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
-    <script src='clase5-tarea3.js'></script>
+    <link rel='stylesheet' type='text/css' media='screen' href='pruebaCSS.css'>
+    
 </head>
 <body>
-    
+    <h1>Calculadora del tiempo total del curso</h1>
+<form id='calculo-tiempo' onsubmit="return false;">
+    <div>
+    <label>Clase 1</label>
+    <input type='number' id='horas' class='tiempo-horas' placeholder="Ingrese horas">
+    <input type='number' id='minutos' min="0" max="59" placeholder="Ingrese minutos">
+    <input type='number' id='segundos' placeholder="Ingrese segundos">
+    <label>Clase 2</label>
+    <input type='number' id='horas' class='tiempo-horas' placeholder="Ingrese horas">
+    <input type='number' id='minutos' min="0" max="59" placeholder="Ingrese minutos">
+    <input type='number' id='segundos' placeholder="Ingrese segundos">
+    <label>Clase 3</label>
+    <input type='number' id='horas' class='tiempo-horas' placeholder="Ingrese horas">
+    <input type='number' id='minutos' min="0" max="59" placeholder="Ingrese minutos">
+    <input type='number' id='segundos' placeholder="Ingrese segundos">
+    <label>Clase 4</label>
+    <input type='number' id='horas' class='tiempo-horas' placeholder="Ingrese horas">
+    <input type='number' id='minutos' min="0" max="59" placeholder="Ingrese minutos">
+    <input type='number' id='segundos' placeholder="Ingrese segundos">
+    <label>Clase 5</label>
+    <input type='number' id='horas' class='tiempo-horas' placeholder="Ingrese horas">
+    <input type='number' id='minutos' min="0" max="59" placeholder="Ingrese minutos">
+    <input type='number' id='segundos' placeholder="Ingrese segundos">
+    <label>Clase 6</label>
+    <input type='number' id='horas' class='tiempo-horas' placeholder="Ingrese horas">
+    <input type='number' id='minutos' min="0" max="59" placeholder="Ingrese minutos">
+    <input type='number' id='segundos' placeholder="Ingrese segundos">  
+    </div>
+<button id='calculo-tiempo-total'>Calcular tiempo total</button>
+<h1 id='resultado'></h1>
+</form>
+<script src='clase5-tarea3.js'></script>
 </body>
 </html>

@@ -6,6 +6,29 @@
 // al apretar el botón "Calcular tiempo total", debe mostrar en un
 // <strong> pre-creado el tiempo total de los videos.
 
+
+
+function calcularHoras(horasClases) {
+    let totalHoras = 0;
+    for (let i = 0; i<=horasClases.length; i++) {
+        totalHoras += totalHoras[i];
+    }
+}
+
+const $calculoHoras = document.querySelector('#calculo-tiempo-total');
+
+$calculoHoras.onclick = function(){
+    let horas = document.querySelectorAll('#horas');
+    let horasArray = Array.from(horas);
+    console.log(resultado);
+   
+
+    return false;
+}
+
+
+//document.querySelector('#resultado') = "La duración es " + resultadoHoras;
+
 /*
 
 EN EL .HTML HACER:
