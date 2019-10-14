@@ -46,7 +46,7 @@ $calculoHoras.onclick = function() {
     let segundosArray = document.getElementsByClassName('tiempo-segundos');
     resultadoTotal = calcularDuracion(horasArray, minutosArray, segundosArray);
 
-    document.querySelector('strong').innerText = resultadoTotal;
+    document.querySelector('strong').textContent = resultadoTotal;
 
     return false;
 }
