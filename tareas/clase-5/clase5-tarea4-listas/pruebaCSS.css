@@ -1,0 +1,77 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	transition: all 0.2s ease;
+}
+
+body,
+label,
+button {
+	font-family: Helvetica, sans-serif;
+}
+
+.container {
+	display: flex;
+	width: 100vw;
+	height: 100vh;
+	background-color: rgb(122, 122, 122);
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+}
+
+form {
+	background-color: #fff;
+	padding: 2rem 3rem;
+	border-radius: 0.75rem;
+	border: 1px solid rgb(196, 196, 196);
+	box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+	display: flex;
+	flex-flow: column nowrap;
+}
+form * {
+	margin: auto;
+	margin-bottom: 0.5rem;
+}
+
+h1 {
+	margin-bottom: 1rem;
+}
+label {
+	text-align: left;
+	margin-left: 0;
+}
+input {
+	width: 100%;
+	padding: 0.5rem;
+	border-radius: 0.25rem;
+	border: 1px solid rgb(196, 196, 196);
+	margin-bottom: 1.25rem;
+}
+
+.btn-container {
+	margin-left: 0;
+}
+button {
+	margin-top: 1rem;
+	padding: 0.5rem 1.5rem;
+	border-radius: 0.25rem;
+	box-shadow: none;
+	border: none;
+	font-weight: 700;
+	cursor: pointer;
+}
+
+.btn-calc {
+	background-color: dodgerblue;
+	color: white;
+	margin-left: 0;
+}
+.btn-calc:hover {
+	background-color: rgb(25, 121, 216);
+}
+
+.btn-cln:hover {
+	background-color: rgb(230, 230, 230);
+}
