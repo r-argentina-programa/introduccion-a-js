@@ -1,0 +1,46 @@
+#ventana{
+    background-color: slateblue;
+   width: 50%;
+   margin: 25%; 
+   border-radius: 12px;
+   padding: 20px; 
+   border: 12px;
+   border-color: rebeccapurple;
+        }
+h1{
+    text-align: center;
+    font-family: Calibri, 'Gill Sans MT', 'Gill Sans', 'Trebuchet MS', sans-serif;
+    color: rgb(255, 255, 255);
+}
+
+#form{
+    text-align: center;
+}
+#form2{
+    text-align: center;
+}
+#ventana label{
+    font-size: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: white;
+    font: bold;
+
+}
+input{
+    width: 20%;
+}
+body{
+    background-color: indigo;
+}
+
+#ventana-resultado{
+
+    text-align: center;
+    width: 50%;
+    margin: 0 auto;
+  
+}
+#resultado{
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}

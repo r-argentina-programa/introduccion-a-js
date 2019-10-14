@@ -33,9 +33,12 @@ for(let i=0;i<cantidadIntegrantes;i++){
     inputs[i].name ="integrante"+String(i)
     labels[i]= document.createElement("label")
     labels[i].for=inputs[i].id
-    labels[i].textContent = "familiar "+String(i+1)
+    labels[i].textContent = "Edad de familiar "+String(i+1)
+    labels[i].style.fontFamily = "Calibri"
+    labels[i].style.fontColor = "white"
     cajas.appendChild(labels[i])
     cajas.appendChild(inputs[i])
+    cajas.appendChild(document.createElement("br"))
    
 }
 
@@ -131,6 +134,36 @@ document.querySelector("#reset").onclick = function(){
 }
 
   
+
+document.querySelector("#boton-agregar").onclick = function(){
+    let inputSalario=[]
+    let br=[]
+   
+    form2 =document.querySelector("#form2")
+     let cajacreada = document.createElement("input")
+     let brcreado = document.createElement("br")
+     br.id="brsalario"
+    cajacreada.type = "number"
+    cajacreada.id = String(inputSalario.length)
+    inputSalario.push(cajacreada)
+    br.push(brcreado)
+    cajacreada.value="ingrese sueldo anual"
+    form2.appendChild(inputSalario[inputSalario.length-1])
+    form2.appendChild(br[br.length-1])
+    
+    return false
+}
+document.querySelector("#boton-quitar").onclick = function(){
+    let form2 = document.querySelector("#form2")
+    let nodes = form2.childNodes
+    let tamaño = nodes.length
+    if(tamaño>=8){
+    form2.removeChild(nodes[tamaño-1])
+    form2.removeChild(nodes[tamaño-2])
+}
+    return false
+}
+
 
 
 

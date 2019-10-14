@@ -5,18 +5,32 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Page Title</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='css/main.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='tarea6css.css'>
     
 </head>
 <body>
-    <form id="form">
-    <input type="number"  placeholder="Cantidad integrantes" id="cantidad-integrantes">
-    <input type="submit"  value="ingresar" id="cantidad-integrantes-boton">
-    <input type="reset" id="reset">
-    
-    
-</form>
-    <div><Strong id="resultado"></Strong></div>
+    <div id="ventana">
+        <h1>Cuantos integrantes tiene su familia?</h1>
+            <form id="form">
+            <input type="number"  placeholder="Cantidad integrantes" id="cantidad-integrantes">
+            <br>
+            <input type="submit"  value="ingresar" id="cantidad-integrantes-boton">
+            <input type="reset" id="reset">
+        </form>
+        <div id="ventana-resultado">
+        <Strong id="resultado"></Strong>
+        </div>
+        <div id="cajas-salario">
+            <h1>
+                Si alguno trabaja, ingrese sueldo anual
+            </h1>
+        <form id="form2">
+            <input type="submit" value = "+" id="boton-agregar">
+            <input type="submit"value = "-" id="boton-quitar">
+            <br>
+        </form>
+        </div>
+    </div>
     <script src='tarea-clase-6-mio.js'></script>
 </body>
 </html>
