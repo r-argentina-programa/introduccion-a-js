@@ -144,7 +144,8 @@ document.querySelector("#boton-agregar").onclick = function(){
      let brcreado = document.createElement("br")
      br.id="brsalario"
     cajacreada.type = "number"
-    cajacreada.id = String(inputSalario.length)
+    cajacreada.id = "inputsalario"
+    cajacreada.placeholder= "ingresar sueldo"
     inputSalario.push(cajacreada)
     br.push(brcreado)
     cajacreada.value="ingrese sueldo anual"
@@ -164,7 +165,29 @@ document.querySelector("#boton-quitar").onclick = function(){
     return false
 }
 
+document.querySelector("#calcular-salario").onclick = function(){
+  let form2 =document.querySelector("#form2")
+  let montos = document.querySelectorAll("#inputsalario")
+  let resultado = document.querySelector("#resultadosueldo")
+  let salarios= []
 
+  for(let i=0;i<montos.length;i++){
+      salarios[i]= Number(montos[i].value)
+  }
+
+  let minSalario = Math.min.apply(Math,salarios)
+  let maxSalario = Math.max.apply(Math,salarios)
+  let salarioAnualprom = promedioArreglo(salarios)
+  let salarioMensualprom = salarioAnualprom/12
+
+  resultado.style.fontFamily= "Calibri"
+  resultado.textContent = `El salario maximo es: ${maxSalario} el salario minimo es: ${minSalario} el promedio anual: ${salarioAnualprom} y el mensual: ${salarioMensualprom}`
+  resultado.style.color= "white"
+  
+
+
+    return false
+}
 
 
 

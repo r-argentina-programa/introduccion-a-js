@@ -19,6 +19,9 @@ h1{
 #form2{
     text-align: center;
 }
+#form3{
+    text-align: center;
+}
 #ventana label{
     font-size: 20px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -44,3 +47,9 @@ body{
     color: white;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
+#ventana-resultado-sueldo{
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+}
+
