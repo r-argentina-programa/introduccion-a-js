@@ -3,7 +3,7 @@
 // Preguntarle estos datos al usuario y guardarlos en 2 variables
 // Ejecutar la función con estos datos
 // Impriman el resultado en la consola
-function calcularEdad(anioActual, anioNacimiento) {
+/*function calcularEdad(anioActual, anioNacimiento) {
     return anioActual - anioNacimiento;
 }
 
@@ -43,6 +43,7 @@ const salarioAnual = Number(prompt('Cuál es tu salario mensual?'));
 console.log('Tu salario mensual es ' + calcularSalarioMensual(salarioAnual));
 console.log('Tu salario semanal es ' + calcularSalarioSemanal(salarioAnual));
 console.log('Tu salario diario es ' + calcularSalarioDiario(salarioAnual));
+*/
 
 /// SCOPE
 
@@ -67,9 +68,10 @@ function pruebaHoisting(){
 //pruebaHoisting();
 */
 
-/*
+
 var a = 1; //global
 let b = 2; //global
+
 
 function prueba(c) { //c es un parámetro de la función prueba. LOCAL.
     let d = 4; //local a la función
@@ -102,4 +104,4 @@ console.log('b vale: ' + b); // 2
 // console.log('d vale: ' + d); // error
 // console.log('e vale: ' + e); // error
 // console.log('f vale: ' + f); // error
-*/
+

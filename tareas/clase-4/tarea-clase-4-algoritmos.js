@@ -163,3 +163,181 @@ Desafío de programación #51. Find the frequency of characters inside a string.
 Desafío de programación #52. Calculate Fibonacci(500) with high precision (all decimals)
 Desafío de programación #53. Calculate 70! with high precision (all decimals)
  */
+
+
+ /* 
+ DESAFIO 1:
+ let i = 0
+ while (i < 10) {
+   i = i + 1;
+   console.log(i)
+ }
+ */
+
+// DESAFIO 2:
+
+/*
+for(i = 1; i <= 100; i = i + 2) {
+  console.log(i);
+}
+
+// otra forma
+
+
+function numerosImpares() {
+  for (i = 1; i <= 100; i++) {
+    if (i % 2 === 0) {
+      null;   // ACA PUEDO PONER console.log(''); O  console.log(null) y me va a aparecer o un espacio vacio o el mensaje null respectivamente. 
+                Si dejo null directamente no aparece ningun mensaje y me ahorro el renglon.
+    } else ( console.log (i))
+  }
+}
+
+numerosImpares();
+*/
+
+// DESAFIO 3:
+// forma 1:
+
+/*
+for (let i = 1; i <= 10; i++) {
+  let multiploDeSiete;
+  multiploDeSiete = (i * 7);
+  console.log('7 x ' + i + ' = ' + multiploDeSiete);
+}
+
+// forma 2
+for (let i = 1; i <= 70; i++) {
+  if (i % 7 === 0) {
+    console.log(i);
+  } else {   // en teoria puedo dejar la operacion sin un else y queda implicito que no tiene que hacer nada
+    null
+  }
+}
+*/
+
+// DESAFIO 4:
+
+/*
+for (let i = 1; i <= 100; i++) {
+  if (i <= 10) {
+    console.log('1 x ' + i + ' = ' + i);
+  } else if (i <= 20 && i % 2 === 0) {
+    let tablaDelDos;
+    tablaDelDos = (i / 2);
+    console.log('2 x ' + i/2 + ' = ' + i)
+  }
+  .
+  .
+  .
+}
+*/
+
+/*
+  for (let i = 1; i < 10; i++) {
+    console.log(i + ' x ' + 1 + ' = ' + i);
+    
+    console.log(i + ' x ' + 2 + ' = ' + 2 * i);
+  
+    console.log(i + ' x ' + 3 + ' = ' + 3 * i);
+  
+    console.log(i + ' x ' + 4 + ' = ' + 4 * i);
+
+    console.log(i + ' x ' + 5 + ' = ' + 5 * i);
+
+    console.log(i + ' x ' + 6 + ' = ' + 6 * i);
+
+    console.log(i + ' x ' + 7 + ' = ' + 7 * i);
+
+    console.log(i + ' x ' + 8 + ' = ' + 8 * i);
+
+    console.log(i + ' x ' + 9 + ' = ' + 9 * i);
+
+    console.log(i + ' x ' + 10 + ' = ' + 10 * i);
+
+}
+
+*/
+
+// DESAFIO 5:
+
+// Desafío de programación #5: Calcula el resultado de la suma de los numeros del 1 al 10 en un array.
+// [1,2,3,4,5,6,7,8,9,10]
+//
+// 1 + 2 + 3 + ... + 10 = ? //hacerlo con un array y un bucle
+/*
+const a = [1,2,3,4,5,6,7,8,9,10];
+let suma = 0;
+
+for (let i=0; i < a.length; i++) {
+  suma = suma + a[i]
+}
+console.log(suma);
+*/
+
+// DESAFIO 6:
+
+// Factorial de 10  ( 10! )
+
+/*
+const a = [1,2,3,4,5,6,7,8,9,10]
+let factorial = 1;
+
+for (let i = 0; i < a.length; i++) {
+  factorial = factorial * a[i];
+}
+console.log(factorial);
+*/
+
+// DESAFIO 7:
+/*
+let numerosImpares = 0;
+
+for (i=11; i <= 30; i = i+2) {
+  
+  numerosImpares = numerosImpares + i;
+}
+
+console.log(numerosImpares);
+*/
+
+//DESAFIO 8:
+
+// Desafío de programación #8: Crea una función que convierta de Celsius a Fahrenheit
+/*
+
+function convertirCelsiusAFarenheit () {
+  let temperaturaEnFarenheit;
+  const temperaturaEnCelsius = Number(prompt('Ingrese la temperatura en grados celsius:'));
+  temperaturaEnFarenheit = (temperaturaEnCelsius * 1.8) +32
+  console.log('La temperatura en grados Farenheit es ' + temperaturaEnFarenheit + ' °F');
+  return;
+}
+
+convertirCelsiusAFarenheit();
+*/
+
+// Math.round(numero * 100) / 100 para limitar a 2 decimales!!
+
+// DESAFIO 12:
+
+// Desafío de programación #12: Crea una función que reciba un array de números y devuelva un array conteniendo solo los números positivos
+
+/*
+const a = [3, 8, -5, 2, -7, 1, 0, -6, 9];
+function numerosPositivos(i){ 
+  
+  for (i = 0; i < a.length; i++){
+    if(a[i] > 0){
+      console.log(a[i]);
+    }
+  }  
+}
+numerosPositivos();
+*/
+
+// DESAFIO 13:
+
+const a = [3, 20, 37, 19, 2, 5, 8 , 4];
+let max = Math.max(...a);
+console.log(max);
