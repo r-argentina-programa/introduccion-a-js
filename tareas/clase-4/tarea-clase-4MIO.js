@@ -1,9 +1,5 @@
 // TAREA: Imprimí cada 3er número del 3 al 22 usando un 'bucle for'.
 
-<<<<<<< HEAD:tareas/clase-4/tarea-clase-4.js
-
-<<<<<<< HEAD
-=======
 /*
 Estos desafíos de coding están enfocados para los principiantes, por lo tanto las soluciones fueron implementadas
 usando  elementos de programación simples y clásicos.
@@ -176,7 +172,7 @@ function devolverNumerosPositivos(arrayNumeros) {
 devolverNumerosPositivos(arrayNumeros);
 */
 //Desafío de programación #13: Encontrar el número de mayor valor en un arreglo(array) de números.
-
+/*
 let numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 5, 27, 10];
 let array2 = [4, 200, 1, 5, 3];
 function mayorValorEnArray(numeros) {
@@ -189,10 +185,10 @@ function mayorValorEnArray(numeros) {
 	return mayorNumeroArray;
 }
 console.log(mayorValorEnArray(array2));
-
+*/
 //Desafío de programación #14: Mostrar en pantalla(imprimir) los 10 primeros numeros
 //De la sucesión de Fibonacci sin utilizar recursividad.
-/*
+
 let numerosFibonacci = [];
 let contadorFibonacci1 = 0;
 let contadorFibonacci2 = 1;
@@ -202,8 +198,8 @@ for (let i = 0; i <= 10; i++) {
 	contadorFibonacci1 = numerosFibonacci[i];
 }
 console.log(numerosFibonacci);
-*/
->>>>>>> 65a47ee898be74bb34730ba6fb17aa215fb73a51:tareas/clase-4/tarea-clase-4MIO.js
+
+//>>>>>>> 65a47ee898be74bb34730ba6fb17aa215fb73a51:tareas/clase-4/tarea-clase-4MIO.js
 /*
  Desafío de programación #1: Imprimí los números del 1 al 10
  Desafìo de programación  #2: Imprimí los números impares del 1 al 100
@@ -273,10 +269,9 @@ Coding challenge #51. Find the frequency of characters inside a string. Return t
 Coding challenge #52. Calculate Fibonacci(500) with high precision (all decimals)
 Coding challenge #53. Calculate 70! with high precision (all decimals)
  */
-=======
+
 // TAREA: Usando un bucle 'while', decile a tu computadora que registre los números de
 //       diez a uno.
-
 
 // TAREA: Ha llegado el momento de un ejercicio clásico: 'FizzBuzz'.
 // Cuenta del 1 al 50 e imprime los números:
@@ -292,4 +287,3 @@ Coding challenge #53. Calculate 70! with high precision (all decimals)
 
 // Calcular el promedio de todos los números en un array de números. (y ponerlo en una función)
 // ej.: calcularPromedio([10,5,4,2,8])
->>>>>>> upstream/master
