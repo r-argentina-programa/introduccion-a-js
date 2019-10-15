@@ -21,13 +21,10 @@ for (let i = 1; i <=NumeroDeFamiliares; i++){
     form.appendChild(label)
     form.appendChild(input)
     form.appendChild(bajarRenglon)
-    input.class = 'edad'
+    input.className = 'edad'
 }
 
 
-const edadMaxima = Math.max()
-
-const edadMinima = Math.min()
 
 const botonCalcular = document.querySelector('#calcular')
 
@@ -38,15 +35,37 @@ const botonCalcular = document.querySelector('#calcular')
 
 
 botonCalcular.onclick = function(){
-    const edadesTodos = document.querySelector('.edad').value;
-    console.log('click')
-    console.log(edadesTodos)
+    const edadesTodos = document.querySelectorAll('.edad');
+   
+    const listaEdades = []
+    for(i = 0; i < edadesTodos.length; i++){
+        listaEdades.push(+edadesTodos[i].value)
+    }
+
+    const edadMaxima = Math.max(...listaEdades)
+    const inputMaximo = document.querySelector('#maximo')
+    inputMaximo.value = edadMaxima
+
+
+    const edadMinima = Math.min(...listaEdades)
+    const inputMinimo = document.querySelector('#minimo')
+    inputMinimo.value = edadMinima
+    
+    
+    const promedioEdad = function(){
+        let edadTotal = 0;
+        for (let i = 0; i < listaEdades.length; i++){
+            edadTotal += listaEdades[i]
+        }
+        return edadTotal / listaEdades.length;
+    }
+    const inputPromedio = document.querySelector('#promedio')
+    inputPromedio.value = promedioEdad();
+
 }
 
 
 
-
-let promedioEdad = 0
 
 //function calcularPromedioEdad(){
 //    for (let i = 0; )
