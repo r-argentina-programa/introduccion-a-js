@@ -45,7 +45,7 @@ $calculoHoras.onclick = function() {
     let horasArray = document.getElementsByClassName('tiempo-horas');
     let minutosArray = document.getElementsByClassName('tiempo-minutos');
     let segundosArray = document.getElementsByClassName('tiempo-segundos');
-    resultadoTotal = calcularDuracion(horasArray, minutosArray, segundosArray);
+    resultadoTotal = calcularTiempoTotal(horasArray, minutosArray, segundosArray);
 
     document.querySelector('strong').textContent = resultadoTotal;
 
