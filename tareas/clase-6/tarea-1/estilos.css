@@ -1,0 +1,82 @@
+* {
+  margin: 0;
+  padding: 0;
+  border-style: none;
+}
+
+body {
+  font-family: Verdana, Geneva, sans-serif;
+}
+
+#container {
+  width: 40%;
+  background: rgba(109, 90, 205, 0.317);
+  margin: 50px auto;
+  /* padding: 10px; */
+}
+
+.q1 {
+  width: 100%;
+  margin: auto;
+  padding-top: 10px;
+  text-align: center;
+}
+
+input {
+  font-size: 1.1rem;
+  padding: 3px 5px;
+  margin-left: 20px;
+  outline: none;
+  border-radius: 5px;
+  color: #000000;
+}
+.inicio-info {
+  text-align: center;
+  padding: 5px;
+  background: rgba(128, 0, 87, 0.119);
+}
+#info {
+  margin: 10px auto;
+}
+
+#resultado {
+  width: 50%;
+  margin: auto;
+}
+
+h2 {
+  text-align: center;
+  font-size: 17px;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+
+#mayor-edad,
+#menor-edad,
+#promedio {
+  border-bottom: solid 2px slateblue;
+}
+
+button {
+  font-size: 15px;
+  width: 50%;
+  padding: 10px 0px;
+  cursor: pointer;
+  background: rgba(128, 0, 87, 0.119);
+  border: 0;
+  color: #f7f7f7;
+  margin: 5% 25%;
+  border-radius: 5px;
+  outline: none;
+}
+
+button:focus,
+button:active {
+  border: solid 2px slateblue;
+}
+
+.total {
+  width: 100%;
+  margin: auto;
+  padding: 3px 10px;
+}
