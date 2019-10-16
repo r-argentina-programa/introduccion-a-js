@@ -124,10 +124,9 @@
 //       variable llamada nuestroTitulo.
 //       Utilizá console.log para ver lo que obtuviste!
 
-
-
-
-
+let nuestroTitulo = document.querySelector('h1');
+console.log(nuestroTitulo);
+console.log(nuestroTitulo.innerText);
 
 /*
     Obteniendo elementos similares.
@@ -146,31 +145,30 @@
 
 // TAREA: Obtené todos los elementos <li> de la página en una variable llamada mediaLinks.
 
-
-
-
+var mediaLinks = document.querySelectorAll('li');
+console.log(mediaLinks);
+// .querySelectorAll devuelve un array (NodeList) con la cantidad de elementos que haya
 
 
 // TAREA: Ahora utilizá console.log para ver la cantidad de 
 // elementos li que hay con mediaLinks.length
 
-
-
-
+console.log(`hay ${mediaLinks.length} elementos en mediaLinks`);
 
 
 // TAREA: ¿Te acordás de los bucles del nivel 2? Usando lo que sabés de ellos, realizá iteraciones
 //      sobre cada item de mediaLinks y mostralos en pantalla con console.log
 
-
-
+for (let i = 0; i < mediaLinks.length; i++) {
+    console.log(mediaLinks[i].innerText);
+}
 
 
 
 /*
     Propiedades de los elementos
     ==================
-    
+
     Ok, hasta acá todo bien. Peeeroo, ¿que pasa si queremos obtener SOLO el texto
     de nuestra etiqueta 'h1'?
     Los elementos de página tienen una propiedad para esto: '.textContent'.
@@ -184,16 +182,14 @@
 // TAREA: Obtené el contenido de nuestro elemento 'h1'
 // y utilizá console.log para mostrarlo.
 
-
-
-
-
+nuestroTitulo = document.querySelector('h1'); //ya definido arriba..
+console.log(nuestroTitulo.textContent);
 
 /*
     Editar el contenido de la página
     ====================
 
-    Podemos simplemente cambiar el contenido de las étiquetas utilizando la propiedad que 
+    Podemos simplemente cambiar el contenido de las étiquetas utilizando la propiedad que
     vimos recién, '.textContent'.
 
     Ejemplo:
@@ -205,14 +201,13 @@
 
 // TAREA: Hagamos un nuevo título! Cambiá el contenido de nuestro 'h1' y ponele lo que quieras.
 
-
-
-
+nuestroTitulo.textContent = ('Hola ' + prompt("Ingresa tu nombre") + '!');
+console.log(nuestroTitulo.textContent);
 
 /*
     Editando atributos
     ==================
-    
+
     También podemos cambiar y establecer atributos en nuestros elementos.
 
     Ejemplo:
@@ -223,10 +218,10 @@
 
 // TAREA: Actualizá el valor del atributo 'src' de nuestra etiqueta 'img' a "img/kittens.jpeg".
 
+const ourImg = document.querySelector('img');
+ourImg.src = "img/kittens.jpeg";
 
-
-
-
+//NOTA: al parece no existia ningun tag de <img/> asi que creé uno y le di el atributo de src="img"
 
 /*
     Editando estilos
@@ -248,10 +243,8 @@
 
 // Tarea: Obtené cualquier elemento de la página y cambiale algunos estilos.
 
-
-
-
-
+//const nuestroTitulo = document.querySelector('h1'); ya definido!
+nuestroTitulo.style.backgroundColor = 'cyan';
 
 /*
    Creando nuevos nodos (Elementos)
