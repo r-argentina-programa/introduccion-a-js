@@ -238,7 +238,7 @@ ourImg.src = "img/kittens.jpeg";
     Ejemplo:
 
     const nuestroTwitter = document.querySelector('.twitter');
-    ourTwitter.style.backgroundColor = 'white';
+    nuestroTwitter.style.backgroundColor = 'white';
 */
 
 // Tarea: Obtené cualquier elemento de la página y cambiale algunos estilos.
