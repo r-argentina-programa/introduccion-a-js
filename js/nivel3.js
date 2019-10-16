@@ -218,10 +218,10 @@ console.log(nuestroTitulo.textContent);
 
 // TAREA: Actualizá el valor del atributo 'src' de nuestra etiqueta 'img' a "img/kittens.jpeg".
 
+const ourImg = document.querySelector('img');
+ourImg.src = "img/kittens.jpeg";
 
-
-
-
+//NOTA: al parece no existia ningun tag de <img/> asi que creé uno y le di el atributo de src="img"
 
 /*
     Editando estilos
@@ -243,10 +243,8 @@ console.log(nuestroTitulo.textContent);
 
 // Tarea: Obtené cualquier elemento de la página y cambiale algunos estilos.
 
-
-
-
-
+//const nuestroTitulo = document.querySelector('h1'); ya definido!
+nuestroTitulo.style.backgroundColor = 'cyan';
 
 /*
    Creando nuevos nodos (Elementos)
