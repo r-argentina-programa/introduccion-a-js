@@ -14,12 +14,21 @@ Desafío de programación #1: Imprimí los números del 1 al 10
 
  1 3 5 ... 99
 
+ for (let i = 1; i <= 10; i++) {
+    console.log(i);
+ }
+
 Desafío de programación #3: Imprimí la tabla de multiplicación del 7
 
  7x0 = 0
  7x1 = 7
  ...
  7x9 = 63
+
+ for (let i = 1; i <= 10; i++) {
+    var mult = 7 * i
+    console.log(`7x${i} = ${mult}`)
+}
 
 Desafío de programación #4: Imprimí todas las tablas de multiplicación del 1 al 9
 
@@ -33,35 +42,145 @@ Desafío de programación #4: Imprimí todas las tablas de multiplicación del 1
  ...
  9x9 = 81
 
+ for (let i = 1; i < 10; i++) {
+    for (let j = 1; j < 10; j++) {
+        console.log(`${i}x${j} = ${i * j}`)
+    }
+    console.log("\n")
+}
+
 Desafío de programación #5: Calcula el resultado de la suma de los numeros del 1 al 10 en un array.
  [1,2,3,4,5,6,7,8,9,10]
 
  1 + 2 + 3 + ... + 10 = ? //hacerlo con un array y un bucle
 
+let array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+let suma = 0;
+for (let i = 0; i < array.length; i++) {
+    suma += array[i]
+}
+console.log(suma);
+
 Desafío de programación #6: Calcula 10! (10 factorial)
 
  10 * 9 * 8 * ... * 1
 
+ let fact = 1;
+for (let i = 1; i <= 10; i++) {
+    fact = fact*i
+}
+console.log(`El factorial de 10 es ${fact}`)
+
 Desafío de programación #7: Calcula la suma de todos los números impares mayores que 10 y menores que 30
+
+let suma = 0;
+for (let i = 11; i <= 30; i+=2) {
+    suma += i;
+}
+console.log(`${suma}`)
 
 Desafío de programación #8: Crea una función que convierta de Celsius a Fahrenheit
 
+T = Number(prompt('Ingrese la temperatura a convertir a Fahrenheit'))
+function celsiusToFahrenheit(T) {
+    var Fahr = (T*(9/5)+32);
+    return Fahr
+}
+console.log(`${T}° Celsius son ${celsiusToFahrenheit(T)}° Fahrenheit`)
+
 Desafío de programación #9: Crea una función que convierta de Fahrenheit a Celsius
+
+T = Number(prompt('Ingrese la temperatura a convertir a Celsius'))
+function fahrenheitToCelsius(T) {
+    var celsius = ((T-32)*5/9);
+    return celsius
+}
+console.log(`${T}° Fahrenheit son ${fahrenheitToCelsius(T)}° Celsius`)
 
 Desafío de programación #10: Calcula la suma de todos los números en un array de números
 
+array = [1, 3, 52, 34, 23];
+let suma = 0;
+for (i = 0; i < array.length; i++) {
+    suma += array[i];
+}
+console.log(`La suma del array es ${suma}`);
+
 Desafío de programación #11: Calcula el promedio de todos los números en un array de números. (en una función)
+
+const array = [1, 3, 52, 34, 23];
+console.log(array)
+
+function promedio(array) {
+    let suma = 0;
+    for (i = 0; i < array.length; i++) {
+        suma += array[i];
+    }
+    return (suma / array.length);
+}
+
+console.log(`El promedio del array es ${promedio(array)}`)
 
 Desafío de programación #12: Crea una función que reciba un array de números y devuelva un array conteniendo solo los números positivos
 
+let array = [1, -3, 52, -4, 23, 6];
+console.log(array);
+
+function positivos(array) {
+    const arrayPositivos = [];
+    for (i = 0; i < array.length; i++) {
+        if (array[i] >= 0) {
+            arrayPositivos.push(array[i]);
+        }
+    }
+    return arrayPositivos
+}
+
+array = positivos(array);
+
+console.log(array);
+
 Desafío de programación #13: Find the maximum number in an array of numbers
+
+const array = [1, -3, 52, -4, 23, 6];
+console.log(array);
+
+function maximo(array) {
+    let i = 0;
+    let max = array[i];
+    for (i = 0; i < array.length; i++) {
+        if (array[i] > max) {
+            max = array[i];
+    }
+    }
+    return max
+}
+
+console.log(maximo(array));
 
 Desafío de programación #14: Imprimir los primeros 10 dígitos de Fibonacci sin recursión
 
 Fibonacci (lo buscan en google si no lo saben o no se acuerdan)
 El resultado debería ser: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55
 
+function fibonacci(n) {
+    let fib = [0, 1];
+    for (let i = 2; i < n; i++) {
+        fib.push(fib[i - 2] + fib[i - 1])
+    }
+    return fib
+}
+
+console.log(fibonacci(10));
+
 Desafío de programación #15: Crear una función que encuentre el número n de Fibonacci usando recursión
+
+function fibonacci(n) {
+    if (n < 2) {
+        return n
+    }
+    return fibonacci(n - 1) + fibonacci(n - 2)
+}
 
 Desafío de programación #16: Create una función que dado un número retorne un Boolean (true/false) dependiendo si es primo o no.
 Aclaración: Los números primos son aquellos que tienen exactamente 4 divisores enteros.
@@ -74,12 +193,36 @@ Ejemplo:
    6 NO es primo porque se puede dividir por (1,-1,2,-2,3,-3,6,-6)
    ... y así
 
+function esPrimo(n) {
+    let a = [];
+    for (let i = -n; i <= n; i++) {
+        if (n % i === 0) {
+            a.push(i)
+        }
+    }
+    if (a.length === 4) {
+        console.log(`El número ${n} es primo, es divisible por ${a}`)
+    }
+    else {
+        console.log(`El número ${n} no es primo, es divisible por ${a}`)
+    }
+}
+
+n = Number(prompt("ingrese un número"));
+esPrimo(n);
 
 Desafío de programación #17: Calcular la suma de los dígitos positivos de un número entero positivo
 Ejemplo:
    123 = 1 + 2 + 3 = 6
    2 = 2
    1234 = 1 + 2 + 3 + 4 = 10
+
+function sumaDigitos(n) {
+    let a = n.toString();
+    for (let i = 0; i <= a.length; i++) {
+        
+    }
+}
 
 Desafío de programación #18: Imprimir los primeros 100 números primos
 
