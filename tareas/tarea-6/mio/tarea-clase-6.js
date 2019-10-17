@@ -6,45 +6,147 @@ Al hacer click en "calcular", mostrar en un elemento pre-existente la mayor edad
 Punto bonus: Crear un botón para "empezar de nuevo" que empiece el proceso nuevamente, borrando los inputs ya creados (investigar cómo en MDN).
 */
 
+//aquí declaro las funciones mayor, menor, moda y promedio
 
-function crearFormularioFamiliar(cantidadFamiliares) {
+function promedio(listaNumeros) {
+
+    let resultado = 0
+
+    for (let i = 0; i < listaNumeros.length; i++) {
+        resultado += listaNumeros[i];
+    }
+    return resultado / listaNumeros.length;
+}
+
+function maximo(listaNumeros) {
+    let resultado = listaNumeros[0];
+    for (let i = 0; i < listaNumeros.length; i++) {
+        if (listaNumeros[i] > resultado) {
+            resultado = listaNumeros[i];
+        }
+    }
+    return resultado
+}
+
+function minimo(listaNumeros) {
+    let resultado = listaNumeros[0];
+    for (let i = 0; i < listaNumeros.length; i++) {
+        if (listaNumeros[i] < resultado) {
+            resultado = listaNumeros[i];
+        }
+    }
+    return resultado
+}
+
+function moda(listaNumeros) {
+
+    let resultado = null
+    let cantidadRepeticionesResultado = 0;
+
+    for (let i = 0; i < listaNumeros.length; i++) {
+
+        let pivot = listaNumeros[i];
+
+        let cantidadRepeticionesPivot = 0;
+
+        for (let j = i; j < listaNumeros.length; j++) {
+
+            if (listaNumeros[j] == pivot) {
+
+                cantidadRepeticionesPivot++;
+
+            }
+        } if (cantidadRepeticionesPivot > cantidadRepeticionesResultado) {
+
+            resultado = pivot;
+
+            cantidadRepeticionesResultado = cantidadRepeticionesPivot;
+        }
+
+
+
+    }
+
+
+    return resultado;
+
+}
+
+function escribirCalculosEdadesEnElementoPrecreado(listaEdades) {
+
+    resultado = document.querySelector("#resultado");
+    resultado.value = `La menor edad es ${minimo(listaEdades)}, la mayor edad es ${maximo(listaEdades)} y el promedio de las edades del grupo familiar es ${promedio(listaEdades)}`
+}
+
+
+function crearFormulariosFamiliares(cantidadFamiliares) {
 
     let nuevosFormulariosFamiliares = [];
-const $documentBody = document.querySelector("body");
+    const $documentBody = document.querySelector("body");
+    const nuevaDivisionFormulario = document.createElement("div");
+    const nuevoFormulario = document.createElement("form");
+    const nuevoBotonEdadesFamiliares = document.createElement("button");
+
+    nuevaDivisionFormulario.class = "form";
+    nuevaDivisionFormulario.appendChild(nuevoFormulario);
+    nuevoFormulario.appendChild(nuevoBotonEdadesFamiliares);
 
     for (let i = 0; i < cantidadFamiliares; i++) {
 
         nuevosFormulariosFamiliares[i] = document.createElement("div"); //por cada familiar hago un elemento de array y le appendeo un label y un input
-        
+
         let nuevoLabel = document.createElement("label");
         let nuevoInput = document.createElement("input");
-        
+
 
         nuevoLabel.setAttribute("for", `edad-familiar-${i}`);
         nuevoLabel.innerHTML = `Ingrese la edad del familiar n°${i + 1}: ` //le pongo (i + 1 para que muestre algo con sentido en la pantalla)
 
         nuevoInput.setAttribute("id", `edad-familiar-${i}`);
         nuevoInput.setAttribute("type", "number");
+        nuevoInput.setAttribute("class", "edad");                //les pongo class = "edad" para poder llamarlos en el onclick del nuevo botón.
 
         nuevosFormulariosFamiliares[i].appendChild(nuevoLabel);
         nuevosFormulariosFamiliares[i].appendChild(nuevoInput);
 
-        $documentBody.appendChild(nuevosFormulariosFamiliares[i]);
+        nuevoFormulario.appendChild(nuevosFormulariosFamiliares[i]);
 
+
+    }
+
+
+    nuevoBotonEdadesFamiliares.id = "boton-procesar-edades-familiares"
+    nuevoBotonEdadesFamiliares.innerHTML = "Calcular";
+    nuevoBotonEdadesFamiliares.onclick = function () {
+
+        const $edadesFamiliares = document.querySelectorAll(".edad");
+        const arrayDeLista = []
+
+        for (let i = 0; i < $edadesFamiliares.length; i++) {
+            arrayDeLista.push(Number($edadesFamiliares[i].value));
         }
-    return nuevosFormulariosFamiliares;    
+
+        escribirCalculosEdadesEnElementoPrecreado(arrayDeLista);
+
+        return false;
+    }
+    $documentBody.appendChild(nuevoFormulario);
+
+    return nuevoFormulario;
 }
+
+
+//aquí empezaría el cuerpo del script (?)
 
 const botonIngresarCantidadFamiliares = document.querySelector("#boton-ingresar-cantidad-familiares")
 
 botonIngresarCantidadFamiliares.onclick = function () {
 
     const $cantidadFamiliares = document.querySelector("#numero-personas-grupo-familiar").value;
+    const conjuntosFormulariosFamiliares = crearFormulariosFamiliares($cantidadFamiliares);
 
-    const conjuntosFormulariosFamiliares = crearFormularioFamiliar($cantidadFamiliares);
 
-
-return false;
+    return false;
 }
 
 
