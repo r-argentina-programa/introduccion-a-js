@@ -123,7 +123,9 @@ function crearFormulariosFamiliares(cantidadFamiliares) {
         const arrayDeLista = []
 
         for (let i = 0; i < $edadesFamiliares.length; i++) {
-            arrayDeLista.push(Number($edadesFamiliares[i].value));
+            
+                arrayDeLista.push(Number($edadesFamiliares[i].value));  //qué hago con los inputs vacíos?? me los cuenta como 0
+            
         }
 
         escribirCalculosEdadesEnElementoPrecreado(arrayDeLista);
@@ -149,6 +151,13 @@ botonIngresarCantidadFamiliares.onclick = function () {
     return false;
 }
 
+const botonEmpezarDeNuevo = document.querySelector("#boton-empezar-de-nuevo")
+botonEmpezarDeNuevo.onclick = function () {
+
+    document.location.reload(true);
+
+}
+
 
 /*
 TAREA:
@@ -157,3 +166,4 @@ Al hacer click en "calcular", mostrar en un elemento pre-existente el mayor sala
 
 Punto bonus: si hay inputs vacíos, ignorarlos en el cálculo (no contarlos como 0).
 */
+
