@@ -29,7 +29,7 @@ function generarFormulario() {
     }
 }
 
-let generarArrays = function () {
+let recopilarDatosUsuario = function () {
     arrayInputEdad = document.querySelectorAll(".input-edad")
     arrayInputEdad = valoresArrayANumeros(arrayInputEdad)
 
@@ -216,7 +216,7 @@ function agregaCalculos() {
 }
 
 $botonCalcular = document.querySelector("#calcular")
-$botonCalcular.onclick = generarArrays
+$botonCalcular.onclick = recopilarDatosUsuario
 
 $botonLimpiarFormulario = document.querySelector("#boton-limpiar-formulario")
 $botonLimpiarFormulario.onclick = limpiarFormulario
