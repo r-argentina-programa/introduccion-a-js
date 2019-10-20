@@ -42,5 +42,5 @@ $calcularTiempo.onclick = function () {
     minutosTotal = (minutosTotal < 10) ? "0" + minutosTotal : minutosTotal;
     segundosTotal = (segundosTotal < 10) ? "0" + segundosTotal : segundosTotal;
     let tiempoTotal = horasTotal + ":" + minutosTotal + ":" + segundosTotal;
-    document.querySelector("#tiempo-total").value = tiempoTotal;
+    document.querySelector("#tiempo-total").append(tiempoTotal);
 }
