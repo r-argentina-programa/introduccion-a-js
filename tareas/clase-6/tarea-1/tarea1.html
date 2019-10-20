@@ -8,27 +8,29 @@
     <link rel="stylesheet" href="estilos.css" />
   </head>
   <body>
-    <div id="container">
+    <div class="contenedor">
       <div class="q1">
         <label for="familiares"
           >Cuantos integrantes tiene tu familia?</label
         >
-        <input id="cantidad-familiares" type="number" min="0" max="50" name="familiares"/>
+        <input  type="number" name="familiares" min="1" max="50" id="integrantes"  />
+        <button type="button" id="agregar" >Agregar</button>
       </div>
 
-      <div id="info">
-        <p class="inicio-info">Ingresa sus edades</p>
-        <button type="submit" id="calcular">Calcular</button>
+      <div id="contenedor">
+        <p class="inicio-edades">Ingresa sus edades</p>
+        <div id="edades"></div>
+        <button type="submit" id="calcular" >Calcular</button>
       </div>
 
       <div id="resultado">
         <h2>Resultados</h2>
-        <p class="total">La edad mayor es: <span id="mayor-edad">35</span></span>
-        <p class="total">La edad menor es: <span id="menor-edad">15</span></p>
-        <p class="total">El promedio es: <span id="promedio">21.5</span></p>
+        <p class="total">La edad mayor es: <span id="mayor-edad"></span></span>
+        <p class="total">La edad menor es: <span id="menor-edad"></span></p>
+        <p class="total">El promedio es: <span id="promedio"></span></p>
         
       </div>
-      <button type="reset">Empezar de nuevo</button>
+      <button type="reset" id="borrar">Empezar de nuevo</button>
     </div>
 
     <script src="tarea1.js"></script>
