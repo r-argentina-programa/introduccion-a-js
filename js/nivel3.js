@@ -211,7 +211,7 @@
 
 // TAREA: Hagamos un nuevo título! Cambiá el contenido de nuestro 'h1' y ponele lo que quieras.
 
-
+    //titulo.textContent = 'chau!';
 
 
 
@@ -229,7 +229,7 @@
 
 // TAREA: Actualizá el valor del atributo 'src' de nuestra etiqueta 'img' a "img/kittens.jpeg".
 
-
+    document.querySelector('img').src = 'img/kittens.jpeg';
 
 
 
@@ -254,8 +254,8 @@
 
 // Tarea: Obtené cualquier elemento de la página y cambiale algunos estilos.
 
-
-
+    //titulo.style.backgroundColor = 'blue';
+    //titulo.style.fontSize = '100px';
 
 
 
@@ -285,7 +285,10 @@
 // P.S. También les podés dar estilos al nuevo nodo que creaste.
 
 
-
+    const nodoImagen = document.createElement('img'); //<img>
+    //ahora le agregamos un atributo
+    nodoImagen.src = 'img/woman_bw.jpg';
+    document.querySelector('header').appendChild(nodoImagen); //appenChild agrega un "hijo"
 
 
 
