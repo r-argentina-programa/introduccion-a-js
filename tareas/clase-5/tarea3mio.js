@@ -6,48 +6,59 @@
 // 3. obtener el número más grande y mostrarlo en un <em> pre-creado con el texto "El número más grande es..."
 // 4. obtener el número que más se repite y mostrarlo en un <em> pre-creado con el texto "El número más frecuente es..."
 
-let nodoLi = document.querySelectorAll(".lista");
-let textoEm1 = document.querySelector(".em1");
-let textoEm2 = document.querySelector(".em2");
-let textoEm3 = document.querySelector(".em3");
-let textoEm4 = document.querySelector(".em4");
+let nodoLi = document.querySelectorAll(".item");
+let textoEm1 = document.querySelector("#em1");
+let textoEm2 = document.querySelector("#em2");
+let textoEm3 = document.querySelector("#em3");
+let textoEm4 = document.querySelector("#em4");
 let listaArray = [];
 
 for (let i = 0; nodoLi.length > i; i++) {
-	listaArray = listaArray + nodoLi[i].innerText;
+	listaArray.push(nodoLi[i].innerText);
 }
 
-function calcularPromedio() {
+function calcularPromedio(numeros) {
 	let acumulador = 0;
-	for (let i = 0; listaArray.length > i; i++) {
-		acumulador = acumulador + Number(listaArray[i]);
+	for (let i = 0; numeros.length > i; i++) {
+		acumulador = acumulador + Number(numeros[i]);
 	}
-	acumulador = acumulador / listaArray.length;
-	let $acumulador = document.createTextNode(acumulador);
+	acumulador = acumulador / numeros.length;
+	return acumulador;
+}
+
+function calcularMayor(numeros) {
+	let acumulador = 0;
+	for (let i = 0; numeros.length > i; i++) {
+		if (numeros[i] > acumulador) {
+			acumulador = numeros[i];
+		}
+	}
+	return acumulador;
+}
+
+function calcularMenor(numeros) {
+	let acumulador = Number;
+	for (let i = 0; numeros.length > i; i++) {
+		if (numeros[i] < acumulador) {
+			acumulador = numeros[i];
+		}
+	}
+	return acumulador;
+}
+
+function imprimirEnPantallaPromedio(numeros) {
+	let $acumulador = document.createTextNode(calcularPromedio(numeros));
 	textoEm1.appendChild($acumulador);
 }
-calcularPromedio();
-
-function calcularMayor() {
-	let acumulador = 0;
-	for (let i = 0; listaArray.length > i; i++) {
-		if (listaArray[i] > acumulador) {
-			acumulador = listaArray[i];
-		}
-	}
-	let $acumulador = document.createTextNode(acumulador);
+function imprimirEnPantallaMayor(numeros) {
+	let $acumulador = document.createTextNode(calcularMayor(numeros));
 	textoEm2.appendChild($acumulador);
 }
-calcularMayor();
-
-function calcularMenor() {
-	let acumulador = Number;
-	for (let i = 0; listaArray.length > i; i++) {
-		if (listaArray[i] < acumulador) {
-			acumulador = listaArray[i];
-		}
-	}
-	let $acumulador = document.createTextNode(acumulador);
+function imprimirEnPantallaMenor(numeros) {
+	let $acumulador = document.createTextNode(calcularMenor(numeros));
 	textoEm3.appendChild($acumulador);
 }
-calcularMenor();
+
+imprimirEnPantallaPromedio(listaArray);
+imprimirEnPantallaMayor(listaArray);
+imprimirEnPantallaMenor(listaArray);
