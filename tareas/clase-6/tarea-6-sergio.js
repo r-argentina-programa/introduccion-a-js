@@ -16,18 +16,41 @@ $botonOk.onclick = function(){
     let cantidadIntegrantes = Number(document.querySelector('#cantidad-integrantes').value);
     console.log(cantidadIntegrantes);
 
-    for (i= 0; i < cantidadIntegrantes.length; i++){
+    for (i= 0; i < cantidadIntegrantes; i++){
         let div = document.createElement('div');
         let label = document.createElement('label');
-        label.textContent = 'Edad del integrante nro';
+        let input = document.createElement('input');
+        label.textContent = 'Edad del integrante nro ' + (i+1);
 
         div.appendChild(label);
+        div.appendChild(input);
         divFamilia.appendChild(div);
     }
 
+    let $botonCalcular = document.createElement('button');
+    $botonCalcular.innerHTML = 'calcular';
+    $botonCalcular.id = 'boton-calcular';
+    divFamilia.appendChild($botonCalcular);
 
+    
+    
+    $botonCalcular.onclick = function(){
+        edadesFamilia = document.querySelectorAll('div > input');
+        let arrayEdadesFamilia = [];
+        let menor;
+        let mayor = Math.max.apply(arrayEdadesFamilia)
+        let promedio;
+        for (let i = 0; i < edadesFamilia.length; i++){
+            arrayEdadesFamilia.push(edadesFamilia[i].value);
+        }
 
+        
+        let pResultados = document.createElement('p');
+        pResultados.textContent = `El mayor es ${mayor}`;
+        divFamilia.appendChild(pResultados);
 
+        
+    }
 
     return false
 }
