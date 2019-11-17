@@ -1,3 +1,25 @@
+var numero1 = 5;
+var numero2 = 5;
+var numero3 = 3;
+var numero4 = 5;
+var numero5 = 5;
+
+function promedio(numero1, numero2,numero3,numero4,numero5) {
+  
+  sumaNumeros = numero1 + numero2 + numero3 + numero4 + numero5;
+  
+  promedioNumeros = sumaNumeros / 5;
+
+  alert(promedioNumeros);
+}
+
+promedio(numero1,numero2,numero3,numero4,numero5);
+
+
+
+
+
+
 //Link original y créditos a https://github.com/CodeGuppyPrograms/CodingChallenges (contiene las respuestas).
 
 /*
@@ -10,17 +32,46 @@ Desafío de programación #1: Imprimí los números del 1 al 10
 
  Resultado: 10 9 8 7 6 5 4 3 2 1
 
+*/
+// let numeroQueSeImprime = 10;
+
+// while (numeroQueSeImprime > 0) {
+//   console.log(numeroQueSeImprime);
+
+//   numeroQueSeImprime--;
+// }
+
+
+/*
  Desafìo de programación  #2: Imprimí los números impares del 1 al 100
 
  1 3 5 ... 99
+*/
 
+// let numeroQueSeImprime = 1
+
+// while (numeroQueSeImprime < 100) {
+//   console.log(numeroQueSeImprime);
+
+//   numeroQueSeImprime = numeroQueSeImprime + 2;
+// }
+
+/*
 Desafío de programación #3: Imprimí la tabla de multiplicación del 7
 
  7x0 = 0
  7x1 = 7
  ...
  7x9 = 63
+*/
 
+// const numeroBase = 7;
+
+// for (i = 0; i <= 10; i++) {
+//   console.log(numeroBase * i);
+// }
+
+/*
 Desafío de programación #4: Imprimí todas las tablas de multiplicación del 1 al 9
 
  1x0 = 0
@@ -32,46 +83,242 @@ Desafío de programación #4: Imprimí todas las tablas de multiplicación del 1
  ...
  ...
  9x9 = 81
+*/
 
+/*
+
+function tablaDeMultiplicar(numeroBase) {
+
+  for (i = 0; i <= 10; i++) {
+    numeroProducto = numeroBase * i;
+    console.log(numeroProducto);
+  }
+}
+
+function desafioCuatro() {
+  tablaDeMultiplicar(1);
+  tablaDeMultiplicar(2);
+  tablaDeMultiplicar(3);
+  tablaDeMultiplicar(4);
+  tablaDeMultiplicar(5);
+  tablaDeMultiplicar(6);
+  tablaDeMultiplicar(7);
+  tablaDeMultiplicar(8);
+  tablaDeMultiplicar(9);
+  tablaDeMultiplicar(10);
+}
+
+// desafioCuatro();
+
+/*
 Desafío de programación #5: Calcula el resultado de la suma de los numeros del 1 al 10 en un array.
  [1,2,3,4,5,6,7,8,9,10]
 
- 1 + 2 + 3 + ... + 10 = ? //hacerlo con un array y un bucle
+ 1 + 2 + 3 + ... + 10 = ? //hacerlo con un array y un bucle */
 
-Desafío de programación #6: Calcula 10! (10 factorial)
+// let resultadoSuma = 0;
+// const NUMEROS_DE_UNO_A_DIEZ = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+// for (i = 0; i < NUMEROS_DE_UNO_A_DIEZ.length; i++) {
 
- 10 * 9 * 8 * ... * 1
+//   resultadoSuma = resultadoSuma + NUMEROS_DE_UNO_A_DIEZ[i];
+// }
+// console.log(`El resultado de la suma es ${resultadoSuma}`);
 
-Desafío de programación #7: Calcula la suma de todos los números impares mayores que 10 y menores que 30
 
-Desafío de programación #8: Crea una función que convierta de Celsius a Fahrenheit
+/*Desafío de programación #6: Calcula 10! (10 factorial)
+
+ 10 * 9 * 8 * ... * 1*/
+
+// 10 x x-1
+
+// let numeroFactorial = 10;
+
+// for (i = 10; i > 0; i--) {
+
+//   numeroFactorial = numeroFactorial * i;
+
+// }
+
+// console.log(`El resultado es ${numeroFactorial}`);
+
+/*Desafío de programación #7: Calcula la suma de todos los números impares mayores que 10 y menores que 30*/
+
+/*let numero = 0;
+
+for (i = 11; i < 30; i = i + 2) {
+
+numero = numero + i;
+
+}
+console.log(`El resultado es ${numero}`);*/
+
+
+/*Desafío de programación #8: Crea una función que convierta de Celsius a Fahrenheit
+//function celsiusAFaranheit(celsius) {
+
+//return (celsius * 9/5) + 32 ;
+
+//}
+
+//Celsius to faranheit;
+//let celsius = prompt("Ingresa los grados centígrados");
+
+//console.log(celsiusAFaranheit(celsius));
+
 
 Desafío de programación #9: Crea una función que convierta de Fahrenheit a Celsius
+//Faranheit to celsius
 
-Desafío de programación #10: Calcula la suma de todos los números en un array de números
+/*function faranheitACelsius(faranheit) {
+	return (faranheit -32) *5/9;
+}
 
-Desafío de programación #11: Calcula el promedio de todos los números en un array de números. (en una función)
+let gradosFaranheit = prompt("Ingresa los grados faranheit");
 
-Desafío de programación #12: Crea una función que reciba un array de números y devuelva un array conteniendo solo los números positivos
+console.log(faranheitACelsius(gradosFaranheit));*/
 
-Desafío de programación #13: Find the maximum number in an array of numbers
 
-Desafío de programación #14: Imprimir los primeros 10 dígitos de Fibonacci sin recursión
+/*Desafío de programación #10: Calcula la suma de todos los números en un array de números
+/*let numerosQueSeSuman = [10, 20, 30, 40, 50];
+let totalNumeros=0;
+
+for (i=0; i<numerosQueSeSuman.length; i++) {
+
+totalNumeros = totalNumeros + numerosQueSeSuman[i];
+}
+
+console.log(totalNumeros);*/
+
+/*Desafío de programación #11: Calcula el promedio de todos los números en un array de números. (en una función)
+let numerosAPromediar = [10, 20, 30, 40, 50];
+let totalNumeros = 0;
+
+function promedio(numerosAPromediar) {
+	for (i=0; i<numerosAPromediar.length; i++) {
+	totalNumeros = totalNumeros + numerosAPromediar[i];}
+
+	return totalNumeros/numerosAPromediar.length;
+}
+
+console.log(promedio(numerosAPromediar));
+
+Desafío de programación #12: Crea una función que reciba un array de números 
+y devuelva un array conteniendo solo los números positivos
+*/
+
+// let numerosAleatorios = [-1, -2, 3, -10, -5, 10, 100, -25, 50, 150];
+// let numerosBajoAnalisis = 0; 
+
+// function numerosPositivos(numerosAleatorios) {
+//   for (i = 0; i < numerosAleatorios.length; i++) {
+//     numerosBajoAnalisis = numerosAleatorios[i];
+//     if (numerosBajoAnalisis < 0) {
+//      numerosAleatorios.splice(i, 1);
+//      i--;
+//     }
+//   } 
+// }
+
+// numerosPositivos(numerosAleatorios);
+
+// console.log(`Los numeros positivos son ${numerosAleatorios}`);
+
+/*Desafío de programación #13: Find the maximum number in an array of numbers*/
+
+// let numerosAleatorios = [-1, -2, 3, -10, -5, 10, 100, -25, 50, 150];
+// let numeroMasAlto = numerosAleatorios[0];
+
+// function calcularNumeroMasAto(numerosAleatorios) {
+
+//   for(i = 0; i< numerosAleatorios.length; i++) {
+//     if(numerosAleatorios[i] > numeroMasAlto) {
+//       numeroMasAlto = numerosAleatorios[i];
+//     }
+//   }
+// }
+
+// calcularNumeroMasAto(numerosAleatorios);
+
+// console.log(`El numero más alto de todos es ${numeroMasAlto}`);
+
+/*Desafío de programación #14: Imprimir los primeros 10 dígitos de Fibonacci sin recursión
 
 Fibonacci (lo buscan en google si no lo saben o no se acuerdan)
 El resultado debería ser: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55
+*/
 
-Desafío de programación #15: Crear una función que encuentre el número n de Fibonacci usando recursión
+//FIBONACCI
 
-Desafío de programación #16: Crear una función que dado un número retorne un Boolean (true/false) dependiendo si es primo o no.
+// let numeroAnterior;
+// let numeroTemporal = 0;
+// let numeroSiguiente = 1;
 
-Desafío de programación #17: Calcular la suma de los dígitos positivos de un número entero positivo
+
+// for (i = 0; i <= 50; i++) {
+//   numeroAnterior = numeroTemporal;
+//   numeroTemporal = numeroSiguiente;
+//   numeroSiguiente = numeroAnterior + numeroSiguiente;
+//   console.log(numeroAnterior);
+// }
+
+/*Desafío de programación #15: Crear una función que encuentre el número n de Fibonacci usando recursión*/
+
+// function numeroFibonacci(posicionN) {
+//   if (posicionN < 2) {
+//     return posicionN;
+//   }
+//   return numeroFibonacci(posicionN - 1) + numeroFibonacci(posicionN - 2);
+// }
+// let posicionN = numeroFibonacci(10);
+
+// console.log(posicionN);
+
+
+/*Desafío de programación #16: Create una función que dado un número retorne un Boolean (true/false) dependiendo si es primo o no.
+Aclaración: Los números primos son aquellos que tienen exactamente 4 divisores enteros.
+Ejemplo:
+   1 NO es primo porque tiene 2 divisores enteros (1, -1)
+   2 es primo porque sólo puede dividirse por (1,-1,2,-2)
+   3 es primo porque sólo puede dividirse por (1,-1,3,-3)
+   4 NO es primo porque se puede dividir por (1,-1,2,-2,4,-4)
+   5 es primo porque sólo puede dividirse por (1,-1,5,-5)
+   6 NO es primo porque se puede dividir por (1,-1,2,-2,3,-3,6,-6)
+   ... y así
+*/
+
+// function numerosPrimos(n) {
+
+//   if (n < 2) {
+//     return false;
+//   } else {
+
+//     for (i = 2; i < n; i++) {
+//       if (n % i === 0) {
+//         return false;
+//       }
+//     }
+//     return true;
+//   }
+// }
+// console.log(numerosPrimos(1523));
+
+/*Desafío de programación #17: Calcular la suma de los dígitos positivos de un número entero positivo
 Ejemplo:
    123 = 1 + 2 + 3 = 6
    2 = 2
    1234 = 1 + 2 + 3 + 4 = 10
+*/
 
-Desafío de programación #18: Imprimir los primeros 100 números primos
+// function sumaDeDigitos(n) {
+//  cadenaTexto = n; 
+//  cadenaNumeros = cadenaTexto.toCharArray(); 
+
+//  console.log(cadenaNumeros);
+// }
+
+
+// sumaDeDigitos(12345);
+/*Desafío de programación #18: Imprimir los primeros 100 números primos
 
 Desafío de programación #19: Crear una función que retorne un array con los primeros números "n-primos" mayores que un número particular definido "alComienzo"
 Ejemplo:
@@ -152,4 +399,4 @@ Desafío de programación #50. Create a function that will receive n as argument
 Desafío de programación #51. Find the frequency of characters inside a string. Return the result as an array of objects. Each object has 2 fields: character and number of occurrences.
 Desafío de programación #52. Calculate Fibonacci(500) with high precision (all decimals)
 Desafío de programación #53. Calculate 70! with high precision (all decimals)
- */
+*/
