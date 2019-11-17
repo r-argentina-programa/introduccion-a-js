@@ -125,7 +125,8 @@
 //       Utilizá console.log para ver lo que obtuviste!
 
 
-
+// const nuestroTitulo = document.querySelector("h1");
+// console.log(nuestroTitulo);
 
 
 
@@ -147,7 +148,8 @@
 // TAREA: Obtené todos los elementos <li> de la página en una variable llamada mediaLinks.
 
 
-
+// const mediaLinks = document.querySelectorAll("li");
+// console.log(mediaLinks);
 
 
 
@@ -162,8 +164,13 @@
 // TAREA: ¿Te acordás de los bucles del nivel 2? Usando lo que sabés de ellos, realizá iteraciones
 //      sobre cada item de mediaLinks y mostralos en pantalla con console.log
 
+// for (let i = 0; i < mediaLinks.length; i++) {
+//     console.log(mediaLinks[i].textContent);
+// }
 
-
+// te content muestra todo;
+// inner text muestra solo lo visible (no lo oculto)
+// inner HTML permite acceder al HTML y modificarlo;
 
 
 
@@ -217,14 +224,17 @@
 
     Ejemplo:
 
-    const nuestroTwitter = document.querySelector('.twitter');
-    ourTwitter.id = "sorpresa";
-*/
 
-// TAREA: Actualizá el valor del atributo 'src' de nuestra etiqueta 'img' a "img/kittens.jpeg".
-
+   const nuestroTwitter = document.querySelector('.twitter');
+    nuestroTwitter.id = "sorpresa";
+    
 
 
+// TAREA: Actualizá el valor del atributo 'src' de nuestra etiqueta 'img' a "img/kittens.jpeg".*/
+
+
+/*const miImagen = document.querySelector("img");
+miImagen.src = "img/kittens.jpeg";*/
 
 
 
@@ -248,9 +258,10 @@
 
 // Tarea: Obtené cualquier elemento de la página y cambiale algunos estilos.
 
-
-
-
+// miTitulo = document.querySelector("h1");
+// miTitulo.style.color = "red";
+// miTitulo.style.fontSize = "500px";
+// miTitulo.style.backgroundColor = "blue";
 
 
 /*
@@ -270,13 +281,20 @@
     const textoParrafo = document.createTextNode('Yeeee!');
     nuevoParrafo.appendChild(textoParrafo);
     nodoPagina.appendChild(nuevoParrafo);
-*/
+    */
 
 // Tarea: Todavía seguís teniendo a los gatitos en tu pantalla? A mí me gusta el logo y los gatitos.
 //       Creá una nueva imagen con nuestro logo como fuente, y ponela
 //       en nuestra cabecera.
 //
 // P.S. También les podés dar estilos al nuevo nodo que creaste.
+
+// const pageNode = document.querySelector("header");
+// const newImage = document.createElement("img");
+// newImage.src = "img/kittens.jpeg";
+// newImage.style.border ="2px solid red";
+// newImage.style.height = "auto";
+// pageNode.appendChild(newImage);
 
 
 

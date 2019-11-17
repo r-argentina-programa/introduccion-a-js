@@ -20,7 +20,6 @@
     Cuando estás escribiendo código que querés que la máquina ejecute, ponelos AFUERA de los bloques de comentario.
 */
 
-
 /*
     Mostrando texto
     ===============
@@ -39,22 +38,25 @@
 */
 
 // Tarea: Ahora te toca a vos! Acá abajo escribí una alerta que diga "Hola mundo!"
-
+// alert("Hello World");
 
 // Tarea: Una vez que la alerta funcione, comentala poniendo '//' en la línea donde está el código y guardá los cambios.
 // Una vez que recargás la página, ya no debería aparecer más.
 
-
 // Tarea: Ahora probá hacer un console.log de un mensaje que queramos.
-
+// console.log("Hello World");
 
 // Consejo: Para recargar el navegador podemos apretar 'CMD + R' en Mac y 'CTRL + R' en
 //      Windows.
 
-
 // Consejo: El atajo del teclado para guardar cambios a un archivo es 'CMD + S' en Mac y 'CTRL + S' en
 //      Windows.
 
+// let variable1 = "Hello World";
+// console.log("el nombre de la variable es " + variable1)
+
+// let name = "Fabrizio"
+// console.log("Mi nommbre es " + name)
 
 /*
     Variables
@@ -102,6 +104,11 @@
 
 // TAREA: Creá 2 variables indefinidas, llamadas numeroUno y numeroDos.
 
+// let numeroUno;
+// let numeroDos;
+
+// let saludo = "hola mundo";
+// alert(saludo);
 
 /*
     Podés usar el nombre de tus variables pare representar qué información tienen adentro, por ejemplo:
@@ -114,18 +121,19 @@
 
 // Crear 2 variables nuevas, una con tu nombre, la segunda con tu edad. Dales un nombre apropriado y
 // mostralas con un alert.
-
+// let name = "Alexis";
+// let age = 30;
+// alert("Mi nombre es " + name + " y mi edad es " + age);
 
 // Consejo: para mostrar 2 variables de texto al mismo tiempo, las podés unir usando el signo '+'. Ejemplo:
 
 /*
-* let nombre = 'Fabricio'
-* let apellido = 'Sodano'
-*
-* alert(nombre + apellido)
-*
-* */
-
+ * let nombre = 'Fabricio'
+ * let apellido = 'Sodano'
+ *
+ * alert(nombre + apellido)
+ *
+ * */
 
 /*
     Constantes
@@ -150,10 +158,12 @@
 
 // TAREA: Crear una constante y mostrarla con un alert
 
+// const IVA = 21;
+// alert(IVA);
 
 // TAREA: Intentar asignar un valor a una constante y ver qué pasa (mirar la consola)
 
-
+// IVA = 20;
 // Consejo: No te olvides de comentar (//) los alerts y los errores intencionales (como en la tarea anterior) para
 // que los alerts no aparezcan cada vez, y para que los errores no hagan que el programa se detenga.
 
@@ -183,6 +193,10 @@
 // la 1ra variable multiplicada (con el operador *) por la 2nda variable.
 // Mostrar el valor de resultadoMultiplicacion con un alert o un console.log
 
+// let diez = 10;
+// let tres = 3;
+// let resultadoMultiplicacion = diez * tres;
+// alert(resultadoMultiplicacion);
 
 /*
     Funciones
@@ -232,6 +246,13 @@
          }
 */
 
+// function duplicate(number) {
+//     return number * 2;
+// };
+
+// console.log(duplicate(10));
+// alert(duplicate(20));
+
 // TAREA: Es tu turno de crear una función!
 
 // Creá una función llamada 'sumar'
@@ -239,17 +260,60 @@
 // Escribí código para que devuelva (return) la suma de numero1 y numero2
 // Ejecutá la función sumar y mostrá su resultado en la consola
 
+function sumar(numero1, numero2) {
+  return numero1 + numero2;
+}
+
+// console.log(sumar(10, 50))
 
 // TAREA: Ahora creemos otra función llamada 'restar'
 //       Que acepte 2 números como parámetro y los reste, y que devuelva ese valor.
 // Ejecutá la función con los números 5 y 1 y mostralos con console.log
 
+function restar(numero1, numero2) {
+  return numero1 - numero2;
+}
+
+// console.log(restar(5,1))
 
 // Consejo: Sabías que en vez de pasar los números directamente a tu función podés crear variables con esos números
 // y pasarlos como parámetros? Probalo!
 
+// let anioNacimiento = 1989;
+// let anioActual = 2019;
+// let miEdad = restar(anioActual, anioNacimiento);
+
+// console.log(miEdad);
+
+// function saludo(nombre) {
+//     return "Hola " + nombre;
+// }
+
+// let miNombre = prompt("Cual es tu nombre?");
+
+// alert(saludo(miNombre));
 // Consejo: Dejá las funciones como están, no las comentes, las vamos a usar de nuevo.
 
+//  function calcularEdadUsuario(anioNacimiento, anioActual) {
+//      return anioActual - anioNacimiento;
+//  };
+
+//  const anioNacimiento = Number(prompt("En que año naciste?"));
+//  const anioActual = Number(prompt("En que año estamos?"));
+//  const edadUsuario = calcularEdadUsuario(anioNacimiento, anioActual)
+
+//  alert("Tu edad es " + edadUsuario + " años");
+
+//  function calcularSalarioAnual (salarioMensual){
+//      const totalSalariosAnuales = 13;
+//      return salarioMensual * totalSalariosAnuales;
+//  }
+
+//  const salarioMensual = Number(prompt("Cual es tu sueldo mensual en USD?"));
+
+//  const SalarioAnual= Number(calcularSalarioAnual(salarioMensual));
+
+//  alert("Tu sueldo anual es de " + SalarioAnual + " Dolares")
 /*
     Condicionales If-Else
     ==================
@@ -311,6 +375,21 @@
     1 + 1 === 3 evalía a FALSO (FALSE), porque 1 + 1 no es igual a 3.
 */
 
+// let resultado;
+// const operator = prompt("Ingresa un operador aritmético (+, -, *, /");
+// const numero1 = Number(prompt("Elegí un número!"));
+// const numero2 = Number(prompt("Elegí otro número!"));
+
+// if(operator === "+") {
+//     resultado = sumar(numero1, numero2);
+// } else {
+//     resultado = restar(numero1, numero2);
+// }
+
+// alert("El resultado de " + numero1 + operator + numero2 + " es " + resultado);
+
+// alert(`El resultado de ${numero1} ${operator} ${numero2} es ${resultado}`);
+
 // TAREA: Tenemos 2 funciones de la tarea anterior -- 'sumar' y 'restar'
 //      Vamos a decirle a la máquina qué función tiene que correr, dependiendo del operador artmético (+, -, /, *, etc.)
 //
@@ -328,7 +407,6 @@
 //
 
 // TAREA: Cambiar el operador a '-', y fijarse que llame a la función 'restar' en vez de a la de 'sumar'.
-
 
 /*
     'If' - 'Else if' - 'Else'
@@ -360,9 +438,13 @@
 
 // TAREA: Creemos 2 funciones más: dividir y multiplicar.
 
+function multiplicar(numero1, numero2) {
+  return numero1 * numero2;
+}
 
-
-
+function dividir(numero1, numero2) {
+  return numero1 / numero2;
+}
 
 // TAREA: Reescribamos el if-else que teníamos y extendámolos, agregando:
 //       'else if' el 'operador' es igual a '-' - llamar a la función 'restar'
@@ -370,9 +452,20 @@
 //       'else if' el 'operador' es igual a '*' - llamar a la función 'multiplicar'.
 //       else console.log - "Perdón, no conozco ese operador".
 
+// if (operator === "+") {
+//   resultado = sumar(numero1, numero2);
+// } else if (operator === "-") {
+//   resultado = restar(numero1, numero2);
+// } else if (operator === "*") {
+//   resultado = multiplicar(numero1, numero2);
+// } else if (operator === "/") {
+//   resultado = dividir(numero1, numero2);
+// } else {
+//   alert("Error");
+//   resultado = "No existe el operador aritmético";
+// }
 
-
-
+// alert(`El resultado de ${numero1} ${operator} ${numero2} es ${resultado}`);
 
 /*
     Operadores Booleanos
@@ -397,10 +490,11 @@
     let maradonaMejorQuePele = true;
 */
 
-
 // TAREA: usando el operador !, Intentá invertir una variable (de true a false, o de false a true) e imprimí el
 // resultado en la consola.
 
+let elPesoEsEstable = true;
+console.log(!elPesoEsEstable);
 
 ////////////////////////////////////////////////////////////////////////////
 // Felicitaciones! Terminaste el Nivel 1 de la introducción a JavaScript! //

@@ -42,29 +42,30 @@
 // TAREA: Crea tu propio array, llamado comidasFavoritas, y escribi dentro algunas
 //       cosas que te gustan.
 
-
+// const comidasFavoritas = ["pizza", "hamburguesa", "pancho", "pasta", "asado"];
 
 
 
 
 
 /*
-    Tamaño del Array
-    ================
-    
-    Podemos verificar fácilmente cuántos elementos tenemos en nuestro Array con una propiedad:
-    '.length'
+Tamaño del Array
+================
 
-    Ejemplo:
+Podemos verificar fácilmente cuántos elementos tenemos en nuestro Array con una propiedad:
+'.length'
 
-    let cosasAleatorias = [2, 'libro', 'hoy es Sabado', 10];
-    console.log(cosasAleatorias.length); // Obtendremos 4.
+Ejemplo:
+
+let cosasAleatorias = [2, 'libro', 'hoy es Sabado', 10];
+console.log(cosasAleatorias.length); // Obtendremos 4.
 */
 
 // TAREA: Verifique cuántos valores tiene en su array comidasFavoritas.
 // imprimi utilizando console.log el resultado.
 
 
+// console.log(" El array tiene " + comidasFavoritas.length + " elementos")
 
 
 
@@ -90,7 +91,8 @@
 
 // TAREA: Obtené el tercer elemento de tu array comidasFavoritas e imprimilo utilizando console.log.
 
-
+// let tercerElemento = comidasFavoritas[2]
+// console.log(`El tercer elemento del array es ${tercerElemento}`)
 
 
 
@@ -113,15 +115,16 @@
 */
 
 // TAREA: Toma tu array de comidasFavoritas y reemplaza el primer valor
-// con cualquier otra cosa.
+// // con cualquier otra cosa.
+// console.log(comidasFavoritas);
+// comidasFavoritas[0] = "lasagna";
 
 
 
 
+// // TAREA: console.log todo el array para verificar.
 
-
-// TAREA: console.log todo el array para verificar.
-
+// console.log(comidasFavoritas);
 
 
 
@@ -146,13 +149,14 @@
 
 // TAREA: Extendamos tu lista de comidasFavoritas y agreguemos un valor más.
 
+// comidasFavoritas.push("helado")
 
 
 
 
+// // TAREA: console.log todo el array para verificar.
 
-// TAREA: console.log todo el array para verificar.
-
+// console.log(comidasFavoritas);
 
 
 
@@ -181,8 +185,10 @@
 
 // TAREA: Intenta crear un array como una constante y modifica los valores que contiene.
 
-
-
+// const colores = ["rojo", "blanco", "verde"];
+// colores[1] = "Azul";
+// console.log(colores);
+// console.log(colores);
 
 
 
@@ -191,7 +197,7 @@
 //       con notación de corchetes (array[1]) y
 //       asigna un nuevo array completamente nuevo a la constante
 
-
+// LO HICIMOS ARRIBA, CON PUSH FUNCIONA IGUAL QUE CON []
 
 
 
@@ -246,6 +252,12 @@
 // TAREA: Usando un bucle 'while', decile a tu computadora que registre los números de
 //       diez a uno.
 
+//  let numero1 = 10;
+
+//  while (numero1>= 1) {
+//      console.log(numero1);
+//      numero1 = numero1 - 1;
+//  }
 
 
 
@@ -268,10 +280,28 @@
 
 // TAREA: Imprimí cada 3er número del 3 al 22 usando un 'bucle for'.
 
+// let i;
+
+// for (i = 3; i <= 22; i= i + 3) {
+//     console.log(i);
+// }
+
+// TAREA HACER PROMEDIO DE NOTAS PARA PROBAR (FUNCION CALUCLAR PROMEDIO QUE TOME COMO PARAMETRO UN ARRAY)
 
 
+// const notasExamenes = [10, 9, 5, 8]
+// let promedioNotas;
 
+// function calcularPromedio(notasObtenidas) {
+//     let totalNotas = 0;
+//     for (i = 0; i < notasObtenidas.length; i++) {
+//         totalNotas = totalNotas + notasObtenidas[i];
+//     }
+//     return promedioNotas = totalNotas / notasObtenidas.length;
+// }
 
+// console.log("Tu promedio es de " + calcularPromedio(notasExamenes));
+// console.log(`Tu promedio es de ${promedioNotas}`);
 
 /*
     Iterando a traves de Arrays
@@ -286,17 +316,22 @@
     Nota: i++ es otra forma de expresar i = i + 1.
 
     Ejemplo:
-
     const animales = ['gatos', 'perros', 'caballos'];
-
+    
     for(let i = 0; i < animales.length; i++){
         console.log('Me gustan los ' + animales[i]); //animales[i] se lee "animales en i"
     }
+    
 */
 
 // TAREA: Probalo con tu comidasFavoritas array.
 
 
+// const comidasFavoritas = ["pizza", "hamburguesa", "pancho", "pasta", "asado"];
+
+// for (i = 0; i < comidasFavoritas.length; i++) {
+//     console.log("Me gusta mucho comer " + comidasFavoritas[i]);
+// }
 
 
 
@@ -304,7 +339,7 @@
 /*
     Bucles y Logica
     ===============
-    
+
     Traigamos bucles junto con las declaraciones if / else que aprendimos en
     nivel 1, y hagamos algo interesante.
 
@@ -339,11 +374,17 @@
 // 16% 4 = 0 - en 16 tenemos 4 * 4
 // 19% 4 = 3 - en 19 tenemos 4 * 4 + 3, etc.
 
-
-
-
-
-
+for (i = 1; i <= 50; i++) {
+    if (i % 3 === 0 && i % 5 === 0) {
+        console.log("FizzBuzz");
+    } else if (i % 3 === 0) {
+        console.log("Fizz");
+    } else if (i % 5 === 0) {
+        console.log("Buzz");
+    } else {
+        console.log(i);
+    }
+} 
 //////////////////////////////////////////////////////////////////////////////
 // ¡Felicidades! ¡Has terminado el Nivel 2 de JavaScript Básico!            //
 // Levántate, estira las piernas y celebra tu logro.                        //
