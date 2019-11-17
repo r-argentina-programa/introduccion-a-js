@@ -8,13 +8,32 @@ Punto bonus: Crear un botón para "empezar de nuevo" que empiece el proceso nuev
  borrando los inputs ya creados (investigar cómo en MDN).
 */
 
+function calcularMayor (array){
+    let contenedor = array[0];
+    for (i = 0; i < array.length; i++){
+        if (contenedor < array[i]){
+            contenedor = array[i];
+        }
+    }
+    return contenedor;
+}
+
+function calcularMenor (array){
+    let contenedor = array[0];
+    for (i = 0; i < array.length; i++){
+        if (contenedor > array[i]){
+            contenedor = array[i];
+        }
+    }
+    return contenedor;
+}
 
 let $botonOk = document.querySelector('#boton-ok');
 let divFamilia = document.querySelector('#div-familia');
 $botonOk.onclick = function(){
 
     let cantidadIntegrantes = Number(document.querySelector('#cantidad-integrantes').value);
-    console.log(cantidadIntegrantes);
+    
 
     for (i= 0; i < cantidadIntegrantes; i++){
         let div = document.createElement('div');
@@ -37,17 +56,20 @@ $botonOk.onclick = function(){
     $botonCalcular.onclick = function(){
         edadesFamilia = document.querySelectorAll('div > input');
         let arrayEdadesFamilia = [];
-        let menor;
-        let mayor = Math.max.apply(arrayEdadesFamilia)
-        let promedio;
+    
         for (let i = 0; i < edadesFamilia.length; i++){
             arrayEdadesFamilia.push(edadesFamilia[i].value);
         }
 
+        let menor = calcularMenor(arrayEdadesFamilia);
+        let mayor = calcularMayor(arrayEdadesFamilia);
         
         let pResultados = document.createElement('p');
-        pResultados.textContent = `El mayor es ${mayor}`;
+        
+        pResultados.textContent = `El mayor es ${mayor}, el menor es ${menor} y el promedio es /////`;
         divFamilia.appendChild(pResultados);
+
+        
 
         
     }
