@@ -22,6 +22,24 @@ $botonCalcular.onclick = function()
 //cuando el usuario haga click en el botón "calcular", mostrar el salario mensual
 // en una caja de texto deshabilitada. --> <input type="text" disabled id="salario-mensual"/>
 
+const $botonCalcular = document.querySelector(".calculate");
+$botonCalcular.onclick = function calcularSalarioMensual() {
+  let salarioAnual = Number(document.querySelector(".salario_anual").value);
+  let salarioMensual = document.querySelector(".resultado");
+  let resultadoDivision = salarioAnual / 12
+  salarioMensual.textContent = `Tu sueldo mensual es de ${resultadoDivision}`;
+  salarioMensual.style.color = "red";
+  return false;
+}
+
+let $botonReset = document.querySelector(".reset");
+
+$botonReset.onclick = function () {
+  let salarioMensual = document.querySelector(".resultado");
+  salarioMensual.textContent = ``;
+}
+
+
 //TAREA: En otro archivo html (no Index) y otro archivo js (no tarea-clase-5.js),
 // creá un formulario que capture el primer nombre, segundo nombre, apellido/s y edad del usuario
 // también vamos a crear un <h1> que diga Bienvenido!
@@ -48,6 +66,18 @@ Ejemplo form:
 // cada dato.
 // al apretar el botón "Calcular tiempo total", debe mostrar en un
 // <strong> pre-creado el tiempo total de los videos.
+
+const segundosTotal = document.querySelector("strong");
+const botonCalculoTotal = document.querySelector(".total_time");
+
+botonCalculoTotal.onclick = function () {
+  let horasVideo = Number(document.querySelector(".hours_video").value);
+  let minutosVideo = Number(document.querySelector(".minutes_video").value);
+  let segundosVideo = Number(document.querySelector(".seconds_video").value);
+  tiempoTotal = (horasVideo * 3600) + (minutosVideo * 60) + segundosVideo;
+  segundosTotal.innerText = tiempoTotal;
+  return false;
+}
 
 //TAREA: En otro archivo distinto,
 // Crear una lista de <ol> y <li> que contengan sólo números.
