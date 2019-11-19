@@ -57,9 +57,18 @@ $botonOk.onclick = function(){
     }
 
     let $botonCalcular = document.createElement('button');
-    $botonCalcular.innerHTML = 'calcular';
+    $botonCalcular.innerHTML = 'Calcular';
     $botonCalcular.id = 'boton-calcular';
     divFamilia.appendChild($botonCalcular);
+
+    let $botonReiniciar = document.createElement('button');
+    $botonReiniciar.innerHTML = 'Reiniciar';
+    $botonReiniciar.id = 'boton-reiniciar';
+    divFamilia.appendChild($botonReiniciar);
+
+    $botonReiniciar.onclick = function(){
+        location.reload();
+    }
 
     
     
