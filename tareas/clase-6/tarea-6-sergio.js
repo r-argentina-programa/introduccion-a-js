@@ -29,7 +29,7 @@ function calcularMenor(array){
 }
 
 function calcularPromedio(array){
-    let contenedor;
+    let contenedor = 0;
     for (i = 0; i < array.length; i++){
         contenedor = contenedor + array[i];
         
@@ -68,7 +68,7 @@ $botonOk.onclick = function(){
         let arrayEdadesFamilia = [];
     
         for (let i = 0; i < edadesFamilia.length; i++){
-            arrayEdadesFamilia.push(edadesFamilia[i].value);
+            arrayEdadesFamilia.push(Number(edadesFamilia[i].value));
         }
 
         let menor = calcularMenor(arrayEdadesFamilia);
