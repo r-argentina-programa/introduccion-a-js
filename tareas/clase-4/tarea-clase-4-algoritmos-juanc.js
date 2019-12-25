@@ -56,68 +56,250 @@ Desafío de programación #12: Crea una función que reciba un array de números
 
 Desafío de programación #13: Find the maximum number in an array of numbers
 
-Desafío de programación #14: Imprimir los primeros 10 dígitos de Fibonacci sin recursión
+*/
 
-Fibonacci (lo buscan en google si no lo saben o no se acuerdan)
-El resultado debería ser: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55
+//Desafío de programación #14: Imprimir los primeros 10 dígitos de Fibonacci sin recursión
 
-Desafío de programación #15: Crear una función que encuentre el número n de Fibonacci usando recursión
+//Fibonacci (lo buscan en google si no lo saben o no se acuerdan)
+//El resultado debería ser: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55
 
-Desafío de programación #16: Crear una función que dado un número retorne un Boolean (true/false) dependiendo si es primo o no.
 
-Desafío de programación #17: Calcular la suma de los dígitos positivos de un número entero positivo
+
+
+//Desafío de programación #15: Crear una función que encuentre el número n de Fibonacci usando recursión
+
+
+
+//Desafío de programación #16: Crear una función que dado un número retorne un Boolean (true/false) dependiendo si es primo o no.
+/*
+//revisar numero 1
+let numero = Number(prompt('Ingrese un numero para saber si es primo'));
+let contador = 0;
+for(let i=1; i<=numero; i++){
+  if(numero%i == 0){
+    contador++;
+    if(contador>2){
+      break;
+    }
+  }
+}
+if(contador>2 || numero === 0 || numero === 1){
+  alert(`${numero} no es primo`);
+}else{
+  alert(`${numero} es primo`);
+}
+*/
+
+
+
+/*Desafío de programación #17: Calcular la suma de los dígitos positivos de un número entero positivo
 Ejemplo:
    123 = 1 + 2 + 3 = 6
    2 = 2
-   1234 = 1 + 2 + 3 + 4 = 10
+   1234 = 1 + 2 + 3 + 4 = 10 */
 
-Desafío de programación #18: Imprimir los primeros 100 números primos
 
-Desafío de programación #19: Crear una función que retorne un array con los primeros números "n-primos" mayores que un número particular definido "alComienzo"
+
+
+
+//Desafío de programación #18: Imprimir los primeros 100 números primos
+/*
+for(let i=2; i<=100; i++){
+  let cont = 0;
+  for(let j=1; j<=i; j++){
+    if(i%j === 0){
+      cont++;
+    }
+    if(cont > 3){
+      continue;
+    }
+  }
+  if(cont <= 2){
+    console.log(i);
+  }
+}
+*/
+
+
+
+
+/*Desafío de programación #19: Crear una función que retorne un array con los primeros números "n-primos" mayores que un número particular definido "alComienzo"
 Ejemplo:
-  Quiero los primeros 4 números primos mayores que 5, el resultado debería ser: [7,11,13,17,19]
+  Quiero los primeros 4 números primos mayores que 5, el resultado debería ser: [7,11,13,17,19]  */
 
-Desafío de programación #20: Rotar un array hacia la izquierda una posición
+/*
+let numeroParticular = Number(prompt('Ingresar desde que numero comenzar'));
+let primerosNnumeros = Number(prompt('Ingresar cuantos numeros primos calcular'));
+
+function calcularPrimos(numeroParticular, primerosNnumeros){
+  let i = numeroParticular+1;
+  let array = [];
+
+  while(array.length < primerosNnumeros){
+    let cont = 0;
+    for(let j=1; j<=i; j++){
+      if(i === 1){
+        cont = 3;
+        continue;
+      }
+      if(i%j === 0){
+        cont++;
+        if (cont>2){
+          continue;
+        }
+      }
+    }
+    if (cont <= 2){
+      array.push(i);
+    }
+    i++;
+  }
+  return array;
+}
+console.log(calcularPrimos(numeroParticular, primerosNnumeros));
+*/
+
+
+
+
+/*Desafío de programación #20: Rotar un array hacia la izquierda una posición
 Ejemplo:
   [9,1,2,3,4] debería quedar como [1,2,3,4,9]
   [5] debería quedar como [5]
-  [4,3,2,1] debería quedar como [3,2,1,4]
+  [4,3,2,1] debería quedar como [3,2,1,4] */
 
-Desafío de programación #21: Rotar un array a la derecha una posición
+/*
+
+let array1 = [9,1,2,3,4];
+console.log(array1);
+let aux = array1[0];
+for (let i=0; i<array1.length; i++){
+  array1[i] = array1[i+1];
+}
+array1[array1.length - 1]= aux;
+console.log(array1);
+*/
+
+
+
+/*Desafío de programación #21: Rotar un array a la derecha una posición
 Ejemplo:
   [2,3,4,1] debería quedar como [1,2,3,4]
   [2,3] debería quedar como [3,2]
+*/
+/*
+function rotarDerecha(array){
+  let aux = array[array.length -1];
+  for(let i=array.length-1; i>=0; i--){
+    if(i === 0){
+      array[0] = aux;
+    }else{
+      array[i] = array[i-1];
+    }
+  }
+  return array;
+}
+vector = [2,3,4,1];
+console.log(vector);
+console.log(rotarDerecha(vector));
+console.log(rotarDerecha(vector));
+console.log(rotarDerecha(vector));
+*/
 
-Desafío de programación #22: Invertir un array
+
+
+/*Desafío de programación #22: Invertir un array
 Ejemplo:
   [1,2,3,4] debería quedar como [4,3,2,1]
   [6,5,4,3,2,1] debería quedar como [1,2,3,4,5,6]
   [5,6,3] debería quedar como [3,6,5]
+*/
+/*
+function invertirArray(array){
+  arrayInvertido = [];
+  for(let i=array.length-1; i>=0; i--){
+    arrayInvertido.push(array[i]);
+  }
+  return arrayInvertido;
+}
+let array = [6,5,4,3,2,1];
+console.log(array);
+console.log(invertirArray(array)); 
+*/
 
-Desafío de programación #23: Invertir una cadena de caracteres
+
+
+
+
+/*Desafío de programación #23: Invertir una cadena de caracteres
 Ejemplo:
   "dabale arroz a la zorra el abad" debería quedar como "daba le arroz al a zorra elabad"
   "bienvenido" debería quedar como "odinevneib"
+*/
+/*
+function invertirArray(array){
+  arrayInvertido = [];
+  for(let i=array.length-1; i>=0; i--){
+    arrayInvertido.push(array[i]);
+  }
+  return arrayInvertido;
+}
+let frase = "bienvenido";
+let array = frase.split('');
+console.log(array);
+console.log(invertirArray(array)); 
+console.log(invertirArray(array).join('')); 
+*/
 
+
+
+
+/*
 Desafío de programación #24: Crear una función que reciba dos dos arrays (arreglos) como argumentos y returne el resultado en un nuevo arreglo
 Ejemplo:
   [1,2,3] con ["a","b","c"] debería quedar como [1,2,3,"a","b","c"]
+*/
+/*
+function union(array1, array2){
+  let array3 = [];
+
+  array3 = array1;
+  for(let i=0; i<array2.length; i++){
+    array3.push(array2[i]);
+  }
+  return array3;
+}
+let vector1 = [1,2,3];
+let vector2 = ["a","b","c"];
+console.log(vector1);
+console.log(vector2);
+console.log(union(vector1, vector2));
+*/
 
 
-Desafío de programación #25: Crear una función que reciba dos arrays (arreglos) de números como argumentos y retorne un array con números que estén en uno u otro array, pero NO en ambos.
-Nota: Esto se llama "diferencia simétrica" entre conjuntos
 
-Desafío de programación #25: Crear una función que reciba dos arrays (arreglos) de números como argumentos y retorne un array con números que estén en uno u otro array, pero NO en ambos.
+
+/*Desafío de programación #25: Crear una función que reciba dos arrays (arreglos) de números como argumentos y retorne un array con números que estén en uno u otro array, pero NO en ambos.
+Nota: Esto se llama "diferencia simétrica" entre conjuntos*/
+
+
+
+
+
+
+/*Desafío de programación #25: Crear una función que reciba dos arrays (arreglos) de números como argumentos y retorne un array con números que estén en uno u otro array, pero NO en ambos.
 Ejemplo:
   [1,2,3] y [3,7,11] debería devolver [1,2,7,11]
-  [5,10,3] y [10,1] debería quedar como [5,3,1]
+  [5,10,3] y [10,1] debería quedar como [5,3,1]*/
 
-Desafío de programación #26: Crear una función que reciba dos arrays de números y retorne un nuevo array con los elementos que se encuentren en el primer array, pero no en el segundo
+
+
+/*Desafío de programación #26: Crear una función que reciba dos arrays de números y retorne un nuevo array con los elementos que se encuentren en el primer array, pero no en el segundo
 Nota; Esto se llama "resta" entre conjuntos
 Ejemplo:
-  [5,1,2,3,4] y [3,4] debería devolver [5,1,2]
+  [5,1,2,3,4] y [3,4] debería devolver [5,1,2]*/
 
-Desafío de programación #27: Crear una función que reciba un array de números como argumento y retorne un array con los elementos distintos
+/*Desafío de programación #27: Crear una función que reciba un array de números como argumento y retorne un array con los elementos distintos
 Ejemplo:
    [1,2,3,4,5,4,3,2,1,0] debería retornar [1,2,3,4,5,0]
 
