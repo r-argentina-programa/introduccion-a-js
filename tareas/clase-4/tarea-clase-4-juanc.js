@@ -62,6 +62,25 @@ for(let i=1; i<=50; i++){
     console.log(palabra+palabra1+palabra2);
 }
 
+//------------------------------------------
+//resolucion
+
+function fizzBuzz(){
+    for(let i=1; i<=50; i++){
+        let texto = '';
+        
+        if(i%3 === 0){
+            texto = 'Fizz';
+        }
+
+        if(i%5 === 0){
+            texto += 'Buzz';
+        }
+
+        console.log(texto || i);
+    }
+}
+console.log(fizzBuzz());
 // Calcular el promedio de todos los números en un array de números. (y ponerlo en una función)
 // ej.: calcularPromedio([10,5,4,2,8])
 
