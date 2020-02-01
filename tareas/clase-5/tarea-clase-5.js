@@ -19,12 +19,21 @@ $botonCalcular.onclick = function()
 
 //Probando el GitHUb
 
-alert ('Como te llamas') //Alerta para ver si el HTML me toma correctamente el script
+alert ('Como te llamas') //Alerta para ver si el HTML me toma correctamente el script (src)
 
 //TAREA: completar tareas/clase-5/index.html para que incluya tarea-clase-5.js
 //TAREA: crear un formulario donde un usuario pueda ingresar su salario anual.
 //cuando el usuario haga click en el botón "calcular", mostrar el salario mensual
 // en una caja de texto deshabilitada. --> <input type="text" disabled id="salario-mensual"/>
+
+
+
+
+
+
+
+
+
 
 //TAREA: En otro archivo html (no Index) y otro archivo js (no tarea-clase-5.js),
 // creá un formulario que capture el primer nombre, segundo nombre, apellido/s y edad del usuario
@@ -45,6 +54,15 @@ Ejemplo form:
 *
 * */
 
+
+
+
+
+
+
+
+
+
 //TAREA: En otro archivo distinto,
 // Por cada clase de r/argentina programa existente, vamos a pedir:
 // horas, minutos y segundos de cada video. Ej. Si un video dura
@@ -52,6 +70,15 @@ Ejemplo form:
 // cada dato.
 // al apretar el botón "Calcular tiempo total", debe mostrar en un
 // <strong> pre-creado el tiempo total de los videos.
+
+
+
+
+
+
+
+
+
 
 //TAREA: En otro archivo distinto,
 // Crear una lista de <ol> y <li> que contengan sólo números.
