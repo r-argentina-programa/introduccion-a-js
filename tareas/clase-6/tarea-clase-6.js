@@ -1,10 +1,53 @@
 /*
 TAREA: Empezar preguntando cuánta gente hay en el grupo familiar.
-Crear tantos inputs+labels como gente haya para completar la edad de cada integrante.
-Al hacer click en "calcular", mostrar en un elemento pre-existente la mayor edad, la menor edad y el promedio del grupo familiar.
+Crear tantos inputs+labels como gente haya para completar la Edades de cada integrante.
+Al hacer click en "calcular", mostrar en un elemento pre-existente la mayor Edades, la menor Edades y el promedio del grupo familiar.
+
 
 Punto bonus: Crear un botón para "empezar de nuevo" que empiece el proceso nuevamente, borrando los inputs ya creados (investigar cómo en MDN).
 */
+
+// CREAR USUARIO
+document.querySelector('#siguiente-paso').onclick = function (event) {
+    const cantidadIntegrantes = Number(document.querySelector('#cantidad-integrantes').value);
+    crearUsuario(cantidadIntegrantes);
+}
+
+//EDADES MÁXIMA, MÍNIMA Y PROMEDIO GENERAL
+document.querySelector('#calcular').onclick = function () {
+
+    /*---SEGUIR DESDE ACÁ---*/
+    
+    const $calculos = document.querySelectorAll('#analisis');
+    const $mayor_edad = document.querySelector('#mayor-edad');
+    $mayor_edad.textContent = (mayorEdad());
+    $calculos.appendChild($mayor_edad);
+    
+    //textos[0].textContent + (mayorEdad());
+      
+        //console.log(textos[1].textContent + (menorEdad()));
+        //console.log(textos[2].textContent + (promEdad()));   
+    
+   //LA PARTE DE ARRIBA FUNCIONA PERO NO MUESTRA EL TEXTO EN EL FORMULARIO
+   
+   
+   //Qué elemento quiero crear? Para qué serviría?
+   
+
+   
+   //Es crear un elemento la única forma de mostrar el texto de cada párrafo + el resultado de cada cálculo?
+   
+
+   
+
+
+    event.preventDefault();
+
+}
+
+    
+   
+   
 
 
 /*

@@ -1,0 +1,13 @@
+.oculto {
+    display: none;
+}
+
+#calculador-edades{
+    font-style: italic;
+    font-weight: bolder;
+    background-color: cadetblue;
+}
+
+.edad{
+    background-color: brown;
+}
