@@ -3,19 +3,47 @@
 // Preguntarle estos datos al usuario y guardarlos en 2 variables
 // Ejecutar la función con estos datos
 // Impriman el resultado en la consola
+
 function calcularEdad(anioActual, anioNacimiento) {
     return anioActual - anioNacimiento;
 }
 
-const anioActual = Number(prompt("Cuál es el año actual?"));
-const anioNacimiento = Number(prompt("En qué año naciste?"));
+const $body = document.querySelector('body');
 
-console.log('Tenés ' + calcularEdad(anioActual, anioNacimiento) + ' años');
+const $div = document.createElement('div');
+//TAG fecha actual
+const $actual = document.createElement('label');
+const fechaActual = document.createTextNode('Ingrese la fecha de hoy: ');
+$actual.appendChild(fechaActual);
+
+const $anioActual = document.createElement('input');
+$anioActual.type = "date";
+
+//TAG fecha nacimiento
+const $nacimiento = document.createElement('label');
+const fechaNacimiento = document.createTextNode('Ingrese su fecha de nacimiento: ');
+$nacimiento.appendChild(fechaNacimiento);
+
+const $anioNacimiento = document.createElement('input');
+$anioNacimiento.type = "date";
+
+//Agrego los hijos al padre ("body")
+$div.appendChild($actual);
+$div.appendChild($anioActual);
+$div.appendChild($nacimiento);
+$div.appendChild($anioNacimiento);
+$body.appendChild($div);
+
+
+
+
+//console.log('Tenés ' + calcularEdad(anioActual, anioNacimiento) + ' años');
 
 // Preguntar el salario anual y calcular el salario mensual
 // Preguntar el salario mensual y calcular el anual
 // diario... semanal, por hora. etc.
 
+/*
 function calcularSalarioAnual(salarioMensual) {
     const cantidadMesesEnUnAnio = 12;
     return salarioMensual * cantidadMesesEnUnAnio;
@@ -43,6 +71,8 @@ const salarioAnual = Number(prompt('Cuál es tu salario mensual?'));
 console.log('Tu salario mensual es ' + calcularSalarioMensual(salarioAnual));
 console.log('Tu salario semanal es ' + calcularSalarioSemanal(salarioAnual));
 console.log('Tu salario diario es ' + calcularSalarioDiario(salarioAnual));
+
+*/
 
 /// SCOPE
 
