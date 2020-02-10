@@ -4,40 +4,24 @@
 // Ejecutar la función con estos datos
 // Impriman el resultado en la consola
 
+document.querySelector('#calcular-edad').onclick = function (){
+    const anioActual = Number(document.querySelector('#actual').value);
+    const anioNacimiento = Number(document.querySelector('#nacimiento').value);
+    console.log('Tenés ' + calcularEdad(anioActual, anioNacimiento) + ' años');
+};
+
+
 function calcularEdad(anioActual, anioNacimiento) {
     return anioActual - anioNacimiento;
 }
 
-const $body = document.querySelector('body');
-
-const $div = document.createElement('div');
-//TAG fecha actual
-const $actual = document.createElement('label');
-const fechaActual = document.createTextNode('Ingrese la fecha de hoy: ');
-$actual.appendChild(fechaActual);
-
-const $anioActual = document.createElement('input');
-$anioActual.type = "date";
-
-//TAG fecha nacimiento
-const $nacimiento = document.createElement('label');
-const fechaNacimiento = document.createTextNode('Ingrese su fecha de nacimiento: ');
-$nacimiento.appendChild(fechaNacimiento);
-
-const $anioNacimiento = document.createElement('input');
-$anioNacimiento.type = "date";
-
-//Agrego los hijos al padre ("body")
-$div.appendChild($actual);
-$div.appendChild($anioActual);
-$div.appendChild($nacimiento);
-$div.appendChild($anioNacimiento);
-$body.appendChild($div);
 
 
 
 
-//console.log('Tenés ' + calcularEdad(anioActual, anioNacimiento) + ' años');
+
+
+
 
 // Preguntar el salario anual y calcular el salario mensual
 // Preguntar el salario mensual y calcular el anual
