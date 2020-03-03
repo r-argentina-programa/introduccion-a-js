@@ -10,7 +10,7 @@ Punto bonus: Crear un botón para "empezar de nuevo" que empiece el proceso nuev
 
 // CREAR USUARIO
 document.querySelector('#siguiente-paso').onclick = function (event) {
-    
+
     const cantidadIntegrantes = Number(document.querySelector('#cantidad-integrantes').value);
     
     if (cantidadIntegrantes > 0){
@@ -20,44 +20,37 @@ document.querySelector('#siguiente-paso').onclick = function (event) {
     
 }
 
+
 //EDADES MÁXIMA, MÍNIMA Y PROMEDIO GENERAL
-document.querySelector('#calcular').onclick = function (event) {
+document.querySelector('#calcular').onclick = function () {
 
     const calculos = document.querySelectorAll('#analisis > p');//Trae todo el 'div' análisis.
     const edades  = document.querySelectorAll(".edades");//Trae las edades de los ingresantes
-    
-    
-    document.querySelector('#menor-edad').value = mostrarMenor(calculos,calcularMenorEdad);
 
-    
-    //mostrarMayor(calculos,calcularMayorEdad);
-    //mostrarMenor(calculos,calcularMenorEdad);
-    //mostrarPromedio(calculos,calcularPromEdad);
+    mostrarMayor(calculos,calcularMayorEdad);
+    mostrarMenor(calculos,calcularMenorEdad);
+    mostrarPromedio(calculos,calcularPromEdad);
+    mostrarResultados()
+
    
     
-    function mostrarMayor(calculos, calcularMayorEdad) {//calculos es un NodeList con los párrafos
-        
-        for(let i = 0; i < calculos.length; i++){
-            console.log(crearTag("p",calculos[i].innerText,"#mayor-edad"));
-
-        }
-        
-        
-        //const textoMayor = document.createTextNode(`${calculos[0].innerText}` + `${calcularMayorEdad(edades)}`)
-        
+    //calculos es un NodeList con los párrafos
+    function mostrarMayor(calculos,calcularMayorEdad) { 
+        calculos[0].innerText += calcularMayorEdad(edades);
     }
 
     function mostrarMenor(calculos,calcularMenorEdad){
-        console.log(calculos[1].innerText + calcularMenorEdad(edades));
+        calculos[1].innerText += calcularMenorEdad(edades);
     }
 
     function mostrarPromedio(calculos,calcularPromEdad){
-        console.log(calculos[2].innerText+calcularPromEdad(edades));
+        calculos[2].innerText += calcularPromEdad(edades);
     }
-    
+ 
     event.preventDefault();
 
 }
+
 
 document.querySelector('#resetear').onclick = resetear;
 
@@ -65,6 +58,7 @@ function resetear(){
     limpiarLabels();
     limpiarInputs();
     ocultarBotonCalcular();
+    limpiarResultados();
 }
 
 function limpiarLabels(){
@@ -90,11 +84,13 @@ function ocultarBotonCalcular(){
     document.querySelector('#calcular').className = "oculto";
 }
 
-/*
-function mostrarBotonLimpiar(){
-    document.querySelector('#resetear').className = "";
+function mostrarResultados() {
+    document.querySelector('#analisis').className = '';
 }
-*/
+
+function limpiarResultados(){
+    document.querySelector('#analisis').className = 'oculto';
+}
 
 function crearTag(tag,texto,nodoPadre){
     
