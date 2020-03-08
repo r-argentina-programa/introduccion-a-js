@@ -105,6 +105,7 @@ function resetearResultados(){
 } 
 
 
+
 function crearTag(tag,texto,nodoPadre){
     
     const $nodoPadre = document.querySelector(nodoPadre)
@@ -113,7 +114,6 @@ function crearTag(tag,texto,nodoPadre){
     
     $elemento.appendChild(nodoTexto);
     $nodoPadre.appendChild($elemento);
-
 
     return $nodoPadre;
 }
