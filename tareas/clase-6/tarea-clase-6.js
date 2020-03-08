@@ -14,7 +14,8 @@ document.querySelector('#siguiente-paso').onclick = function (event) {
     const cantidadIntegrantes = Number(document.querySelector('#cantidad-integrantes').value);
     
     if (cantidadIntegrantes > 0){
-        mostrarBotonCalcular()
+        resetearResultados();
+        mostrarBotonCalcular();
         crearUsuario(cantidadIntegrantes);
     }
     
@@ -30,21 +31,21 @@ document.querySelector('#calcular').onclick = function () {
     mostrarMayor(calculos,calcularMayorEdad);
     mostrarMenor(calculos,calcularMenorEdad);
     mostrarPromedio(calculos,calcularPromEdad);
-    mostrarResultados()
-
+    mostrarResultados();
+    
    
     
     //calculos es un NodeList con los párrafos
     function mostrarMayor(calculos,calcularMayorEdad) { 
-        calculos[0].innerText += calcularMayorEdad(edades);
+        calculos[0].textContent += calcularMayorEdad(edades);
     }
 
     function mostrarMenor(calculos,calcularMenorEdad){
-        calculos[1].innerText += calcularMenorEdad(edades);
+        calculos[1].textContent += calcularMenorEdad(edades);
     }
 
     function mostrarPromedio(calculos,calcularPromEdad){
-        calculos[2].innerText += calcularPromEdad(edades);
+        calculos[2].textContent += calcularPromEdad(edades);
     }
  
     event.preventDefault();
@@ -52,7 +53,10 @@ document.querySelector('#calcular').onclick = function () {
 }
 
 
+
 document.querySelector('#resetear').onclick = resetear;
+
+
 
 function resetear(){
     limpiarLabels();
@@ -90,7 +94,16 @@ function mostrarResultados() {
 
 function limpiarResultados(){
     document.querySelector('#analisis').className = 'oculto';
+
 }
+
+function resetearResultados(){
+    const integrantes = document.querySelectorAll('.integrante');
+    for(let i = 0; i < integrantes.length; i++){
+        integrantes.remove();
+    }
+} 
+
 
 function crearTag(tag,texto,nodoPadre){
     
@@ -106,8 +119,16 @@ function crearTag(tag,texto,nodoPadre){
 }
 /*
 TAREA:
-Crear una interfaz que permita agregar ó quitar (botones agregar y quitar) inputs+labels para completar el salario anual de cada integrante de la familia que trabaje.
-Al hacer click en "calcular", mostrar en un elemento pre-existente el mayor salario anual, menor salario anual, salario anual promedio y salario mensual promedio.
+Crear una interfaz que permita: 
+-   agregar ó quitar (botones agregar y quitar) inputs + labels
+    para completar el salario anual de cada integrante de la familia que trabaje.
 
-Punto bonus: si hay inputs vacíos, ignorarlos en el cálculo (no contarlos como 0).
+-   Al hacer click en "calcular", mostrar en un elemento pre-existente 
+    * el mayor salario anual, 
+    * menor salario anual, 
+    * salario anual promedio y 
+    * salario mensual promedio.
+
+Punto bonus: 
+-   si hay inputs vacíos, ignorarlos en el cálculo (no contarlos como 0).
 */

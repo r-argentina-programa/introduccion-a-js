@@ -3,6 +3,7 @@ function crearUsuario(cantidadIntegrantes) {
     for (let i = 0; i < cantidadIntegrantes; i++) {
 
         const $integrantes = document.querySelector('#integrantes');
+        $integrantes.className = ".integrante";
 
         const $label = document.createElement('label');
         const textoLabel = (document.createTextNode('Edad del integrante # ' + (i + 1)));
