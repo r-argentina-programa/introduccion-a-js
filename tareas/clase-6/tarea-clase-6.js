@@ -14,7 +14,7 @@ document.querySelector('#siguiente-paso').onclick = function (event) {
     const cantidadIntegrantes = Number(document.querySelector('#cantidad-integrantes').value);
     
     if (cantidadIntegrantes > 0){
-        resetearResultados();
+        //resetearResultados();
         mostrarBotonCalcular();
         crearUsuario(cantidadIntegrantes);
     }
@@ -63,6 +63,8 @@ function resetear(){
     limpiarInputs();
     ocultarBotonCalcular();
     limpiarResultados();
+    resetearResultados();
+
 }
 
 function limpiarLabels(){
@@ -100,7 +102,7 @@ function limpiarResultados(){
 function resetearResultados(){
     const integrantes = document.querySelectorAll('.integrante');
     for(let i = 0; i < integrantes.length; i++){
-        integrantes.remove();
+        integrantes[i].remove();
     }
 } 
 
