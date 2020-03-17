@@ -74,8 +74,7 @@ function resetearResultados(){
     
     for(let i = 0; i < integrantes.length; i++){
         integrantes[i].remove();
-    }
-    
+    }  
 } 
 
 function limpiarLabels(){
