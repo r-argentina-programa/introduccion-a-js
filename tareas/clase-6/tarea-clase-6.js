@@ -59,13 +59,24 @@ document.querySelector('#resetear').onclick = resetear;
 
 
 function resetear(){
+    resetearResultados();
     limpiarLabels();
     limpiarInputs();
     ocultarBotonCalcular();
     limpiarResultados();
-    resetearResultados();
+    
 
 }
+
+function resetearResultados(){
+    const integrantes = document.querySelectorAll('.integrante');
+    //console.log(integrantes);
+    
+    for(let i = 0; i < integrantes.length; i++){
+        integrantes[i].remove();
+    }
+    
+} 
 
 function limpiarLabels(){
     const labels = document.querySelectorAll('#integrantes > label');
@@ -99,12 +110,7 @@ function limpiarResultados(){
 
 }
 
-function resetearResultados(){
-    const integrantes = document.querySelectorAll('.integrante');
-    for(let i = 0; i < integrantes.length; i++){
-        integrantes[i].remove();
-    }
-} 
+
 
 
 
