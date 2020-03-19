@@ -31,21 +31,24 @@ document.querySelector('#calcular').onclick = function () {
     mostrarMayor(calculos,calcularMayorEdad);
     mostrarMenor(calculos,calcularMenorEdad);
     mostrarPromedio(calculos,calcularPromEdad);
+    mostrarMayor("mayor",calcularMayorEdad(edades));
+    mostrarMenor("menor",calcularMenorEdad(edades));
+    mostrarPromedio("promedio",calcularPromEdad(edades));
     mostrarResultados();
     
    
     
     //calculos es un NodeList con los párrafos
-    function mostrarMayor(calculos,calcularMayorEdad) { 
-        calculos[0].textContent += calcularMayorEdad(edades);
+    function mostrarMayor(texto,valor) { 
+        document.querySelector(`#${texto}-edad`).textContent = valor;
     }
 
-    function mostrarMenor(calculos,calcularMenorEdad){
-        calculos[1].textContent += calcularMenorEdad(edades);
+    function mostrarMenor(texto,valor){
+        document.querySelector(`#${texto}-edad`).textContent = valor;
     }
 
-    function mostrarPromedio(calculos,calcularPromEdad){
-        calculos[2].textContent += calcularPromEdad(edades);
+    function mostrarPromedio(texto,valor){
+        document.querySelector(`#${texto}-edad`).textContent = valor;
     }
  
     event.preventDefault();
