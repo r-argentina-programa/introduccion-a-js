@@ -14,7 +14,7 @@ document.querySelector('#siguiente-paso').onclick = function (event) {
     const cantidadIntegrantes = Number(document.querySelector('#cantidad-integrantes').value);
     
     if (cantidadIntegrantes > 0){
-        resetearResultados();
+        //resetearResultados();
         mostrarBotonCalcular();
         crearUsuario(cantidadIntegrantes);
     }
@@ -31,21 +31,24 @@ document.querySelector('#calcular').onclick = function () {
     mostrarMayor(calculos,calcularMayorEdad);
     mostrarMenor(calculos,calcularMenorEdad);
     mostrarPromedio(calculos,calcularPromEdad);
+    mostrarMayor("mayor",calcularMayorEdad(edades));
+    mostrarMenor("menor",calcularMenorEdad(edades));
+    mostrarPromedio("promedio",calcularPromEdad(edades));
     mostrarResultados();
     
    
     
     //calculos es un NodeList con los párrafos
-    function mostrarMayor(calculos,calcularMayorEdad) { 
-        calculos[0].textContent += calcularMayorEdad(edades);
+    function mostrarMayor(texto,valor) { 
+        document.querySelector(`#${texto}-edad`).textContent = valor;
     }
 
-    function mostrarMenor(calculos,calcularMenorEdad){
-        calculos[1].textContent += calcularMenorEdad(edades);
+    function mostrarMenor(texto,valor){
+        document.querySelector(`#${texto}-edad`).textContent = valor;
     }
 
-    function mostrarPromedio(calculos,calcularPromEdad){
-        calculos[2].textContent += calcularPromEdad(edades);
+    function mostrarPromedio(texto,valor){
+        document.querySelector(`#${texto}-edad`).textContent = valor;
     }
  
     event.preventDefault();
@@ -59,11 +62,23 @@ document.querySelector('#resetear').onclick = resetear;
 
 
 function resetear(){
+    resetearResultados();
     limpiarLabels();
     limpiarInputs();
     ocultarBotonCalcular();
     limpiarResultados();
+    
+
 }
+
+function resetearResultados(){
+    const integrantes = document.querySelectorAll('.integrante');
+    //console.log(integrantes);
+    
+    for(let i = 0; i < integrantes.length; i++){
+        integrantes[i].remove();
+    }  
+} 
 
 function limpiarLabels(){
     const labels = document.querySelectorAll('#integrantes > label');
@@ -97,12 +112,8 @@ function limpiarResultados(){
 
 }
 
-function resetearResultados(){
-    const integrantes = document.querySelectorAll('.integrante');
-    for(let i = 0; i < integrantes.length; i++){
-        integrantes.remove();
-    }
-} 
+
+
 
 
 function crearTag(tag,texto,nodoPadre){
@@ -113,7 +124,6 @@ function crearTag(tag,texto,nodoPadre){
     
     $elemento.appendChild(nodoTexto);
     $nodoPadre.appendChild($elemento);
-
 
     return $nodoPadre;
 }
