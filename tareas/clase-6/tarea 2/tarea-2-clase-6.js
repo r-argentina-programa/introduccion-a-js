@@ -21,7 +21,12 @@ document.querySelector('#agregar').onclick = function(){
 } 
 
 document.querySelector('#calcular').onclick = function(){
+    
     mostrarResultados();
+    mostrarMayorSalario();
+    mostrarMenorSalario();
+    mostrarSalarioAnualPromedio();
+    mostrarSalarioMensualPromedio();
     
     event.preventDefault();
 }
@@ -42,14 +47,15 @@ function agregarMiembro(){
 
 function crearEtiqueta(tag,texto,tipo){
     const $div = document.createElement('div');
-    const $nuevoMiembro = document.querySelector('#agrega-miembros');
+    const $contenedorMiembros = document.querySelector('#agrega-miembros');
     
     //Crea etiqueta y texto o tipo de la misma
     const $etiqueta = document.createElement(tag);
     
     if (tipo === "number") {
         $etiqueta.type = "number";
-        $etiqueta.className = ".miembros";
+        $etiqueta.className = "miembros";
+        $etiqueta.placeholder = "Ejemplo $250000";
     } else {
         const $texto = document.createTextNode(texto);
         $etiqueta.appendChild($texto);
@@ -59,7 +65,7 @@ function crearEtiqueta(tag,texto,tipo){
     
     //Agrega la etiqueta nueva al nodoPadre
     $div.appendChild($etiqueta);
-    $nuevoMiembro.appendChild($div);
+    $contenedorMiembros.appendChild($div);
     
 }
 
@@ -88,4 +94,21 @@ function resetear(valor){
         quitarMiembro();
     }
     ocultarResultados();
+}
+
+
+function mostrarMayorSalario(){
+    document.querySelector('#mayor-salario').textContent = mayorSalarioAnual();
+}
+
+function mostrarMenorSalario(){
+    document.querySelector('#menor-salario').textContent = menorSalarioAnual();
+}
+
+function mostrarSalarioAnualPromedio(){
+    document.querySelector('#salario-anual-promedio').textContent = salarioAnualPromedio(cantidadMiembros);
+}
+
+function mostrarSalarioMensualPromedio(){
+    document.querySelector('#salario-mensual-promedio').textContent = salarioMensualPromedio();
 }
