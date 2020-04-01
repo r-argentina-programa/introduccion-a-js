@@ -52,4 +52,4 @@ function fizzBuzzSimplificado(){
             console.log(texto||i);
      }
  }
-fizzBuzzSimplificado();
+//fizzBuzzSimplificado();
