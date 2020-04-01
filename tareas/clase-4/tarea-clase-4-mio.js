@@ -36,4 +36,20 @@ function fizzBuzzClasico(){
   }
 }
 
-fizzBuzzClasico();
+//fizzBuzzClasico();
+
+function fizzBuzzSimplificado(){
+    for(let i=1; i<=50; i++){
+        let texto = "";
+
+        if(i % 3 === 0){
+        texto = "Fizz"
+        }
+
+        if(i % 5 === 0){
+            texto = texto + "Buzz";
+        }
+            console.log(texto||i);
+     }
+ }
+fizzBuzzSimplificado();
