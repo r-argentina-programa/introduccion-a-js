@@ -4,29 +4,32 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>r/Argentina programa | Intro a JavaScript</title>
+  <title>El barsito de la esquina</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=GFS+Didot">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200">
   <link rel="stylesheet" href="css/main.css">
 </head>
 
 <body>
+
   <header>
-    <h1>Hola!</h1>
-    <h2>Escribamos un poco de código el día de hoy!</h2>
+    <h1>Vamos a ver si podes entrar al barsito!</h1>
+    <h2>Completa los datos de abajo</h2>
+    <br/>
+    <br/>
   </header>
 
-  <main>
-    <div>
-      <p>En <a href="https://www.google.com/chrome/">Chrome</a> y <a href="https://www.mozilla.org/en-GB/firefox/new/">Firefox</a>,
-        para abrir la <i>Consola del navegador</i>, click derecho en esta página y seleccionen <i>'Inspect'</i>. La consola va a aparecer
-          abajo o a la derecha de la pantalla.
-      <p>Si estás listos para probar un atajo del teclado, apretá <i>'<abbr title="Command">CMD</abbr>+<abbr title="Option">OPT</abbr>+J'</i>
-        en Mac, ó <i>'F12'</i> en Windows</p>
-    </div>
+  <form>
+    <input id=nombre-usuario type=text placeholder="Ingresa tu nombre"/> 
+    <input id=edad-usuario type="number" placeholder="Ingresa tu edad"/>
+    <button id="ingresar"> Ingresar al bar </button>
+  </form>
 
+  <div id="resultado"> </div>
+
+  <main>
     <div id="logo">
-      <img src="img/woman_bw.jpg" alt="Welcome to Muses Code JS">
+      <img src="img/woman_bw.jpg" alt="Esta es mi novia!">
     </div>
   </main>
 
@@ -69,7 +72,6 @@
       </ul>
     </div>
   </footer>
-
-  <script src="js/nivel3.js"></script>
+<script src="js/nivel3-mio.js"></script>
 </body>
 </html>
