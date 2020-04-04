@@ -21,17 +21,15 @@ document.querySelector('#agregar').onclick = function(){
 } 
     
 document.querySelector('#calcular').onclick = function(){
+    event.preventDefault();
     
     mostrarSalario("mayor",mayorSalarioAnual());
     mostrarSalario("menor",menorSalarioAnual());
-    mostrarSalario("anual-promedio",salarioAnualPromedio());
-    
-    /*mostrarMenorSalario();
-    mostrarSalarioAnualPromedio();
-    mostrarSalarioMensualPromedio();*/
+    mostrarSalario("anual-promedio",salarioAnualPromedio(cantidadMiembros));
+    mostrarSalario("mensual-promedio",salarioMensualPromedio());
     mostrarResultados();
 
-    event.preventDefault();
+    
 }
 
 
