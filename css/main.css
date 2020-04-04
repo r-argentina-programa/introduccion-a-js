@@ -125,3 +125,23 @@ footer a:hover {
     }
 }
 
+#nombre-usuario {
+    background-color: rgb(216, 141, 114);
+    font-size: medium;
+}
+
+#edad-usuario {
+    background-color: #aae9db;
+    font-size: medium;
+}
+
+#ingresar {
+    background-color: violet;
+    font-size: medium;
+}
+
+#resultado {
+    font-size: x-large;
+    color: tomato;
+    font-weight: bold;
+}
