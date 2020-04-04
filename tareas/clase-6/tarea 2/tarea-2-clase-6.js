@@ -19,15 +19,18 @@ document.querySelector('#agregar').onclick = function(){
     agregarMiembro();
     cantidadMiembros += 1;
 } 
-
+    
 document.querySelector('#calcular').onclick = function(){
     
-    mostrarResultados();
-    mostrarMayorSalario();
-    mostrarMenorSalario();
-    mostrarSalarioAnualPromedio();
-    mostrarSalarioMensualPromedio();
+    mostrarSalario("mayor",mayorSalarioAnual());
+    mostrarSalario("menor",menorSalarioAnual());
+    mostrarSalario("anual-promedio",salarioAnualPromedio());
     
+    /*mostrarMenorSalario();
+    mostrarSalarioAnualPromedio();
+    mostrarSalarioMensualPromedio();*/
+    mostrarResultados();
+
     event.preventDefault();
 }
 
@@ -43,6 +46,7 @@ document.querySelector('#reset').onclick = function(){
 function agregarMiembro(){
     crearEtiqueta('label','Ingrese su salario anual: ',"");
     crearEtiqueta('input',"",'number')
+    mostrarBotonCalculo();
 }
 
 function crearEtiqueta(tag,texto,tipo){
@@ -94,16 +98,28 @@ function resetear(valor){
         quitarMiembro();
     }
     ocultarResultados();
+    ocultarBotonCalculo();
 }
 
 
-function mostrarMayorSalario(){
-    document.querySelector('#mayor-salario').textContent = mayorSalarioAnual();
+function mostrarSalario(tipo,valor){
+    document.querySelector(`#${tipo}-salario`).textContent = valor;
 }
 
-function mostrarMenorSalario(){
-    document.querySelector('#menor-salario').textContent = menorSalarioAnual();
+function mostrarSalarioPromedio(tipo1,tipo2,valor){
+    document.querySelector(`#${tipo1-tipo2}-salario`).textContent = valor;
 }
+
+function mostrarBotonCalculo() {
+    document.querySelector('#calcular').className = '';
+}
+
+function ocultarBotonCalculo() {
+    document.querySelector('#calcular').className = 'oculto';
+}
+
+/*
+
 
 function mostrarSalarioAnualPromedio(){
     document.querySelector('#salario-anual-promedio').textContent = salarioAnualPromedio(cantidadMiembros);
@@ -112,3 +128,4 @@ function mostrarSalarioAnualPromedio(){
 function mostrarSalarioMensualPromedio(){
     document.querySelector('#salario-mensual-promedio').textContent = salarioMensualPromedio();
 }
+*/

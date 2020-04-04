@@ -40,16 +40,9 @@ function salarioAnualPromedio(cantidadMiembros){
 }
 
 function salarioMensualPromedio(){
-  
-  //const sueldos = document.querySelector('.miembros');
   const mesesDelAnio = 12;
   let salarioPromedioMensual = 0;
-  //let sumatoriaSalarios = 0;
-
-  /*for (let i = 0; i < sueldos.length; i++) {
-     = sueldos[i];
-    
-  }*/
+  
   salarioPromedioMensual = (salarioAnualPromedio(cantidadMiembros) / mesesDelAnio);
 
   return salarioPromedioMensual;
