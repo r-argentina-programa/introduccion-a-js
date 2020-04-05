@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<head>
+    <title>Household income data</title>
+    <link rel="stylesheet" href="styles02.css"/>
+    <script type="text/javascript" src="functions02.js"></script>
+
+</head>
+<body>
+<div align="center">
+    <form id="income-form">
+        <h3>Please fill the following boxes with the annual salary of each of your family members</h3>
+        <label for="annual-salary">Annual salary of member 1</label><input type="text" class="salary" id="annual-salary-01"/>
+        <div id="add-rows"></div>
+        <br>
+        <div class= "error-hide" id="errors"></div>
+        <br>
+        <button type="submit" id="add-rows-button">Add</button>
+        <button type="submit" id="remove-rows-button">Remove</button>
+    </form>
+
+    <button type="submit" id="calculate-button">Calculate</button>
+
+    <form id="results-form">
+        <label for="highest-annual-salary">Highest annual salary</label>
+        <input type="text" disabled id="highest-annual-salary"/>
+        <br>
+        <label for="lowest-annual-salary">Lowest annual salary</label>
+        <input type="text" disabled id="lowest-annual-salary"/>
+        <br>
+        <label for="annual-salary-average">Annual salary average</label>
+        <input type="text" disabled id="annual-salary-average"/>
+        <br>
+        <label for="monthly-salary-average">Monthly salary average</label>
+        <input type="text" disabled id="monthly-salary-average"/>
+    </form>
+</div>
+
+    <script type="text/javascript" src="household02.js"></script>
+    <script type="text/javascript" src="pruebas02.js"></script>
+</body>
+</html>
+

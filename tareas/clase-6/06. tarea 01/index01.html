@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<head>
+    <title>Household data</title>
+    <link rel="stylesheet" href="styles01.css"/>
+    <script type="text/javascript" src="functions01.js"></script>
+</head>
+<body>
+    <div align="center">
+    <form id="number-of-members">
+        <h3> How many people are there in your household?</h3>
+        <div class="error-hide" id="errors01"></div>
+        <input type="text" name= "members" id="family-members">
+        <br><br>
+        <button type="submit" id="next-step">Next step</button>
+    </form>
+
+    <div id="reveal-after">
+
+        <form id ="family-ages"><h3>Please fill in the following boxes with the ages of your family members</h3>
+        <div id="add-rows">
+        </div>
+        <br>
+        <div class="error-hide" id="errors02"></div>
+        <br>
+        <button type="reset">Clear form</button>
+        <button type="submit" id="go-back">Go back</button>
+        </form>
+        <button type="submit" id="calculate">Calculate</button>
+
+        <form id="results">
+            <label for="oldest-member" class="result-labels">Oldest member</label>
+            <input type="text" disabled id="oldest-member">
+            <label for="youngest-member" class="result-labels">Youngest member</label>
+            <input type="text" disabled id="youngest-member">
+            <label for="age-average" class="result-labels">Age average</label>
+            <input type="text" disabled id="age-average">
+        </form>
+
+
+    </div>
+
+</div>
+    <script type="text/javascript" src="household01.js"></script>
+    <script type="text/javascript" src="pruebas01.js"></script>
+</body>
+</html>
+
