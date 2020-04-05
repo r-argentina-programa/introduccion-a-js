@@ -1,0 +1,101 @@
+body {
+    background-image: url(https://i.imgur.com/1SJe2wM.png)
+}
+form {
+    background-color: rgba(231, 237, 240, 0.811);
+    display: inline-block;
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    border-radius: 8px;
+    width: 950px;
+    margin-left: 20%;
+    margin-right: 20%;
+    padding-bottom: 30px;
+
+}
+
+h1 {
+    text-align: center;
+    font-size: 35px;
+}
+
+h3 {
+    padding-top: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: rgb(25, 159, 204);
+}
+
+#boxed-title {
+    text-align: center;
+    background-color: rgb(91, 214, 255);
+    width: 950px;
+    height: 46px;
+}
+
+.boxed-classes {
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+    width: 950px;
+    height: 32px;
+    margin-bottom: 15px;
+}
+
+label {
+    font-size: 17px;
+    margin-right: 10px;
+}
+
+input {
+    margin-right: 30px;
+}
+
+input,
+textarea {
+    border-radius: 2px;
+    border: 2px solid rgb(91, 214, 255);
+    padding: 3px;
+}
+
+button {
+    text-align:center;
+    width: 10%;
+    height: 60px;
+    margin-left: 45%;
+    margin-right: 45%;
+    background-color: rgb(91, 214, 255);
+    border: none;
+    border-radius: 2px;
+    margin-top: 20px;
+    transition-duration: 0.2s;
+}
+
+button:hover {
+    background-color: rgb(255, 255, 255, 0.600);
+    font-size: 23px;
+}
+
+button,
+text {
+    font-size: 25px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+}
+
+#reveal-result {
+    display: none;
+    text-align: center;
+}
+
+#result-box {
+    margin-top: 40px;
+    background-color: rgb(91, 214, 255);
+    width: 750px;
+    height: 90px;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 25px;
+    font-family:  Arial, Helvetica, sans-serif;
+    padding-top: 30px;
+    display: inline-block
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Grade data</title>
+    <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+    
+    <div class="header-box">
+        <img src="https://i.imgur.com/5gMwceg.png" alt="Frame">
+        <div class="text"><h1 id="grade-header">YOUR GRADE DATA</h1></div></div>
+        <br><br>
+    <div align="center"><div id="grade-box"><h2>Insert your grades below to obtain info about them!</h2>
+    <ol>
+        <li>
+            <input type="number" class="grades" name="grade01">
+        </li>
+        <li>
+            <input type="number" class="grades" name="grade02">
+        </li>
+        <li>
+            <input type="number" class="grades" name="grade03">
+        </li>
+        <li>
+            <input type="number" class="grades" name="grade04">
+        </li>
+        <li>
+            <input type="number" class="grades" name="grade05">
+        </li>
+        <div id="add-rows"></div>
+        
+    </ol>
+    <button type="submit" id="add-grade">Add a new grade</button>
+    </div></div>
+    <button type="submit" id="average-button">Calculate average</button>
+
+    <button type="submit" id="lowest-button">See lowest grade</button>
+
+    <button type="submit" id="highest-button">See highest grade</button>
+
+    <button type="submit" id="frequent-button">See most frequent grade</button>
+    
+    <div id="reveal-average"><div align="center"><div id="average-box">
+        <label for="average"> Your grade average is... <div id="averageText" class="result"></div></label>
+    </div></div></div>
+    <div id="reveal-lowest"><div align="center"><div id="lowest-box">
+        <label for="average"> Your lowest grade is... <div id="lowestText" class="result"></div></label>
+    </div></div></div>
+    <div id="reveal-highest"><div align="center">
+        <label for="average"><div id="highest-box">Your highest grade is...<div id="highestText" class="result"></div> </label>
+    </div></div></div>
+    <div id="reveal-frequent"><div align="center">
+        <label for="average"><div id="frequent-box"> Your most frequent grade is...<div id="frequentText" class="result"></div> </label>
+    </div></div></div>   
+<script src='number-list.js'></script>
+</body>
+
+</html>

@@ -1,0 +1,168 @@
+body {
+    background-image: url(https://i.imgur.com/JJUiNqt.jpg);
+    text-align: center;
+}
+
+.header-box{
+    position: relative;
+    display: inline-block;
+    width: 657px;
+}  
+
+.header-box .text{
+    position: absolute;
+    z-index: 999;
+    margin: 0 auto;
+    left: 0;
+    right: 5%;
+    top: 6%; 
+    text-align: center;
+    width: 80%; 
+}
+
+h1 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 50px;
+    color: rgb(24, 24, 24);
+    text-shadow: 0 0 6px #fff;
+}
+
+h2 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 20px;
+    color: rgb(86, 197, 236);
+    text-shadow: 0 0 6px #fff;
+    margin-bottom: 30px;
+}
+
+#grade-box {
+    background-color: rgba(255, 255, 255, 0.69);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 70%;
+    border-radius: 8px;
+    margin-bottom: 30px;
+}
+
+input {
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+input,
+textarea {
+    border-radius: 4px;
+    border: 1px solid rgb(86, 197, 236);
+    padding: 4px;
+}
+
+button {
+    border: none;
+    border-radius: 3px;
+    width: 250px;
+    height: 50px;
+    font-size: 16px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+    margin-left: 10px;
+    margin-right: 10px;
+    transition-duration: 0.4s;
+}
+
+#add-grade {
+    border: 2px solid  rgb(86, 197, 236);
+}
+
+#add-grade:hover {
+    background-color: rgb(86, 197, 236);    
+}
+
+#average-button {
+    background-color: rgb(247, 228, 132);
+}
+
+#lowest-button {
+    background-color: rgb(245, 160, 181);
+}
+
+#highest-button {
+    background-color: rgb(86, 197, 236);
+}
+
+#frequent-button {
+    background-color: rgb(141, 193, 181);
+}
+
+#average-button:hover {
+    background-color: rgba(255, 255, 255, 0.69);
+}
+
+#lowest-button:hover {
+    background-color: rgba(255, 255, 255, 0.69);
+}
+#highest-button:hover {
+    background-color: rgba(255, 255, 255, 0.69);
+}
+#frequent-button:hover {
+    background-color: rgba(255, 255, 255, 0.69);
+}
+
+#reveal-average {
+    display: none
+}
+#reveal-lowest {
+    display: none
+}
+#reveal-highest {
+    display: none
+}
+#reveal-frequent {
+    display: none
+}
+
+#average-box {
+    margin-top: 30px;
+    background-color: rgb(247, 228, 132);
+    width: 40%;
+    height: 100px;
+    border-radius: 6px;
+    padding-top: 30px;
+}
+
+#lowest-box {
+    margin-top: 30px;
+    background-color: rgb(245, 160, 181);
+    width: 40%;
+    height: 100px;
+    border-radius: 6px;
+    padding-top: 30px;
+}
+
+#highest-box {
+    margin-top: 30px;
+    background-color: rgb(86, 197, 236);
+    width: 40%;
+    height: 100px;
+    border-radius: 6px;
+    padding-top: 30px;
+}
+
+#frequent-box {
+    margin-top: 30px;
+    background-color: rgb(141, 193, 181);
+    width: 40%;
+    height: 100px;
+    border-radius: 6px;
+    padding-top: 30px;
+}
+
+label {
+    font-size: 20px;
+}
+
+.result {
+    margin-top: 10px;
+    font-size: 30px;
+}
