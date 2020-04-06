@@ -1,8 +1,11 @@
 const $nextStepButton = document.getElementById('next-step');
 
+const $clearFormButton = document.getElementById('clear-form');
+
 const $goBackButton = document.getElementById('go-back');
 
 const $calculateButton = document.getElementById('calculate');
+
 
 $nextStepButton.onclick = function () {
     validarPrimerFormulario();
@@ -11,6 +14,10 @@ $nextStepButton.onclick = function () {
 
 $goBackButton.onclick = function() {
     location.reload();
+}
+
+$clearFormButton.onclick = function() {
+    clearForm();
 }
 
 $calculateButton.onclick = function () {

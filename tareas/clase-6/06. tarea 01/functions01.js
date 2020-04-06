@@ -20,11 +20,43 @@ function createARowForEachMember () {
         const input = document.createElement('input');
         input.type = 'text';
         input.className = 'age';
+        input.classList.add('form-control');
         input.name = i;
         li.appendChild(input);
+        
+        
+        const br = document.createElement('br');
+        $forRows.appendChild(br);
+
+        const forErrors = document.createElement('div');
+        forErrors.classList.add('error-hide');
+        //forErrors.classList.add('invalid-feedback');
+        forErrors.setAttribute("id", `error-container${i}`);
+
+        li.appendChild(forErrors);
+
+        console.log(forErrors);
+
         $forRows.appendChild(li);
+        $forRows.appendChild(br);
+
+        //$forRows.appendChild(forErrors);
     }
 
+}
+
+function clearForm() {
+    const invalidFields = document.querySelectorAll('.is-invalid');
+    const invalidFeedback = document.querySelectorAll('.invalid-feedback');
+
+    for (let i = 0; i < invalidFields.length; i++){
+        invalidFields[i].classList.remove('is-invalid');
+    }
+
+    for (let i = 0; i < invalidFields.length; i++){
+        invalidFeedback[i].classList.remove('invalid-feedback');
+        invalidFeedback[i].innerHTML = '';
+    }
 }
 
 function HTMLCollectionIntoArray(HTMLCollection) {
@@ -163,6 +195,7 @@ function manejarErrores(errors, form) {
             $errors.classList.remove('error-hide');
             $errors.innerHTML = error;
             form.style.height = '250px';
+            form.members.classList.add('is-invalid')
         } else {
             form[key].className = '';
         }
@@ -182,19 +215,20 @@ function manejarErrores02(errors, form) {
 
         if(error){
             cantidadErrores ++,
-            form[key].classList.add('error');
-            //console.log(error);
-            const $errors = document.querySelector('#errors02');
-            $errors.classList.remove('error-hide');
-            const errorContainer = document.createElement('li');
-            const space = document.createElement('br');
-            errorContainer.innerText = error;
-            $errors.appendChild(errorContainer);
-            $errors.appendChild(space);
-            //console.log($errors)
+            form[key].classList.add('is-invalid');
+            //console.log(form[key].classList);
+            const $forErrors = document.getElementById('error-container' + key);
+            $forErrors.classList.remove('error-hide');
+            $forErrors.classList.add('invalid-feedback');
+            $forErrors.innerText = error;
+            //console.log($forErrors);
+         
         } else {
            form[key].classList.add('correct');
-           form[key].classList.remove('error');
+           form[key].classList.remove('is-invalid');
+           const $forErrors = document.getElementById('error-container' + key);
+           $forErrors.classList.add('error-hide');
+           console.log($forErrors);
         }
     });
 
@@ -207,7 +241,7 @@ function clearErrors(formnumber) {
 
 function validarSegundoFormulario (array) {
     const $form = document.querySelector('#family-ages');
-    clearErrors('02');
+    //clearErrors('02');
     let errorArray = [];
     //console.log(array);
     for (let i = 0; i < array.length; i++) {

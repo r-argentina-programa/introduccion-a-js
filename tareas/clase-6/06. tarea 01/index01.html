@@ -2,27 +2,26 @@
 <head>
     <title>Household data</title>
     <link rel="stylesheet" href="styles01.css"/>
+    <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.css" />
     <script type="text/javascript" src="functions01.js"></script>
 </head>
 <body>
     <div align="center">
     <form id="number-of-members">
-        <h3> How many people are there in your household?</h3>
-        <div class="error-hide" id="errors01"></div>
-        <input type="text" name= "members" id="family-members">
-        <br><br>
+        <h5> How many people are there in your household?</h5>
+        <br>
+        <input type="text" class="form-control" name= "members" id="family-members">
+        <div class="error-hide invalid-feedback" id="errors01"></div>
+        <br>
         <button type="submit" id="next-step">Next step</button>
     </form>
 
     <div id="reveal-after">
 
-        <form id ="family-ages"><h3>Please fill in the following boxes with the ages of your family members</h3>
+        <form id ="family-ages"><h5>Please fill in the following boxes with the ages of your family members</h5>
         <div id="add-rows">
         </div>
-        <br>
-        <div class="error-hide" id="errors02"></div>
-        <br>
-        <button type="reset">Clear form</button>
+        <button type="reset" id="clear-form">Clear form</button>
         <button type="submit" id="go-back">Go back</button>
         </form>
         <button type="submit" id="calculate">Calculate</button>
