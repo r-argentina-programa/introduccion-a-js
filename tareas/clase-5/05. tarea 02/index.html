@@ -2,6 +2,7 @@
 <html lang="es">
 <head>
     <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.css" />
 </head>
 <script type="javascript" src='pasta.js'> </script>
     <meta charset="UTF-8">
@@ -11,29 +12,47 @@
     <title>The Pasta Club</title>
 </head>
 <body>
-     <div class="box">
+    <div align="center"> 
+    <div class="box">
         <img src="https://i.imgur.com/fj0UM7H.png" alt="Frame">
-        <div class="text"><h1 id="pasta-header">Welcome to <br>the Pasta Club!</h1></div></div>
+        <div class="text"><h1 id="pasta-header">Welcome to <br>the Pasta Club!</h1></div>
+    </div></div>
 <br><br>
 <div id= "form-hide" align="center"><form>
-        <h3>Please fill in the form if you'd like to join:</h3>
+        <strong>Please fill in the form if you'd like to join:</strong>
+        <br><br>
+        <div class="row">
+            <div class="col">
+        <input type="text" class="form-control" id="name" name="username" placeholder= "First name" required="required">
+    </div>
+    <div class="col">       
+        <input type="text" class="form-control" id="second_name" name="second_username" placeholder= "Last name" required="required">
+    </div>
+    <div class="col">
+        <input type="text" class="form-control" id="surname" name="user_surname" placeholder= "Surname" required="required">
+    </div>
+        </div>
         <br>
-        <label for="name">Name: </label>
-        <input type="text" id="name" name="username" required="required">
-        <br><br>
-        <label for="second_name">Second name: </label>
-        <input type="text" id="second_name" name="second_username" required="required">
-        <br><br>
-        <label for="surname">Surname: </label>
-        <input type="text" id="surname" name="user_surname" required="required">
-        <br><br>
         <label for="age">Age: </label>
-        <input type="number" id="age" name="user_age" required="required">
-        <br><br>
+        <input type="number" class="form-control" id="age" name="user_age" required="required">
+        <br>
         <label for="email">E-mail: </label>
-        <input type="email" id="email" name="user_mail" required="required">
-        <br><br>
-        <button type="submit" id="join-button">Join</button>
+        <div class="row">
+        <div class="col">
+            <input type="text" class="form-control" id="surname" name="user_surname" required="required">
+        </div>
+            <div class="col-auto">
+      <label class="sr-only" for="inlineFormInputGroup">Username</label>
+      <div class="input-group mb-2">
+        <div class="input-group-prepend">
+          <div class="input-group-text">@</div>
+        </div>
+        <input type="text" class="form-control" id="inlineFormInputGroup" >
+      </div>
+      </div>
+    </div>
+        <br><div align="center">
+        <button type="submit" class="btn btn-outline-success" id="join-button">Join</button></div>
     </form>
 </div>
 <div id= "reveal-text" align="center"><form>
@@ -44,7 +63,7 @@ We are pleased to announce you are now a member of our club! We will log you in 
 </form>
 <table>
     <tr>
-        <th colspan="4">Meanwhile, you can take a peek at what our wonderful members are doing...</th>
+        <th colspan="4">Meanwhile, you can take a peek at<br>what our wonderful members are doing...</th>
     </tr>
     <tr>
        <td>
@@ -101,7 +120,7 @@ We are pleased to announce you are now a member of our club! We will log you in 
 </table>
 </div>
     </div>
-<div id="under-18" align="center"><form><div id="text-under-18" align="center">You are <b>under 18</b>, thus, you are not allowed to join. Thank you so much for your interest.<br>
+<div id="under-18" align="center"><form><div id="text-under-18" align="center">You are <b>under 18</b>, thus, you are not allowed to join. Thank you so much for your interest.
     You might want to check out our Kids Pasta Club! Where fun is what counts</div></form></div>
 
 

@@ -5,7 +5,6 @@ body {
 
 .box{
     position: relative;
-    display: inline-block;
     width: 562px;
 }  
 
@@ -20,16 +19,16 @@ body {
     width: 80%; 
 }
 
-h1 {
+#pasta-header {
     font-size: 50px;
     font-family:Georgia, 'Times New Roman', Times, serif;
     color: #c63202;
     box-shadow: white;
     text-shadow: 0 0 6px #fff;
     margin-top: 8%;
-
+    font-weight: bold;
 }
-h3 {
+strong {
     text-align: center;
     font-size: 20px;
     font-family:Georgia, 'Times New Roman', Times, serif;
@@ -39,11 +38,14 @@ form {
     text-align: left;
     display: inline-block;
     font-family:Arial, Helvetica, sans-serif;
-    width: 500px;
-    height: 320px;
+    width: 700px;
     background-color: rgba(185, 250, 124, 0.838);
     padding: 20px;
     border-radius: 8px;
+}
+
+#age {
+    width: 150px;
 }
 
 label{
@@ -73,21 +75,19 @@ input#email {
 #join-button {
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 20px;
-    background-color: rgba(185, 250, 124, 0.838);
+    /*background-color: rgba(185, 250, 124, 0.838);*/
     border: none;
     border-radius: 8px;
-    width: 70px;
-    height: 30px;
+    /*width: 70px;
+    height: 30px;*/
     border: 2px solid white;
     transition-duration: 0.2s;
-    margin-left: 215px;
 }
 
 
 #join-button:hover {
     font-weight: bold;
-    width: 75px;
-    height: 35px;
+    background-color: #c63202;
 
 }
 
@@ -102,7 +102,6 @@ input#email {
     vertical-align: middle;
     font-size: 20px;
     font-family: Georgia, 'Times New Roman', Times, serif;
-    margin-top: 85px;
 
 }
 #under-18{
@@ -113,15 +112,15 @@ input#email {
     vertical-align: middle;
     font-size: 20px;
     font-family: Georgia, 'Times New Roman', Times, serif;
-    margin-top: 110px;
 }
 
 table {
     background-color:rgb(239, 226, 210, 0.838);
     margin-top: 30px;
-    width: 550px;
-    height: 320px;
+    width: 700px;
+    height: 460px;
     padding: 20px;
+    margin: 50px;
     border-radius: 8px;
     text-align: center;
 }
@@ -129,7 +128,7 @@ th {
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 20px;
     margin-top: 50px;
-    padding-bottom: 20px;
+    padding-bottom: 10px;
 }
 td {
     padding: 10px;
