@@ -20,7 +20,9 @@ text.setAttribute("type","number")
 text.setAttribute("class","grades")
 tag.appendChild(text)
 const div = document.getElementById('add-rows');
+const br = document.createElement('br')
 div.appendChild(tag);
+div.appendChild(br);
 };
 /*
 
