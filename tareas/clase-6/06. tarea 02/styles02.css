@@ -13,6 +13,7 @@ form {
     padding: 20px;
     transition-duration: 0.4s;
     margin: 40px;
+    text-align: center;
 }
 
 #income-form {
@@ -61,4 +62,8 @@ button:hover {
 
 .error {
     border: 2px solid red;
+}
+
+label {
+    font-size: 17px;
 }

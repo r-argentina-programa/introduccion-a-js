@@ -13,6 +13,7 @@ const $rowsManipulation = document.getElementById('add-rows');
 
 
 let i = 2;
+let n = 1;
 $addRowsButton.onclick = function () {
     const numberOfMembers = 1;
     createMembers(numberOfMembers);

@@ -1,10 +1,11 @@
 function createMembers(numberOfMembers) {
-    addMember(i);
+    addMember(i, n);
     i += 1;
+    n += 1;
 
 }
 
-function addMember (index) {
+function addMember (index, n) {
     const div = document.createElement('div');
 
 
@@ -14,18 +15,40 @@ function addMember (index) {
     const input = document.createElement('input');
     input.type = 'text'
     input.className = 'salary';
+    input.classList.add('form-control');
+    input.name = i;
+
+    const br = document.createElement('br');
 
     div.appendChild(label)
     div.appendChild(input)
 
+    
+
+    const forErrors = document.createElement('div');
+    forErrors.classList.add('error-hide');
+    forErrors.setAttribute("id", `error-container${n}`);
+
+    //div.appendChild(br);
+    div.appendChild(forErrors);
+    div.appendChild(br);
+
+
     $rowsManipulation.appendChild(div);
+    //$rowsManipulation.appendChild(forErrors);
+
 
 }
 
 function removeDinamicallyAddedRows () {
+    /*const lastDiv = document.getElementById(`error-container${n}`);
+    const lastField = document.getElementById*/
+
+    
     const lastChild = $rowsManipulation.lastChild;
     lastChild.remove();
     i = i - 1;
+    n = i - 1;
 
 }
 
@@ -33,9 +56,10 @@ function HTMLCollectionIntoArray (HTMLCollection) {
     let array = [];
     for (let i = 0; i < (HTMLCollection.length); i++) {
         let item = Number(HTMLCollection.item(i).value)
-        if (HTMLCollection.item(i).value.length !== 0) {
+        array.push(item);
+        /*if (HTMLCollection.item(i).value.length !== 0) {
             array.push(item);
-        }       
+        }    */   
     }
     
     return array;
@@ -117,10 +141,10 @@ function validarSalarioAnual(salarioAnual) {
 
     return '';
 };
-
+/*
 function clearErrors() {
     document.querySelector('#errors').innerHTML = '';
-}
+}*/
 
 function manejarErrores(errors, form) {
     const keys = Object.keys(errors);
@@ -132,18 +156,40 @@ function manejarErrores(errors, form) {
 
         if(error){
             cantidadErrores ++;
+            form[key].classList.add('is-invalid');
             form[key].classList.add('error');
-            const $errors = document.querySelector('#errors');
-            $errors.classList.remove('error-hide');
-            const errorContainer = document.createElement('li');
-            const space = document.createElement('br');
-            errorContainer.innerText = error;
-            $errors.appendChild(errorContainer);
-            $errors.appendChild(space);
+            const $forErrors = document.getElementById('error-container' + key);
+            console.log(key);
+            console.log($forErrors);
+            $forErrors.classList.remove('error-hide');
+            $forErrors.classList.add('invalid-feedback');
+            $forErrors.innerText = error;
+            console.log(error);
         } else {
             form[key].classList.add('correct');
-            form[key].classList.remove('error');
+            form[key].classList.remove('is-invalid');
+            const $forErrors = document.getElementById('error-container' + key);
+            $forErrors.classList.add('error-hide');
+            console.log($forErrors);
         };
+
+        /*         if(error){
+            cantidadErrores ++,
+            form[key].classList.add('is-invalid');
+            //console.log(form[key].classList);
+            const $forErrors = document.getElementById('error-container' + key);
+            $forErrors.classList.remove('error-hide');
+            $forErrors.classList.add('invalid-feedback');
+            $forErrors.innerText = error;
+            //console.log($forErrors);
+         
+        } else {
+           form[key].classList.add('correct');
+           form[key].classList.remove('is-invalid');
+           const $forErrors = document.getElementById('error-container' + key);
+           $forErrors.classList.add('error-hide');
+           console.log($forErrors);
+        } */
     });
 
     return cantidadErrores;
@@ -180,11 +226,14 @@ function manejarErrores(errors, form) {
 
 function validarFormulario(array) {
     const $form = document.querySelector('#income-form');
-    clearErrors();
+   // clearErrors();
     let errorArray = [];
     for (let i = 0; i < array.length; i++) {
         errorArray.push(validarSalarioAnual(array[i]));
     };
+
+    console.log(errorArray);
+    console.log(array);
 
     const errors = Object.assign({}, errorArray);
 
@@ -194,22 +243,4 @@ function validarFormulario(array) {
         return '';
     };
 
-/*     const $form = document.querySelector('#family-ages');
-    clearErrors('02');
-    let errorArray = [];
-    //console.log(array);
-    for (let i = 0; i < array.length; i++) {
-        errorArray.push(validarEdadesDeMiembros(array[i]));
-    };
-
-    const errors = Object.assign({}, errorArray);
-
-    //console.log(errors);
-
-    const success = manejarErrores02(errors, $form) === 0;
-
-    if(success){
-        return '';
-    } */
 };
-
