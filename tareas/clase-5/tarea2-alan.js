@@ -22,7 +22,7 @@ document.querySelector('#boton-principal').onclick = function(){
     const $apellidoUsuario = document.querySelector('#apellido-usuario').value;
     const $edadUsuario = Number(document.querySelector('#edad-usuario').value);
 
-    document.querySelector('h1').textContent = `Bienvenido ${$nombreUsuario} ${$apellidoUsuario}! Asi que tenes ${$edadUsuario}? Excelente!`
+    document.querySelector('h1').textContent = `Hola ${$nombreUsuario} ${$apellidoUsuario}! Asi que tenes ${$edadUsuario} años? Excelente! Gracias por pasar.`
 
 }
 
