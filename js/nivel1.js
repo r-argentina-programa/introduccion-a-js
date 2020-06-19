@@ -102,7 +102,6 @@
 
 // TAREA: Creá 2 variables indefinidas, llamadas numeroUno y numeroDos.
 
-
 /*
     Podés usar el nombre de tus variables pare representar qué información tienen adentro, por ejemplo:
 
@@ -184,6 +183,8 @@
 // Mostrar el valor de resultadoMultiplicacion con un alert o un console.log
 
 
+
+
 /*
     Funciones
     =========
@@ -244,6 +245,15 @@
 //       Que acepte 2 números como parámetro y los reste, y que devuelva ese valor.
 // Ejecutá la función con los números 5 y 1 y mostralos con console.log
 
+function sumar(num1,num2){
+    return num1 + num2;
+}
+
+function restar(num1,num2){
+    return num1 - num2;
+}
+
+
 
 // Consejo: Sabías que en vez de pasar los números directamente a tu función podés crear variables con esos números
 // y pasarlos como parámetros? Probalo!
@@ -282,6 +292,16 @@
         console.log('Nuestro número es menor que 7');
     }
 */
+
+
+nombreUsuario = prompt("Como te llamas?");
+edadUsuario = prompt("Cuantos años tenes?");
+
+function darBienvenida(nombreUsuario,edadUsuario){
+    return "Welcome " + nombreUsuario + " to my AgeDetector Website. You're " + edadUsuario + " years old."
+}
+
+console.log(darBienvenida(nombreUsuario,edadUsuario));
 
 /*
     Operadores de comparación
