@@ -1,3 +1,24 @@
+//Testing HTML
+
+const $nombreUsuario = document.querySelector("#nombre-usuario");
+
+const $botonIngreso = document.querySelector("#ingresar");
+
+$botonIngreso.onclick = function(){
+   const edadUsuario = Number(document.querySelector("#edad-usuario").value);
+   let textoIngreso;
+   if(edadUsuario >=18){
+       textoIngreso = "Podes pasar";
+   }else{
+       textoIngreso = "No podes pasar";
+   }
+   document.querySelector("#resultado").innerText = textoIngreso;
+
+   return false;
+
+}
+
+
 // Nivel 3
 
 /*
@@ -124,8 +145,8 @@
 //       variable llamada nuestroTitulo.
 //       Utilizá console.log para ver lo que obtuviste!
 
-
-
+const $nuestroTitulo = document.querySelector("h1");
+console.log($nuestroTitulo);
 
 
 
@@ -146,25 +167,21 @@
 
 // TAREA: Obtené todos los elementos <li> de la página en una variable llamada mediaLinks.
 
-
-
-
+const $mediaLinks = document.querySelectorAll("li");
 
 
 // TAREA: Ahora utilizá console.log para ver la cantidad de 
 // elementos li que hay con mediaLinks.length
 
-
-
-
+console.log($mediaLinks);
 
 
 // TAREA: ¿Te acordás de los bucles del nivel 2? Usando lo que sabés de ellos, realizá iteraciones
 //      sobre cada item de mediaLinks y mostralos en pantalla con console.log
 
-
-
-
+for(let i=0; i<$mediaLinks.length; i++){
+    console.log($mediaLinks[i].innerText);
+}
 
 
 /*
@@ -185,7 +202,7 @@
 // y utilizá console.log para mostrarlo.
 
 
-
+console.log($nuestroTitulo.textContent);
 
 
 
@@ -205,8 +222,8 @@
 
 // TAREA: Hagamos un nuevo título! Cambiá el contenido de nuestro 'h1' y ponele lo que quieras.
 
-
-
+$nuestroTitulo.textContent = "@AlanNavarro248";
+console.log($nuestroTitulo.textContent);
 
 
 /*
@@ -223,8 +240,7 @@
 
 // TAREA: Actualizá el valor del atributo 'src' de nuestra etiqueta 'img' a "img/kittens.jpeg".
 
-
-
+document.querySelector("img").src = "img/kittens.jpeg"
 
 
 
@@ -248,10 +264,8 @@
 
 // Tarea: Obtené cualquier elemento de la página y cambiale algunos estilos.
 
-
-
-
-
+$nuestroTitulo.style.backgroundColor = "green";
+$nuestroTitulo.style.fontStyle = "bold";
 
 /*
    Creando nuevos nodos (Elementos)

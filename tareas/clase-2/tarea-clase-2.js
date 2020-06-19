@@ -18,6 +18,45 @@
 
 // TAREA: Cambiar el operador a '-', y fijarse que llame a la función 'restar' en vez de a la de 'sumar'.
 
+
+function sumar(num1,num2){
+    return num1 + num2;
+}
+
+function restar(num1,num2){
+    return num1 - num2;
+}
+
+
+let operador = "+";
+let num1 = 8;
+let num2 = 2;
+let resultado;
+
+if(operador === "+"){
+    resultado = sumar(num1,num2);
+}else{
+    resultado = restar(num1,num2);
+};
+
+console.log(resultado);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
 function sumar(numero1, numero2) {
     return numero1 + numero2;
 }
@@ -41,4 +80,4 @@ if (operador === '+') {
 console.log(
     `El resultado de ${numero1} ${operador} ${numero2} es ${resultado}`
 );
-
+*/
