@@ -1,9 +1,31 @@
 // TAREA: Imprimí cada 3er número del 3 al 22 usando un 'bucle for'.
 
+function tareaImprimirNumero(){
+    for(let i=3 ; i<=22 ; i = i + 3){
+
+    console.log(i);
+
+    }
+}
+
+//tareaImprimirNumero();
+
 
 // TAREA: Usando un bucle 'while', decile a tu computadora que registre los números de
 //       diez a uno.
 
+function tareaRegistrarNumeros(){
+
+let i = 1;
+
+while( i <= 10){
+    console.log(i);
+    i = i + 1;
+    
+    }
+}
+
+//tareaRegistrarNumeros();
 
 // TAREA: Ha llegado el momento de un ejercicio clásico: 'FizzBuzz'.
 // Cuenta del 1 al 50 e imprime los números:
@@ -52,4 +74,5 @@ function fizzBuzzSimplificado(){
             console.log(texto||i);
      }
  }
+
 //fizzBuzzSimplificado();

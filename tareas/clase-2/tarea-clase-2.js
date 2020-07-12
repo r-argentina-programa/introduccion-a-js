@@ -27,32 +27,34 @@ function restar(num1,num2){
     return num1 - num2;
 }
 
+function multiplicar(num1,num2){
+    return num1 * num2;
+}
 
-let operador = "+";
-let num1 = 8;
-let num2 = 2;
+function dividir(num1,num2){
+    return num1 / num2;
+}
+
+
+let operador = prompt("Ingrese un operador");
+let num1 = Number(prompt("Ingrese el primer numero"));
+let num2 = Number(prompt("Ingrese el segundo numero"));
 let resultado;
 
 if(operador === "+"){
     resultado = sumar(num1,num2);
-}else{
+}else if (operador === "-"){
     resultado = restar(num1,num2);
+}else if (operador === "*"){
+    resultado = multiplicar(num1,num2);
+}else if (operador === "/"){
+    resultado = dividir(num1,num2);
+}else{
+    console.log(`No entendi el operador ${operador}`);
 };
+   
 
-console.log(resultado);
-
-
-
-
-
-
-
-
-
-
-
-
-
+console.log(`El resultado de ${num1} ${operador} ${num2} es ${resultado}`);
 
 
 

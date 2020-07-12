@@ -83,6 +83,10 @@ Desafío de programación #6: Calcula 10! (10 factorial)
 
  10 * 9 * 8 * ... * 1
 
+*/
+
+
+/*
 Desafío de programación #7: Calcula la suma de todos los números impares mayores que 10 y menores que 30
 
 Desafío de programación #8: Crea una función que convierta de Celsius a Fahrenheit
