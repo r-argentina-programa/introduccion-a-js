@@ -16,16 +16,16 @@ function tareaImprimirNumero(){
 
 function tareaRegistrarNumeros(){
 
-let i = 1;
+let i = 10;
 
-while( i <= 10){
+while( i >= 1){
     console.log(i);
-    i = i + 1;
-    
+    i--;
+
     }
 }
 
-//tareaRegistrarNumeros();
+tareaRegistrarNumeros();
 
 // TAREA: Ha llegado el momento de un ejercicio clásico: 'FizzBuzz'.
 // Cuenta del 1 al 50 e imprime los números:
@@ -58,7 +58,7 @@ function fizzBuzzClasico(){
   }
 }
 
-//fizzBuzzClasico();
+fizzBuzzClasico();
 
 function fizzBuzzSimplificado(){
     for(let i=1; i<=50; i++){
@@ -75,4 +75,4 @@ function fizzBuzzSimplificado(){
      }
  }
 
-//fizzBuzzSimplificado();
+fizzBuzzSimplificado();
