@@ -235,14 +235,7 @@ miTitulo.innerText = "Este titulo esta mejor que el anterior"
 */
 // TAREA: Actualizá el valor del atributo 'src' de nuestra etiqueta 'img' a "img/kittens.jpeg".
 
-$miImagen = document.querySelector("#logo")
 
-console.log($miImagen);
-
-$miImagen.id = "kittens.jpeg"
-
-
--
 
 /*
     Editando estilos
