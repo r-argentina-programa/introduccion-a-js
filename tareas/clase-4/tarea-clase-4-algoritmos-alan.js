@@ -1,9 +1,9 @@
 //Link original y créditos a https://github.com/CodeGuppyPrograms/CodingChallenges (contiene las respuestas).
 
-/*
-Estos desafíos de coding están enfocados para los principiantes, por lo tanto las soluciones fueron implementadas
-usando  elementos de programación simples y clásicos.
-*/
+
+//Estos desafíos de coding están enfocados para los principiantes, por lo tanto las soluciones fueron implementadas
+//usando  elementos de programación simples y clásicos.
+
 
 /*
 Desafío de programación #1: Imprimí los números del 1 al 10

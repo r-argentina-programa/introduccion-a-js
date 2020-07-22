@@ -145,9 +145,8 @@ $botonIngreso.onclick = function(){
 //       variable llamada nuestroTitulo.
 //       Utilizá console.log para ver lo que obtuviste!
 
-const $nuestroTitulo = document.querySelector("h1");
-console.log($nuestroTitulo);
-
+let miTitulo = document.querySelector("h1");
+console.log(miTitulo);
 
 
 /*
@@ -167,20 +166,20 @@ console.log($nuestroTitulo);
 
 // TAREA: Obtené todos los elementos <li> de la página en una variable llamada mediaLinks.
 
-const $mediaLinks = document.querySelectorAll("li");
+const medialinks = document.querySelectorAll("li");
+console.log(medialinks);
+
 
 
 // TAREA: Ahora utilizá console.log para ver la cantidad de 
 // elementos li que hay con mediaLinks.length
 
-console.log($mediaLinks);
-
-
 // TAREA: ¿Te acordás de los bucles del nivel 2? Usando lo que sabés de ellos, realizá iteraciones
 //      sobre cada item de mediaLinks y mostralos en pantalla con console.log
 
-for(let i=0; i<$mediaLinks.length; i++){
-    console.log($mediaLinks[i].innerText);
+for(i = 0 ; i < medialinks.length ; i++){
+
+    console.log(medialinks[i].innerText);
 }
 
 
@@ -202,8 +201,7 @@ for(let i=0; i<$mediaLinks.length; i++){
 // y utilizá console.log para mostrarlo.
 
 
-console.log($nuestroTitulo.textContent);
-
+console.log(miTitulo.innerText);
 
 
 /*
@@ -222,9 +220,7 @@ console.log($nuestroTitulo.textContent);
 
 // TAREA: Hagamos un nuevo título! Cambiá el contenido de nuestro 'h1' y ponele lo que quieras.
 
-$nuestroTitulo.textContent = "@AlanNavarro248";
-console.log($nuestroTitulo.textContent);
-
+miTitulo.innerText = "Este titulo esta mejor que el anterior"
 
 /*
     Editando atributos
@@ -237,12 +233,16 @@ console.log($nuestroTitulo.textContent);
     const nuestroTwitter = document.querySelector('.twitter');
     ourTwitter.id = "sorpresa";
 */
-
 // TAREA: Actualizá el valor del atributo 'src' de nuestra etiqueta 'img' a "img/kittens.jpeg".
 
-document.querySelector("img").src = "img/kittens.jpeg"
+$miImagen = document.querySelector("#logo")
+
+console.log($miImagen);
+
+$miImagen.id = "kittens.jpeg"
 
 
+-
 
 /*
     Editando estilos
@@ -264,8 +264,6 @@ document.querySelector("img").src = "img/kittens.jpeg"
 
 // Tarea: Obtené cualquier elemento de la página y cambiale algunos estilos.
 
-$nuestroTitulo.style.backgroundColor = "green";
-$nuestroTitulo.style.fontStyle = "bold";
 
 /*
    Creando nuevos nodos (Elementos)
@@ -291,8 +289,6 @@ $nuestroTitulo.style.fontStyle = "bold";
 //       en nuestra cabecera.
 //
 // P.S. También les podés dar estilos al nuevo nodo que creaste.
-
-
 
 
 
