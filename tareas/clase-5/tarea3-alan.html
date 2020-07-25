@@ -1,40 +1,48 @@
-  <!DOCTYPE html>
-  <html>
+<!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+ </head>
+ <body>
+    <h1>Bienvenido</h1>
+        <p>Ingrese la duracion de cada video del canal r/ArgentinaPrograma</p>
+     
+    <form>
+        <label> Video Clase 1</label>
+        <input class="horas-ingresadas"   placeholder="Hrs" type="number" max="9999" min="0"/>
+        <input class="minutos-ingresados" placeholder="Min" type="number"/>
+        <input class="segundos-ingresados"placeholder="Seg" type="number"/>
+    <br>
+        <label> Video Clase 2</label>
+        <input class="horas-ingresadas"   placeholder="Hrs" type="number" max="9999" min="0"/>
+        <input class="minutos-ingresados" placeholder="Min" type="number"/>
+        <input class="segundos-ingresados"placeholder="Seg" type="number"/>
+    <br>
+        <label> Video Clase 3</label>
+        <input class="horas-ingresadas"   placeholder="Hrs" type="number" max="9999" min="0"/>
+        <input class="minutos-ingresados" placeholder="Min" type="number"/>
+        <input class="segundos-ingresados"placeholder="Seg" type="number"/>
+    <br>
+        <label> Video Clase 4</label>
+        <input class="horas-ingresadas"   placeholder="Hrs" type="number"max="9999" min="0"/>
+        <input class="minutos-ingresados" placeholder="Min" type="number"/>
+        <input class="segundos-ingresados"placeholder="Seg" type="number"/>
+    <br>
+        <label> Video Clase 5</label>
+        <input class="horas-ingresadas"   placeholder="Hrs" type="number" max="9999" min="0"/>
+        <input class="minutos-ingresados" placeholder="Min" type="number"/>
+        <input class="segundos-ingresados"placeholder="Seg" type="number"/>
+    <br>
+    <br>
+        <button type="button" id="boton-calcular">Calcular</button>
+        <button type="reset">Limpiar</button>
     
-  <head>
-      <meta charset='utf-8'>
-      <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-      <title>Clase 5 | Tarea 3</title>
-      <meta name='viewport' content='width=device-width, initial-scale=1'>
-     <!-- <link rel="stylesheet" type="text/css" href="css/styles.css"> -->
-  </head>
-
-  <body>
-    <header>
-      <h1> Bienvenido!</h1>
-    </header>
-      <p><strong>/rArgentinaPrograma</strong> es un canal de Youtube con contenido sobre Javascript.</p>
-      
-      <form>
-      <label>Ingrese la duracion total del video.</label>
-      <br>
-      <br>
-      <label for="hours-lengh">Horas</label>
-      <input class="box-input" placeholder="00" type="number" id="hours-lengh"/> 
-      <label for="minutes-lengh">Minutos</label>
-      <input class="box-input" placeholder="00" type="number" max="59" id="minutes-lengh"/>
-      <label for="seconds-lengh">Segundos</label>
-      <input class="box-input" placeholder="00" type="number" max="59" id="seconds-lengh"/>
-      <br>
-      <br>
-      <button id="add-lengh" type="button">Ingresar duración</button>
-
     </form>
+     <br> 
+        <strong id="resultado"> </strong>
 
-    <div id="total-lengh" hide>
-    </div>
-
-    <script type="text/javascript" src="tarea3-alan.js"></script>
-  </body>
-  </html>
-
+        <script type="text/javascript" src="tarea3-alan.js"></script>
+ </body>
+ </html>
