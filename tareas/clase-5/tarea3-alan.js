@@ -5,13 +5,6 @@
 // cada dato.
 // al apretar el botón "Calcular tiempo total", debe mostrar en un
 // <strong> pre-creado el tiempo total de los videos.
-/*
-function convertirSegundosAMinutos($totalSeg){
-   const resultadoMin = $totalSeg / 60;
-   const resultadoSeg = $totalSeg % 60;
-   return resultadoMin,resultadoSeg;
-}
-*/
 
 document.querySelector("#boton-calcular").onclick = function(){
 
@@ -19,21 +12,19 @@ document.querySelector("#boton-calcular").onclick = function(){
         const $minIngresados = document.querySelectorAll(".minutos-ingresados");
             const $hrsIngresadas = document.querySelectorAll(".horas-ingresadas");
   
-let totalSeg = 0;
-let totalMin = 0;
-let totalHrs = 0;
+    let segAcumulados = 0;
+    let minAcumulados = 0; 
+    let hrsAcumuladas = 0;
 
-let segAcumulados = 0;
-let minAcumulados = 0; 
-let hrsAcumuladas = 0;
+    let minConvertidos = 0;
+    let hrsConvertidas = 0;
 
-let segConvertidos = 0;
-let minConvertidos = 0;
-let hrsConvertidas = 0;
+    let totalSeg = 0;
+    let totalMin = 0;
+    let totalHrs = 0;
 
     for(let i = 0 ; i < $segIngresados.length ; i++){
-        segAcumulados = segAcumulados + Number($segIngresados[i].value);    
-        
+        segAcumulados = segAcumulados + Number($segIngresados[i].value);       
     }
        
     for(let i = 0; i < $minIngresados.length ; i++){
@@ -44,20 +35,25 @@ let hrsConvertidas = 0;
         hrsAcumuladas = hrsAcumuladas + Number($hrsIngresadas[i].value);
     }
 
-    function convertirSegundosAMinutos(){
+      
+    minConvertidos = segAcumulados / 60;
+        minConvertidos = parseInt(minConvertidos); 
 
-      minConvertidos = segAcumulados / 60;  
-      segConvertidos = segAcumulados % 60;
-
-
-        return segConvertidos;
-
-    }
-
-    console.log(totalSeg);
-    console.log(totalMin);
-    console.log(totalHrs);
-
-    console.log(convertirSegundosAMinutos());
     
+    hrsConvertidas = (minAcumulados + minConvertidos) / 60;
+        hrsConvertidas = parseInt(hrsConvertidas)
+
+            
+
+    totalSeg = segAcumulados % 60;
+
+    totalMin = (minConvertidos + minAcumulados) % 60;
+
+    totalHrs = hrsConvertidas + hrsAcumuladas;
+
+
+    console.log(`Los segundos totales son ${totalSeg}
+                los minutos totales son ${totalMin}
+                 y las horas totales son ${totalHrs}`);
+
 }
