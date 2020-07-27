@@ -23,21 +23,41 @@ let totalSeg = 0;
 let totalMin = 0;
 let totalHrs = 0;
 
+let segAcumulados = 0;
+let minAcumulados = 0; 
+let hrsAcumuladas = 0;
+
+let segConvertidos = 0;
+let minConvertidos = 0;
+let hrsConvertidas = 0;
+
     for(let i = 0 ; i < $segIngresados.length ; i++){
-        totalSeg = totalSeg + Number($segIngresados[i].value);    
+        segAcumulados = segAcumulados + Number($segIngresados[i].value);    
         
     }
        
     for(let i = 0; i < $minIngresados.length ; i++){
-        totalMin = totalMin + Number($minIngresados[i].value);
+        minAcumulados = minAcumulados + Number($minIngresados[i].value);
     }
 
     for(let i = 0; i < $hrsIngresadas.length ; i++){
-        totalHrs = totalHrs + Number($hrsIngresadas[i].value);
+        hrsAcumuladas = hrsAcumuladas + Number($hrsIngresadas[i].value);
+    }
+
+    function convertirSegundosAMinutos(){
+
+      minConvertidos = segAcumulados / 60;  
+      segConvertidos = segAcumulados % 60;
+
+
+        return segConvertidos;
+
     }
 
     console.log(totalSeg);
     console.log(totalMin);
     console.log(totalHrs);
+
+    console.log(convertirSegundosAMinutos());
     
 }
