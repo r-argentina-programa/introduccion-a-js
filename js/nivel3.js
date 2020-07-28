@@ -1,3 +1,24 @@
+//Testing HTML
+
+const $nombreUsuario = document.querySelector("#nombre-usuario");
+
+const $botonIngreso = document.querySelector("#ingresar");
+
+$botonIngreso.onclick = function(){
+   const edadUsuario = Number(document.querySelector("#edad-usuario").value);
+   let textoIngreso;
+   if(edadUsuario >=18){
+       textoIngreso = "Podes pasar";
+   }else{
+       textoIngreso = "No podes pasar";
+   }
+   document.querySelector("#resultado").innerText = textoIngreso;
+
+   return false;
+
+}
+
+
 // Nivel 3
 
 /*
@@ -124,9 +145,8 @@
 //       variable llamada nuestroTitulo.
 //       Utilizá console.log para ver lo que obtuviste!
 
-
-
-
+let miTitulo = document.querySelector("h1");
+console.log(miTitulo);
 
 
 /*
@@ -146,25 +166,21 @@
 
 // TAREA: Obtené todos los elementos <li> de la página en una variable llamada mediaLinks.
 
-
-
+const medialinks = document.querySelectorAll("li");
+console.log(medialinks);
 
 
 
 // TAREA: Ahora utilizá console.log para ver la cantidad de 
 // elementos li que hay con mediaLinks.length
 
-
-
-
-
-
 // TAREA: ¿Te acordás de los bucles del nivel 2? Usando lo que sabés de ellos, realizá iteraciones
 //      sobre cada item de mediaLinks y mostralos en pantalla con console.log
 
+for(i = 0 ; i < medialinks.length ; i++){
 
-
-
+    console.log(medialinks[i].innerText);
+}
 
 
 /*
@@ -185,8 +201,7 @@
 // y utilizá console.log para mostrarlo.
 
 
-
-
+console.log(miTitulo.innerText);
 
 
 /*
@@ -205,9 +220,7 @@
 
 // TAREA: Hagamos un nuevo título! Cambiá el contenido de nuestro 'h1' y ponele lo que quieras.
 
-
-
-
+miTitulo.innerText = "Este titulo esta mejor que el anterior"
 
 /*
     Editando atributos
@@ -220,11 +233,7 @@
     const nuestroTwitter = document.querySelector('.twitter');
     ourTwitter.id = "sorpresa";
 */
-
 // TAREA: Actualizá el valor del atributo 'src' de nuestra etiqueta 'img' a "img/kittens.jpeg".
-
-
-
 
 
 
@@ -247,10 +256,6 @@
 */
 
 // Tarea: Obtené cualquier elemento de la página y cambiale algunos estilos.
-
-
-
-
 
 
 /*
@@ -277,8 +282,6 @@
 //       en nuestra cabecera.
 //
 // P.S. También les podés dar estilos al nuevo nodo que creaste.
-
-
 
 
 

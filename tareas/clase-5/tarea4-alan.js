@@ -15,4 +15,3 @@ for(let i = 0; i < numerosLi.length; i++){
 }
 
 console.log(numeros);
-

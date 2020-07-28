@@ -1,0 +1,12 @@
+.box-input{
+    width: 300px;
+    border-color:  red;
+}
+
+body{
+    background-color: grey;
+ }
+
+h1{
+    color: red; 
+}
