@@ -5,3 +5,13 @@
 // 2. obtener el número más pequeño y mostrarlo en un <em> pre-creado con el texto "El número más pequeño es..."
 // 3. obtener el número más grande y mostrarlo en un <em> pre-creado con el texto "El número más grande es..."
 // 4. obtener el número que más se repite y mostrarlo en un <em> pre-creado con el texto "El número más frecuente es..."
+
+let numeros = [1,2];
+
+numerosLi = document.querySelectorAll("li");
+
+for(let i = 0; i < numerosLi.length; i++){
+    numeros.push(numerosLi[i].value);
+}
+
+console.log(numeros);
