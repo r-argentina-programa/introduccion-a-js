@@ -8,7 +8,7 @@
 
 document.querySelector("#boton-calcular").onclick = function(){
 
-    let $segIngresados = document.querySelectorAll(".segundos-ingresados");
+    const $segIngresados = document.querySelectorAll(".segundos-ingresados");
         const $minIngresados = document.querySelectorAll(".minutos-ingresados");
             const $hrsIngresadas = document.querySelectorAll(".horas-ingresadas");
   
@@ -23,37 +23,33 @@ document.querySelector("#boton-calcular").onclick = function(){
     let totalMin = 0;
     let totalHrs = 0;
 
-    for(let i = 0 ; i < $segIngresados.length ; i++){
+    for(let i = 0; i < $segIngresados.length ; i++){
         segAcumulados = segAcumulados + Number($segIngresados[i].value);       
     }
        
-    for(let i = 0; i < $minIngresados.length ; i++){
+    for(let i = 0; i < $minIngresados.length ;  i++){
         minAcumulados = minAcumulados + Number($minIngresados[i].value);
     }
 
-    for(let i = 0; i < $hrsIngresadas.length ; i++){
+    for(let i = 0; i < $hrsIngresadas.length ;  i++){
         hrsAcumuladas = hrsAcumuladas + Number($hrsIngresadas[i].value);
     }
 
-      
+  // minConvertidos equivale a los segundos pasados a minutos 
+
     minConvertidos = segAcumulados / 60;
         minConvertidos = parseInt(minConvertidos); 
-
-    
+  
     hrsConvertidas = (minAcumulados + minConvertidos) / 60;
         hrsConvertidas = parseInt(hrsConvertidas)
 
             
-
     totalSeg = segAcumulados % 60;
 
     totalMin = (minConvertidos + minAcumulados) % 60;
 
     totalHrs = hrsConvertidas + hrsAcumuladas;
 
-
-    console.log(`Los segundos totales son ${totalSeg}
-                los minutos totales son ${totalMin}
-                 y las horas totales son ${totalHrs}`);
-
+    document.querySelector("#resultado").innerText = `La duracion total es de ${totalHrs}:${totalMin}:${totalSeg}.`
+ 
 }
