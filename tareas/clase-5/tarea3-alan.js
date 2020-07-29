@@ -9,8 +9,8 @@
 document.querySelector("#boton-calcular").onclick = function(){
 
     const $segIngresados = document.querySelectorAll(".segundos-ingresados");
-        const $minIngresados = document.querySelectorAll(".minutos-ingresados");
-            const $hrsIngresadas = document.querySelectorAll(".horas-ingresadas");
+    const $minIngresados = document.querySelectorAll(".minutos-ingresados");
+    const $hrsIngresadas = document.querySelectorAll(".horas-ingresadas");
   
     let segAcumulados = 0;
     let minAcumulados = 0; 
