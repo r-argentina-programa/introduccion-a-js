@@ -236,6 +236,8 @@ miTitulo.innerText = "Este titulo esta mejor que el anterior"
 // TAREA: Actualizá el valor del atributo 'src' de nuestra etiqueta 'img' a "img/kittens.jpeg".
 
 
+document.querySelector("img").src = "img/kittens.jpeg"
+
 
 /*
     Editando estilos
@@ -283,7 +285,9 @@ miTitulo.innerText = "Este titulo esta mejor que el anterior"
 //
 // P.S. También les podés dar estilos al nuevo nodo que creaste.
 
-
+const imagenLogo = document.createElement("img");
+imagenLogo.src = "img/woman_bw.jpg";
+document.querySelector("header").appendChild(imagenLogo);
 
 
 ////////////////////////////////////////////////////////////////////////////
