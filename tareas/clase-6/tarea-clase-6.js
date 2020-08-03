@@ -14,3 +14,25 @@ Al hacer click en "calcular", mostrar en un elemento pre-existente el mayor sala
 
 Punto bonus: si hay inputs vacíos, ignorarlos en el cálculo (no contarlos como 0).
 */
+
+let $cantidadIntegrantes = document.querySelector("#cantidad-integrantes").value;
+
+let $botonAgregarIntegrantes = document.querySelector("#boton-agregar-integrantes");
+
+$botonAgregarIntegrantes.onclick = function(){
+  
+
+     document.querySelector("#integrantes").appendChild(element);
+    
+
+}
+
+
+
+function agregarIntegrantes($cantidadIntegrantes){
+
+  
+
+}
+
+agregarIntegrantes($cantidadIntegrantes);
