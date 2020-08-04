@@ -7,7 +7,7 @@
 // 4. obtener el número que más se repite y mostrarlo en un <em> pre-creado con el texto "El número más frecuente es..."
 
 let $listadoDeNumeros = document.querySelectorAll("li");
-let numeros = new Array;
+let numeros = [];
 
 for(let i = 0; i < $listadoDeNumeros.length ; i++){
     numeros.push(Number($listadoDeNumeros[i].innerText));
@@ -19,7 +19,7 @@ function calcularPromedio(numeros){
     let promedio = 0;   
 
     for(let i = 0; i < numeros.length ; i++){
-        suma = suma + Number(numeros[i]);
+        suma += numeros[i];
     }
 
     promedio = suma / numeros.length;
@@ -63,20 +63,19 @@ function obtenerNumeroMasFrecuente(numeros){
 
    for(let i = 0; i < numeros.length; i++){
         
-    let numeroActual = numeros[i];
-    let contadorActual = 0;
+        let numeroActual = numeros[i];
+        let contadorActual = 0;
 
-        for(let e = 0; e < numeros.length; e++){
+        for(let j = 0; j < numeros.length; j++){
 
-            if(numeroActual == numeros[e]){
+            if(numeroActual == numeros[j]){
                 contadorActual++;
             }
 
-                if(contadorActual > contadorMayor){
-                    numeroMasFrecuente = numeroActual;
-                    contadorMayor = contadorActual;
-
-                }
+            if(contadorActual > contadorMayor){
+                numeroMasFrecuente = numeroActual;
+                contadorMayor = contadorActual;
+            }
        }
    }
 
@@ -84,20 +83,20 @@ function obtenerNumeroMasFrecuente(numeros){
 
 }
 
-let $botonResolver = document.querySelector("#resolver");
+const $botonResolver = document.querySelector("#resolver");
 
 $botonResolver.onclick = function(){
   
-    let valorPromedio = Number(calcularPromedio(numeros));
+    const valorPromedio = calcularPromedio(numeros);
     document.querySelector("#resultado-promedio").innerText = `El valor promedio es de ${valorPromedio}.`;
 
-    let valorNumMenor = Number(obtenerNumeroMenor(numeros));
+    const valorNumMenor = obtenerNumeroMenor(numeros);
     document.querySelector("#resultado-menor").innerText =  `El numero menor es ${valorNumMenor}.`;
 
-    let valorNumMayor = Number(obtenerNumeroMayor(numeros));
+    const valorNumMayor = obtenerNumeroMayor(numeros);
     document.querySelector("#resultado-mayor").innerText = `El numero mayor es ${valorNumMayor}.`;
 
-    let valorNumMasFrecuente = Number(obtenerNumeroMasFrecuente(numeros));
+    const valorNumMasFrecuente = obtenerNumeroMasFrecuente(numeros);
     document.querySelector("#resultado-frecuente").innerText = `El numero mas frecuente es ${valorNumMasFrecuente}.`;
 
 }
