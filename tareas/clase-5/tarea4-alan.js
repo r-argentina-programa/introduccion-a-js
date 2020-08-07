@@ -61,8 +61,7 @@ function obtenerNumeroMasFrecuente(numeros){
     let numeroMasFrecuente = 0;
     let contadorMayor = 0;
 
-   for(let i = 0; i < numeros.length; i++){
-        
+   for(let i = 0; i < numeros.length; i++){    
         let numeroActual = numeros[i];
         let contadorActual = 0;
 
