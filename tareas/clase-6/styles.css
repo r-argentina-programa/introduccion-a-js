@@ -1,0 +1,17 @@
+.oculto{
+    display: none;
+}
+
+label{
+    font-size: 17px;
+}
+
+
+body{
+    background-color: #19287fad;
+}
+
+.valor-invalido{
+    border-color: red;
+    background-color: lightgray;
+}
