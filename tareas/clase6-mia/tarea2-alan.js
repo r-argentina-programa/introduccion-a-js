@@ -2,7 +2,7 @@
 
 document.querySelector("#agregar-integrante").onclick = function(){
     
-    const indice = crearIndice();
+    const indice = obtenerIndice();
 
     crearIntegrante(indice);
     mostrarBotonCalcular();
@@ -15,7 +15,7 @@ function crearIntegrante(indice){
     $contenedorIntegrante.className = "integrante";
 
     const $etiquetaIntegrante = document.createElement("label");
-    $etiquetaIntegrante.innerText = `Integrante N°${indice + 1}`;
+    $etiquetaIntegrante.innerText = `Integrante N°${indice}`;
 
     const $inputIntegrante = document.createElement("input");
     $inputIntegrante.className = "salarioIntegrante";
@@ -68,7 +68,7 @@ function reiniciar(){
 }
 
 
-function crearIndice(){
+function obtenerIndice(){
     let $indice = document.querySelectorAll(".integrante");
     indice = $indice.length;
     
