@@ -33,7 +33,9 @@ function crearIntegrante(indice){
 document.querySelector("#borrar-integrante").onclick = borrarIntegrante;
 
 function borrarIntegrante(){
+    
     document.querySelector("#integrantes").lastChild.remove();
+
 }
 
 function borrarTodosLosIntegrantes(){
@@ -72,7 +74,7 @@ function obtenerIndice(){
     let $indice = document.querySelectorAll(".integrante");
     indice = $indice.length;
     
-    return indice;
+    return indice + 1;
 }
 
 
