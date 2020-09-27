@@ -1,0 +1,7 @@
+.oculto{
+    display: none;
+}
+
+.error{
+    border: solid red;
+}
