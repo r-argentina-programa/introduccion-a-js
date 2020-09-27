@@ -55,3 +55,32 @@ function obtenerEdadesIntegrantes() {
     }
     return edades;
 }
+
+function crearIntegrante(indice) {
+
+    const $div = document.createElement('div');
+    $div.className = 'integrante';
+
+    const $label = document.createElement('label');
+    $label.textContent = 'Ingrese la edad del integrante #' + (indice + 1);
+
+    const $input = document.createElement('input');
+    $input.type = 'number';
+    $input.name = `edad-integrante${indice + 1}`
+
+    $div.appendChild($label);
+    $div.appendChild($input);
+
+
+    const $integrantes = document.querySelector('#integrantes');
+    $integrantes.appendChild($div);
+
+}
+
+
+function crearIntegrantes(cantidadIntegrantes) {
+    for (let i = 0; i < cantidadIntegrantes; i++) {
+        crearIntegrante(i)
+    }
+}
+
