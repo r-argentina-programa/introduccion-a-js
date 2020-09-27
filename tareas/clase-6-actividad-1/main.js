@@ -117,5 +117,41 @@ function mostrarBotonResetear() {
 function ocultarBotonResetear() {
     document.querySelector('#resetear').className = 'oculto';
 }
+
+function validarCantidadIntegrantes(cantidadDeIntegrantes) {
+    if (10 < cantidadDeIntegrantes) {
+        return 'El campo cantidad de integrantes debe ser menor a 10';
+    } else if (cantidadDeIntegrantes === 0) {
+        return 'El campo cantidad de integrantes no debe ser 0';
+    } else if (!/^[1-9]{1,2}$/.test(cantidadDeIntegrantes)) {
+        return 'El campo cantidad de integrantes deben ser solo números'
+    } else {
+        return '';
+    }
+}
+
+
+function validarEdadesIntegrantes(integrantes){ 
+    let errores= [];
+    for (let i = 0; i < integrantes.length; i++) {
+
+        errores += validarEdadIntegrante(integrantes[i]);
+    }
+    return errores;
+}
+
+function validarEdadIntegrante(edad) {
+
+    if (edad > 100) {
+        return 'El campo edad no debe ser superior a 100';
+    } else if (edad === '') {
+        return 'El campo edad no debe estar vacío';
+    } else {
+        return '';
+    }
+
+}
+
+
 function borrarErroresAnteriores() {
     const $errores = document.querySelectorAll('#errores li')
