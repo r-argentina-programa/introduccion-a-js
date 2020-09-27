@@ -47,6 +47,11 @@ document.querySelector('#calcular').onclick = function (event) {
 
     event.preventDefault();
 }
+
+function mostrarEdad(tipo, valor) {
+    document.querySelector(`#${tipo}-edad`).textContent = valor;
+}
+
 function obtenerEdadesIntegrantes() {
     const $integrantes = document.querySelectorAll('.integrante input');
     const edades = [];
@@ -84,3 +89,5 @@ function crearIntegrantes(cantidadIntegrantes) {
     }
 }
 
+function borrarErroresAnteriores() {
+    const $errores = document.querySelectorAll('#errores li')
