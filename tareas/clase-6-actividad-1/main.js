@@ -89,5 +89,33 @@ function crearIntegrantes(cantidadIntegrantes) {
     }
 }
 
+function ocultarBotonSiguientePaso() {
+    document.querySelector('#siguiente-paso').className = 'oculto';
+}
+
+function mostrarBotonSiguientePaso() {
+    document.querySelector('#siguiente-paso').className = '';
+}
+
+function mostrarBotonCalcular() {
+    document.querySelector('#calcular').className = '';
+
+}
+
+function mostrarResultados() {
+    document.querySelector('#analisis').className = '';
+}
+
+function ocultarResultados() {
+    document.querySelector('#analisis').className = 'oculto'
+}
+
+function mostrarBotonResetear() {
+    document.querySelector('#resetear').className = '';
+}
+
+function ocultarBotonResetear() {
+    document.querySelector('#resetear').className = 'oculto';
+}
 function borrarErroresAnteriores() {
     const $errores = document.querySelectorAll('#errores li')
