@@ -97,6 +97,14 @@ function borrarIntegrantesAnteriores() {
     }
 }
 
+function borrarErroresAnteriores() { 
+    const errores = document.querySelectorAll('#errores li');
+
+    for(let i=0; i < errores.length;i++){
+        errores[i].remove();
+    }
+}
+
 document.querySelector('#resetear').onclick = function () {
     ocultarResultados();
     ocultarBotonResetear();
