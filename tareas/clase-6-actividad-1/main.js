@@ -197,5 +197,3 @@ function manejarErrores(errores) {
 const $form = document.querySelector('#formulario');
 
 
-function borrarErroresAnteriores() {
-    const $errores = document.querySelectorAll('#errores li')
