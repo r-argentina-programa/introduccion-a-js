@@ -47,3 +47,11 @@ document.querySelector('#calcular').onclick = function (event) {
 
     event.preventDefault();
 }
+function obtenerEdadesIntegrantes() {
+    const $integrantes = document.querySelectorAll('.integrante input');
+    const edades = [];
+    for (let i = 0; i < $integrantes.length; i++) {
+        edades.push(Number($integrantes[i].value));
+    }
+    return edades;
+}
