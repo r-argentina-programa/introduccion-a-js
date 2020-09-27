@@ -153,5 +153,33 @@ function validarEdadIntegrante(edad) {
 }
 
 
+
+function manejarErrores(errores) {
+
+    const keys = Object.keys(errores)
+    let cantidadErrores = 0;
+
+    keys.forEach(function (key) {
+        const error = errores[key];
+        const $errores = document.querySelector('#errores')
+        if (error) {
+            cantidadErrores++
+            $form[key].className = 'error';
+
+            const $error = document.createElement('li')
+            $error.innerText = error;
+            $errores.appendChild($error);
+        } else {
+            $form[key].className = '';
+        }
+    })
+    return cantidadErrores
+}
+
+
+ 
+const $form = document.querySelector('#formulario');
+
+
 function borrarErroresAnteriores() {
     const $errores = document.querySelectorAll('#errores li')
