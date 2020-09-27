@@ -177,7 +177,6 @@ function validarEdadIntegrante(edad) {
 }
 
 
-
 function manejarErrores(errores) {
 
     const keys = Object.keys(errores)
@@ -201,7 +200,6 @@ function manejarErrores(errores) {
 }
 
 
- 
 const $form = document.querySelector('#formulario');
 
 
