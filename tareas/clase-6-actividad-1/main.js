@@ -89,6 +89,22 @@ function crearIntegrantes(cantidadIntegrantes) {
     }
 }
 
+
+function borrarIntegrantesAnteriores() {
+    let $integrantes = document.querySelectorAll('.integrante')
+    for (let i = 0; i < $integrantes.length; i++) {
+        $integrantes[i].remove();
+    }
+}
+
+document.querySelector('#resetear').onclick = function () {
+    ocultarResultados();
+    ocultarBotonResetear();
+    borrarIntegrantesAnteriores();
+}
+
+
+
 function ocultarBotonSiguientePaso() {
     document.querySelector('#siguiente-paso').className = 'oculto';
 }
