@@ -23,3 +23,27 @@ document.querySelector('#siguiente-paso').onclick = function (event) {
 
     event.preventDefault();
 }
+
+document.querySelector('#calcular').onclick = function (event) {
+    const numeros = obtenerEdadesIntegrantes();
+
+    const errorEdadesIntegrantes = validarEdadesIntegrantes(numeros)
+
+
+    const esExito = manejarErrores(errores) === 0
+
+    if(esExito){
+        mostrarEdad('mayor', obtenerNumeroMayor(numeros));
+        mostrarEdad('menor', obtenerNumeroMenor(numeros));
+        mostrarEdad('promedio', obtenerPromedio(numeros));
+        mostrarResultados();
+        mostrarBotonResetear();
+
+    }else{
+        alert('no fue exito')
+    }
+
+    
+
+    event.preventDefault();
+}
