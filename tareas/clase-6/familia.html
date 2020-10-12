@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Ejercicio Familia</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+<body> 
+    <form id="info-familia">
+        <label for="cantidad-familiares">Ingresar cantidad de familiares:</label>
+        <input type="number" id="cantidad-familiares" /> 
+        <button type="submit" id="siguiente-paso">Siguiente</button>
+
+        <div id="integrantes">
+
+        </div>
+
+        <button id = "calcular" class="oculto">Calcular</button>
+
+        <div id="resultados" class="oculto" >
+
+            <p>La edad del mayor es: <strong id="edad-mayor"></strong></p>
+            <p>La edad del menor es: <strong id="edad-menor"></strong></p>
+            <p>El promedio de edad es: <strong id="promedio-edades"></strong></p>
+
+        </div>
+
+
+        <button type="reset" id="resetear">Resetear</button>
+
+
+    </form>
+
+
+    <script src='familia.js'></script>
+    <script src='pruebas.js'></script>
+    <link rel="stylesheet" href="familia.css">
+
+</body>
+</html>
