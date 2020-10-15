@@ -40,18 +40,15 @@ document.querySelector("#borrar-integrante").onclick = borrarIntegrante;
 
 function borrarIntegrante(){
     
-    //let $integrantes = document.querySelectorAll(".integrante");
+    let $integrantes = document.querySelectorAll(".integrante");
     
-
-    //if($integrantes.length > 0){
+    if($integrantes.length > 0){
         document.querySelector("#integrantes").lastChild.remove();
-    //}
+    }
     
-
-    //if($integrantes.length === 1){
-    //    reiniciar();
-    //}
-
+    if($integrantes.length === 1){
+        reiniciar();
+    }
 
 }
 
