@@ -10,3 +10,7 @@ label{
 body{
     background-color: #19287fad;
 }
+
+.error {
+    color: red;
+}

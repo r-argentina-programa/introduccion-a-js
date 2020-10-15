@@ -21,6 +21,8 @@ document.querySelector("#boton-agregar-integrantes").onclick = function(){
 
      }
 
+     event.preventDefault();
+
 }
 
 document.querySelector("#reiniciar").onclick = function(){
@@ -30,7 +32,7 @@ document.querySelector("#reiniciar").onclick = function(){
 document.querySelector("#calcular").onclick = function(){
 
  const edades = obtenerEdades();
- 
+
      document.querySelector("#resultado-mayor-edad").innerText = obtenerMayorEdad(edades);
      document.querySelector("#resultado-menor-edad").innerText = obtenerMenorEdad(edades);
      document.querySelector("#resultado-edad-promedio").innerText = obtenerEdadPromedio(edades);
@@ -145,3 +147,78 @@ function obtenerEdadPromedio(edades){
 
  return (contenedor / edades.length).toFixed(2);
 }
+
+// Validaciones y control de errores
+
+function validarFormulario(){
+
+     const edades = obtenerEdades();
+     const integrantes = $formulario.integrantes.value;
+
+     const errorEdades = validarEdades(edades);
+     const errorIntegrantes = validarIntegrantes(integrantes);
+
+     const errores = {
+          edades : errorEdades,
+          integrantes : errorIntegrantes
+     };
+
+     controladorDeErrores(errores);
+
+     event.preventDefault();
+}
+
+function controladorDeErrores(errores){
+
+     const keys = Object.keys(errores)
+     const $errores = document.querySelector("#mostrar-errores");
+     $errores.innerText = "";
+     
+     keys.forEach(function(key) {
+          const error = errores[key]
+
+         if(error){
+               const contenedorError = document.createElement("li");
+               contenedorError.innerText = error;
+               $errores.appendChild(contenedorError);
+
+               ocultarResultados();
+               
+         }
+
+         if(!error){
+              document.querySelector("#exito").className = "";
+         }
+
+     });
+
+};
+
+function validarEdades(edades){
+
+     for(let i = 0; i < edades.length; i++){
+          
+          if(edades[i] < 0){
+              return "Los numeros negativos no son validos."
+          }
+
+          if(edades[i] === 0){
+               return "Las edades deben ser mayores a 0."
+          }
+
+     }
+
+
+}
+
+function validarIntegrantes(integrantes){
+
+     if(integrantes < 0){
+          return "El campo integrantes no puede tener valores negativos."
+     }
+
+     return "";
+}
+
+const $formulario = document.querySelector("#calculador-edades");
+$formulario.onsubmit = validarFormulario;

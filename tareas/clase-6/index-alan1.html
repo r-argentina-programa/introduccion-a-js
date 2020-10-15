@@ -8,25 +8,31 @@
 </head>
 <body>
     
-    <form id="calculador-edades">
+    <form method="post" id="calculador-edades" name="formulario">
     
         <label for="cantidad-integrantes">¿Cuantas personas conforman tu grupo familiar?</label>
-        <input type="number" id="cantidad-integrantes"/> 
+        <input type="number" id="cantidad-integrantes" name="integrantes"/> 
 
-        <button id="boton-agregar-integrantes" type="button">Agregar</button>
+        <button id="boton-agregar-integrantes" type="submit">Agregar</button>
         <button type="reset">Limpiar</button>
 
         <div id="integrantes">
 
         </div>
 
-        <button id="calcular" type="button" class="oculto">Calcular</button>
+        <button id="calcular" type="submit" class="oculto">Calcular</button>
         
         <div id="resultado" class="oculto">
             <p>La edad mayor es: <strong id="resultado-mayor-edad"></strong></p>
             <p>La edad menor es: <strong id="resultado-menor-edad"></strong></p>
             <p>La edad promedio es: <strong id="resultado-edad-promedio"></strong></p>
         </div>
+
+        <ul id="mostrar-errores">
+
+        </ul>
+
+        <div id="exito" class="oculto">Exito!</div>
 
         <button id="reiniciar" type="reset" class="oculto">Reiniciar</button>
     
