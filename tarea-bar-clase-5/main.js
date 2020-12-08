@@ -27,11 +27,11 @@ ingresar.onclick = function() {
         if (edadUsuario.value >= 18) {
             creaP()
             texto = document.createTextNode(`Hola ${nomberUsuario.value}, sos mayor, podes entrar!`)
-            document.querySelector('#resultado').appendChild(texto)
+            document.querySelector('#resultado').innerHTML = texto.nodeValue
         } else {
             creaP()
             texto = document.createTextNode(`Hola ${nomberUsuario.value}, sos menor, no podes entrar!`)
-            document.querySelector('#resultado').appendChild(texto)
+            document.querySelector('#resultado').innerHTML = texto.nodeValue
         }
         return false;
 }
