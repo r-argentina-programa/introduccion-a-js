@@ -113,8 +113,6 @@
 
     const nuestroTwitter = document.querySelector('.twitter');
 
-
-
     // Podemos guardar elementos de la página en variables, al igual que como cualquier otro valor!
     // De todas formas, fijate que un elemento de página es un objeto,
     // el cual es un "tipo de referencia", así como los arrays (mirá el nivel 2).
@@ -127,14 +125,7 @@
 //       Utilizá console.log para ver lo que obtuviste!
 
 
-cont = nuestroTitulo = document.querySelector('h1')
-console.log(nuestroTitulo)
 
-//podemos leer texto
-console.log(nuestroTitulo.innerText)
-
-//o cambiarlo
-nuestroTitulo.innerText = 'Hola Che!!!'
 
 
 
@@ -156,30 +147,15 @@ nuestroTitulo.innerText = 'Hola Che!!!'
 // TAREA: Obtené todos los elementos <li> de la página en una variable llamada mediaLinks.
 
 
-const mediaLinks = document.querySelectorAll(`li`);
 
-/*
-console.log(mediaLinks)
 
-for (let i = 0; i < mediaLinks.length; i++) {
-//    console.log(i); Esto esta mal, porque deolveria el la posicion del objeto, y no el objeto en si.
-    console.log(mediaLinks[i].innerText);
-//    mediaLinks[i].innerHTML = `hola`; Esto me cambiaria el inner text de todos los items de mediaLink por hola
-     
-}
 
-*/
+
 // TAREA: Ahora utilizá console.log para ver la cantidad de 
 // elementos li que hay con mediaLinks.length
 
-let counter = 0
 
-for (let i = 0; i < mediaLinks.length; i++) {
-    counter++;
-    
-}
 
-console.log(counter)
 
 
 
@@ -187,11 +163,6 @@ console.log(counter)
 //      sobre cada item de mediaLinks y mostralos en pantalla con console.log
 
 
-
-for (let i = 0; i < mediaLinks.length; i++) {
-    console.log(`El item ${mediaLinks[i].innerText} esta presente`);
-    
-}
 
 
 
@@ -213,10 +184,6 @@ for (let i = 0; i < mediaLinks.length; i++) {
 // TAREA: Obtené el contenido de nuestro elemento 'h1'
 // y utilizá console.log para mostrarlo.
 
-const nuestroH1Inner = document.querySelector('h1').innerHTML
-const nuestroH1Text = document.querySelector('h1').textContent
-console.log(nuestroH1Inner)
-console.log(nuestroH1Text)
 
 
 
@@ -238,7 +205,7 @@ console.log(nuestroH1Text)
 
 // TAREA: Hagamos un nuevo título! Cambiá el contenido de nuestro 'h1' y ponele lo que quieras.
 
-document.querySelector('h1').textContent = '@Yo'
+
 
 
 
@@ -254,11 +221,10 @@ document.querySelector('h1').textContent = '@Yo'
     ourTwitter.id = "sorpresa";
 */
 
-// TAREA: Actualizá el valor del atributo 'src' de nuestra etiqueta 'img' a "img/kttens.jpeg".
+// TAREA: Actualizá el valor del atributo 'src' de nuestra etiqueta 'img' a "img/kittens.jpeg".
 
 
-const imagen = document.querySelector('img');
-imagen.src = "img/kittens.jpg"
+
 
 
 
@@ -283,8 +249,8 @@ imagen.src = "img/kittens.jpg"
 // Tarea: Obtené cualquier elemento de la página y cambiale algunos estilos.
 
 
-const h1 = document.querySelector('h1')
-h1.style.color = 'red';
+
+
 
 
 /*
@@ -313,21 +279,6 @@ h1.style.color = 'red';
 // P.S. También les podés dar estilos al nuevo nodo que creaste.
 
 
-const nuevaImagen = document.createElement(`img`);
-const selectHeader = document.querySelector('header')
-const creaDiv = document.createElement('div')
-const selectDiv = document.querySelector('div')
-
-selectHeader.appendChild(creaDiv)
-let div = document.querySelector('div')
-div.id = 'divLogo'
-
-
-divLogo.appendChild(nuevaImagen)
-let logo = document.querySelector('img')
-logo.src = 'img/logo.jpg'
-logo.id = 'logo'
-document.querySelector('#logo').border = '5'
 
 
 
@@ -337,28 +288,3 @@ document.querySelector('#logo').border = '5'
 // Levántate, estira las piernas y celebra tu logro.                      //
 // ¡Creo que esto amerita un festejo!                                     //
 ////////////////////////////////////////////////////////////////////////////
-
-
-
-
-// EVENTOS, TOMANDO INFORMACION DEL INDEX (.VALUE DEL INPUT)
-
-
-//guardo el boton en una constante
-let textoResultado; //Vamos a usar esta variable para pasarsela al div
-
-const $boton = document.querySelector('#ingresar')
-//se le pone el signo pesos para indicar que es un dato de html, y no una variable fija.
-$boton.onclick = function() { //onclick es un metodo para los botones
-    let edadUsusario = Number(document.querySelector('#edad-usuario').value)
-    if (edadUsusario >= 18) {
-        textoResultado = 'Podes pasar porque sos mayor'
-    } else {
-        textoResultado = 'No podes pasar'
-    }
-    document.querySelector('#resultado').innerHTML = textoResultado
-
-    //Ver event bubling
-    return false
-}
-
