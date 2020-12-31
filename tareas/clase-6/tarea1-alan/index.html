@@ -8,37 +8,52 @@
 </head>
 <body>
     
-    <form method="post" id="calculador-edades" name="formulario">
+    <form method="post" id="calculador-edades" name="formulario" class="interface">
     
-        <label for="cantidad-integrantes">¿Cuantas personas conforman tu grupo familiar?</label>
-        <input type="number" id="cantidad-integrantes" name="integrantes"/> 
+        <label for="cantidad-integrantes">Por favor, ingresar la cantidad de integrantes de tu grupo familiar, y a continuacion, sus respectivas edades.</label>
+        <br>
+        <br>
+
+        <input type="number" id="cantidad-integrantes" min="0" max="9" name="integrantes"/> 
 
         <button id="boton-agregar-integrantes" type="submit">Agregar</button>
         <button type="reset">Limpiar</button>
 
         <div id="integrantes">
-
+        <br>
         </div>
 
-        <button id="calcular" type="submit" class="oculto">Calcular</button>
-        
+        <br>
+        <button id="calcular" type="submit" class="oculto">Calcular</button>    <button id="reiniciar" type="reset" class="oculto">Reiniciar</button>
+        <br>
+
         <div id="resultado" class="oculto">
             <p>La edad mayor es: <strong id="resultado-mayor-edad"></strong></p>
             <p>La edad menor es: <strong id="resultado-menor-edad"></strong></p>
             <p>La edad promedio es: <strong id="resultado-edad-promedio"></strong></p>
         </div>
 
-        <ul id="mostrar-errores">
+        <br>
 
-        </ul>
+        <div id="mostrar-errores">
+            
+        </div>
 
-        <div id="exito" class="oculto">Exito!</div>
+        <div id="exito" class="oculto">Éxito!
+
+        <br>
+            <img src="brindis.jpg" alt="Seis personas brindando con copas de champagne">
+
+        </div>
+
+        <br>
 
         <button id="reiniciar" type="reset" class="oculto">Reiniciar</button>
     
     </form>
 
-    <script src="index.js" type="text/javascript"></script>
+    <script src="main.js" type="text/javascript"></script>
+    <script src= "pruebas.js" type="text/javascript"></script>
 
 </body>
 </html>

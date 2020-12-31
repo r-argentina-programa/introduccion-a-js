@@ -6,11 +6,12 @@ Al hacer click en "calcular", mostrar en un elemento pre-existente la mayor edad
 Punto bonus: Crear un botón para "empezar de nuevo" que empiece el proceso nuevamente, borrando los inputs ya creados (investigar cómo en MDN).
 */
 
-document.querySelector("#boton-agregar-integrantes").onclick = function(){
+document.querySelector("#boton-agregar-integrantes").onclick = function(event){
 
      const $cantidadIntegrantes = document.querySelector("#cantidad-integrantes").value;
   
      if($cantidadIntegrantes > 0){
+
           borrarIntegrantesAnteriores();
           mostrarBotonCalcular();
           mostrarBotonReiniciar();
@@ -36,7 +37,7 @@ document.querySelector("#calcular").onclick = function(){
      document.querySelector("#resultado-mayor-edad").innerText = obtenerMayorEdad(edades);
      document.querySelector("#resultado-menor-edad").innerText = obtenerMenorEdad(edades);
      document.querySelector("#resultado-edad-promedio").innerText = obtenerEdadPromedio(edades);
-     mostrarResultados();
+     
 }
 
 function crearIntegrantes(indice){
@@ -50,12 +51,17 @@ function crearIntegrantes(indice){
      const $input = document.createElement("input");
      $input.className = "edad-integrante"
      $input.type = "number";
-     
+
+     // Estos limites no los uso ya que la consigna pide testear con funciones o regular expressions.
+     //$input.min = 0;
+     //$input.max = 99;
+
      const $integrantes = document.querySelector("#integrantes");
 
      $contenedor.appendChild($label);
      $contenedor.appendChild($input);
      $integrantes.appendChild($contenedor);
+
 }
 
 function borrarIntegrantesAnteriores(){
@@ -86,18 +92,28 @@ function mostrarBotonReiniciar(){
 
 function ocultarResultados(){
      document.querySelector("#resultado").className = "oculto";
+     document.querySelector("#exito").className = "oculto";
 }
 
 function mostrarResultados(){
      document.querySelector("#resultado").className = "";
 }
 
+function ocultarErrores(){
+     document.querySelector("#mostrar-errores").className = "oculto";
+}
+
+function mostrarErrores(){
+     document.querySelector("#mostrar-errores").className = "";
+}
+
 function reiniciar(){
      ocultarBotonCalcular();
      ocultarBotonReiniciar();
      ocultarResultados();
+     ocultarErrores();
      borrarIntegrantesAnteriores();
-
+     
 }
 
 function obtenerEdades(){
@@ -150,74 +166,100 @@ function obtenerEdadPromedio(edades){
 
 // Validaciones y control de errores
 
-function validarFormulario(){
+function validarFormulario(event){
 
+     const integrantes = Number($formulario["cantidad-integrantes"].value);
      const edades = obtenerEdades();
-     const integrantes = $formulario.integrantes.value;
-
-     const errorEdades = validarEdades(edades);
+     
      const errorIntegrantes = validarIntegrantes(integrantes);
-
+     const errorEdades = validarEdades(edades);
+     
      const errores = {
-          edades : errorEdades,
-          integrantes : errorIntegrantes
+
+          integrantes : errorIntegrantes,
+          edades : errorEdades
+          
      };
 
-     controladorDeErrores(errores);
+    const formularioExitoso = controladorDeErrores(errores);
+
+     if(formularioExitoso === 0){
+
+          document.querySelector("#exito").className = "";
+          mostrarResultados();
+
+     }else{
+
+          document.querySelector("#exito").className = "oculto";
+
+     }
 
      event.preventDefault();
+
 }
 
 function controladorDeErrores(errores){
 
      const keys = Object.keys(errores)
      const $errores = document.querySelector("#mostrar-errores");
-     $errores.innerText = "";
-     
+     $errores.innerHTML = "";
+     let contadorError = 0;
+
      keys.forEach(function(key) {
           const error = errores[key]
+          mostrarErrores();
+          
 
          if(error){
+               ocultarResultados();
                const contenedorError = document.createElement("li");
                contenedorError.innerText = error;
                $errores.appendChild(contenedorError);
 
-               ocultarResultados();
-               
+               contadorError++
          }
-
-         if(!error){
-              document.querySelector("#exito").className = "";
-         }
-
+         
      });
+
+     return contadorError;
 
 };
 
 function validarEdades(edades){
-
+     
      for(let i = 0; i < edades.length; i++){
           
-          if(edades[i] < 0){
-              return "Los numeros negativos no son validos."
+          if(edades[i] < 0 ){
+               return "Las edades ingresadas no pueden tener valores negativos.";
           }
 
           if(edades[i] === 0){
-               return "Las edades deben ser mayores a 0."
+               return "Las edades ingresadas deben ser mayores a 0.";
           }
 
-     }
+          if(edades[i] === ""){
+               return "Hay campos sin completar. Completelos e intentelo de nuevo."
+          }
 
+          if(edades[i] > 99){
+               return "Solo se permiten edades entre 1 y 99."
+          };
+
+     }
+          
+     return "";
 
 }
 
 function validarIntegrantes(integrantes){
 
-     if(integrantes < 0){
-          return "El campo integrantes no puede tener valores negativos."
+     if(integrantes <= 0){
+
+          return "La cantidad de integrantes debe ser mayor a 0.";
      }
 
      return "";
+
 }
 
 const $formulario = document.querySelector("#calculador-edades");
