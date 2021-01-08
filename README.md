@@ -3,7 +3,7 @@
 Este repositorio es una traducción casi literal de https://github.com/muses-code-js/js-intro-workshop, de [MusesCodeJS](https://musescodejs.org/) y su autora Tanya Butenko.
 
 * [El post de reddit](https://www.reddit.com/r/argentina/comments/d9wzkh/alguno_que_ande_corto_de_guita_pero_muy/)
-* [El workspace de Slack](https://rargentinaprograma.slack.com)
+* [El workspace de Slack](https://rargentinaprograma.slack.com) y [el link de invitación](https://join.slack.com/t/rargentinaprograma/shared_invite/zt-a8t8mtnl-P17TciXOmAlvfJRhyqrDbQ)
 * [El canal de YouTube](https://www.youtube.com/channel/UCXfQLgiBQPIzBp8-nRsG0KA)
 * [El canal de Twitch](https://www.twitch.tv/rargentinaprograma/)
 
