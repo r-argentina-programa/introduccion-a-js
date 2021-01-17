@@ -25,7 +25,7 @@ function testValidarEdades(){
 function testValidarIntegrantes(){
 
     console.assert(
-        validarIntegrantes(0) === "La cantidad de integrantes debe ser mayor a 0",
+        validarIntegrantes(0) === "La cantidad de integrantes debe ser mayor a 0.",
         "Validar integrantes no valido que los integrantes sean mayores a 0"
     );
 
@@ -37,5 +37,5 @@ function testValidarIntegrantes(){
 }
 
 
-testValidarEdades();
+//testValidarEdades();
 testValidarIntegrantes();
