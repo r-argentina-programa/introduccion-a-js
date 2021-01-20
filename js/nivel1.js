@@ -38,6 +38,10 @@
         una vez que  se recargue index.html.
 */
 
+//alert('Hola Mundo');
+
+//console.log('Hola Mundo');
+
 // Tarea: Ahora te toca a vos! Acá abajo escribí una alerta que diga "Hola mundo!"
 
 
@@ -102,6 +106,8 @@
 
 // TAREA: Creá 2 variables indefinidas, llamadas numeroUno y numeroDos.
 
+//let numeroUno;
+//let numeroDos;
 
 /*
     Podés usar el nombre de tus variables pare representar qué información tienen adentro, por ejemplo:
@@ -115,8 +121,13 @@
 // Crear 2 variables nuevas, una con tu nombre, la segunda con tu edad. Dales un nombre apropriado y
 // mostralas con un alert.
 
+//let nombre = 'Alfredo';
+//let edad = 23;
 
 // Consejo: para mostrar 2 variables de texto al mismo tiempo, las podés unir usando el signo '+'. Ejemplo:
+
+//alert('Se llama ' + nombre + ' y su edad es ' + edad);
+
 
 /*
 * let nombre = 'Fabricio'
@@ -125,6 +136,7 @@
 * alert(nombre + apellido)
 *
 * */
+
 
 
 /*
@@ -150,6 +162,8 @@
 
 // TAREA: Crear una constante y mostrarla con un alert
 
+//const Dni = 23;
+//alert(Dni);
 
 // TAREA: Intentar asignar un valor a una constante y ver qué pasa (mirar la consola)
 
@@ -183,6 +197,11 @@
 // la 1ra variable multiplicada (con el operador *) por la 2nda variable.
 // Mostrar el valor de resultadoMultiplicacion con un alert o un console.log
 
+/*let diez = 10;
+let tres = 3;
+let resultadoMultiplicacion = diez * tres;
+
+console.log(resultadoMultiplicacion);*/
 
 /*
     Funciones
@@ -239,16 +258,74 @@
 // Escribí código para que devuelva (return) la suma de numero1 y numero2
 // Ejecutá la función sumar y mostrá su resultado en la consola
 
+function sumar(numero1, numero2) {
+	return numero1 + numero2;
+}
+
 
 // TAREA: Ahora creemos otra función llamada 'restar'
 //       Que acepte 2 números como parámetro y los reste, y que devuelva ese valor.
 // Ejecutá la función con los números 5 y 1 y mostralos con console.log
+
+function restar(numero1, numero2) {
+	return numero1 - numero2;
+}
 
 
 // Consejo: Sabías que en vez de pasar los números directamente a tu función podés crear variables con esos números
 // y pasarlos como parámetros? Probalo!
 
 // Consejo: Dejá las funciones como están, no las comentes, las vamos a usar de nuevo.
+
+//let añonacimiento = 1996;
+//let añoactual= 2019;
+
+//let miedad = restar(añonacimiento, añoactual);
+
+//console.log('mi edad es' + miedad);
+
+//let userage = prompt('Please type your age', '23');
+
+//function saludo(nombrre) {
+	//return 'hola' + nombre;
+//}
+
+//let minombre = prompt('cual es tu nombre');
+//console.log(
+	//saludar(minombre)
+//);
+
+
+
+/*function calcularedad(añoactual, añonacimiento) {
+	return añoactual - añonacimiento;
+}
+let añoactual = Number(prompt('Ingresa el año actual'));
+let añonacimiento = Number(prompt('ingresa tu año de nacimiento'));
+
+let edadusuario = calcularedad(añoactual, añonacimiento)
+
+console.log('Tu Edad es ' + edadusuario);*/
+
+/*Escribir una funcion que calcular y te devuelva el salario anual, mensual, semanal, diario.*/
+
+/*function calcularsalarioanual(salariomensual) {
+	const mesesenunaño = 12;
+	return salariomensual * mesesenunaño;
+}
+
+function calcularsalariomensual(salarioanual) {
+	const mesesenunaño = 12
+	return salarioanual / mesesenunaño;
+}
+
+const salariomensual = Number(prompt('Cual es tu salario mensual?'));
+	console.log('Tu salario anual es ' + calcularsalarioanual(salariomensual));
+
+const salarioanual = Number(prompt('Cual es tu salario anual'));
+	console.log('Tu salario mensual es ' + calcularsalariomensual(salarioanual));
+*/
+
 
 /*
     Condicionales If-Else
@@ -257,7 +334,6 @@
     Qué pasa si en nuestro programa queremos decidir sobre qué función debería ejecutarse? Tenemos que usar condicionales!
 
     "Si (if) tenés una televisión, podés mirarla. Si no (else), hacés otra cosa."
-
     Es lo mismo con el código. Le podés dar una condición 'if' a una máquina para que haga una decisión acerca de qué
     parte del código tiene que ejecutarse.
 
@@ -329,6 +405,23 @@
 
 // TAREA: Cambiar el operador a '-', y fijarse que llame a la función 'restar' en vez de a la de 'sumar'.
 
+/*let operador = '-';
+let numero1 = 2;
+let numero2 = 4;
+
+let result;
+
+if (operador ===  '+') {
+	result = sumar(numero1, numero2);
+	
+} else {
+	result = restar(numero1, numero2);
+}
+
+console.log (
+	'El resultado de ' + numero1 + operador + numero2 + ' es ' + result
+);*/
+
 
 /*
     'If' - 'Else if' - 'Else'
@@ -360,8 +453,14 @@
 
 // TAREA: Creemos 2 funciones más: dividir y multiplicar.
 
+function dividir(numero1, numero2){
+	return numero1 / numero2; 
+}
 
 
+function multiplicar(numero1, numero2){
+	return numero1 * numero2; 
+}
 
 
 // TAREA: Reescribamos el if-else que teníamos y extendámolos, agregando:
@@ -370,9 +469,29 @@
 //       'else if' el 'operador' es igual a '*' - llamar a la función 'multiplicar'.
 //       else console.log - "Perdón, no conozco ese operador".
 
+/*let operador = prompt('Ingresa un operador: +, -, *, /');
+let numero1 = 20;
+let numero2 = 10;
 
+let result;
 
+if (operador === '+') {
+	result = sumar(numero1, numero2);
+}
+else if (operador === '-') {
+	result = restar(numero1, numero2);
+}
+else if (operador === '*') {
+	result = multiplicar(numero1, numero2);
+}
+else if (operador === '/') {
+	result = dividir(numero1, numero2);
+}
+else {
+	console.log('Perdon, no conozco ese operador ' + operador);
+}
 
+console.log('El resultado de ' + numero1 + ' ' + operador + ' ' + numero2 + ' es ' + result);*/
 
 /*
     Operadores Booleanos
@@ -401,8 +520,71 @@
 // TAREA: usando el operador !, Intentá invertir una variable (de true a false, o de false a true) e imprimí el
 // resultado en la consola.
 
+let myvariable = false;
+console.log(myvariable);
+console.log(!myvariable);
+console.log(!!myvariable);
+
+
 
 ////////////////////////////////////////////////////////////////////////////
 // Felicitaciones! Terminaste el Nivel 1 de la introducción a JavaScript! //
 // El siguiente nivel es el que está en nivel2.js                         //
 ////////////////////////////////////////////////////////////////////////////
+
+
+// Tarea Nro 1, Clase Nro 3:
+
+const myname = 'alfredo';
+const snakename = 'david';
+const nombreusuario = (prompt('Ingresa tu nombre')).toLowerCase();
+
+if (myname === nombreusuario) {
+	console.log('Hola, Tocayo! Yo también me llamo ' + nombreusuario);
+} else if (snakename === nombreusuario) {
+	console.log('Hola '  +  'te llamás igual que solid snake ' + snakename);
+} else {
+	console.log('Hola ' + nombreusuario);
+} 
+
+// Tarea Nro 2, Clase Nro 3
+
+const myage = 23
+let edadusuario = Number(prompt('Cual es tu edad'));
+
+if (myage === edadusuario) {
+    console.log('Tenes la misma edad que yo!');
+} else if (edadusuario > myage) {
+    console.log('Eres mayor que yo');
+} else if (edadusuario < myage) {
+    console.log('Eres menor que yo');
+} else {
+    console.log('eso no es edad che');
+}
+
+// Tarea Nro 3, Clase Nro 3
+
+const edadentradabar = 18;
+const respuestaafirmativa = 'si';
+const respuestanegativa = 'no';
+
+const documentousuario = (prompt('Tenes dni?').toLowerCase());
+
+if (documentousuario === respuestaafirmativa) {
+    const edaduser = Number(prompt('Cual es tu edad'));
+
+    if (edaduser > edadentradabar) {
+        console.log('Podes entrar al bar');
+    } else if (edaduser < edadentradabar) {
+        console.log('Eres menor de edad , no podes entrar al bar');
+    } else if (edaduser === edadentradabar) {
+        console.log('Entras justo al bar jeje');
+    } else {
+        console.log('no se entiende la respuesta');
+    }
+
+} else if (documentousuario === respuestanegativa) {
+    console.log('necesitamos el dni para que puedas entrar al bar');
+} else {
+    console.log('no se entiende la respuesta');
+}
