@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<head>
+    <title>Household income data</title>
+    <link rel="stylesheet" href="styles02.css"/>
+    <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.css" />
+    <script type="text/javascript" src="functions02.js"></script>
+
+</head>
+<body>
+<div align="center">
+    <form id="income-form">
+        <h4>Please fill the following boxes with the annual salary of each of your family members</h4>
+        <label for="annual-salary">Annual salary of member 1</label><input type="text" class="salary form-control" id="annual-salary-01"/>
+        <div class="error-hide" id="error-container0"></div>
+        <br>
+        <div id="add-rows"></div>
+        <br>
+        <!--<div class= "error-hide" id="errors"></div>-->
+        
+        <button type="submit" class="btn-sm" id="add-rows-button">Add</button>
+        <button type="submit" class="btn-sm" id="remove-rows-button">Remove</button>
+    </form>
+
+    <button type="submit" class="btn-sm" id="calculate-button">Calculate</button>
+
+    <form id="results-form">
+        <label for="highest-annual-salary">Highest annual salary</label><br>
+        <input type="text" disabled id="highest-annual-salary"/>
+        <br><br>
+        <label for="lowest-annual-salary">Lowest annual salary</label><br>
+        <input type="text" disabled id="lowest-annual-salary"/>
+        <br><br>
+        <label for="annual-salary-average">Annual salary average</label><br>
+        <input type="text" disabled id="annual-salary-average"/>
+        <br><br>
+        <label for="monthly-salary-average">Monthly salary average</label><br>
+        <input type="text" disabled id="monthly-salary-average"/>
+    </form>
+</div>
+
+    <script type="text/javascript" src="household02.js"></script>
+    <script type="text/javascript" src="pruebas02.js"></script>
+</body>
+</html>
+
