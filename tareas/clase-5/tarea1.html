@@ -1,21 +1,28 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Clase 5</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarea 1 - Clase 5</title>
 </head>
 <body>
-    <form>
-        <label for="salario-anual">Salario anual:</label>
-        <input type="number" id="salario-anual" placeholder="Ej.: 100000"/>
-        <label for="salario-anual">Salario mensual:</label>
-        <input type="number" disabled id="salario-mensual"/>
-        <button type="button" id="calcular-salario-mensual">Calcular</button>
-        <button type="reset">Limpiar</button>
+    <h1 id="titulo">Bienvenido!</h1>
+    <form id="datos-usuario" onsubmit="return false;">
+        <label for="nombre-usuario">Nombre</label>
+        <input type="text" id="nombre-usuario" placeholder="Ingresa tu nombre">
+        <label for="segundo-usuario">Segundo nombre</label>
+        <input type="text" id="segundo-usuario" placeholder="Ingresa tu segundo nombre">
+        <label for="apellido-usuario">Apellido</label>
+        <input type="text" id="apellido-usuario" placeholder="Ingresa tu apellido">
+        <label for="edad-usuario">Edad</label>
+        <input type="number" id="edad-usuario" min="1" max="100" placeholder="Ingresa tu edad">
+        <button type="button" id="personalizar-texto">Personalizar</button>
     </form>
+    <br>
+    <div id="resultado">
+        Hola
+    </div>
     <script type="text/javascript" src="tarea1.js"></script>
 </body>
 </html>
