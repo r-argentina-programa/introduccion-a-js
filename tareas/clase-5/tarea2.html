@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarea 2 - Clase 5</title>
+</head>
+<body>
+
+    <div class="banner">
+        <h2>Tareas Clase 5 (Horas)</h2>
+    </div>
+
+    <div class="body">
+        <p id="descripcion">Ingresa los datos de cada clase de r/argentina-programa</p>
+
+        <form id="datos-clases" onsubmit="return false">
+        
+            <div class="clase-1">
+                <label class="clases">Clase 1</label>
+                <input class="horas" type="number" id="horas-clase" placeholder="Horas">
+                <input class="minutos" type="number" id="minutos-clase" min="0" max="60" placeholder="Minutos">
+                <input class="segundos" type="number" id="segundos-clase" min="0" max="60" placeholder="Segundos">
+            </div>
+
+            <div class="clase-2">
+                <label class="clases">Clase 2</label>
+                <input class="horas" type="number" id="horas-clase" placeholder="Horas">
+                <input class="minutos" type="number" id="minutos-clase" min="0" max="60" placeholder="Minutos">
+                <input class="segundos" type="number" id="segundos-clase" min="0" max="60" placeholder="Segundos">
+            </div>
+
+            <div class="clase-3">
+                <label class="clases">Clase 3</label>
+                <input class="horas" type="" id="horas-clase" placeholder="Horas">
+                <input class="minutos" type="number" id="minutos-clase" min="0" max="60" placeholder="Minutos">
+                <input class="segundos" type="number" id="segundos-clase" min="0" max="60" placeholder="Segundos">
+            </div>
+
+            <div class="clase-4">
+                <label class="clases">Clase 4</label>
+                <input class="horas" type="number" id="horas-clase" placeholder="Horas">
+                <input class="minutos" type="number" id="minutos-clase" min="0" max="60" placeholder="Minutos">
+                <input class="segundos" type="number" id="segundos-clase" min="0" max="60" placeholder="Segundos">
+            </div>
+
+            <div class="clase-5">
+                <label class="clases">Clase 5</label>
+                <input class="horas" type="number" id="horas-clase" placeholder="Horas">
+                <input class="minutos" type="number" id="minutos-clase" min="0" max="60" placeholder="Minutos">
+                <input class="segundos" type="number" id="segundos-clase" min="0" max="60" placeholder="Segundos">
+            </div>
+            
+            <br>
+
+            <div class="resultado"></div>
+
+            <br>
+
+            <button type="button" id="calcular-tiempo">Calcular tiempo total</button>
+
+        </form>
+    </div>
+
+    <div class="footer">
+        r-argentina-programa&copy;
+    </div>
+
+    <script src="tarea2.js"></script>
+</body>
+</html>
