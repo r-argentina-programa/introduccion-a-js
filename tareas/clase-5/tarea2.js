@@ -57,7 +57,8 @@ $botonCalcularTiempo.onclick = function() {
     // transformar resultados totales
 
     let divisionSegundos, enteroSegundos, decimalSegundos;
-    let divisionMinutos, enteroMinutos, decimalMinutos;
+    let divisionMinutos, decimalMinutos;
+    let enteroMinutos = 0;
     let segundosActual, minutosActual, horasActual;
 
     if (totalSegundos >= 60) {
@@ -70,7 +71,7 @@ $botonCalcularTiempo.onclick = function() {
     }
 
     if (totalMinutos >= 60) {
-        divisionMinutos = totalMinutos / 60;
+        divisionMinutos = (totalMinutos + enteroSegundos) / 60;
         enteroMinutos = Math.floor(divisionMinutos);
         decimalMinutos = divisionMinutos - enteroMinutos;
         minutosActual = Math.round(decimalMinutos * 60);
