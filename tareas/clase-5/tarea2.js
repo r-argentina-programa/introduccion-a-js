@@ -24,8 +24,8 @@ $botonCalcularTiempo.onclick = function() {
     let arrayMinutos = [];
     let $arrayMinutos = document.getElementsByClassName("minutos");
 
-    for (i=0; i<$arraySegundos.length; i++) {
-        let campoMinutos = $arraySegundos[i];
+    for (i=0; i<$arrayMinutos.length; i++) {
+        let campoMinutos = $arrayMinutos[i];
         arrayMinutos.push(Number(campoMinutos.value));
     }
 
@@ -55,33 +55,20 @@ $botonCalcularTiempo.onclick = function() {
     }
 
     // transformar resultados totales
+    
+    const divisionSegundos = totalSegundos / 60;
+    const segundosEnteros = Math.floor(divisionSegundos);
+    const segundosRestantes = totalSegundos % 60;
+    //segundosActual = Math.round(decimalSegundos * 60);
 
-    let divisionSegundos, enteroSegundos, decimalSegundos;
-    let divisionMinutos, decimalMinutos;
-    let enteroMinutos = 0;
-    let segundosActual, minutosActual, horasActual;
+    const divisionMinutos = (totalMinutos + segundosEnteros) / 60;
+    const minutosEnteros = Math.floor(divisionMinutos);
+    const minutosRestantes = (totalMinutos + segundosEnteros) % 60;
+    //const minutosActual = Math.round(decimalMinutos * 60);
 
-    if (totalSegundos >= 60) {
-        divisionSegundos = totalSegundos / 60;
-        enteroSegundos = Math.floor(divisionSegundos);
-        decimalSegundos = divisionSegundos - enteroSegundos;
-        segundosActual = Math.round(decimalSegundos * 60);
-    } else {
-        segundosActual = Number(totalSegundos);
-    }
-
-    if (totalMinutos >= 60) {
-        divisionMinutos = (totalMinutos + enteroSegundos) / 60;
-        enteroMinutos = Math.floor(divisionMinutos);
-        decimalMinutos = divisionMinutos - enteroMinutos;
-        minutosActual = Math.round(decimalMinutos * 60);
-    } else {
-        minutosActual = Number(totalMinutos);
-    }
-
-    horasActual = totalHoras + enteroMinutos;
+    const horasActual = totalHoras + minutosEnteros;
 
     console.log(horasActual);
-    console.log(minutosActual);
-    console.log(segundosActual);
+    console.log(minutosRestantes);
+    console.log(segundosRestantes);
 }
