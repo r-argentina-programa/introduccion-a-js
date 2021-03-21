@@ -68,7 +68,8 @@ $botonCalcularTiempo.onclick = function() {
 
     const horasActual = totalHoras + minutosEnteros;
 
-    console.log(horasActual);
-    console.log(minutosRestantes);
-    console.log(segundosRestantes);
+    let resultadoFinal = document.querySelector("#resultado");
+    resultadoFinal.textContent = `${horasActual} : ${minutosRestantes} : ${segundosRestantes}`;
+
+    return false;
 }
