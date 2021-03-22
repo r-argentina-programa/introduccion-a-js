@@ -146,6 +146,7 @@ let edad = "28";
 
 // alert('Mi nombre es ' + nombre + ' y mi edad es ' + edad);
 
+alert(`mi nombre es ${nombre} y mi edad es ${edad}`);
 
 /*
     Constantes
@@ -182,7 +183,7 @@ const numeroProvinciasDeArgentina = 23;
 
 // TAREA: Intentar asignar un valor a una constante y ver qué pasa (mirar la consola)
 
-// numeroProvinciasDeArgentina = 2;
+
 
 // Consejo: No te olvides de comentar (//) los alerts y los errores intencionales (como en la tarea anterior) para
 // que los alerts no aparezcan cada vez, y para que los errores no hagan que el programa se detenga.
