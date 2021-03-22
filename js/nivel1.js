@@ -507,6 +507,28 @@ const diezMenorQueVeinte = 10 < 20;
 
 console.log(!diezMenorQueVeinte);
 
+
+// Va la tarea que se da en clase pero no esta en el texto:
+
+let anioActual = Number(prompt('ingrese el anio actual'));
+let anioNacimiento = Number(prompt('ingrese el anio de su nacimiento'));
+
+console.log('usted tiene ' + restar(anioActual,anioNacimiento) + ' anios');
+
+function calcularSalarios(mensual) {
+
+    let salarioAnual = mensual * 12;
+    let salarioSemanal = mensual / 4;
+    let salarioDiario = salarioSemanal / 5;
+    let salarioPorHora = salarioDiario / 8;
+
+    console.log(`su salario anual es de $${salarioAnual}, \n su salario mensual es de $${mensual}, \n su salario semanal es de $${salarioSemanal}, \n su salatio diario es de $${salarioDiario}, \n y su salario por hora es de $${salarioPorHora}`)
+}
+
+let salarioMensual = Number(prompt('ingrese su salario mensual'));
+
+console.log(calcularSalarios(salarioMensual));
+
 ////////////////////////////////////////////////////////////////////////////
 // Felicitaciones! Terminaste el Nivel 1 de la introducción a JavaScript! //
 // El siguiente nivel es el que está en nivel2.js                         //
