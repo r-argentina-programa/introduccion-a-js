@@ -309,7 +309,7 @@ function sumar(numero1, numero2) {
     return numero1 + numero2;
 }
 
-console.log(sumar(2,5));
+console.log(sumar(2, 5));
 
 // TAREA: Ahora creemos otra función llamada 'restar'
 //       Que acepte 2 números como parámetro y los reste, y que devuelva ese valor.
@@ -319,7 +319,7 @@ function restar(numero1, numero2) {
     return numero1 - numero2;
 }
 
-console.log(restar(5,1));
+console.log(restar(5, 1));
 console.log(restar(diez, tres));
 
 // Consejo: Sabías que en vez de pasar los números directamente a tu función podés crear variables con esos números
@@ -513,7 +513,7 @@ console.log(!diezMenorQueVeinte);
 let anioActual = Number(prompt('ingrese el anio actual'));
 let anioNacimiento = Number(prompt('ingrese el anio de su nacimiento'));
 
-console.log('usted tiene ' + restar(anioActual,anioNacimiento) + ' anios');
+console.log('usted tiene ' + restar(anioActual, anioNacimiento) + ' anios');
 
 function calcularSalarios(mensual) {
 
@@ -523,9 +523,13 @@ function calcularSalarios(mensual) {
     let salarioPorHora = salarioDiario / 8;
 
     console.log(`su salario anual es de $${salarioAnual}, \n su salario mensual es de $${mensual}, \n su salario semanal es de $${salarioSemanal}, \n su salatio diario es de $${salarioDiario}, \n y su salario por hora es de $${salarioPorHora}`)
+
+    return salarioAnual, salarioSemanal, salarioDiario, salarioPorHora;
 }
 
-let salarioMensual = Number(prompt('ingrese su salario mensual'));
+// let salarioMensual = Number(prompt('ingrese su salario mensual'));
+
+let salarioMensual = 30000;
 
 console.log(calcularSalarios(salarioMensual));
 
