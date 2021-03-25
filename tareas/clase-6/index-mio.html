@@ -6,16 +6,14 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="main-mio.css"/>
-    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css"/>
     <title>Tarea 6</title>
 </head>
 <body>
 
 <form id="calculador-edades">
-    
     <label for="cantidad-integrantes">Ingrese la cantidad de integrantes</label>
     <input type="number" id="cantidad-integrantes"/>
-    <button type="submit" id="siguiente-paso" class="btn btn-primary">Siguiente</button>
+    <button type="submit" id="siguiente-paso">Siguiente</button>
 
     <div id="integrantes">
 
@@ -29,24 +27,7 @@
         <p>El promedio de edad es: <strong id="promedio-edad"></strong></p>
     </div>
 
-    
-    <div id="salarios">
-
-    </div>
-    <button type="button" id="crear-salario" class="oculto" >Crear salario</button>
-
-    <button type="button" id="quitar-salario" class="oculto" >Quitar salario</button>
-    <button type="button" id="calcular-salarios" class="oculto">Calcular salarios</button>
-    
-    <div id="analisis-salarios" class="oculto">
-        <p>El mayor salario anual es: <strong id="mayor-salario"></strong></p>
-        <p>El menor salario anual es: <strong id="menor-salario"></strong></p>
-        <p>El promedio de salario anual es: <strong id="promedio-salario"></strong></p>
-        <p>El promedio de salario mensual es: <strong id="promedio-mensual-salario"></strong></p>
-
-    </div>
-
-    <button type="reset" id="resetear" class="btn btn-primary">Resetear</button>
+    <button type="reset" id="resetear">Resetear</button>
 </form>
 
 <script type="text/javascript" src="calculos-mio.js"></script>
