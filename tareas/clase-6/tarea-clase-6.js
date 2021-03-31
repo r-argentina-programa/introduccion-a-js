@@ -9,11 +9,50 @@ Punto bonus: Crear un botón para "empezar de nuevo" que empiece el proceso nuev
 console.log('hola');
 
 const $botonInicial = document.querySelector('#boton-inicial');
+const $divFamilia = document.querySelector('div.familia');
+const $divCalculos = document.querySelector('#calculos');
 
 $botonInicial.onclick = function() {
-    const $divFamilia = document.querySelector('div.familia');
-    $divFamilia.innerHTML = '';
+    
+    reseteaCampos();
     const cantidadFamilia = Number(document.querySelector('#cantidad-familia').value);
+    crearLabelInput(cantidadFamilia);
+    
+    $divFamilia.appendChild(document.createElement('br')); // da espacio visual
+
+    muestraDivCalculos();
+
+    document.querySelector('#boton-calculos').onclick = function() {
+        creaArrayEdades();
+    }
+    return false;
+}
+
+function creaArrayEdades() {
+    const $nodeEdades = document.querySelectorAll('.edades');
+        const arrayEdades = [];
+        for (let i = 0; i < $nodeEdades.length; i++) {
+            arrayEdades.push(Number($nodeEdades[i].value))
+        }
+
+    muestraEdades(arrayEdades);
+}
+
+function muestraEdades(arr) {
+    const $textoResultado = document.createTextNode(`La edad mas chica es ${numeroMinimo(arr)}, la edad mas grande es ${numeroMaximo(arr)} y la edad promedio es ${calcularPromedio(arr)}`)
+
+    $divFamilia.appendChild($textoResultado);
+}
+
+function muestraDivCalculos() {
+    $divCalculos.style.display = '';
+}
+
+function reseteaCampos() {
+    $divFamilia.innerHTML = '';
+}
+
+function crearLabelInput(cantidadFamilia) {
 
     for (let i = 0; i < cantidadFamilia; i++) {
         const $nuevoLabel = document.createElement('label');
@@ -30,31 +69,7 @@ $botonInicial.onclick = function() {
         $divFamilia.appendChild(document.createElement('br'));
         
     }
-
-    
-    $divFamilia.appendChild(document.createElement('br'));
-    const $divCalculos = document.querySelector('#calculos');
-    $divCalculos.style.display = '';
-
-    document.querySelector('#boton-calculos').onclick = function() {
-
-        const $nodeEdades = document.querySelectorAll('.edades');
-        const arrayEdades = [];
-        for (let i = 0; i < $nodeEdades.length; i++) {
-            arrayEdades.push(Number($nodeEdades[i].value))
-        }
-
-
-        const $textoResultado = document.createTextNode(`La edad mas chica es ${numeroMinimo(arrayEdades)}, la edad mas grande es ${numeroMaximo(arrayEdades)} y la edad promedio es ${calcularPromedio(arrayEdades)}`)
-
-        $divFamilia.appendChild($textoResultado);
-
-    }
-    return false;
 }
-
-
-
 
 function calcularPromedio(array) {
     let contador = 0;
@@ -71,7 +86,6 @@ function numeroMaximo(array) {
             numMayor = array[i];
         } 
     }
-
     return numMayor;
 }
 
@@ -82,7 +96,6 @@ function numeroMinimo(array) {
             numMenor = array[i];
         } 
     }
-
     return numMenor;
 }
 /*
