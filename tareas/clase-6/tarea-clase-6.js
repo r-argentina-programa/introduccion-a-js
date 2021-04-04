@@ -12,28 +12,38 @@ const $botonInicial = document.querySelector('#boton-inicial');
 const $divFamilia = document.querySelector('div.familia');
 const $divCalculos = document.querySelector('#calculos');
 
-$botonInicial.onclick = function() {
-    
+$botonInicial.onclick = function () {
+
     reseteaCampos();
     const cantidadFamilia = Number(document.querySelector('#cantidad-familia').value);
     crearLabelInput(cantidadFamilia);
-    
+
     $divFamilia.appendChild(document.createElement('br')); // da espacio visual
 
     muestraDivCalculos();
 
-    document.querySelector('#boton-calculos').onclick = function() {
+    document.querySelector('#boton-calculos').onclick = function () {
         creaArrayEdades();
+        
+        mostrarBotonSalario();
+        
+        
     }
     return false;
 }
 
+
+
+/////////////////////////////////////////////// funciones 
+
+
+
 function creaArrayEdades() {
     const $nodeEdades = document.querySelectorAll('.edades');
-        const arrayEdades = [];
-        for (let i = 0; i < $nodeEdades.length; i++) {
-            arrayEdades.push(Number($nodeEdades[i].value))
-        }
+    const arrayEdades = [];
+    for (let i = 0; i < $nodeEdades.length; i++) {
+        arrayEdades.push(Number($nodeEdades[i].value))
+    }
 
     muestraEdades(arrayEdades);
 }
@@ -41,7 +51,8 @@ function creaArrayEdades() {
 function muestraEdades(arr) {
     const $textoResultado = document.createTextNode(`La edad mas chica es ${numeroMinimo(arr)}, la edad mas grande es ${numeroMaximo(arr)} y la edad promedio es ${calcularPromedio(arr)}`)
 
-    $divFamilia.appendChild($textoResultado);
+    document.querySelector('div.resultado').appendChild($textoResultado);
+
 }
 
 function muestraDivCalculos() {
@@ -56,7 +67,7 @@ function crearLabelInput(cantidadFamilia) {
 
     for (let i = 0; i < cantidadFamilia; i++) {
         const $nuevoLabel = document.createElement('label');
-        $nuevoLabel.innerHTML = `Edad integrante ${i+1}`;
+        $nuevoLabel.innerHTML = `Edad integrante ${i + 1}`;
 
         const $nuevoInput = document.createElement('input');
         $nuevoInput.classList.add('edades');
@@ -67,8 +78,10 @@ function crearLabelInput(cantidadFamilia) {
         $divFamilia.appendChild(document.createElement('br'));
         $divFamilia.appendChild($nuevoInput);
         $divFamilia.appendChild(document.createElement('br'));
-        
+
     }
+
+
 }
 
 function calcularPromedio(array) {
@@ -84,7 +97,7 @@ function numeroMaximo(array) {
     for (let i = 0; i < array.length; i++) {
         if (array[i] > numMayor) {
             numMayor = array[i];
-        } 
+        }
     }
     return numMayor;
 }
@@ -94,7 +107,7 @@ function numeroMinimo(array) {
     for (let i = 0; i < array.length; i++) {
         if (array[i] < numMenor) {
             numMenor = array[i];
-        } 
+        }
     }
     return numMenor;
 }
@@ -105,3 +118,19 @@ Al hacer click en "calcular", mostrar en un elemento pre-existente el mayor sala
 
 Punto bonus: si hay inputs vacíos, ignorarlos en el cálculo (no contarlos como 0).
 */
+
+
+function mostrarBotonSalario() {
+    document.querySelector('#trabajar-salarios').style.display = '';
+}
+function agregarInputSalario(nodeListFamilia) {
+    for (let i = 0; i < nodeListFamilia.length; i++) {
+
+        const $nuevoLabelSalario = document.createElement('label');
+        const $nuevoInputSalario = document.createElement('input');
+
+        nodeListFamilia[i].appendChild($nuevoLabelSalario);
+        nodeListFamilia[i].appendChild($nuevoInputSalario);
+
+    }
+}
