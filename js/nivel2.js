@@ -44,7 +44,9 @@
 
 
 
+const comidasFavoritas = ['hamburguesa', 'pizza', 'milanesas'];
 
+console.log(comidasFavoritas);
 
 
 
@@ -64,7 +66,7 @@
 // TAREA: Verifique cuántos valores tiene en su array comidasFavoritas.
 // imprimi utilizando console.log el resultado.
 
-
+console.log(`la cantidad de posiciones que tiene comidasFavoritas es de ${comidasFavoritas.length}`);
 
 
 
@@ -92,7 +94,7 @@
 
 
 
-
+console.log(`el tercer elemento de mi array comidasFavoritas es ${comidasFavoritas[2]}`)
 
 
 /*
@@ -116,7 +118,9 @@
 // con cualquier otra cosa.
 
 
+comidasFavoritas[0] = 'asado';
 
+console.log(comidasFavoritas);
 
 
 
@@ -147,14 +151,14 @@
 // TAREA: Extendamos tu lista de comidasFavoritas y agreguemos un valor más.
 
 
-
+comidasFavoritas.push('lasagna');
 
 
 
 // TAREA: console.log todo el array para verificar.
 
 
-
+console.log(comidasFavoritas);
 
 
 
@@ -182,7 +186,13 @@
 // TAREA: Intenta crear un array como una constante y modifica los valores que contiene.
 
 
+const municipiosDeMendoza = ['mendoza', 'godoy cruz', 'guaymallen'];
 
+console.log(municipiosDeMendoza);
+
+municipiosDeMendoza[0] = 'lavalle';
+
+console.log(municipiosDeMendoza);
 
 
 
@@ -192,7 +202,12 @@
 //       asigna un nuevo array completamente nuevo a la constante
 
 
+municipiosDeMendoza.push('malargue');
 
+console.log(municipiosDeMendoza);
+
+// municipiosDeMendoza = 'san rafael'; da error por ser const
+ 
 
 
 
@@ -247,7 +262,13 @@
 //       diez a uno.
 
 
+let contadorWhile = 10;
 
+while (contadorWhile > 0) {
+    console.log(`usando while ${contadorWhile}`);
+    contadorWhile--;
+    
+}
 
 
 
@@ -269,7 +290,9 @@
 // TAREA: Imprimí cada 3er número del 3 al 22 usando un 'bucle for'.
 
 
-
+for (i = 3; i <= 22; i += 3) {
+    console.log(`contar de a 3 usando for ${i}`);
+}
 
 
 
@@ -297,7 +320,9 @@
 // TAREA: Probalo con tu comidasFavoritas array.
 
 
-
+for (i = 0; i < comidasFavoritas.length; i++) {
+    console.log(`me encanta comer ${comidasFavoritas[i]}`);
+}
 
 
 
