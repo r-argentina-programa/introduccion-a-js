@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Tiempo clases</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="stylesheet" href="tiempo-clases.css"/>
+
+    
+</head>
+
+<body>
+    <form onsubmit="return false;">
+        <label>Clase 1
+            <input type="number" placeholder="Horas" class="horas" id="horas-clase1"/>
+            <input type="number" placeholder="Minutos" class="minutos" id="minutos-clase1" />
+            <input type="number" placeholder="Segundos" class="segundos" id="segundos-clase1" />
+        </label>
+        <br>
+        <label>Clase 2
+            <input type="number" placeholder="Horas" class="horas" id="horas-clase2"/>
+            <input type="number" placeholder="Minutos" class="minutos" id="minutos-clase2" />
+            <input type="number" placeholder="Segundos" class="segundos" id="segundos-clase2" />
+        </label>
+        <br>
+        <label> Clase 3
+            <input type="number" placeholder="Horas" class="horas" id="horas-clase3"/>
+            <input type="number" placeholder="Minutos" class="minutos" id="minutos-clase3" />
+            <input type="number" placeholder="Segundos" class="segundos" id="segundos-clase3" />
+        </label>
+        <br>
+        <label> Clase 4
+            <input type="number" placeholder="Horas" class="horas" id="horas-clase4"/>
+            <input type="number" placeholder="Minutos" class="minutos" id="minutos-clase4" />
+            <input type="number" placeholder="Segundos" class="segundos" id="segundos-clase4" />
+        </label>
+        <br>
+        <label> Clase 5
+            <input type="number" placeholder="Horas" class="horas" id="horas-clase5"/>
+            <input type="number" placeholder="Minutos" class="minutos" id="minutos-clase5" />
+            <input type="number" placeholder="Segundos" class="segundos" id="segundos-clase5" />
+        </label>
+        <br>
+
+
+
+
+    <button type="button" id="calcular">Calcular tiempo total</button>
+
+    <div class ="oculto" id ="tiempo-total"> Tiempo total
+        <br>
+        <strong id="horas-totales"></strong>
+        <br>
+        <strong id = "minutos-totales"> </strong>
+        <br>
+        <strong id = "segundos-totales"></strong>
+        <br>
+    </div>
+
+    </form>
+
+    <script src="tiempo-clases.js"></script>
+</body>
+
+</html>

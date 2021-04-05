@@ -8,6 +8,7 @@ Punto bonus: Crear un botón para "empezar de nuevo" que empiece el proceso nuev
  borrando los inputs ya creados (investigar cómo en MDN).
 */
 
+
 document.querySelector('#siguiente-paso').onclick = function(event) {
   const $cantidadIntegrantes = document.querySelector('#cantidad-integrantes');
   const cantidadIntegrantes = Number($cantidadIntegrantes.value);
@@ -15,8 +16,10 @@ document.querySelector('#siguiente-paso').onclick = function(event) {
   borrarIntegrantesAnteriores();
   crearIntegrantes(cantidadIntegrantes);
 
+  mostrarBotonCrearSalarios()
+
   event.preventDefault();
-};
+}
 
 document.querySelector('#calcular').onclick = function(event) {
   const numeros = obtenerEdadesIntegrantes();
@@ -70,6 +73,12 @@ function resetear() {
   borrarIntegrantesAnteriores();
   ocultarBotonCalculo();
   ocultarResultados();
+  borrarSalariosAnteriores();
+  ocultarBotonSalarios();
+  ocultarAnalisisSalarios();
+  ocultarBotonCrearSalario();
+  ocultarBotonQuitarSalarios();
+  
 }
 
 function ocultarBotonCalculo() {
@@ -77,7 +86,7 @@ function ocultarBotonCalculo() {
 }
 
 function mostrarBotonCalculo() {
-  document.querySelector('#calcular').className = '';
+  document.querySelector('#calcular').className = 'btn btn-primary';
 }
 
 function ocultarResultados() {
@@ -108,3 +117,119 @@ Al hacer click en "calcular", mostrar en un elemento pre-existente el mayor sala
 
 Punto bonus: si hay inputs vacíos, ignorarlos en el cálculo (no contarlos como 0).
 */
+
+
+const $botonCrearSalario = document.querySelector("#crear-salario")
+$botonCrearSalario.onclick = function(event){
+  const $cantidadSalarios = document.querySelector('#cantidad-integrantes');
+  const cantidadSalarios = Number($cantidadSalarios.value);
+  crearSalarios(cantidadSalarios);
+  mostrarBotonSalarios();
+  mostrarBotonQuitarSalarios()
+
+  event.preventDefault();
+
+
+}
+
+const $botonQuitarSalario = document.querySelector("#quitar-salario")
+$botonQuitarSalario.onclick = function(event){
+  borrarSalariosAnteriores();
+
+  event.preventDefault();
+}
+
+const $botonCalcularSalarios = document.querySelector("#calcular-salarios")
+$botonCalcularSalarios.onclick = function(event){
+  const array = obtenerSalariosIntegrantes();
+  mostrarAnalisisSalarios();
+  mostrarSalario( `mayor`, obtenerMayorSalario(array));
+  mostrarSalario(`menor`, obtenerMenorSalario(array));
+  mostrarSalario(`promedio`, obtenerPromedioSalarios(array));
+  mostrarSalario(`promedio-mensual`, obtenerPromedioSalariosMensuales(obtenerSalariosMensuales(array)));
+
+  event.preventDefault();
+}
+
+
+function crearSalario(indice){
+  const div = document.createElement("div")
+  div.className = "salario";
+
+  const label = document.createElement("label")
+  label.textContent = "Salario del integrante #: " + (indice + 1);
+
+  const input = document.createElement("input")
+  input.type = "number";
+
+  div.appendChild(label);
+  div.appendChild(input);
+
+  const $salarios = document.querySelector("#salarios");
+  $salarios.appendChild(div) ;
+
+
+}
+
+function crearSalarios(cantidadIntegrantes){
+  for (let i = 0; i < cantidadIntegrantes; i++) {
+    crearSalario(i);
+}
+}
+
+function borrarSalariosAnteriores(){
+  const asalariados = document.querySelectorAll(".salario")
+  for (i = 0; i < asalariados.length; i++ ){
+    asalariados[i].remove()
+  } 
+}
+
+function mostrarBotonSalarios(){
+  document.querySelector("#calcular-salarios").className = "btn btn-primary"
+}
+
+function ocultarBotonSalarios(){
+  document.querySelector("#calcular-salarios").className = "oculto"
+}
+
+function mostrarBotonQuitarSalarios(){
+  document.querySelector("#quitar-salario").className ="btn btn-danger";
+}
+
+function ocultarBotonQuitarSalarios(){
+  document.querySelector("#quitar-salario").className ="oculto";
+}
+
+function mostrarBotonCrearSalarios(){
+  document.querySelector("#crear-salario").className ="btn btn-primary";
+}
+
+function ocultarBotonCrearSalario(){
+  document.querySelector("#crear-salario").className ="oculto";
+}
+
+function mostrarAnalisisSalarios(){
+  document.querySelector("#analisis-salarios").className = "";
+
+}
+
+function ocultarAnalisisSalarios(){
+  document.querySelector("#analisis-salarios").className = "oculto"; 
+}
+
+function mostrarSalario(tipo, valor){
+  document.querySelector(`#${tipo}-salario`).textContent = valor;
+}
+
+function obtenerSalariosIntegrantes(){
+  const $$salarios = document.querySelectorAll(".salario input")
+  let arraySalarios = []
+  for (i = 0; i < $$salarios.length; i++){
+    if ($$salarios[i].value !== ""){
+    arraySalarios.push(Number($$salarios[i].value))
+    }
+  } return arraySalarios
+
+
+
+}
