@@ -1,10 +1,21 @@
 // TAREA: Imprimí cada 3er número del 3 al 22 usando un 'bucle for'.
-
+/*
+for(let i = 3; i <= 22; i++) {
+    if (i % 3 == 0) {
+        console.log(i)
+    }
+}
+*/
 
 // TAREA: Usando un bucle 'while', decile a tu computadora que registre los números de
 //       diez a uno.
-
-
+/*
+let i = 10;
+while(i > 0) {
+    console.log(i);
+    i--;
+}
+*/
 // TAREA: Ha llegado el momento de un ejercicio clásico: 'FizzBuzz'.
 // Cuenta del 1 al 50 e imprime los números:
 // * Si un número es múltiplo de tres, imprime 'Fizz'.
@@ -16,6 +27,42 @@
 // 10% 3 = 1 - en 10 tenemos 3 * 3 + 1
 // 16% 4 = 0 - en 16 tenemos 4 * 4
 // 19% 4 = 3 - en 19 tenemos 4 * 4 + 3, etc.
-
 // Calcular el promedio de todos los números en un array de números. (y ponerlo en una función)
 // ej.: calcularPromedio([10,5,4,2,8])
+function fizzBuzz(numeroInicio, numeroFin) {
+    const resultado = [];
+    for (let i = numeroInicio; i <= numeroFin; i++) {
+        if (i % 3 === 0 && i % 5 === 0) {
+            resultado.push("FizzBuzz");
+        } else if (i % 3 === 0) {
+            resultado.push("Fizz");
+        } else if (i % 5 === 0) {
+            resultado.push("Buzz");
+        } else {
+            resultado.push(i);
+        }
+    }
+    return resultado;
+}
+
+const resultadoFizzBuzz = fizzBuzz(1, 50);
+
+const numeros = resultadoFizzBuzz.filter(function (item) {
+    if (typeof (item) !== "string") {
+        return item;
+    }
+})
+
+function calcularPromedio(listaDeNumeros) {
+    const CANTIDAD_DE_ELEMENTOS = listaDeNumeros.length;
+    let total = 0;
+    for (let i = 0; i < CANTIDAD_DE_ELEMENTOS; i++) {
+        total += listaDeNumeros[i];
+    }
+    return total / CANTIDAD_DE_ELEMENTOS;
+}
+
+resultadoFizzBuzz.forEach(item => {
+    console.log(item);    
+});
+console.log(`El promedio es: ${calcularPromedio(numeros)}`);
