@@ -218,7 +218,7 @@
     Ejemplo:
 
     const nuestroTwitter = document.querySelector('.twitter');
-    ourTwitter.id = "sorpresa";
+    nuestroTwitter.id = "sorpresa";
 */
 
 // TAREA: Actualizá el valor del atributo 'src' de nuestra etiqueta 'img' a "img/kittens.jpeg".
