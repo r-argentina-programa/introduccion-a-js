@@ -43,7 +43,7 @@
 //       cosas que te gustan.
 
 
-
+/* const comidasFavoritas = ["asado", "pastas", "helado"]; */
 
 
 
@@ -65,7 +65,9 @@
 // imprimi utilizando console.log el resultado.
 
 
+const comidasFavoritas = ["asado", "pastas", "helado"];
 
+//console.log(comidasFavoritas.length);
 
 
 
@@ -91,7 +93,7 @@
 // TAREA: Obtené el tercer elemento de tu array comidasFavoritas e imprimilo utilizando console.log.
 
 
-
+//console.log(comidasFavoritas[2]);
 
 
 
@@ -116,7 +118,9 @@
 // con cualquier otra cosa.
 
 
+comidasFavoritas[0] = "banana";
 
+//console.log(comidasFavoritas);
 
 
 
@@ -148,7 +152,9 @@
 
 
 
+comidasFavoritas.push('batata');
 
+//console.log(comidasFavoritas)
 
 
 // TAREA: console.log todo el array para verificar.
@@ -178,13 +184,18 @@
     // Esto es ilegal y devolverá un error igual al que se genera al cambiar cualquier constante:
     animales = [ 'mouse', 'elephant' ];
  */
-
+;
 // TAREA: Intenta crear un array como una constante y modifica los valores que contiene.
 
 
+const datosPersonales = ['catriel', 'perez'];
+datosPersonales[0] = 'pablo';
 
+//console.log(datosPersonales);
 
+//datosPersonales = ['pablo'];
 
+//console.log(datosPersonales);
 
 
 // TAREA: Observa lo que sucede si agregas algo con.push(), cambias algo
@@ -192,7 +203,9 @@
 //       asigna un nuevo array completamente nuevo a la constante
 
 
+datosPersonales.push(37);
 
+//console.log(datosPersonales[2]);
 
 
 
@@ -246,9 +259,14 @@
 // TAREA: Usando un bucle 'while', decile a tu computadora que registre los números de
 //       diez a uno.
 
+/* 
+let numero = 1;
 
-
-
+while (numero <= 10) {
+    console.log(numero);
+    numero++;
+}
+ */
 
 
 /*
@@ -268,8 +286,10 @@
 
 // TAREA: Imprimí cada 3er número del 3 al 22 usando un 'bucle for'.
 
-
-
+/* for (let i = 3; i < 22; i += 3) {
+    console.log(i);
+}
+ */
 
 
 
@@ -297,7 +317,11 @@
 // TAREA: Probalo con tu comidasFavoritas array.
 
 
+/* const comidaFavoritas = ['asado', 'pastas', 'helado'];
 
+for (let i = 0; i < comidaFavoritas.length; i++) {
+    console.log(comidaFavoritas[i]);
+}; */
 
 
 
@@ -339,7 +363,37 @@
 // 16% 4 = 0 - en 16 tenemos 4 * 4
 // 19% 4 = 3 - en 19 tenemos 4 * 4 + 3, etc.
 
+for (let i = 1; i <= 50; i++) {
+    if (i % 3 === 0 && i % 5 === 0) {
+        console.log('fizzBuzz');
+    } else if (i % 3 === 0) {
+        console.log('fizz');
+    } else if (i % 5 === 0) {
+        console.log('buzz');
+    } else {
+        console.log(i);
+    }
+}
 
+//otra forma con while y concatenacion
+
+let i = 1;
+const fizz = "Fizz";
+const buzz = "Buzz";
+
+while (i <= 50) {
+    if (i % 3 === 0 && i % 5 === 0) {
+
+        console.log(fizz + buzz);
+    } else if (i % 3 === 0) {
+        console.log(fizz);
+    } else if (i % 5 === 0) {
+        console.log(buzz);
+    } else {
+        console.log(i);
+    }
+    i++
+}
 
 
 

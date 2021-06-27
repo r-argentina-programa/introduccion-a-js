@@ -1,13 +1,28 @@
 <!doctype html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Clase 5</title>
 </head>
-<body>
 
+<body>
+    <form id="formulario-salario">
+        <div>
+            <label for="calcular-salario">Ingrese su salario Mensual</label>
+            <input type="number" name="salario" id="salario-mensual" placeholder="35000">
+            <input type="submit" value="calcular" id="boton">
+            <input type="reset" value="resetear">
+        </div>
+        <hr>
+        <div>
+            <label for="resultado">Resultado</label>
+            <input type="number" name="resultado" id="mostrar-resultado" disabled>
+        </div>
+    </form>
+    <script src="tarea-clase-5.js"></script>
 </body>
+
 </html>

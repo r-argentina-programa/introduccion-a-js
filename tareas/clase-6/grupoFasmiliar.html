@@ -1,0 +1,50 @@
+<!-- TAREA: Empezar preguntando cuánta gente hay en el grupo familiar. Crear tantos inputs+labels como gente haya para completar la edad de cada integrante. Al hacer click en "calcular", mostrar en un elemento pre-existente la mayor edad, la menor edad y el
+promedio del grupo familiar. Punto bonus: Crear un botón para "empezar de nuevo" que empiece el proceso nuevamente, borrando los inputs ya creados (investigar cómo en MDN). -->
+<!DOCTYPE html>
+<html lang="es-AR">
+
+<head>
+    <title>Grupo Familiar</title>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="palabras claves">
+    <meta name="author" content="catriel">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="descripcion de la pagina">
+    <link rel="stylesheet" href="grupoFamiliar.css">
+</head>
+
+<body>
+
+    <form id="calculador-edades">
+        <h1>Hola Mundo!</h1>
+        <label for="cantidad-integrantes">Cantidad de integrantes</label>
+        <input type="number" id="cantidad-integrantes" placeholder="Ingrese cantidad de integrantes">
+
+        <button type="submit" id="siguiente-paso">Siguiente</button>
+
+        <div id="integrantes">
+
+        </div>
+        <button type="reset" id="resetear">Reset</button>
+        <button type="button" id="calcular" class="oculto">Calcular</button>
+
+        <div id="analisis" class="oculto">
+            <p>La edad mayor es: <strong id="mayor-edad"></strong></p>
+            <p>La menor edad es: <strong id="menor-edad"></strong></p>
+            <p>El promedio de edad es: <strong id="promedio-edad"></strong></p>
+        </div>
+
+
+    </form>
+
+
+    <script type="text/javascript" src="grupoFamiliar.js"></script>
+    <script src="calculosGrupoFamiliar.js"></script>
+
+    </div>
+
+</body>
+
+</html>

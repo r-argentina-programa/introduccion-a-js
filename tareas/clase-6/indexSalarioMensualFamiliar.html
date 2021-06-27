@@ -1,0 +1,55 @@
+<!--ingresar integrantes familiares
+    ingresar salarios mensual  
+    boton calcular
+    retornar salarioAnualMayor, salarioMensualMenor, 
+    y salarioMensualPromedio
+    si hay input vacios de salario ignorarlos 
+    -->
+
+
+<!DOCTYPE html>
+<html lang="es-AR">
+
+<head>
+    <title>Calcular Salario Familiar</title>
+    <link rel="stylesheet" href="styleSalarioMensualFamiliar.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keyword" content="tarea, js, calculo">
+    <meta name="description" content="tarea de la clase numero 6">
+    <meta name="author" content="catriel">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container-flex">
+
+        <form id="integrantes-familiares" class="jumbotron">
+            <label for="ingreso-familiares">Ingresar numero de familiares</label>
+            <input type="number" id="numero-familiar" placeholder="1">
+
+            <button type="submit" id="siguiente" class="btn-success">Siguiente</button>
+
+            <div id="familiares" class="jumbotron">
+                <p>Hola Mundo!</p>
+            </div>
+
+            <div id="resultado" class="oculto">
+                <p>El salario anual mayor es: <strong id="mayor-salario"></strong></p>
+                <p>El salario anual menor es: <strong id="menor-salario"></strong></p>
+                <p>El salario anual promedio es: <strong id="promedio-salario"></strong></p>
+            </div>
+
+            <button type="reset" id="resetear" class="btn-danger">Resetear</button>
+            <button type="button" id="calcular" class="oculto">Calcular</button>
+        </form>
+
+    </div>
+
+    <script type="text/javascript" src="calcularSalarioMensual.js"></script>
+    <script type="text/javascript" src="t6.js"></script>
+</body>
+
+</html>

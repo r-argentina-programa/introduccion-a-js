@@ -125,7 +125,9 @@
 //       Utilizá console.log para ver lo que obtuviste!
 
 
+/* const h1 = document.querySelector('h1');
 
+console.log(h1); */
 
 
 
@@ -146,7 +148,9 @@
 
 // TAREA: Obtené todos los elementos <li> de la página en una variable llamada mediaLinks.
 
+/* const todosLi = document.querySelectorAll('li');
 
+console.log(todosLi); */
 
 
 
@@ -154,7 +158,7 @@
 // TAREA: Ahora utilizá console.log para ver la cantidad de 
 // elementos li que hay con mediaLinks.length
 
-
+/* console.log(todosLi.length); */
 
 
 
@@ -162,7 +166,10 @@
 // TAREA: ¿Te acordás de los bucles del nivel 2? Usando lo que sabés de ellos, realizá iteraciones
 //      sobre cada item de mediaLinks y mostralos en pantalla con console.log
 
+/* for (let i = 0; i < todosLi.length; i++) {
+    console.log(todosLi[i]);
 
+} */
 
 
 
@@ -185,7 +192,9 @@
 // y utilizá console.log para mostrarlo.
 
 
+/* const h1 = document.querySelector('h1').textContent;
 
+console.log(h1); */
 
 
 
@@ -205,7 +214,11 @@
 
 // TAREA: Hagamos un nuevo título! Cambiá el contenido de nuestro 'h1' y ponele lo que quieras.
 
+/* let titulo = document.querySelector('h1');
 
+titulo.textContent = 'Hola Catriel';
+
+console.log(titulo); */
 
 
 
@@ -224,8 +237,9 @@
 // TAREA: Actualizá el valor del atributo 'src' de nuestra etiqueta 'img' a "img/kittens.jpeg".
 
 
+/* let imagen = document.querySelector('img');
 
-
+imagen.src = 'img/kittens.jpeg'; */
 
 
 /*
@@ -249,7 +263,9 @@
 // Tarea: Obtené cualquier elemento de la página y cambiale algunos estilos.
 
 
+/* let subtitulo = document.querySelector('h2');
 
+subtitulo.style.color = 'violet'; */
 
 
 
@@ -264,13 +280,13 @@
     existingNode.appendChild(newNode); // agrega un newNode al final de existingNode.
 
     Ejemplo:
-
-    const nodoPagina = document.querySelector('body');
-    const nuevoParrafo = document.createElement('p');
-    const textoParrafo = document.createTextNode('Yeeee!');
-    nuevoParrafo.appendChild(textoParrafo);
-    nodoPagina.appendChild(nuevoParrafo);
 */
+/* const nodoPagina = document.querySelector('body');
+const nuevoParrafo = document.createElement('p');
+const textoParrafo = document.createTextNode('Yeeee!');
+nuevoParrafo.appendChild(textoParrafo);
+nodoPagina.appendChild(nuevoParrafo);
+ */
 
 // Tarea: Todavía seguís teniendo a los gatitos en tu pantalla? A mí me gusta el logo y los gatitos.
 //       Creá una nueva imagen con nuestro logo como fuente, y ponela
@@ -279,8 +295,13 @@
 // P.S. También les podés dar estilos al nuevo nodo que creaste.
 
 
+/* const nodoPagina = document.querySelector('div');
+const nuevoParrafo = document.createElement('p');
+const tituloImagen = document.createTextNode('Estoy agregando contenido con JS');
 
-
+nuevoParrafo.appendChild(tituloImagen);
+nodoPagina.appendChild(nuevoParrafo);
+ */
 
 
 ////////////////////////////////////////////////////////////////////////////

@@ -16,9 +16,51 @@
 // No se olviden de hacer un console.log para ver el resultado!
 //
 
+function calcular() {
+    const operador = prompt('Ingrese su operador "+", "-", "/", "*"', '+');
+    const numero1 = 10;
+    const numero2 = 5;
+    let resultado;
+
+    if (operador === "+") {
+        return sumar(numero1, numero2);
+    } else if (operador === "-") {
+        return restar(numero1, numero2);
+    } else if (operador === "/") {
+        return dividir(numero1, numero2);
+    } else if (operador === "*") {
+        return multiplicar(numero1, numero2);
+    } else {
+        alert(`No entendi tu operador "${operador}"`);
+        calcular();
+    };
+
+    function sumar(numero1, numero2, resultado) {
+        resultado = numero1 + numero2;
+        console.log(`${numero1} + ${numero2} = ${resultado}`);
+    };
+
+    function restar(numero1, numero2, resultado) {
+        resultado = numero1 - numero2;
+        console.log(`${numero1} - ${numero2} = ${resultado}`);
+    };
+
+    function dividir(numero1, numero2, resultado) {
+        resultado = numero1 / numero2;
+        console.log(`${numero1} / ${numero2} = ${resultado}`);
+    };
+
+    function multiplicar(numero1, numero2, resultado) {
+        resultado = numero1 * numero2;
+        console.log(`${numero1} * ${numero2} = ${resultado}`);
+    };
+};
+
+//calcular();
+
 // TAREA: Cambiar el operador a '-', y fijarse que llame a la función 'restar' en vez de a la de 'sumar'.
 
-function sumar(numero1, numero2) {
+/* function sumar(numero1, numero2) {
     return numero1 + numero2;
 }
 
@@ -39,6 +81,10 @@ if (operador === '+') {
 
 //https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/template_strings
 console.log(
-    `El resultado de ${numero1} ${operador} ${numero2} es ${resultado}`
-);
-
+    `
+                El resultado de $ { numero1 }
+                $ { operador }
+                $ { numero2 }
+                es $ { resultado }
+                `
+); */

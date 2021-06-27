@@ -1,0 +1,44 @@
+body {
+    background: url('pexels-maxime-francis-2246476.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: orange;
+    font-size: xx-large;
+    text-align: center;
+}
+
+form {
+    background-color: black;
+    opacity: .6;
+    border-radius: 21px;
+    margin: 55px;
+    padding: 21px 55px;
+}
+
+#calcular,
+#siguiente-paso,
+#resetear {
+    background-color: darkgreen;
+    color: orange;
+    font-size: xx-large;
+    padding: 13px 55px;
+    margin: 13px;
+    border-radius: 13px;
+}
+
+#resetear {
+    background-color: crimson;
+}
+
+input {
+    background-color: orange;
+    color: black;
+    font-size: large;
+    margin: 13px;
+    padding: 13px;
+    border-radius: 8px;
+}
+
+.oculto {
+    display: none;
+}

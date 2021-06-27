@@ -1,0 +1,27 @@
+body {
+    background: tomato;
+    color: turquoise;
+    font-size: 30px;
+    font-weight: bolder;
+    text-align: center;
+}
+
+.boton {
+    background: darkmagenta;
+    color: ghostwhite;
+    font-size: xx-large;
+    margin: 20px;
+    padding: 10px 30px;
+    border-radius: 10px;
+}
+
+#boton {
+    background-color: darkgreen;
+}
+
+.oculto {
+    display: none;
+}
+
+
+/* hacer que cada vifdeo en una propia linea */

@@ -1,0 +1,23 @@
+body {
+    background: url(pexels-pixabay-326055.jpg);
+    color: bisque;
+}
+
+#calcular {
+    background-color: aquamarine;
+    padding: 13px 54px;
+    font-size: 21px;
+    font-weight: bold;
+    border-radius: 13px;
+}
+
+
+/* .oculto {
+    display: none;
+} */
+
+body>p {
+    font-size: 55px;
+    font-weight: bold;
+    text-align: center;
+}
