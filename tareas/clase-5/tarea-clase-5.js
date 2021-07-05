@@ -31,6 +31,9 @@ let salarioAnual;
 
 const $botonCalcular = document.querySelector('#boton-calcular')
 
+$botonCalcular.onclick = function(){
+
+}
 
 //TAREA: En otro archivo html (no Index) y otro archivo js (no tarea-clase-5.js),
 // creá un formulario que capture el primer nombre, segundo nombre, apellido/s y edad del usuario
