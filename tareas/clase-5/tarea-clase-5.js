@@ -36,6 +36,7 @@ $botonCalcular.onclick = function(){
   salarioAnual = document.querySelector('#input-salario-anual').value
   document.querySelector('#display-salario-mensual').value = calcularSalarioMensual(salarioAnual)
   
+  return false;
 }
 
 //TAREA: En otro archivo html (no Index) y otro archivo js (no tarea-clase-5.js),
