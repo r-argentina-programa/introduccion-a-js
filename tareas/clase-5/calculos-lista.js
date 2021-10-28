@@ -1,11 +1,12 @@
 const $botonCalcular = document.querySelector("#boton-calcular");
 
+
 //promedio
 function calcularPromedio(array) {
     let totalSuma = 0;
 
     for (let i = 0; i < array.length; i++) {
-        totalSuma9 += array[i];
+        totalSuma += array[i];
     };
 
     return totalSuma / array.length;
@@ -52,10 +53,9 @@ function calcularNumeroMasFrecuente(array) {
 
 
 
+$botonCalcular.onclick = function(){
+    const $numeros = document.querySelectorAll(".numeros").value;
 
-$botonCalcular.onclick = function () {
-
-
-
-    return false;
+    document.querySelector("#promedio").textContent = `El promedio es ${calcularPromedio($numeros)}`;
 }
+
