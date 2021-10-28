@@ -53,11 +53,19 @@ function calcularNumeroMasFrecuente(array) {
 
 
 
-$botonCalcular.onclick = function(){
+/*$botonCalcular.onclick = function(){
     const $numeros = document.querySelectorAll(".numeros").value;
 
     document.querySelector("#promedio").textContent = `El promedio es ${calcularPromedio($numeros)}`;
 
     return false
 }
+*/
 
+$botonCalcular.onclick = function(){
+    const $numeros = Number(document.querySelectorAll(".numeros").value);
+
+    document.querySelector("#promedio").textContent = `El promedio es ${calcularPromedio($numeros)}`;
+
+    return false;
+}
