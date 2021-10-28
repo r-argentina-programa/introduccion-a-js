@@ -1,0 +1,61 @@
+const $botonCalcular = document.querySelector("#boton-calcular");
+
+//promedio
+function calcularPromedio(array) {
+    let totalSuma = 0;
+
+    for (let i = 0; i < array.length; i++) {
+        totalSuma9 += array[i];
+    };
+
+    return totalSuma / array.length;
+}
+
+
+//numero más grande
+function calcularMayorNumero(array) {
+    let numeroMayor = 0;
+
+    for (let i = 0; i < array.length; i++) {
+        let numeroMayor = array[0];
+
+        if (array[i] > numeroMayor) {
+            numeroMayor = array[i];
+        };
+    };
+
+    return numeroMayor;
+}
+
+
+//numero más pequeño
+function calcularMenorNumero(array) {
+    let numeroMenor = array[0];
+
+    for (let i = 0; i < array.length; i++) {
+        if (array[i] < numeroMenor) {
+            numeroMenor = array[i]
+        };
+    };
+
+    return numeroMenor;
+}
+
+
+//numero más frecuente
+function calcularNumeroMasFrecuente(array) {
+    let numeroMasFrecuente;
+    
+
+   
+}
+
+
+
+
+$botonCalcular.onclick = function () {
+
+
+
+    return false;
+}
