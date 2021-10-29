@@ -1,64 +1,69 @@
 const $botonCalcular = document.querySelector("#boton-calcular");
 
+//NodeList a array
+function NodeListToArray(NodeList) {
+    const arrayNumeros = [];
+
+    for (let i = 0; i < NodeList.length; i++) {
+        arrayNumeros.push(Number((NodeList[i].value)))
+    }
+
+    return arrayNumeros;
+}
 
 //promedio
 function calcularPromedio(array) {
     let totalSuma = 0;
 
     for (let i = 0; i < array.length; i++) {
-        totalSuma += Number(array[i].value);
+        totalSuma += array[i];
     };
 
     return totalSuma / array.length;
-}
-
+};
 
 //numero más grande
 function calcularMayorNumero(array) {
-    let numeroMayor = Number(array[0].value);
+    let mayorNumero = array[0];
 
     for (let i = 0; i < array.length; i++) {
-        if (Number(array[i].value) > numeroMayor) {
-            numeroMayor = Number(array[i].value);
+        if (array[i] > mayorNumero) {
+            mayorNumero = array[i];
         };
     };
 
-    return numeroMayor;
-}
-
+    return mayorNumero;
+};
 
 //numero más pequeño
 function calcularMenorNumero(array) {
-    let numeroMenor = Number(array[0].value);
+    let menorNumero = array[0];
 
     for (let i = 0; i < array.length; i++) {
-        if (Number(array[i].value) < numeroMenor) {
-            numeroMenor = Number(array[i].value)
+        if (array[i] < menorNumero) {
+            menorNumero = array[i];
         };
     };
 
-    return numeroMenor;
-}
-
+    return menorNumero;
+};
 
 //numero más frecuente
-function calcularNumeroMasFrecuente(array) {
-    let numeroMasFrecuente;
 
 
-
-}
-
-
+//ejecución
 
 $botonCalcular.onclick = function () {
     const $numeros = document.querySelectorAll(".numeros");
 
+    let numerosACalcular = NodeListToArray($numeros);
 
-    document.querySelector("#promedio").textContent = `El promedio es ${calcularPromedio($numeros)}`;
-    document.querySelector("#numero-pequenio").textContent = `El número más pequeño es ${calcularMenorNumero($numeros)}`;
-    document.querySelector("#numero-grande").textContent = `El número más grande es ${calcularMayorNumero($numeros)}`;
-    //document.querySelector("#numero-frecuente").textContent = `El número más frecuente es ${calcularNumeroMasFrecuente($numeros)}`;
+    console.log(numerosACalcular);
+
+    document.querySelector("#promedio").textContent = `El promedio es ${calcularPromedio(numerosACalcular)}`;
+    document.querySelector("#numero-pequenio").textContent = `El número más pequeño es ${calcularMenorNumero(numerosACalcular)}`;
+    document.querySelector("#numero-grande").textContent = `El número más grande es ${calcularMayorNumero(numerosACalcular)}`;
+    //document.querySelector("#numero-frecuente").textContent = `El número más frecuente es ${calcularNumeroMasFrecuente(numerosACalcular)}`;
 
     return false;
 };
