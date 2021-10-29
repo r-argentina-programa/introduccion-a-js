@@ -51,6 +51,22 @@ function calcularMenorNumero(array) {
 };
 
 //numero más frecuente
+function calcularNumeroMasFrecuente(array) {
+    let numeroMasFrecuente;
+
+    for (let i = 0; i < array.length; i++) {
+        let contador = 0;
+
+        for (let j = 0; j < array.length; j++) {
+            if(array[i] === array[j]) {
+                contador++
+                numeroMasFrecuente = array[i];
+            };
+        };
+    };
+
+    return numeroMasFrecuente;
+}
 
 
 //ejecución
@@ -65,14 +81,15 @@ $botonCalcular.onclick = function () {
     document.querySelector("#promedio").textContent = `El promedio es ${calcularPromedio(numerosACalcular)}`;
     document.querySelector("#numero-pequenio").textContent = `El número más pequeño es ${calcularMenorNumero(numerosACalcular)}`;
     document.querySelector("#numero-grande").textContent = `El número más grande es ${calcularMayorNumero(numerosACalcular)}`;
-    //document.querySelector("#numero-frecuente").textContent = `El número más frecuente es ${calcularNumeroMasFrecuente(numerosACalcular)}`;
+    document.querySelector("#numero-frecuente").textContent = `El número más frecuente es ${calcularNumeroMasFrecuente(numerosACalcular)}`;
 
     return false;
 };
 
 
-$botonLimpiar.onclick = function(){
-document.querySelector("#promedio").textContent = "El promedio es...";
-document.querySelector("#numero-pequenio").textContent = "El número más pequeño es...";
-document.querySelector("#numero-grande").textContent = "El numero más grande es...";
+$botonLimpiar.onclick = function () {
+    document.querySelector("#promedio").textContent = "El promedio es...";
+    document.querySelector("#numero-pequenio").textContent = "El número más pequeño es...";
+    document.querySelector("#numero-grande").textContent = "El numero más grande es...";
+    document.querySelector("#numero-frecuente").textContent = "El número más frecuente es...";
 }
