@@ -1,4 +1,6 @@
+//botones
 const $botonCalcular = document.querySelector("#boton-calcular");
+const $botonLimpiar = document.querySelector("#boton-limpiar");
 
 //NodeList a array
 function NodeListToArray(NodeList) {
@@ -68,3 +70,9 @@ $botonCalcular.onclick = function () {
     return false;
 };
 
+
+$botonLimpiar.onclick = function(){
+document.querySelector("#promedio").textContent = "El promedio es...";
+document.querySelector("#numero-pequenio").textContent = "El número más pequeño es...";
+document.querySelector("#numero-grande").textContent = "El numero más grande es...";
+}
