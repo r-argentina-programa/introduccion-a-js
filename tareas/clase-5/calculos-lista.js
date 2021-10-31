@@ -55,11 +55,8 @@ function calcularNumeroMasFrecuente(array) {
     let numeroMasFrecuente;
 
     for (let i = 0; i < array.length; i++) {
-        let contador = 0;
-
-        for (let j = 0; j < array.length; j++) {
-            if(array[i] === array[j]) {
-                contador++
+        for (let j = i + 1; j < array.length; j++) {
+            if (array[i] === array[j]) {
                 numeroMasFrecuente = array[i];
             };
         };
