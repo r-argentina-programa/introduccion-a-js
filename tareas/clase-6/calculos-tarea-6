@@ -1,0 +1,33 @@
+function calcularPromedio (array){
+    let sumaTotal = 0;
+
+    for(let i=0; i< array.length; i++){
+        sumaTotal += array[i];
+    }
+
+    return sumaTotal / array.length;
+}
+
+function calcularMenorNumero (array){
+    let menorNumero = array[i]
+
+    for (let i=0; i<array.length; i++){
+        if(array[i] < menorNumero){
+            menorNumero = array[i];
+        };
+    }
+
+    return menorNumero;
+}
+
+function calcularMayorNumero(array){
+    let mayorNumero = array[i];
+
+    for (let i=0; i<array.length; i++){
+        if(array[i] > mayorNumero){
+            mayorNumero = array[i];
+        };
+    };
+
+    return mayorNumero;
+}
