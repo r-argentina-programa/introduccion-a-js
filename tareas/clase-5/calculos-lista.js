@@ -1,19 +1,18 @@
-//botones
 const $botonCalcular = document.querySelector("#boton-calcular");
 const $botonLimpiar = document.querySelector("#boton-limpiar");
 
-//NodeList a array
-function NodeListToArray(NodeList) {
+
+function nodeListToArray(nodeList) {
     const arrayNumeros = [];
 
-    for (let i = 0; i < NodeList.length; i++) {
-        arrayNumeros.push(Number((NodeList[i].value)))
+    for (let i = 0; i < nodeList.length; i++) {
+        arrayNumeros.push(Number((nodeList[i].value)))
     }
 
     return arrayNumeros;
 }
 
-//promedio
+
 function calcularPromedio(array) {
     let totalSuma = 0;
 
@@ -24,7 +23,7 @@ function calcularPromedio(array) {
     return totalSuma / array.length;
 };
 
-//numero más grande
+
 function calcularMayorNumero(array) {
     let mayorNumero = array[0];
 
@@ -37,7 +36,7 @@ function calcularMayorNumero(array) {
     return mayorNumero;
 };
 
-//numero más pequeño
+
 function calcularMenorNumero(array) {
     let menorNumero = array[0];
 
@@ -50,7 +49,7 @@ function calcularMenorNumero(array) {
     return menorNumero;
 };
 
-//numero más frecuente
+
 function calcularNumeroMasFrecuente(array) {
     let numeroMasFrecuente;
 
@@ -66,12 +65,10 @@ function calcularNumeroMasFrecuente(array) {
 }
 
 
-//ejecución
-
 $botonCalcular.onclick = function () {
     const $numeros = document.querySelectorAll(".numeros");
 
-    let numerosACalcular = NodeListToArray($numeros);
+    let numerosACalcular = nodeListToArray($numeros);
 
     console.log(numerosACalcular);
 
