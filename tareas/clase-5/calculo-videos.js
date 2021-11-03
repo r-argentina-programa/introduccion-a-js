@@ -1,16 +1,17 @@
-const $botonCalcular = document.querySelector("#boton-calcular");
-const $horasPorClase = document.querySelectorAll(".horas");
-const $minutosPorClase = document.querySelectorAll(".minutos");
-const $segundosPorClase = document.querySelectorAll(".segundos");
-const $textoResultadoTotal = document.querySelector("#resultado");
-
-
-let horasTotalesDeClase = 0;
-let minutosTotalesDeClase = 0;
-let segundosTotalesDeClase = 0;
-
-
 $botonCalcular.onclick = function () {
+    const $botonCalcular = document.querySelector("#boton-calcular");
+    const $horasPorClase = document.querySelectorAll(".horas");
+    const $minutosPorClase = document.querySelectorAll(".minutos");
+    const $segundosPorClase = document.querySelectorAll(".segundos");
+    const $textoResultadoTotal = document.querySelector("#resultado");
+
+
+    let horasTotalesDeClase = 0;
+    let minutosTotalesDeClase = 0;
+    let segundosTotalesDeClase = 0;
+
+
+
     for (let i = 0; i < $horasPorClase.length; i++) {
         horasTotalesDeClase = horasTotalesDeClase + $horasPorClase[i].value;
     }
