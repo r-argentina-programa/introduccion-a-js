@@ -9,13 +9,49 @@ document.querySelector("#siguiente-paso").onclick = function() {
     const $cantidadIntegrantes = document.querySelector("#cantidad-integrantes");
     const cantidadIntegrantes = Number($cantidadIntegrantes.value);
 
-    borrarIntegrantes();
-    crearIntegrantes(cantidadIntegrantes);
+    borrarIntegrantesAnteriores();
+    crearIntegrante(cantidadIntegrantes);
 
     event.preventDefault();
+};
+
+document.querySelector("#calcular").onclick = function(event) {
+    const numeros = obtenerEdadesIntegrantes();
+    mostrarEdad('mayor', calcularMayorNumero(numeros));
+    mostrarEdad('menor', calcularMenorNumero(numeros));
+    mostrarEdad('promedio', calcularPromedio(numeros));
+    mostrarResultados();
+
+    event.preventDefault();
+};
+
+document.querySelector("#resetear").onclick = resetear;
+
+function borrarIntegrantesAnteriores() {
+    const $integrantes = document.querySelectorAll(".integrante");
+    for (let i=0; i< $integrantes.length; i++) {
+        $integrantes[i].remove();
+    }
 }
 
+function crearIntegrantes(cantidadIntegrantes) {
 
+    if (cantidadIntegrantes > 0) {
+        mostrarBotonCalculo();
+    } else {
+        resetear();
+    }
+
+    for (let i = 0; i < cantidadIntegrantes; i++) {
+        crearIntegrante(i);
+    }
+}
+
+function crearIntegrante(indice) {
+    const $div = document.querySelector("div");
+    $div.className = 'integrante';
+    
+}
 
 /*
 TAREA:
