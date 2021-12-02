@@ -17,3 +17,23 @@ document.querySelector("#calcular-salario-mensual").onclick = function(){
   }
 
   
+  document.querySelector("#enviar").onclick = function(event){
+
+    
+    const nombre = document.querySelector("#nombre")
+    const segundoNombre = document.querySelector("#segundo-nombre")
+    const edad = document.querySelector ("#edad")
+
+    document.querySelector("#mostrarNombre").textContent = nombre.value
+    document.querySelector("#mostrarSegundoNombre").textContent = segundoNombre.value
+    document.querySelector("#mostrarEdad").textContent = edad.value
+    document.querySelector("#saludar-usuario").textContent = ("Bienvenido " + nombre.value)
+
+
+    mostrarElemento("#placeholder")
+    return false
+}
+
+function mostrarElemento(elemento){
+    document.querySelector(elemento).className = ""
+}
