@@ -37,3 +37,4 @@ document.querySelector("#calcular-salario-mensual").onclick = function(){
 function mostrarElemento(elemento){
     document.querySelector(elemento).className = ""
 }
+
