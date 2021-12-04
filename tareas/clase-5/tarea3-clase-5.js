@@ -1,145 +1,112 @@
-document.querySelector("#siguiente-paso").onclick = function(event){
-    const  $cantidadClases = document.querySelector("#cantidad-clases")
-    const   cantidadClases = Number($cantidadClases.value)
-   
-    borrarClasesAnteriores()
-    crearClases(cantidadClases)
-   
-   
-   
-    event.preventDefault()
-   
-   }
-   
-   document.querySelector("#boton-calcular").onclick = function(event){
-       const horas = obtenerHoras()
-       const minutos = obtenerMinutos()
-       const segundos = obtenerSegundos()
-       mostrarResultados("horas",calcularHoras(horas))
-       mostrarResultados("minutos",calcularMinutos(minutos))
-       mostrarResultados("segundos",calcularSegundos(segundos))
-   
-       mostrarResultadoFinal()
-   
-   
-       event.preventDefault()
-   }
-   
-   function crearClases(cantidadClases){
-       
-               if(cantidadClases > 0){
-                   mostrarBotonCalcular()
-               }
-               for (let i = 0; i < cantidadClases; i++)
-               crearClase(i);
-               
-       }
-   
-   function borrarClasesAnteriores(){
-       const $clases = document.querySelectorAll(".clase")
-       for (let i = 0; i < $clases.length; i ++){
-           $clases[i].remove()
-       }
-   }
-   
-   function crearClase(indice){
-       
-       
-       const $div = document.createElement ("div")
-       $div.className = "clase";
-   
-       const $labelHoras = document.createElement("label")
-       $labelHoras.textContent = "Ingrese cantidad Horas de video " + (indice + 1)
-   
-       const $inputHoras = document.createElement("input")
-       $inputHoras.className = "inputHoras"
-       $inputHoras.type = "number"
-   
-       const $labelMinutos = document.createElement("label")
-       $labelMinutos.textContent = "Ingrese cantidad Minutos de video " + (indice + 1)
-   
-       const $inputMinutos = document.createElement("input")
-       $inputMinutos.className = "inputMinutos"
-       $inputMinutos.type = "number"
-   
-       const $labelSegundos = document.createElement("label")
-       $labelSegundos.textContent = "Ingrese cantidad Segundos de video " + (indice + 1)
-   
-       const $inputSegundos = document.createElement("input")
-       $inputSegundos.className = "inputSegundos"
-       $inputSegundos.type = "number"
-      
-       $div.appendChild($labelHoras)
-       $div.appendChild($inputHoras)
-       $div.appendChild($labelMinutos)
-       $div.appendChild($inputMinutos)
-       $div.appendChild($labelSegundos)
-       $div.appendChild($inputSegundos)
-   
-   
-       const $clases = document.querySelector("#placeholder")
-       $clases.appendChild($div)
-   }
-   
-   function mostrarBotonCalcular(){
-       document.querySelector("#boton-calcular").className = ""
-   }
-   
-   function mostrarResultados(tipo,valor){
-       document.querySelector(`#${tipo}-cantidad`).textContent = valor;
-   }
-   
-   function mostrarResultadoFinal(){
-       document.querySelector("#resultados").className = ""
-   }
-   
-   function obtenerHoras(){
-       const $horas = document.querySelectorAll(".inputHoras")
-       const horas = []
-       for (let i = 0; i < $horas.length; i++){
-           horas.push(Number($horas[i].value))
-   
-   }
-   return horas
-   }
-   
-   
-   
-   function obtenerMinutos(){
-       const $minutos = document.querySelectorAll(".inputMinutos")
-       const minutos = []
-       for (let i = 0; i < $minutos.length; i++){
-           minutos.push(Number($minutos[i].value))
-   
-   }
-   return minutos
-   }
-   
-   
-   
-   function obtenerSegundos(){
-       const $segundos = document.querySelectorAll(".inputSegundos")
-       const segundos = []
-       for (let i = 0; i < $segundos.length; i++){
-           segundos.push(Number($segundos[i].value))
-   
-   }
-   return segundos
-   }
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
+document.querySelector("#siguiente-paso").onclick = function() {
+    cantidadClases = Number(document.querySelector("#cantidad-clases").value)
+
+    borrarInputsAnteriores()
+    crearInputsClases(cantidadClases)
+
+    return false
+}
+
+
+document.querySelector("#calcular").onclick = function() {
+    let horasParcial = Number(obtenerHoras())
+    let minutosParcial = Number(obtenerMinutos())
+    let segundosParcial = Number(obtenerSegundos())
+    const horasTotal = horasParcial + Math.floor(minutosParcial / 60) + Math.floor(segundosParcial / 3600)
+    const minutosTotal = minutosParcial % 60
+    const segundosTotal = segundosParcial % 60
+
+    mostrarResultados(horasTotal, minutosTotal, segundosTotal)
+
+    return false
+}
+
+
+
+function crearInputsClases(cantidadClases) {
+
+    if (cantidadClases > 0) {
+        mostrarBotonCalculo()
+    }
+
+    for (let i = 0; i < cantidadClases; i++) {
+        crearInput(i)
+    }
+}
+
+
+function crearInput(indice) {
+    const $div = document.createElement("div")
+    $div.className = "clases"
+
+    const $label = document.createElement("label")
+    $label.textContent = "Ingrese horas clase" + (indice + 1)
+    const $inputHoras = document.createElement("input")
+    $inputHoras.className = "input-hora"
+    const $inputMinutos = document.createElement("input")
+    $inputMinutos.className = "input-minutos"
+    const $inputSegundos = document.createElement("input")
+    $inputSegundos.className = "input-segundos"
+
+    $div.appendChild($label)
+    $div.appendChild($inputHoras)
+    $div.appendChild($inputMinutos)
+    $div.appendChild($inputSegundos)
+
+    const $placeholder = document.querySelector("#placeholder")
+    $placeholder.appendChild($div)
+
+
+}
+
+function borrarInputsAnteriores() {
+    const $inputAnteriores = document.querySelectorAll(".clases")
+    for (let i = 0; i < $inputAnteriores.length; i++) {
+        $inputAnteriores[i].remove()
+    }
+}
+
+
+function obtenerHoras() {
+    const $inputsHora = document.querySelectorAll(".input-hora")
+    let horasParcial = 0
+    for (let i = 0; i < $inputsHora.length; i++) {
+
+        horasParcial += Number($inputsHora[i].value)
+    }
+
+    return horasParcial
+
+}
+
+function obtenerMinutos() {
+    const $inputMinutos = document.querySelectorAll(".input-minutos")
+    let minutosParcial = 0
+
+    for (let i = 0; i < $inputMinutos.length; i++) {
+        minutosParcial += Number($inputMinutos[i].value)
+    }
+    return minutosParcial
+}
+
+function obtenerSegundos() {
+    const $inputSegundos = document.querySelectorAll(".input-segundos")
+    let segundosParcial = 0
+
+    for (let i = 0; i < $inputSegundos.length; i++) {
+        segundosParcial += Number($inputSegundos[i].value)
+    }
+    return segundosParcial
+}
+
+
+
+function mostrarBotonCalculo() {
+    document.querySelector("#calcular").className = ""
+}
+
+function mostrarResultados(horas, minutos, segundos) {
+    const $resultado = document.querySelector("#resultado-final")
+    $resultado.textContent = ("Horas" + horas + "Minutos" + minutos + "segundos" + segundos)
+
+}
