@@ -17,7 +17,7 @@ document.querySelector("#calcular").onclick = function() {
     const segundosTotal = segundosParcial % 60
 
     mostrarResultados(horasTotal, minutosTotal, segundosTotal)
-
+    mostrarResultado()
     return false
 }
 
@@ -105,8 +105,12 @@ function mostrarBotonCalculo() {
     document.querySelector("#calcular").className = ""
 }
 
+function mostrarResultado(){
+    document.querySelector("#resultado").className = ""
+}
+
 function mostrarResultados(horas, minutos, segundos) {
     const $resultado = document.querySelector("#resultado-final")
-    $resultado.textContent = ("Horas" + horas + "Minutos" + minutos + "segundos" + segundos)
+    $resultado.textContent = ( horas + " Horas " + minutos + " Minutos " + segundos + " segundos ")
 
 }
