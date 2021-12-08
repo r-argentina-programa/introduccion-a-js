@@ -17,7 +17,7 @@ document.querySelector("#calcular").onclick = function() {
     const segundosTotal = segundosParcial % 60
 
     mostrarResultados(horasTotal, minutosTotal, segundosTotal)
-    mostrarResultado()
+    mostrarElemento("#resultado")
     return false
 }
 
@@ -26,7 +26,7 @@ document.querySelector("#calcular").onclick = function() {
 function crearInputsClases(cantidadClases) {
 
     if (cantidadClases > 0) {
-        mostrarBotonCalculo()
+        mostrarElemento("#calcular")
     }
 
     for (let i = 0; i < cantidadClases; i++) {
@@ -101,13 +101,11 @@ function obtenerSegundos() {
 
 
 
-function mostrarBotonCalculo() {
-    document.querySelector("#calcular").className = ""
+function mostrarElemento(elemento) {
+   document.querySelector(`${elemento}`).className = ""
 }
 
-function mostrarResultado(){
-    document.querySelector("#resultado").className = ""
-}
+
 
 function mostrarResultados(horas, minutos, segundos) {
     const $resultado = document.querySelector("#resultado-final")
