@@ -30,6 +30,7 @@ document.querySelector("#calcular-salario-mensual").onclick = function(){
     document.querySelector("#saludar-usuario").textContent = ("Bienvenido " + nombre.value)
 
 
+   
     mostrarElemento("#placeholder")
     return false
 }
