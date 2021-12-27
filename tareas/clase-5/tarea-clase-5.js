@@ -60,10 +60,11 @@ Ejemplo form:
 
 document.querySelector("#calcular-salario-mensual").onclick = function(){
 
-  const salarioAnualUsuario = Number(document.querySelector("#salarioAnual"));
+  const salarioAnualUsuario = Number(document.querySelector("#salario-anual").value);
   const salarioMensual = calcularSalarioMensual(salarioAnualUsuario);
 
   document.querySelector("#salario-mensual").value = salarioMensual;
+  return false;
 }
 
 function calcularSalarioMensual(salarioAnual){
