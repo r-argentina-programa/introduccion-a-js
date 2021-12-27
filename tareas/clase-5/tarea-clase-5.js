@@ -66,3 +66,8 @@ document.querySelector("#calcular-salario-mensual").onclick = function(){
   document.querySelector("#salario-mensual").value = salarioMensual;
 }
 
+function calcularSalarioMensual(salarioAnual){
+  const mesesEnUnAnio = 12;
+  return salarioAnual / mesesEnUnAnio;
+}
+
