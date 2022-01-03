@@ -1,3 +1,10 @@
 * {
     background-color: rgb(105, 245, 233);
 }
+
+h1 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 80px;
+    text-align: center;
+}
+
