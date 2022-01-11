@@ -13,6 +13,10 @@ $saludoUsuario.onclick = function() {
         $titulo.textContent = `No podes ingresar al bar ${$nombreUsuario}`;
     }
 
+    const $textoResultado = document.querySelector("#resultado");
+    $textoResultado.textContent = `${$nombreUsuario} ${$apellidoUsuario} edad = ${$edadUsuario}`;
+    $textoResultado.style.display = "block";
+
     return false;
 }
 
