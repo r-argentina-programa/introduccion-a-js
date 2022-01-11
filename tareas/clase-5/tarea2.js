@@ -6,3 +6,12 @@ $saludoUsuario.onclick = function() {
     const $apellidoUsuario = document.querySelector("#apellido-usuario").value;
     const $edadUsuario = Number(document.querySelector("#edad-usuario").value);
 }
+
+function chequearEdad(edadUsuario) {
+    edadMinimaParaIngresar = 18;
+    if(edadMinimaParaIngresar > edadUsuario){
+        return false;
+    }else{
+        return true;
+    }
+}
