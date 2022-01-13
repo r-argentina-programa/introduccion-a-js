@@ -1,0 +1,51 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html {
+    font-size: 62.5%;
+}
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    font-size: 2rem;
+}
+header {
+    margin: 10px 0;
+}
+button {
+    width: 100px;
+    height: 30px;
+    border-radius: 8px;
+}
+input {
+    border-radius: 8px;
+    margin: 10px 8px;
+    padding: 0 5px;
+}
+#boton-agregar {
+    background-color: rgb(65, 236, 65);
+    color: white;
+}
+#boton-eliminar {
+    background-color: rgb(231, 26, 26);
+    color: white;
+}
+#boton-calcular {
+    display: none;
+}
+#form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#resultados {
+    display: none;
+}
+p {
+    margin: 10px;
+}
