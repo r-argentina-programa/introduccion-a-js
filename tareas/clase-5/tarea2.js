@@ -7,7 +7,7 @@ $saludoUsuario.onclick = function() {
     const apellidoUsuario = document.querySelector("#apellido-usuario").value;
     const edadUsuario = Number(document.querySelector("#edad-usuario").value);
 
-    if(chequearEdad(edadUsuario)){
+    if(puedeEntrar(edadUsuario)){
         $titulo.textContent = `Bienvenido al bar ${nombreUsuario}`;
     }else{
         $titulo.textContent = `No podes ingresar al bar ${nombreUsuario}`;
@@ -20,7 +20,7 @@ $saludoUsuario.onclick = function() {
     return false;
 }
 
-function chequearEdad(edadUsuario) {
+function puedeEntrar(edadUsuario) {
     edadMinimaParaIngresar = 18;
     if(edadMinimaParaIngresar > edadUsuario){
         return false;
