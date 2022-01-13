@@ -14,7 +14,7 @@ $saludoUsuario.onclick = function() {
     }
 
     const $textoResultado = document.querySelector("#resultado");
-    $textoResultado.textContent = `${$nombreUsuario} ${$apellidoUsuario} edad = ${$edadUsuario}`;
+    $textoResultado.textContent = `Datos del usuario: ${$nombreUsuario} ${$apellidoUsuario} edad = ${$edadUsuario}`;
     $textoResultado.style.display = "block";
 
     return false;
