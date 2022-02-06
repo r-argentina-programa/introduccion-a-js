@@ -29,6 +29,23 @@ $botonCalcular.onclick = function()
 // mostrar toda la información junta en un campo de texto
 // Y va a cambiar el <h1> para decir "Bienvenido, nombreDeUsuario"!
 
+
+document.querySelector("#calcular-salario-anual").onclick = function(){
+  let $salarioAnual = Number(document.querySelector("#salario-anual").value);
+  
+  let resultado = calcularSalarioMensual($salarioAnual);
+  document.querySelector("#salario-mensual").value = resultado;
+
+  return false;
+}
+
+function calcularSalarioMensual(salarioAnual){
+  const MESES_AÑO = 12;
+  return salarioAnual / MESES_AÑO;
+}
+
+
+
 /*
 Ejemplo form:
   <form id="entrada-bar" onsubmit="return false;">
@@ -48,6 +65,10 @@ Ejemplo form:
 // cada dato.
 // al apretar el botón "Calcular tiempo total", debe mostrar en un
 // <strong> pre-creado el tiempo total de los videos.
+
+
+
+
 
 //TAREA: En otro archivo distinto,
 // Crear una lista de <ol> y <li> que contengan sólo números.
