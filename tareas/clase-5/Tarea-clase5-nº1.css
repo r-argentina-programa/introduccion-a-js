@@ -1,0 +1,37 @@
+html, body{
+    margin : 0;
+    padding: 0;
+}
+
+html{
+    font-size: 200%;
+}
+
+body{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    background-color: aqua;
+}
+
+h1{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+
+h2{
+    font-family: Didot, 'GFS Didot', serif;
+    font-size: 1rem;
+}
+
+
+
+#sueldo-anual{
+    width: 100%;
+}
+
+#salario-mensual{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
