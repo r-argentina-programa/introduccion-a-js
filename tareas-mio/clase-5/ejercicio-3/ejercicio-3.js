@@ -20,7 +20,7 @@ $botonCalcular.onclick = function () {
   for (let i = 0; i < minutos.length; i++) {
     minutosTotales = minutosTotales + Number(minutos[i].value);
 
-    if (minutosTotales > 59) {
+    if (minutosTotales >= 60) {
       horasTotales++;
       minutosTotales = minutosTotales - 60;
     }
@@ -31,9 +31,9 @@ $botonCalcular.onclick = function () {
   for (let i = 0; i < minutos.length; i++) {
     segundosTotales = segundosTotales + Number(segundos[i].value);
 
-    if (segundosTotales > 119) {
+    if (segundosTotales >= 60) {
       minutosTotales++;
-      segundosTotales = segundosTotales - 120;
+      segundosTotales = segundosTotales - 60;
     }
   }
 
