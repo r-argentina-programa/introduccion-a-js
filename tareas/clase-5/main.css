@@ -1,0 +1,39 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    align-items: center;
+    background: #EFEFEF;
+    display: flex;
+    flex-direction: column;
+    font-family: Avenir, 'Source Sans Pro', sans-serif;
+    justify-content: center;
+}
+
+body * {
+    box-sizing: border-box;
+}
+
+header {
+    box-sizing: border-box;
+    flex: 0 1 auto;
+    text-align: center;
+}
+
+h1 {
+    font-family: Didot, 'GFS Didot', serif;
+    font-size: 5rem;
+    margin: 0 3.5rem;
+}
+
+
+#resultado {
+    background-color: #EFE;
+    font-size: 2em;
+}
