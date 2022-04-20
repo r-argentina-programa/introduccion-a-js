@@ -1,3 +1,15 @@
+
+const $botonCalcular = document.querySelector("#boton-calcular");
+
+$botonCalcular.onclick = function() {
+    const salarioAnual = Number(document.querySelector("#salarioanual").value);
+    const salarioMensual = salarioAnual / 12
+    console.log(salarioMensual)
+    document.getElementById("salario-mensual").value = salarioMensual;
+    // document.getElementById("salario-mensual").innerHTML = salarioMensual;     
+    return false;
+}
+
 /*
 Cosas a tener en cuenta:
 1. Los <input> no tienen .innerText, en vez de eso, usan .value. https://developer.mozilla.org/es/docs/Web/HTML/Elemento/input
@@ -17,11 +29,17 @@ $botonCalcular.onclick = function()
 }
 */
 
-//TAREA: completar tareas/clase-5/index.html para que incluya tarea-clase-5.js
+
+// PRIMERA TAREA - DONE
+//TAREA: completar tareas/clase-5/index.html para que incluya tarea-clase-5.js *
 //TAREA: crear un formulario donde un usuario pueda ingresar su salario anual.
 //cuando el usuario haga click en el botón "calcular", mostrar el salario mensual
 // en una caja de texto deshabilitada. --> <input type="text" disabled id="salario-mensual"/>
 
+
+
+
+// SEGUNDA TAREA
 //TAREA: En otro archivo html (no Index) y otro archivo js (no tarea-clase-5.js),
 // creá un formulario que capture el primer nombre, segundo nombre, apellido/s y edad del usuario
 // también vamos a crear un <h1> que diga Bienvenido!
@@ -41,6 +59,7 @@ Ejemplo form:
 *
 * */
 
+// TERCERA TAREA
 //TAREA: En otro archivo distinto,
 // Por cada clase de r/argentina programa existente, vamos a pedir:
 // horas, minutos y segundos de cada video. Ej. Si un video dura
@@ -49,6 +68,8 @@ Ejemplo form:
 // al apretar el botón "Calcular tiempo total", debe mostrar en un
 // <strong> pre-creado el tiempo total de los videos.
 
+
+// CUARTA TAREA
 //TAREA: En otro archivo distinto,
 // Crear una lista de <ol> y <li> que contengan sólo números.
 // Convertir esos números a un array y:

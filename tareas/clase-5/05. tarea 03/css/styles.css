@@ -1,0 +1,102 @@
+body {
+    background-image: url(https://i.imgur.com/1SJe2wM.png)
+}
+form {
+    background-color: rgba(231, 237, 240, 0.811);
+    display: inline-block;
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    border-radius: 8px;
+    width: 950px;
+    margin-left: 20%;
+    margin-right: 20%;
+    padding-bottom: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+
+}
+
+h1 {
+    text-align: center;
+    font-size: 35px;
+}
+
+.clases {
+    font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    font-weight: bold;
+    color: rgb(25, 159, 204);
+}
+
+#boxed-title {
+    background-color: rgb(91, 214, 255);
+    width: 100%;
+    height: 55px;
+}
+
+.boxed-classes {
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    height: 32px;
+    padding-top: 5px;
+    margin-bottom: 15px;
+}
+
+label {
+    font-size: 17px;
+    margin-right: 10px;
+}
+
+input {
+    margin-right: 30px;
+}
+
+input,
+textarea {
+    border-radius: 2px;
+    border: 2px solid rgb(91, 214, 255);
+    padding: 3px;
+}
+
+.calculate-button {
+    text-align:center;
+    width: 10%;
+    height: 50px;
+    margin-left: 45%;
+    margin-right: 45%;
+    background-color: rgb(91, 214, 255);
+    border: none;
+    border-radius: 3px;
+    margin-top: 20px;
+    transition-duration: 0.2s;
+}
+
+button:hover {
+    background-color: rgb(255, 255, 255, 0.600);
+    font-size: 23px;
+}
+
+button,
+text {
+    font-size: 25px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+}
+
+#reveal-result {
+    display: none;
+    text-align: center;
+}
+
+#result-box {
+    margin-top: 40px;
+    background-color: rgb(91, 214, 255);
+    width: 750px;
+    height: 120px;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 25px;
+    font-family:  Arial, Helvetica, sans-serif;
+    padding-top: 30px;
+    display: inline-block;
+    margin-bottom: 40px;
+}
