@@ -1,0 +1,26 @@
+{
+  "name": "introduccion-a",
+  "version": "1.0.0",
+  "description": "Introducción a JS",
+  "main": "index.html",
+  "directories": {
+    "doc": "doc"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Korv4c/introduccion-a-js.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Korv4c/introduccion-a-js/issues"
+  },
+  "homepage": "https://github.com/Korv4c/introduccion-a-js#readme",
+  "dependencies": {
+    "bootstrap": "^5.1.3",
+    "jquery": "^3.6.0"
+  }
+}
