@@ -28,7 +28,7 @@ $botonCalcular.onclick = function(){
   const mesesEnUnAnio = 12;
   const salarioAnual = Number(document.querySelector('#salario-anual').value);
   const salarioMensual = salarioAnual / mesesEnUnAnio;
-  document.querySelector('#salario.mensual').value = salarioMensual;
+  document.querySelector('#salario-mensual').value = salarioMensual;
   return false;
 }
 
