@@ -1,53 +1,16 @@
-const $botonIngresar = document.querySelector('#ingresar');
+const numerosObtenidos = document.querySelectorAll('li');
+const listaNumeros = [];
 
-const listaNumeros = []
-
-$botonIngresar.onclick = function(){
-    listaNumeros.push(document.querySelector('#numero-1').value);
-    listaNumeros.push(document.querySelector('#numero-2').value);
-    listaNumeros.push(document.querySelector('#numero-3').value);
-    listaNumeros.push(document.querySelector('#numero-4').value);
-    listaNumeros.push(document.querySelector('#numero-5').value);
-    listaNumeros.push(document.querySelector('#numero-6').value);
-
-    calcularPromedio(listaNumeros);
-    obtenerNumeroPequenio(listaNumeros);
-    obtenerNumeroGrande(listaNumeros);
-    obtenerNumeroFrecuente(listaNumeros);
-
-    return false;
+for(let i = 0; i < numerosObtenidos.length; i++){
+    listaNumeros.push((numerosObtenidos[i]));
 }
 
-function calcularPromedio(listaNumeros){
-    let sumaNumeros = 0;
-    for(let i = 0; i < listaNumeros.length; i++){
-        sumaNumeros = sumaNumeros + listaNumeros[i];
-    }
-    return sumaNumeros / listaNumeros.length;
-}
+console.log(listaNumeros);
 
-function obtenerNumeroPequenio(listaNumeros){
+function obtenerPromedio(listaNumeros){}
 
-}
+function obtenerNumeroPequenio(listaNumeros){}
 
-function obtenerNumeroGrande(){
+function obtenerNumeroGrande(listaNumeros){}
 
-}
-
-function obtenerNumeroFrecuente(){
-
-}
-
-/*
-const pruebaLista = [-7, 42, 32, 4];
-let numeroMenor = 0
-numeroMenor = pruebaLista[0];
-
-for(let i = 0; i < pruebaLista.length; i++){
-    if(pruebaLista[i] < numeroMenor){
-        numeroMenor = i;
-    }
-}
-
-console.log(numeroMenor);
-*/
+function obtenerNumeroFrecuente(listaNumeros){}
