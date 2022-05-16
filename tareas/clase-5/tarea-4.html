@@ -5,18 +5,26 @@
         <title>r/ Argentina Programa</title>
     </head>
     <body>
-        <ol id="lista-numeros">
-                <li>11</li>
-                <li>25</li>
-                <li>25</li>
-                <li>39</li>
-                <li>41</li>
-                <li>53</li>
-        </ol>
-        <em id="promedio">El promedio es... </em>
-        <em id="numero-pequeño">El número más pequeño es...</em>
-        <em id="numero-grande">El número más grande es...</em>
-        <em id="numero-frecuente">El número más frecuente es...</em>
+        <form>
+            <ol id="lista-numeros">
+                    <li>11</li>
+                    <li>25</li>
+                    <li>25</li>
+                    <li>39</li>
+                    <li>41</li>
+                    <li>53</li>
+            </ol>
+            <button id="boton-enviar">Enviar</button>
+            <div id="resultado"></div>
+                <em>El promedio es... </em>
+                <input type="number" disabled id="promedio"/>
+                <em>El número más pequeño es...</em>
+                <input type="number" disabled id="numero-pequeño"/>
+                <em>El número más grande es...</em>
+                <input type="number" disabled id="numero-grande"/>
+                <em>El número más frecuente es...</em>
+                <input type="number" disabled id="numero-frecuente"/>
+        </form>
         <script src="tarea-4.js"></script>
     </body>
 </html>
