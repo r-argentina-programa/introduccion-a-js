@@ -1,15 +1,26 @@
-/*
-const numerosObtenidos = document.querySelectorAll('li');
-const listaNumeros = [];
+const $botonEnviar = document.querySelector('#boton-enviar');
 
-for(let i = 0; i < numerosObtenidos.length; i++){
-    listaNumeros.push((numerosObtenidos[i]).value);
+$botonEnviar.onclick = function(){
+    const listaNumeros = [];
+
+    console.log(document.querySelectorAll('li').length);
+
+    for(let i = 0; i < (document.querySelectorAll('li').length); i++){
+        listaNumeros.push(Number(document.querySelectorAll('li')[i].textContent));
+    }
+
+    const numeroPromedio = obtenerPromedio(listaNumeros);
+    const numeroPequenio = obtenerNumeroPequenio(listaNumeros);
+    const numeroGrande = obtenerNumeroGrande(listaNumeros);
+    const numeroFrecuente = obtenerNumeroFrecuente(listaNumeros);
+
+    document.querySelector('#promedio').value = numeroPromedio;
+    document.querySelector('#numero-pequeño').value = numeroPequenio;
+    document.querySelector('#numero-grande').value = numeroGrande;
+    document.querySelector('#numero-frecuente').value = numeroFrecuente;
+
+    return false;
 }
-
-console.log(listaNumeros);
-*/
-
-const listaNumeros = [1, 2, 2, 3, 4, 5];
 
 function obtenerPromedio(listaNumeros){
     let sumaNumeros = 0;
