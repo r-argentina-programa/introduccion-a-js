@@ -15,7 +15,15 @@ $botonCalcular.onclick = function(){
     const cantIntegrantes = document.querySelector('#cantidad-integrantes').value;
     const cantidadIntegrantes = Number(cantIntegrantes);
 
-    obtenerEdades(cantidadIntegrantes);
+    const listaEdades = obtenerEdades(cantidadIntegrantes);
+
+    const edadMayor = calcularEdadMayor(listaEdades);
+    const edadMenor = calcularEdadMenor(listaEdades);
+    const edadPromedio = calcularEdadPromedio(listaEdades);
+
+    document.querySelector('#edad-mayor').textContent = edadMayor;
+    document.querySelector('#edad-menor').textContent = edadMenor;
+    document.querySelector('#edad-promedio').textContent = edadPromedio;
 
     return false;
 }
@@ -45,9 +53,35 @@ function obtenerEdades(cantidadIntegrantes){
     for(let i = 0; i < cantidadIntegrantes; i++){
         listaEdades.push(Number(document.querySelectorAll('input')[i + 1].value));
     }
+    return listaEdades;
+}
 
-    console.log(listaEdades);
+function calcularEdadMayor(listaEdades){
+    let edadMayor = listaEdades[0];
+    for(let i = 0; i < listaEdades.length; i++){
+        let edadCualquiera = listaEdades[i];
+        if(edadCualquiera > edadMayor){
+            edadMayor = edadCualquiera;
+        }
+    }
+    return edadMayor
+}
 
-    return false;
+function calcularEdadMenor(listaEdades){
+    let edadMenor = listaEdades[0];
+    for(let i = 0; i < listaEdades.length; i++){
+        let edadCualquiera = listaEdades[i];
+        if(edadCualquiera < edadMenor){
+            edadMenor = edadCualquiera;
+        }
+    }
+    return edadMenor;
+}
 
+function calcularEdadPromedio(listaEdades){
+    let sumaEdades = 0;
+    for(let i = 0; i < listaEdades.length; i++){
+        sumaEdades = sumaEdades + listaEdades[i];
+    }
+    return sumaEdades / listaEdades.length;
 }
