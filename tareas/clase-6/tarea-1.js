@@ -12,6 +12,10 @@ $botonSiguiente.onclick = function(){
 const $botonCalcular = document.querySelector('#calcular');
 
 $botonCalcular.onclick = function(){
+    const cantIntegrantes = document.querySelector('#cantidad-integrantes').value;
+    const cantidadIntegrantes = Number(cantIntegrantes);
+
+    obtenerEdades(cantidadIntegrantes);
 
     return false;
 }
@@ -33,4 +37,17 @@ function crearIntegrantes(cantidadIntegrantes){
         const $integrantes = document.querySelector('#integrantes');
         $integrantes.appendChild($div);
     }   
+}
+
+function obtenerEdades(cantidadIntegrantes){
+    const listaEdades = [];
+
+    for(let i = 0; i < cantidadIntegrantes; i++){
+        listaEdades.push(Number(document.querySelectorAll('input')[i + 1].value));
+    }
+
+    console.log(listaEdades);
+
+    return false;
+
 }
