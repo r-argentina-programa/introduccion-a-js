@@ -28,6 +28,14 @@ $botonCalcular.onclick = function(){
     return false;
 }
 
+const $botonReiniciar = document.querySelector('#reiniciar');
+
+$botonReiniciar.onclick = function(){
+    $integrantes.remove();
+
+    return false;
+}
+
 function crearIntegrantes(cantidadIntegrantes){
     for(let i = 0; i < cantidadIntegrantes; i++){
         const $div = document.createElement('div');
