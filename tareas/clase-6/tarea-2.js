@@ -21,8 +21,6 @@ $botonCalcular.onclick = function(){
     const cantIntegrantes = document.querySelectorAll('input').length;
     const cantidadIntegrantes = Number(cantIntegrantes);
 
-    console.log(cantIntegrantes, cantidadIntegrantes);
-
     const listaSalario = obtenerSalario(cantidadIntegrantes);
     
     const salarioMayor = calcularSalarioMayor(listaSalario);
@@ -56,7 +54,7 @@ function agregarIntegrante(){
 function obtenerSalario(cantidadIntegrantes){
     const listaSalario = [];
 
-    for(let i = 0; i < document.querySelector('#integrantes').length; i++){
+    for(let i = 0; i < cantidadIntegrantes; i++){
         listaSalario.push(Number(document.querySelectorAll('input')[i].value));
     }
 
