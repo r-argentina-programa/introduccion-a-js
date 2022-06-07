@@ -15,8 +15,6 @@ $botonEliminar.onclick = function(){
 const $botonCalcular = document.querySelector('#calcular');
 
 $botonCalcular.onclick = function(){
-    // const cantIntegrantes = document.querySelector('#integrantes').length;
-    // const cantidadIntegrantes = Number(cantIntegrantes);
 
     const cantIntegrantes = document.querySelectorAll('input').length;
     const cantidadIntegrantes = Number(cantIntegrantes);
