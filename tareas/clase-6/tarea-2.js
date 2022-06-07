@@ -15,7 +15,15 @@ $botonEliminar.onclick = function(){
 const $botonCalcular = document.querySelector('#calcular');
 
 $botonCalcular.onclick = function(){
-    const listaSalario = obtenerSalario();
+    // const cantIntegrantes = document.querySelector('#integrantes').length;
+    // const cantidadIntegrantes = Number(cantIntegrantes);
+
+    const cantIntegrantes = document.querySelectorAll('input').length;
+    const cantidadIntegrantes = Number(cantIntegrantes);
+
+    console.log(cantIntegrantes, cantidadIntegrantes);
+
+    const listaSalario = obtenerSalario(cantidadIntegrantes);
     
     const salarioMayor = calcularSalarioMayor(listaSalario);
     const salarioMenor = calcularSalarioMenor(listaSalario);
@@ -45,7 +53,7 @@ function agregarIntegrante(){
     $integrantes.appendChild($div);
 }
 
-function obtenerSalario(){
+function obtenerSalario(cantidadIntegrantes){
     const listaSalario = [];
 
     for(let i = 0; i < document.querySelector('#integrantes').length; i++){
