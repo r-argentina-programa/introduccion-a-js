@@ -29,6 +29,10 @@ document.querySelector('#calcular').onclick = function(event) {
 };
 
 document.querySelector('#resetear').onclick = resetear;
+//Es lo mismo que, solo que ya esta declarada mas abajo:
+/* document.querySelector('#resetear').onclick = resetear() {
+  resetear()
+}; */
 
 function borrarIntegrantesAnteriores() {
   const $integrantes = document.querySelectorAll('.integrante');
