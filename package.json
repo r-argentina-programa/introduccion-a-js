@@ -1,0 +1,25 @@
+{
+  "name": "introduccion-a-js",
+  "version": "1.0.0",
+  "description": "Ejercicios para aprender a programar formularios",
+  "main": "README.md",
+  "directories": {
+    "doc": "doc"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cg-diazborromeo/introduccion-a-js.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cg-diazborromeo/introduccion-a-js/issues"
+  },
+  "homepage": "https://github.com/cg-diazborromeo/introduccion-a-js#readme",
+  "dependencies": {
+    "bootstrap": "^5.1.3"
+  }
+}
