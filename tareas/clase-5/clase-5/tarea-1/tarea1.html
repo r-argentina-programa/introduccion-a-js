@@ -6,15 +6,32 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Clase 5</title>
+    <link rel="stylesheet" href="../../../../node_modules/bootstrap/dist/css/bootstrap.min.css">
 </head>
 <body>
     <form>
-        <label for="salario-anual">Salario anual:</label>
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Salario Anual</label>
+            <input type="number" class="form-control" id="salario-anual" placeholder="Ej.: 100000" aria-describedby="emailHelp">
+            <div id="emailHelp" class="form-text">We'll never share your salary with anyone else.</div>
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Salario Mensual</label>
+            <input class="form-control" id="salario-mensual" type="number" placeholder="Salario mensual a calcular..." disabled>
+        </div>
+        <div class="mb-3">
+            <button type="button" class="btn btn-primary" id="calcular-salario-mensual">Calcular</button>
+            <button type="reset" class="btn btn-primary">Limpiar</button>
+        </div>
+       
+
+
+        <!-- <label for="salario-anual">Salario anual:</label>
         <input type="number" id="salario-anual" placeholder="Ej.: 100000"/>
         <label for="salario-anual">Salario mensual:</label>
         <input type="number" disabled id="salario-mensual"/>
         <button type="button" id="calcular-salario-mensual">Calcular</button>
-        <button type="reset">Limpiar</button>
+        <button type="reset">Limpiar</button> -->
     </form>
     <script type="text/javascript" src="tarea1.js"></script>
 </body>
