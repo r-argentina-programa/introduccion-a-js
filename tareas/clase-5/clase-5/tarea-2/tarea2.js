@@ -18,14 +18,14 @@ Ejemplo form:
 * */
 
 const $botonIngreso = document.querySelector("#ingresar-datos");
-$botonIngreso.onclick = function(){
+$botonIngreso.onclick = function(event){
     const primerNombreUsuario = document.querySelector("#primer-nombre-usuario").value;
     const segundoNombreUsuario = document.querySelector("#segundo-nombre-usuario").value;
     const apellidoUsuario = document.querySelector("#apellido-usuario").value;
     const edadUsuario = document.querySelector("#edad-usuario").value;
     const datosCompletoUsuario = document.querySelector("#datos-completos");
-    datosCompletoUsuario.textContent = `Hola ${primerNombreUsuario} ${segundoNombreUsuario}, cuyo apellido es ${apellidoUsuario} y edad es ${edadUsuario}.`;
+    datosCompletoUsuario.textContent = `Hola ${primerNombreUsuario} ${segundoNombreUsuario} ${apellidoUsuario}. Tu edad es ${edadUsuario}, guau!`;
     const bienvenidoUsuario = document.querySelector("h1");
     bienvenidoUsuario.textContent = `Bienvenido, ${primerNombreUsuario} ${segundoNombreUsuario} ${apellidoUsuario}!`;
-    return false;
+    event.preventDefault();
 };

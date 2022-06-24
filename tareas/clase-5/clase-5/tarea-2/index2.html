@@ -6,28 +6,57 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Clase 5</title>
+    <link rel="stylesheet" href="../../../../node_modules/bootstrap/dist/css/bootstrap.min.css">
 </head>
 <body>
     <form id="formulario" onsubmit="return false">
-        <input type="text" id="primer-nombre-usuario" placeholder="Ingresar primer nombre">
-        <input type="text" id="segundo-nombre-usuario" placeholder="Ingresar segundo nombre">
-        <input type="text" id="apellido-usuario" placeholder="Ingresar apellido">
-        <input type="number" id="edad-usuario" placeholder="ingresar edad">
+        <div class="container">
+            <div class="row">
+              <div class="col">
+                <input type="text" id="primer-nombre-usuario" placeholder="Ingresar primer nombre">
+              </div>
+              <div class="col">
+                <input type="text" id="segundo-nombre-usuario" placeholder="Ingresar segundo nombre">
+              </div>
+              <div class="col">
+                <input type="text" id="apellido-usuario" placeholder="Ingresar apellido">
+              </div>
+              <div class="col">
+                <input type="number" id="edad-usuario" placeholder="ingresar edad">
+              </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-6">
+                    <div class="mb-3">
+                        <button id="ingresar-datos" class="btn btn-outline-primary">Enviar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <div class="container">
+            <div class="row">
+                <div class="col-6">
+                    <div class="mb-3">
+                        <label for="exampleFormControlTextarea1" class="form-label"></label>
+                        <textarea class="form-control" id="datos-completos" rows="3" placeholder="Sus datos se mostraran aqui" disabled></textarea>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </form>
-    
-    <div>
-        <button id="ingresar-datos">Ingresar</button>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-6">
+                <h1>Bienvenido!</h1></script>
+            </div>
+        </div>
     </div>
-
-    <div>
-        <textarea type="text" id="datos-completos" cols="40" rows="10" placeholder="Sus datos se mostraran aqui" disabled></textarea>
-    </div>
-
-    <h1>Bienvenido!</h1>
-
     
-
-
     <script src="tarea2.js"></script>
 </body>
 </html>
