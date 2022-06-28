@@ -37,13 +37,69 @@ Desafío de programación #5: Calcula el resultado de la suma de los numeros del
  [1,2,3,4,5,6,7,8,9,10]
 
  1 + 2 + 3 + ... + 10 = ? //hacerlo con un array y un bucle
+*/
 
+/*
+function calcularSumaArray(arrNum){
+  let resultado = 0;
+  for(let i = 0; i < arrNum.length; i++){
+    resultado += arrNum[i];
+  }
+return resultado;
+}
+
+let numerosArray = [1,2,3,4,5,6,7,8,9,10];
+
+console.log(`El resultado de la suma es ${calcularSumaArray(numerosArray)}`);
+*/
+
+
+
+
+
+
+/*
 Desafío de programación #6: Calcula 10! (10 factorial)
 
  10 * 9 * 8 * ... * 1
+*/
+// function calcularFactorial(numero){
+// let resultado = 1;
+
+  
+//     for(let i = 0; i<numero; i++){
+//       resultado = resultado * (numero - i);
+//     }
+
+
+  
+
+// return resultado;
+// }
+// let numeroACalcular = 4;
+// console.log(`El factorial de ${numeroACalcular} es ${calcularFactorial(numeroACalcular)}`);
+
+
+ /*
 
 Desafío de programación #7: Calcula la suma de todos los números impares mayores que 10 y menores que 30
+*/
 
+// function numerosImpares(){
+// let resultado = 0;
+//   for(let i = 0; i < 31; i++){
+//     if(i > 10 && i % 2 != 0 && i < 30){
+//       resultado +=i;
+//     }
+
+
+//   }
+// return resultado;
+
+// }
+// console.log(`Resultado numeros impares mayores a 10 y menores a 30 ${numerosImpares()}`);
+
+/*
 Desafío de programación #8: Crea una función que convierta de Celsius a Fahrenheit
 
 Desafío de programación #9: Crea una función que convierta de Fahrenheit a Celsius
@@ -53,6 +109,27 @@ Desafío de programación #10: Calcula la suma de todos los números en un array
 Desafío de programación #11: Calcula el promedio de todos los números en un array de números. (en una función)
 
 Desafío de programación #12: Crea una función que reciba un array de números y devuelva un array conteniendo solo los números positivos
+*/
+// function calcularNumerosPositivos(arrNum){
+//   let resultado = [];
+
+//   for(let i =0; i < arrNum.length; i++){
+//     if(arrNum[i] > 0){
+//     resultado.push(arrNum[i]);    
+//     }
+//   }
+
+
+//   return resultado;
+// }
+
+// let numeros = [10,-5,-10,3];
+
+// console.log(`Numeros positivos ${calcularNumerosPositivos(numeros)}`)
+
+
+
+/*
 
 Desafío de programación #13: Find the maximum number in an array of numbers
 
@@ -60,7 +137,29 @@ Desafío de programación #14: Imprimir los primeros 10 dígitos de Fibonacci si
 
 Fibonacci (lo buscan en google si no lo saben o no se acuerdan)
 El resultado debería ser: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55
+*/
+function calcularFibonacci(arrNum){
+let numFibo = [];
+let resultado = 0;
 
+  for(let i = 0; i < 11; i++){
+    resultado = (arrNum[i] + arrNum[i+1]);
+    arrNum.push(resultado); 
+    numFibo.push(resultado);
+  }
+
+return numFibo;
+}
+let inicioFibo = [0,1];
+console.log(`secuencia fibonazi ${calcularFibonacci(inicioFibo)}`)
+
+
+
+
+
+
+
+/*
 Desafío de programación #15: Crear una función que encuentre el número n de Fibonacci usando recursión
 
 Desafío de programación #16: Crear una función que dado un número retorne un Boolean (true/false) dependiendo si es primo o no.
