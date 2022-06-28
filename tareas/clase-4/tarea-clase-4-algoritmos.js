@@ -37,7 +37,21 @@ Desafío de programación #5: Calcula el resultado de la suma de los numeros del
  [1,2,3,4,5,6,7,8,9,10]
 
  1 + 2 + 3 + ... + 10 = ? //hacerlo con un array y un bucle
+*/
 
+console.log("hola");
+
+
+
+
+
+
+
+
+
+
+
+/*
 Desafío de programación #6: Calcula 10! (10 factorial)
 
  10 * 9 * 8 * ... * 1
