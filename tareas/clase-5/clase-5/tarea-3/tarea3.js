@@ -42,34 +42,74 @@ $botonAgregarVideo.onclick = function() {
     return false;
 }; */
 
+let $horasVideo = document.querySelector("#horas-video");
+let $minutosVideo = document.querySelector("#minutos-video");
+let $segundosVideo = document.querySelector("#segundos-video");
+
 const arrayHoras = [];
 const arrayMinutos = [];
 const arraySegundos = [];
 
 let $botonAgregarVideo = document.querySelector("#agregar-video");
 $botonAgregarVideo.onclick = function() {
-    let horasVideo = Number(document.querySelector("#horas-video").value);
-    let minutosVideo = Number(document.querySelector("#minutos-video").value);
-    let segundosVideo = Number(document.querySelector("#segundos-video").value);
+    let horasVideo = Number($horasVideo.value);
+    let minutosVideo = Number($minutosVideo.value);
+    let segundosVideo = Number($segundosVideo.value);
+
     arrayHoras.push(horasVideo);
     arrayMinutos.push(minutosVideo);
     arraySegundos.push(segundosVideo);
+
+    borrarValores();
+
     return arrayHoras, arrayMinutos, arraySegundos;
 };
 
 let $botonTiempoTotal = document.querySelector("#calcular-total");
 $botonTiempoTotal.onclick = function() {
-    const segundosPorMinuto = 60;
-    const minutosPorHora = 60;
+    calcularTotalHoras(arrayHoras);
+    calcularTotalMinutos(arrayMinutos);
+    calcularTotalSegundos(arraySegundos)
+
+    let $botonResultado = document.querySelector("#resultado");
+    $botonResultado.value = `Cantidad total de tiempo: ${sumaTotalHoras} horas, ${sumaTotalMinutos} minutos y ${sumaTotalSegundos} segundos.`;
+}
+
+function borrarValores() {
+    $horasVideo.value = null;
+    $minutosVideo.value = null;
+    $segundosVideo.value = null;
+}
+
+function calcularTotalHoras(arrayHoras) {
     sumaTotalHoras = 0;
-    sumaTotalMinutos = 0;
-    sumaTotalSegundos = 0;
     for (let i = 0; i < arrayHoras.length; i++) {
         sumaTotalHoras += arrayHoras[i];
     };
+
+    return sumaTotalHoras;
+}
+
+function calcularTotalMinutos(arrayMinutos) {
+    const minutosPorHora = 60;
+    sumaTotalMinutos = 0;
+
     for (let i = 0; i < arrayMinutos.length; i++) {
         sumaTotalMinutos += arrayMinutos[i];
     }
+
+    if (sumaTotalMinutos >= minutosPorHora) {
+        sumaTotalHoras += (sumaTotalMinutos - (sumaTotalMinutos % minutosPorHora)) / minutosPorHora;
+        sumaTotalMinutos = sumaTotalMinutos % minutosPorHora;
+    }
+
+    return sumaTotalMinutos;
+}
+
+function calcularTotalSegundos(arraySegundos) {
+    const segundosPorMinuto = 60;
+    sumaTotalSegundos = 0;
+
     for (let i = 0; i < arraySegundos.length; i++) {
         sumaTotalSegundos += arraySegundos[i];
     }
@@ -78,12 +118,6 @@ $botonTiempoTotal.onclick = function() {
         sumaTotalMinutos += (sumaTotalSegundos - (sumaTotalSegundos % segundosPorMinuto)) / segundosPorMinuto;
         sumaTotalSegundos = sumaTotalSegundos % segundosPorMinuto;
     }
-    if (sumaTotalMinutos >= minutosPorHora) {
-        sumaTotalHoras += (sumaTotalMinutos - (sumaTotalMinutos % minutosPorHora)) / minutosPorHora;
-        sumaTotalMinutos = sumaTotalMinutos % minutosPorHora;
-    }
 
-    let $botonResultado = document.querySelector("#resultado");
-    $botonResultado.value = `Cantidad total de tiempo: ${sumaTotalHoras} horas, ${sumaTotalMinutos} minutos y ${sumaTotalSegundos} segundos.`;
+    return sumaTotalSegundos;
 }
-

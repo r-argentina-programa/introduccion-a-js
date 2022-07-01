@@ -6,25 +6,36 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Clase 5</title>
+    <link rel="stylesheet" href="../../../../node_modules/bootstrap/dist/css/bootstrap.min.css">
 </head>
 <body>
-    <header>
-        <div id="video-div">
-            <input type="number" id="horas-video" placeholder="Agregar horas">
-            <input type="number" id="minutos-video" placeholder="Agregar minutos">
-            <input type="number" id="segundos-video" placeholder="Agregar segundos"> 
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <input type="number" id="horas-video" placeholder="Agregar horas">
+            </div>
+            <div class="col">
+                <input type="number" id="minutos-video" placeholder="Agregar minutos">
+            </div>
+            <div class="col">
+                <input type="number" id="segundos-video" placeholder="Agregar segundos"> 
+            </div>
         </div>
-    </header>
-    <div id="boton-div">
-        <button id="agregar-video">Agregar video</buttom>
     </div>
-    <div>
-        <button id="calcular-total">Calcular tiempo total</button>
+    
+    <div class="container">
+        <div class="col">
+            <div class="row-6">
+                <button id="agregar-video" class="btn btn-primary mt-2 mb-1">Agregar video</buttom>
+            </div>
+             <div class="row-6">
+                <button id="calcular-total" class="btn btn-primary mb-2">Calcular total</button>
+            </div>
+            <div class="row-6">
+                <input type="text" id="resultado" style="width: 500px; height: 100px" disabled>
+            </div>
+        </div>
     </div>
-    <div>
-        <input type="text" id="resultado" style="width: 500px; height: 100px" disabled>
-    </div>
-
 
     <script src="tarea3.js"></script>
 </body>
