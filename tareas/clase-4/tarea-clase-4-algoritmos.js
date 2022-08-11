@@ -63,7 +63,17 @@ El resultado debería ser: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55
 
 Desafío de programación #15: Crear una función que encuentre el número n de Fibonacci usando recursión
 
-Desafío de programación #16: Crear una función que dado un número retorne un Boolean (true/false) dependiendo si es primo o no.
+Desafío de programación #16: Create una función que dado un número retorne un Boolean (true/false) dependiendo si es primo o no.
+Aclaración: Los números primos son aquellos que tienen exactamente 4 divisores enteros.
+Ejemplo:
+   1 NO es primo porque tiene 2 divisores enteros (1, -1)
+   2 es primo porque sólo puede dividirse por (1,-1,2,-2)
+   3 es primo porque sólo puede dividirse por (1,-1,3,-3)
+   4 NO es primo porque se puede dividir por (1,-1,2,-2,4,-4)
+   5 es primo porque sólo puede dividirse por (1,-1,5,-5)
+   6 NO es primo porque se puede dividir por (1,-1,2,-2,3,-3,6,-6)
+   ... y así
+
 
 Desafío de programación #17: Calcular la suma de los dígitos positivos de un número entero positivo
 Ejemplo:
@@ -153,3 +163,173 @@ Desafío de programación #51. Find the frequency of characters inside a string.
 Desafío de programación #52. Calculate Fibonacci(500) with high precision (all decimals)
 Desafío de programación #53. Calculate 70! with high precision (all decimals)
  */
+
+
+//desafio nro 1 
+
+for (let n = 1; n <= 10; n++) {
+  console.log(n);
+}
+
+// desafio nro 2 
+
+for (let i = 1; i <=100; i++) {
+  if ((i % 2) != 0) {
+    console.log(i);
+  }
+}
+
+// desafio nro 3
+
+for (let m = 0; m <= 9; m++) {
+  console.log('7x'+ m + '=' +  m*7);
+}
+
+//desafio nro 4 
+
+
+for (x= 0; x <= 9; x++) {
+  for (y= 0; y <= 9; y++) {
+    console.log(x + 'x' + y + '=' + x * y);
+  }
+}
+
+// desafio nro 5 
+let suma = 0;
+let array = [1,2,3,4,5,6,7,8,9,10];
+for (let a = 0; a <= 9; a++) {
+  suma = suma + array[a];
+}
+console.log(suma);
+
+// desafio nro 6 
+
+factorial = 1;
+for (let s = 1; s <= 10; s++) {
+  factorial *= s;
+}
+
+console.log(factorial);
+
+// desafio nro 7 
+
+numimpar = 0;
+
+for (let a = 10; a < 30; a++) {
+  if (a % 2 != 0) {
+  numimpar += a;
+  }
+}
+
+console.log(numimpar);
+
+
+// desafio nro 8
+//(0°C × 9/5) + 32 = 32°F ( formula)
+
+
+function Fahrenheit () {
+  let c = Number(prompt('Cual es la temperatura en grados Celsius?'));
+  return (c * 1.8) + 32; 
+}
+
+console.log('La temperatura en grados Fahrenheit es ' + Fahrenheit()  + '°F');
+
+//desafio nro 9
+//(0°F − 32) × 5/9 = -17.78°C ejemplo formula
+
+function Celsius() {
+  let f = Number(prompt('Cual es la temperatura en grados Fahrenheit'));
+  return (f - 32) * 0.55;
+}
+
+console.log('La temperatura en grados Celsius es ' + Celsius() + '°C')
+
+//desafio nro 10
+//Calcula la suma de todos los números en un array de números
+
+
+function sumax(array2) {
+  let sum = 0; 
+  for (let a = 0; a < array2.length; a++) {
+    sum += array2[a];
+  }
+  return sum;
+}
+
+let array2 = [5,10,15,20,25];
+console.log(sumax(array2));
+
+//desafio nro 11
+//Calcula el promedio de todos los números en un array de números. (en una función)
+
+let array3 = [10,20,30,40,50];
+function promedioarray(array3) {
+  let sumi = 0;
+  for (let v = 0; v < array3.length; v++) {
+    sumi += array3[v];
+  }
+  return sumi / array3.length;
+}
+
+console.log(promedioarray(array3));
+
+//desafio nro 12
+//Crea una función que reciba un array de números y devuelva un array conteniendo solo los números positivos
+
+function numeros(array4) {
+  let sumapositivos = [];
+  for(let m = 0; m < array4.length; m++) {
+    if (array4[m] >= 0) {
+      sumapositivos.push(array4[m])
+    }
+  }
+  return sumapositivos;
+}
+let array4 = [-1,20,-3,40,-5];
+console.log(numeros(array4));
+
+//desafio nro 13
+// Find the maximum number in an array of numbers
+
+function encontrarmax(array5) {
+  let maximonum = 0;
+  for (let n = 0; n < array5.length; n++) {
+    if (array[n] > maximonum) {
+      maximonum = array[n];
+    }
+  }
+  return maximonum;
+}
+let array5 =  [1,2,3,4,5]
+console.log(encontrarmax(array5));
+
+//Desafío nro 14: Imprimir los primeros 10 dígitos de Fibonacci sin recursión
+
+
+let a1 = 0;
+console.log(a1);
+let a2 = 1;
+console.log(a2)
+let asum = 0;
+for (let x = 2; x <= 10 ; x++) {
+  let asum = a1 + a2;
+  a1 = a2;
+  a2 = asum;
+  console.log(asum);
+}
+
+//desafio nro 15: Crear una función que encuentre el número n de Fibonacci usando recursión
+
+function nroFibonacci(n) {
+  if (n === 0) return 1;
+  if (n < 0) return;
+
+  return nroFibonacci (n-1) + (n-2)
+}
+console.log(nroFibonacci(8));
+
+
+//Desafío de programación #17: Calcular la suma de los dígitos positivos de un número entero positivo
+
+const numberPositivos = 12345;

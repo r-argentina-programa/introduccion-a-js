@@ -42,8 +42,7 @@
 // TAREA: Crea tu propio array, llamado comidasFavoritas, y escribi dentro algunas
 //       cosas que te gustan.
 
-
-
+let comidasfavoritas = ['Spaguetti', 'Pizza', 'Hamburguesa', 'Pollo Frito'];
 
 
 
@@ -64,6 +63,7 @@
 // TAREA: Verifique cuántos valores tiene en su array comidasFavoritas.
 // imprimi utilizando console.log el resultado.
 
+console.log(comidasfavoritas.length);
 
 
 
@@ -90,9 +90,7 @@
 
 // TAREA: Obtené el tercer elemento de tu array comidasFavoritas e imprimilo utilizando console.log.
 
-
-
-
+console.log(comidasfavoritas[2]);
 
 
 /*
@@ -115,17 +113,12 @@
 // TAREA: Toma tu array de comidasFavoritas y reemplaza el primer valor
 // con cualquier otra cosa.
 
-
-
-
+comidasfavoritas [0] = 'tacos';
 
 
 // TAREA: console.log todo el array para verificar.
 
-
-
-
-
+console.log(comidasfavoritas);
 
 // TIP: ¡No te olvides que las posiciones de índice comienzan desde 0!
 
@@ -146,14 +139,11 @@
 
 // TAREA: Extendamos tu lista de comidasFavoritas y agreguemos un valor más.
 
-
-
-
-
+comidasfavoritas.push('Carne Asada');
 
 // TAREA: console.log todo el array para verificar.
 
-
+console.log(comidasfavoritas);
 
 
 
@@ -181,17 +171,14 @@
 
 // TAREA: Intenta crear un array como una constante y modifica los valores que contiene.
 
-
-
-
-
-
+const a = [1, 2, 3];
+a[2] = 9;
+a.push(8);
+console.log(a);
 
 // TAREA: Observa lo que sucede si agregas algo con.push(), cambias algo
 //       con notación de corchetes (array[1]) y
 //       asigna un nuevo array completamente nuevo a la constante
-
-
 
 
 
@@ -247,8 +234,12 @@
 //       diez a uno.
 
 
+let numero = 11;
 
-
+while (numero > 1 ) {
+    numero -= 1
+    console.log(numero);
+}
 
 
 /*
@@ -268,9 +259,24 @@
 
 // TAREA: Imprimí cada 3er número del 3 al 22 usando un 'bucle for'.
 
+for (let n = 3; n <= 22; n += 3) {
+    console.log('Hola, cada 3er numero del 3 a 22 es: ' + n);
+};
 
+//TAREA: Hacer una función que se llame calcularPromedio
+// que tome como parámetro un array
 
+const grados = [10, 5, 6];
+function calcularPromedio(grados) {   
+    let totalgrados = 0;
+    for (let x = 0; x < grados.length; x++) {
+    totalgrados = totalgrados + grados[x];
+}
 
+return totalgrados / grados.length; 
+}
+
+console.log('El promedio de las notas es ' + calcularPromedio(grados));
 
 
 /*
@@ -339,7 +345,17 @@
 // 16% 4 = 0 - en 16 tenemos 4 * 4
 // 19% 4 = 3 - en 19 tenemos 4 * 4 + 3, etc.
 
-
+for (let z = 1; z <= 50; z++) {
+    if (z % 5 === 0 && z % 3 === 0) {
+        console.log('FizzBuzz');
+    } else if (z % 5 === 0) {
+        console.log('Buzz'); 
+    } else if (z % 3 === 0) {
+        console.log('Fizz');
+    } else {
+        console.log(z);
+    }
+}
 
 
 
