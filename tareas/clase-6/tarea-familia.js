@@ -8,3 +8,10 @@ document.querySelector('#añadir-cantidad-integrantes').onclick = function(event
     event.preventDefault();
 };
 
+function borrarIntegrantesAnteriores() {
+    const $integrantes = document.querySelectorAll('.integrantes');
+    for (let i = 0; i < $integrantes.length; i++) {
+        $integrante[i].remove;
+    }
+}
+
