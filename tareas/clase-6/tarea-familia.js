@@ -9,7 +9,7 @@ document.querySelector('#añadir-cantidad-integrantes').onclick = function(event
 };
 
 function borrarIntegrantesAnteriores() {
-    const $integrantes = document.querySelectorAll('.integrantes');
+    const $integrantes = document.querySelectorAll('.integrante');
     for (let i = 0; i < $integrantes.length; i++) {
         $integrante[i].remove;
     }
