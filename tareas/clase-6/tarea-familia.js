@@ -15,3 +15,15 @@ function borrarIntegrantesAnteriores() {
     }
 }
 
+function crearIntegrantes(cantidadIntegrantes) {
+    if (cantidadIntegrantes > 0) {
+        mostrarBotonCalculo();
+    } else {
+        resetear();
+    }
+
+    for (let i = 0; i < cantidadIntegrantes; i++) {
+        crearIntegrante(i);
+    }
+}
+
