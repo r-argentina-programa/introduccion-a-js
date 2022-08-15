@@ -93,3 +93,19 @@ function obtenerPromedio(numeros) {
 
     return (acumulador / numeros.length).toFixed(2);
 }
+
+function mostrarBotonCalculo() {
+    document.querySelector('#calcular').className = '';
+}
+
+function mostrarResultados() {
+    document.querySelector('#calculos').className = '';
+}
+
+function ocultarBotonCalculo() {
+    document.querySelector('#calcular').className = 'oculto';
+}
+
+function ocultarResultados() {
+    document.querySelector('#calculos').className = 'oculto';
+}
