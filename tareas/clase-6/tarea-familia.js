@@ -56,3 +56,10 @@ function crearIntegrante(indice) {
     const $integrantes = document.querySelector('#integrantes');
     $integrantes.appendChild($div);
 }
+
+function resetear() {
+    borrarIntegrantesAnteriores();
+    ocultarBotonCalculo();
+    ocultarResultados();
+}
+
