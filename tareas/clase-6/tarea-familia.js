@@ -57,6 +57,15 @@ function crearIntegrante(indice) {
     $integrantes.appendChild($div);
 }
 
+function obtenerEdadesIntegrantes() {
+    const $integrantes = document.querySelectorAll('.integrante input');
+    const edades = [];
+    for (let i = 0; i < $integrantes.length; i++) {
+        edades.push(Number($integrantes[i].value));
+    }
+    return edades;
+}
+
 function resetear() {
     borrarIntegrantesAnteriores();
     ocultarBotonCalculo();
