@@ -8,6 +8,16 @@ document.querySelector('#añadir-cantidad-integrantes').onclick = function(event
     event.preventDefault();
 };
 
+document.querySelector('#calcular').onclick = function(event) {
+    const numeros = obtenerEdadesIntegrantes();
+    mostrarEdad('mayor', obtenerMayorNumero(numeros));
+    mostrarEdad('menor', obtenerMenorNumero(numeros));
+    mostrarEdad('promedio', obtenerPromedio(numeros));
+    mostrarResultados();
+
+    event.preventDefault();
+};
+
 function borrarIntegrantesAnteriores() {
     const $integrantes = document.querySelectorAll('.integrante');
     for (let i = 0; i < $integrantes.length; i++) {
