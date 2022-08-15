@@ -18,6 +18,10 @@ document.querySelector('#calcular').onclick = function(event) {
     event.preventDefault();
 };
 
+document.querySelector('#resetear').onclick = function() {
+    resetear();
+}
+
 function borrarIntegrantesAnteriores() {
     const $integrantes = document.querySelectorAll('.integrante');
     for (let i = 0; i < $integrantes.length; i++) {
