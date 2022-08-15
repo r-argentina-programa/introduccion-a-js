@@ -66,6 +66,10 @@ function obtenerEdadesIntegrantes() {
     return edades;
 }
 
+function mostrarEdad(tipo, valor) {
+    document.querySelector(`#${tipo}-edad`).textContent = valor;
+}
+
 function resetear() {
     borrarIntegrantesAnteriores();
     ocultarBotonCalculo();
