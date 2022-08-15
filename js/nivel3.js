@@ -358,7 +358,8 @@ console.log(nuestroH1.textContent);
 // TAREA: Hagamos un nuevo título! Cambiá el contenido de nuestro 'h1' y ponele lo que quieras.
 
 
-
+nuestroH1.textContent = ' Hola r Argantina  Programa';
+console.log(nuestroH1.textContent);
 
 
 
