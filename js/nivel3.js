@@ -199,7 +199,8 @@ const nuestroTitulo = document.querySelector('h1');
 console.log(nuestroTitulo);
 console.log(nuestroTitulo.innerText);
 nuestroTitulo.innerText = 'Hola r/Argentina programa!'
-
+nuestroTitulo.textContent;
+console.log(nuestroTitulo.textContent);
 ///Esto espara obtener 1 solo elemento
 
 
@@ -303,9 +304,15 @@ Nos va devolver en este caso "sebastian"
 // TAREA: ¿Te acordás de los bucles del nivel 2? Usando lo que sabés de ellos, realizá iteraciones
 //      sobre cada item de mediaLinks y mostralos en pantalla con console.log
 
+for (let i = 0; i < mediaLinks.length; i++) {
+    console.log(mediaLinks[i]);
+}
 
 
-
+/* for (let i = 0; i < mediaLinks.length; i++) {
+    console.log(mediaLinks[i].innerText);
+    mediaLinks[i].innerText = 'Hola';
+ */
 
 
 /*
@@ -325,6 +332,10 @@ Nos va devolver en este caso "sebastian"
 // TAREA: Obtené el contenido de nuestro elemento 'h1'
 // y utilizá console.log para mostrarlo.
 
+const nuestroH1 = document.querySelector('h1');
+console.log(nuestroH1);
+nuestroTitulo.textContent;
+console.log(nuestroH1.textContent);
 
 
 
@@ -345,6 +356,9 @@ Nos va devolver en este caso "sebastian"
 */
 
 // TAREA: Hagamos un nuevo título! Cambiá el contenido de nuestro 'h1' y ponele lo que quieras.
+
+
+
 
 
 
