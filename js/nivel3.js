@@ -358,7 +358,7 @@ console.log(nuestroH1.textContent);
 // TAREA: Hagamos un nuevo título! Cambiá el contenido de nuestro 'h1' y ponele lo que quieras.
 
 
-nuestroH1.textContent = ' Hola r Argantina  Programa';
+nuestroH1.textContent = ' Hola r Argentina  Programa';
 console.log(nuestroH1.textContent);
 
 
@@ -377,11 +377,11 @@ console.log(nuestroH1.textContent);
     ourTwitter.id = "sorpresa";
 */
 
-// TAREA: Actualizá el valor del atributo 'src' de nuestra etiqueta 'img' a "img/kittens.jpeg".
+// TAREA: Actualizá el valor del atributo 'src' de nuestra etiqueta 'img' a "img/kittens.jpg".
 
 
-
-
+const img = document.querySelector('img');
+img.src = "img/kittens.jpeg"
 
 
 /*
@@ -404,7 +404,11 @@ console.log(nuestroH1.textContent);
 
 // Tarea: Obtené cualquier elemento de la página y cambiale algunos estilos.
 
+const h2 = document.querySelector('h2'); 
+h2.style.color = 'blue';
 
+const h1 = document.querySelector('h1');
+h1.style.border = 'Solid 1px blue'
 
 
 
@@ -433,6 +437,13 @@ console.log(nuestroH1.textContent);
 //       en nuestra cabecera.
 //
 // P.S. También les podés dar estilos al nuevo nodo que creaste.
+
+
+const nuevaImagen = document.createElement('img');
+img.src = "img/logo_r_argentinaprograma.jpg"
+
+document.querySelector('header').appendChild(img);
+const Imagen = document.querySelector('img');
 
 
 
