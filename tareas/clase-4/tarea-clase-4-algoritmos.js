@@ -303,7 +303,7 @@ El resultado debería ser: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55
    fibonacci[i] = fibonacci[i - 1] + fibonacci[i - 2] //n = n-1 + n-2. formula del fibonacci
     
   }
-  return fibonacci[numero]
+  return fibonacci
 }
 
 console.log(fibonacci(2)); 
