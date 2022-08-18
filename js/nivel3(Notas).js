@@ -130,20 +130,6 @@ console.log(nuestroTitulo);
 console.log(nuestroTitulo.innerText);
 nuestroTitulo.innerText = 'Hola r/Argentina programa';
 
-//Aca agregue un h2 en html para ver lo del setInterval y  cambiar el h1
-
-
-const nuestroSubtitulo = document.querySelector('h2');
-console.log(nuestroSubtitulo);
-console.log(nuestroSubtitulo.innerText);
-
-
-//funcion setInterval
-setInterval(function(){
-    nuestroSubtitulo.innerText = String(Math.random())
-
-},1000)
-
 
 
 
@@ -170,55 +156,10 @@ console.log(mediaLinks);
 
 for (let i = 0; i < mediaLinks.length; i++) {
     console.log(mediaLinks[i].innerText);
-    mediaLinks[i].innerText = 'Hola!'//Aca cambiamos las li todas
+    mediaLinks[i].innerText = 'Hola!'
 }
 
 
-
-
-//================================================================
-/* == NOTA == */
-/* ¿Cual es la diferencia entre querySelector y FindElementBy? */
-/*  FindElementBy, getelementbyid,getelementbyname
-
-ya no se usan
-
-
-usamos querySelector
-
-
-*/
-
-/* cuando buscaste esos li, te los busco textualmente? o solo te busca en las etiquetas html? */
-/* si tuvieramos que pensar como es: seria como un arbol */
-
-/*
-
-querySelectorAll('.twitter')
-querySelectorAll('body footer') // el espacio dice dentro de
-
-html
---head      head es hijo de html y hermano de body
-----meta    hermano e hijos de head
-----title   hermano
-----link    hermano
-----link    hermano
-----link    hermano   (<link class="twitter")
---body
----- form
------- imput   el imput es hijo de form  hijo de body y que asu vez es hijo de html
----- footer
------- ul
--------- li.twitter
--------- li#facebook
--------- li.twitter
-
-
-
-
-
-
-*/
 
 
 
@@ -226,7 +167,7 @@ html
 // TAREA: Ahora utilizá console.log para ver la cantidad de 
 // elementos li que hay con mediaLinks.length
 
-console.log(mediaLinks.length);
+
 
 
 
@@ -234,10 +175,6 @@ console.log(mediaLinks.length);
 // TAREA: ¿Te acordás de los bucles del nivel 2? Usando lo que sabés de ellos, realizá iteraciones
 //      sobre cada item de mediaLinks y mostralos en pantalla con console.log
 
-for (let i = 0; i < mediaLinks.length; i++) {
-    console.log(mediaLinks[i]);
-    
-}
 
 
 
@@ -261,10 +198,6 @@ for (let i = 0; i < mediaLinks.length; i++) {
 // y utilizá console.log para mostrarlo.
 
 
-let h1 = document.querySelector('h1').textContent;//asi podemos obtener el textcontent
-console.log(h1);
-let h2 = document.querySelector('h2').textContent;
-console.log(h2);
 
 
 
@@ -285,8 +218,6 @@ console.log(h2);
 
 // TAREA: Hagamos un nuevo título! Cambiá el contenido de nuestro 'h1' y ponele lo que quieras.
 
-h1.textContent = 'Buenas!!!';
-console.log(h1.textContent);
 
 
 
@@ -304,9 +235,6 @@ console.log(h1.textContent);
 */
 
 // TAREA: Actualizá el valor del atributo 'src' de nuestra etiqueta 'img' a "img/kittens.jpeg".
-
-const nuestraImagen = document.querySelector('img');
-nuestraImagen.src = "img/kittens.jpeg";
 
 
 
@@ -332,9 +260,6 @@ nuestraImagen.src = "img/kittens.jpeg";
 */
 
 // Tarea: Obtené cualquier elemento de la página y cambiale algunos estilos.
-
-const subtitulo = document.querySelector('h2');
-subtitulo.style.color ='#DA3296';
 
 
 
@@ -367,11 +292,6 @@ subtitulo.style.color ='#DA3296';
 // P.S. También les podés dar estilos al nuevo nodo que creaste.
 
 
-const nodoPagina = document.querySelector('header');
-const nuevaImagen = document.createElement('img');
-nuevaImagen.src = "img/r-argentina-programa.jpg"
-
-nodoPagina.appendChild(nuevaImagen); 
 
 
 
@@ -383,19 +303,19 @@ nodoPagina.appendChild(nuevaImagen);
 ////////////////////////////////////////////////////////////////////////////
 
 
-const $botonIngreso = document.querySelector('#ingresar');/* En este caso pedimos el elemento que tiene el id ingresar */
+const botonIngreso = document.querySelector('#Ingresar');/* En este caso pedimos el elemento que tiene el id ingresar */
 /* evento onclick, es una propiedad que espera una funcion*/
 /* Entonces lo que tenemos que ahcer es declarar una funcion anonima */
-$botonIngreso.onclick = function(){/* Entonces aca vamosd a decir que va pasar cuando hagamos un click */
+botonIngreso.onclick = function(){/* Entonces aca vamosd a decir que va pasar cuando hagamos un click */
     const edadUsuario = Number(document.querySelector('#edad-usuario').value);
     /* si lo queremos validad hacemos */
-    let textoResultado;
+    let textoresultado;
     if(edadUsuario >= 18){
-        textoResultado = 'Podés ingresar';
+        textoresultado = 'Podés ingresar';
     }else{
-        textoResultado = 'No podés ingresar';
+        textoresultado = 'No podés ingresar';
     }
-    document.querySelector('#resultado').innerText = textoResultado;
+    document.querySelector('#resultado').innerText = textoresultado;
     return false;
 }
 

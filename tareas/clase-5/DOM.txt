@@ -5,12 +5,11 @@ en JavaScript tenemos el DOM que es el Document Objet Model(DOM)
 
 ### El DOM es un Objeto que sabe todo lo que esta cargado en una pagina o en la pagina web en la cual fue incluido
 
-ejemplo: en estge caso:
+ejemplo: en este caso:
 
 <script src="js/nivel3.js"></script> 
 
 Entonces asi el DOM va saber todos los elementos que eatn cargados en esa pagina
- 
 
  Sabe de Html, sabe del head, sabe del title, sabe link de form, etc
 
@@ -44,7 +43,7 @@ y en la consola vamos aver
  <h1 class="subtitulo" id="titulo">Hola!</h1>
 
  lo que podes hacer en esta parte lo cual se pone mas interesante es:
-
+val
  console.log(nuestroTitulo.innerText);
  y nos devulve HOla! y si nos fijamos ya podemos empezar a interactuar con la pagina
 
