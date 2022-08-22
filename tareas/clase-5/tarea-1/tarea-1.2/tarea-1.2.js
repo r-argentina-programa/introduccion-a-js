@@ -1,11 +1,11 @@
 const $calcular = (document.querySelector(
   "#calcular-salario-anual-usuario"
 ).onclick = function () {
-  const $salarioMensual = Number(
+  const salarioMensual = Number(
     document.querySelector("#salario-mensual-usuario").value
   );
 
-  const salarioAnual = calcularSalarioAnual($salarioMensual);
+  const salarioAnual = calcularSalarioAnual(salarioMensual);
 
   document.querySelector("#salario-anual-usuario").value = salarioAnual;
 
