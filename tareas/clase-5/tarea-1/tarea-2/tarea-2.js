@@ -11,12 +11,12 @@ const $mostrarInformacion = (document.querySelector('#mostrar-informacion-usuari
         edadUsuario,
     );
     const mensajeAUsuario = 'Bienvenid@';
-    document.querySelector('#bienvenido').innerText = (`${mensajeAUsuario} ${informacionUsuario}`);
+    document.querySelector('#bienvenido').innerText = `${mensajeAUsuario} ${informacionUsuario}`;
     return false;
 });
 
 function capturarInformacion(primerNombreUsuario, segundoNombreUsuario, apellidosUsuario, edadUsuario) {
-    const informacionUsuario = (`${primerNombreUsuario}  ${segundoNombreUsuario} ${apellidosUsuario} de ${edadUsuario} años`);
+    const informacionUsuario = `${primerNombreUsuario}  ${segundoNombreUsuario} ${apellidosUsuario} de ${edadUsuario} años`;
 
     return informacionUsuario;
 }
