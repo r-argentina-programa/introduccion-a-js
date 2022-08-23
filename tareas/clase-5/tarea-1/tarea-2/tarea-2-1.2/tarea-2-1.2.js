@@ -10,8 +10,8 @@ document.querySelector('#mostrar-informacion-usuario').onclick = function () {
         apellidoUsuario,
         edadUsuario,
     );
-    const saludoAlUsuario = 'Bienvenid@';
-    document.querySelector('#bienvenido').innerText = `${saludoAlUsuario} ${datosUsuario}`;
+
+    document.querySelector('#bienvenido').innerText = `Bienvenid@! ${datosUsuario}`;
 
     return false;
 };
@@ -22,5 +22,6 @@ function capturarInformacionUsuario(primerNombreUsuario, segundoNombreUsuario, a
 }
 
 document.querySelector('#borrar').onclick = function () {
-    const borrar = (document.querySelector('#bienvenido').innerText = 'Bienvenid@!');
+    document.querySelector('#bienvenido').innerText = 'Bienvenid@!';
 };
+

@@ -1,4 +1,4 @@
-const $mostrarInformacion = (document.querySelector('#mostrar-informacion-usuario').onclick = function () {
+document.querySelector('#mostrar-informacion-usuario').onclick = function () {
     const primerNombreUsuario = document.querySelector('#primer-nombre-usuario').value;
     const segundoNombreUsuario = document.querySelector('#segundo-nombre-usuario').value;
     const apellidosUsuario = document.querySelector('#apellidos-usuario').value;
@@ -10,14 +10,13 @@ const $mostrarInformacion = (document.querySelector('#mostrar-informacion-usuari
         apellidosUsuario,
         edadUsuario,
     );
-    const mensajeAUsuario = 'Bienvenid@';
-    document.querySelector('#bienvenido').innerText = `${mensajeAUsuario} ${informacionUsuario}`;
+
+    document.querySelector('#bienvenido').innerText = (`Bienvenid@! ${informacionUsuario}`);
     return false;
-});
+};
 
 function capturarInformacion(primerNombreUsuario, segundoNombreUsuario, apellidosUsuario, edadUsuario) {
     const informacionUsuario = `${primerNombreUsuario}  ${segundoNombreUsuario} ${apellidosUsuario} de ${edadUsuario} años`;
 
     return informacionUsuario;
 }
-
