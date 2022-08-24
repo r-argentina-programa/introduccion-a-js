@@ -1,16 +1,22 @@
 document.querySelector('#calcular-tiempo-total').onclick = function () {
-    const horasVideo = Number(document.querySelector('#horas-video').value);
-    const minutosVideo = Number(document.querySelector('#minutos-video').value);
-    const segundosVideo = Number(document.querySelector('#segundos-video').value);
+    const horasVideo = document.querySelectorAll('.clase .horas-video');
+    const minutosVideo = document.querySelectorAll('.clase .minutos-video');
+    const segundosVideo = document.querySelectorAll('.clase .segundos-video');
+    const tiempoTotal = devolverTiempoVideo(horasVideo,minutosVideo,segundosVideo)
+    document.querySelector(".resultado").values = tiempoTotal
 
-    const tiempoTotalVideo = calcularTiempoTotalClases(horasVideo, minutosVideo, segundosVideo);
-
-    document.querySelector('#resultado').value = tiempoTotalVideo;
-
-    return false;
+    for (let i = 0; i < horasVideo.length; i++) {
+        console.log(horasVideo[i].value);
+    }
+    for (let i = 0; i < minutosVideo.length; i++) {
+        console.log(minutosVideo[i].value);
+    }
+    for (let i = 0; i < segundosVideo.length; i++) {
+        console.log(segundosVideo[i].value);
+    }
 };
 
-function calcularTiempoTotalClases(horasVideo, minutosVideo, segundosVideo) {
-    const tiempoTotalClase = `${horasVideo}:${minutosVideo}: ${segundosVideo}`;
-    return tiempoTotalClase;
+function devolverTiempoVideo(horasVideo, minutosVideo, segundosVideo) {
+    const tiempoVideo = `${horasVideo}:${minutosVideo}:${segundosVideo}`;
+    return tiempoVideo;
 }

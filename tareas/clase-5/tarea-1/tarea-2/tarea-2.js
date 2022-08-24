@@ -20,3 +20,4 @@ function capturarInformacion(primerNombreUsuario, segundoNombreUsuario, apellido
 
     return informacionUsuario;
 }
+
