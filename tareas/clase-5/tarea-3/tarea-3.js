@@ -1,22 +1,29 @@
 document.querySelector('#calcular-tiempo-total').onclick = function () {
-    const horasVideo = document.querySelectorAll('.clase .horas-video');
-    const minutosVideo = document.querySelectorAll('.clase .minutos-video');
-    const segundosVideo = document.querySelectorAll('.clase .segundos-video');
-    const tiempoTotal = devolverTiempoVideo(horasVideo,minutosVideo,segundosVideo)
-    document.querySelector(".resultado").values = tiempoTotal
-
+    const horasVideo = document.querySelectorAll('.horas-video');
+    let horasVideoTotales = 0;
     for (let i = 0; i < horasVideo.length; i++) {
-        console.log(horasVideo[i].value);
+        horasVideoTotales += Number(horasVideo[i].value);
     }
-    for (let i = 0; i < minutosVideo.length; i++) {
-        console.log(minutosVideo[i].value);
-    }
-    for (let i = 0; i < segundosVideo.length; i++) {
-        console.log(segundosVideo[i].value);
-    }
-};
 
-function devolverTiempoVideo(horasVideo, minutosVideo, segundosVideo) {
-    const tiempoVideo = `${horasVideo}:${minutosVideo}:${segundosVideo}`;
-    return tiempoVideo;
-}
+    console.log(horasVideoTotales);
+    const minutosVideo = document.querySelectorAll('.minutos-video');
+    let minutosVideosTotales = 0;
+    for (let i = 0; i < minutosVideo.length; i++) {
+        minutosVideosTotales += Number(minutosVideo[i].value);
+    }
+    horasVideoTotales = Math.floor(minutosVideosTotales / 60) + horasVideoTotales;
+    minutosVideosTotales = minutosVideosTotales % 60;
+    console.log(minutosVideosTotales);
+    const segundosVideo = document.querySelectorAll('.segundos-video');
+    let segundosVideosTotales = 0;
+    for (let i = 0; i < segundosVideo.length; i++) {
+        segundosVideosTotales += Number(segundosVideo[i].value);
+    }
+    minutosVideosTotales = Math.floor(segundosVideosTotales / 60) + minutosVideosTotales;
+    segundosVideosTotales = segundosVideosTotales % 60;
+    console.log(segundosVideosTotales);
+
+    document.querySelector(
+        '.resultado',
+    ).innerText = `El tiempo total de todas las clases es: Horas:${horasVideoTotales} Minutos: ${minutosVideosTotales} Segundos: ${segundosVideosTotales}`;
+};
