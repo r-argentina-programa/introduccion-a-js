@@ -4,11 +4,9 @@ document.querySelector('#calcular-promedio').onclick = function () {
     for (let i = 0; i < listaDeNumeros.length; i++) {
         const numero = Number(listaDeNumeros[i].innerText);
         acumulador += numero;
-
+        for (let i = 0; i < acumulador.length; i++) {}
     }
-    document.querySelector(
-        '.suma-numeros-total',
-    ).innerText = `La suma total de todos los numeros es: ${acumulador}`;
+    document.querySelector('.suma-numeros-total').innerText = `La suma total de todos los numeros es: ${acumulador}`;
 
     const promedio = acumulador / listaDeNumeros.length;
 
