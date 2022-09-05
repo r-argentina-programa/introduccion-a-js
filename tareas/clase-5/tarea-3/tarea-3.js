@@ -24,7 +24,7 @@ document.querySelector('#calcular-tiempo-total').onclick = function () {
         horasVideoTotales += Number(horasVideo[i].value);
     }
 
-    const totalHorasVideo = (horasVideoTotales += horasExtra);
+    const totalHorasVideo = horasVideoTotales + horasExtra;
 
     document.querySelector(
         '.resultado',
