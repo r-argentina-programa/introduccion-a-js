@@ -11,7 +11,8 @@ document.querySelector('#mostrar-informacion-usuario').onclick = function () {
         edadUsuario,
     );
 
-    document.querySelector('#bienvenido').innerText = `Bienvenid@! ${datosUsuario}`;
+    const MENSAJE_BIENVENIDA = 'Bienvenid@!';
+    document.querySelector('#bienvenido').innerText = `${MENSAJE_BIENVENIDA} ${datosUsuario}`;
 
     return false;
 };
@@ -21,7 +22,7 @@ function capturarInformacionUsuario(primerNombreUsuario, segundoNombreUsuario, a
     return informacionDelUsuario;
 }
 
+const MENSAJE_BIENVENIDA = 'Bienvenid@!';
 document.querySelector('#borrar').onclick = function () {
-    document.querySelector('#bienvenido').innerText = 'Bienvenid@!';
+    document.querySelector('#bienvenido').innerText = MENSAJE_BIENVENIDA;
 };
-
