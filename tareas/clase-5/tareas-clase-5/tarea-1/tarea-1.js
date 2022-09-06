@@ -10,6 +10,6 @@ document.querySelector('#calcular-salario-mensual-usuario').onclick = function (
 
 function calcularSalarioMensual(salarioAnualUsuario) {
     const MESES_EN_EL_ANIO = 12;
-    let salarioMensual = salarioAnualUsuario / MESES_EN_EL_ANIO;
-    return salarioMensual;
+    return salarioAnualUsuario / MESES_EN_EL_ANIO;
+    
 }
