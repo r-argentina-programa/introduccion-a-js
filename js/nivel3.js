@@ -1,4 +1,4 @@
-// Nivel 3
+i// Nivel 3
 
 /*
     Introducción
@@ -33,7 +33,10 @@
     <header></header>
     <p></p>
     <img />//Tags   que se autocierran
+    <p>Texto del parrafo</p>//Tags   que se autocierran//parrafo
+    <h1>tetxo em el h1</h1>
 
+    <input type="text" disabled value=1/> esto se cierra asi y no asi <input type=text"></input>
     A estos elementos los llamamos "tags". Cada elemento de la página tiene un tag que abre y otro que
     cierra. (NOTA: Algunos tags, como <img />, no necesitan ser
     cerrados con otro tag.)
