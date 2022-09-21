@@ -1,0 +1,15 @@
+*{ 
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-width: 1200px;
+    min-height: 1200px;
+    width: 100%;
+    height: 100%;
+    color: aliceblue;
+}
+
