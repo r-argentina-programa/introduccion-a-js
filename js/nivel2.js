@@ -1,5 +1,7 @@
 // Nivel 2
 
+// alert("estamos escribiendo en el nivel 2");
+
 /*
     Introducción
     ============
@@ -42,8 +44,8 @@
 // TAREA: Crea tu propio array, llamado comidasFavoritas, y escribi dentro algunas
 //       cosas que te gustan.
 
-
-
+let comidas_que_me_gustan = ['lasagna','asado','sushi'];
+// console.log(comidas_que_me_gustan.length);
 
 
 
@@ -90,7 +92,8 @@
 
 // TAREA: Obtené el tercer elemento de tu array comidasFavoritas e imprimilo utilizando console.log.
 
-
+let elem_03 = comidas_que_me_gustan[2];
+// console.log(elem_03);
 
 
 
@@ -115,7 +118,10 @@
 // TAREA: Toma tu array de comidasFavoritas y reemplaza el primer valor
 // con cualquier otra cosa.
 
-
+comidas_que_me_gustan[0] = 'berenjenas';
+console.log(comidas_que_me_gustan[0]);
+console.log(comidas_que_me_gustan[1]);
+console.log(comidas_que_me_gustan[2]);
 
 
 
@@ -146,6 +152,7 @@
 
 // TAREA: Extendamos tu lista de comidasFavoritas y agreguemos un valor más.
 
+comidas_que_me_gustan.push('tarta de manzana');
 
 
 
@@ -154,7 +161,11 @@
 // TAREA: console.log todo el array para verificar.
 
 
-
+/*
+for(i=0; i<comidas_que_me_gustan.length; i++) {
+    console.log(comidas_que_me_gustan[i]);
+}
+*/
 
 
 
@@ -181,6 +192,8 @@
 
 // TAREA: Intenta crear un array como una constante y modifica los valores que contiene.
 
+const animales = ['perro','gato'];
+//animales = ['conejo'];
 
 
 
@@ -191,8 +204,12 @@
 //       con notación de corchetes (array[1]) y
 //       asigna un nuevo array completamente nuevo a la constante
 
-
-
+animales.push('cuyi');
+console.log(animales.length);
+animales[0]='pececillo';
+console.log(animales[0]);
+//animales = ['conejo'];
+// me queda claro que lo que es una constante acá es el array en sí,que no se puede reasignar, o eso parece
 
 
 
@@ -246,8 +263,13 @@
 // TAREA: Usando un bucle 'while', decile a tu computadora que registre los números de
 //       diez a uno.
 
-
-
+/*
+let contador = 10;
+while(contador >= 1) {
+    console.log("vamos por el numero " + contador);
+    contador--;
+}
+*/
 
 
 
@@ -267,8 +289,12 @@
 */
 
 // TAREA: Imprimí cada 3er número del 3 al 22 usando un 'bucle for'.
-
-
+/*
+let i;
+for(i=3; i< 23; i = i+3){
+    console.log(i);
+}
+*/
 
 
 
@@ -296,7 +322,12 @@
 
 // TAREA: Probalo con tu comidasFavoritas array.
 
-
+/*
+for (let index = 0; index < comidas_que_me_gustan.length; index++) {
+    console.log("me gusta el/la " + comidas_que_me_gustan[index]);
+    
+}
+*/
 
 
 
@@ -322,6 +353,23 @@
         }
     }
 */
+
+/*
+for (let i = 1; i <= 50; i++) {
+    if(i%15 === 0) {
+        console.log("FizzBuzz");
+    } else if (i%3 === 0) {
+        console.log("Fizz");
+    } else if (i%5 === 0) {
+        console.log("Buzz");
+    } else {
+        console.log(i);
+    }
+    
+}
+*/
+
+
 
 // TAREA: Ha llegado el momento de un ejercicio clásico: 'FizzBuzz'.
 

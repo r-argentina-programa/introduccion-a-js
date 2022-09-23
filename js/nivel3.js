@@ -12,6 +12,7 @@
     TIP: Si querés utilizar multiples archivos .js, simplemente
     agregá más etiquetas <script>.
 */
+// console.log('estamos en el nivel 3');
 
 /*
     Hablemos un poco más de HTML, CSS y de como podemos interactuar con ellos
@@ -120,13 +121,16 @@
     // pero no la variable en sí misma. Vas a ver esto en acción ahora mismo.
 */
 
+// console.log(document.querySelector('.twitter'));
+
 // TAREA: Ahora te toca a vos! — Obtené la etiqueta h1 de la página y guardala en una variable
 //       variable llamada nuestroTitulo.
 //       Utilizá console.log para ver lo que obtuviste!
 
-
-
-
+/*
+const etiquetah1 = document.querySelector('h1');
+console.log(etiquetah1);
+*/
 
 
 /*
@@ -145,7 +149,7 @@
 */
 
 // TAREA: Obtené todos los elementos <li> de la página en una variable llamada mediaLinks.
-
+let mediaLinks = document.querySelectorAll('li');
 
 
 
@@ -153,7 +157,7 @@
 
 // TAREA: Ahora utilizá console.log para ver la cantidad de 
 // elementos li que hay con mediaLinks.length
-
+console.log(mediaLinks.length);
 
 
 
@@ -162,8 +166,12 @@
 // TAREA: ¿Te acordás de los bucles del nivel 2? Usando lo que sabés de ellos, realizá iteraciones
 //      sobre cada item de mediaLinks y mostralos en pantalla con console.log
 
-
-
+/*
+for (let i = 0; i < mediaLinks.length; i++) {
+    console.log(mediaLinks[i]);
+    
+}
+*/
 
 
 
@@ -181,10 +189,18 @@
     // Obtendremos el texto: 'Twitter: @MusesCodeJSSyd @MusesCodeJSMelb @MCJSHobart @MCJSPerth @BrisMuses'.
 */
 
+/*
+const texto_del_twitter = document.querySelector('.twitter').textContent;
+console.log(texto_del_twitter);
+*/
+
 // TAREA: Obtené el contenido de nuestro elemento 'h1'
 // y utilizá console.log para mostrarlo.
 
-
+/*
+let texto_h1 = document.querySelector('h1').textContent;
+console.log(texto_h1);
+*/
 
 
 
@@ -205,7 +221,7 @@
 
 // TAREA: Hagamos un nuevo título! Cambiá el contenido de nuestro 'h1' y ponele lo que quieras.
 
-
+document.querySelector('h1').textContent = "Otro título cambiado desde Java Script";
 
 
 
@@ -223,7 +239,14 @@
 
 // TAREA: Actualizá el valor del atributo 'src' de nuestra etiqueta 'img' a "img/kittens.jpeg".
 
+const elemento_img = document.querySelector('img');
+console.log(elemento_img);
+elemento_img.src = "img/kittens.jpeg";
 
+const elemento_src_en_img = elemento_img.querySelector('src');
+//console.log(elemento_src_en_img);
+const elemento_texto_img = elemento_img.textContent;
+//console.log(elemento_texto_img);
 
 
 
@@ -248,8 +271,11 @@
 
 // Tarea: Obtené cualquier elemento de la página y cambiale algunos estilos.
 
-
-
+/*
+const elemento_h1 = document.querySelector('h1');
+elemento_h1.style.backgroundColor = 'red';
+elemento_h1.style.color = 'blue';
+*/
 
 
 
@@ -272,14 +298,30 @@
     nodoPagina.appendChild(nuevoParrafo);
 */
 
+const nodePagina = document.querySelector('body');
+const nuevo_parrafo = document.createElement('p');
+nuevo_parrafo.style.fontSize = "20px";
+nuevo_parrafo.style.backgroundColor = "pink";
+const texto_en_parrafo = document.createTextNode('Vaaaaamos, estamos aprendiendo a agregar texto en un nodo!');
+nuevo_parrafo.appendChild(texto_en_parrafo);
+nodePagina.appendChild(nuevo_parrafo);
+
 // Tarea: Todavía seguís teniendo a los gatitos en tu pantalla? A mí me gusta el logo y los gatitos.
 //       Creá una nueva imagen con nuestro logo como fuente, y ponela
 //       en nuestra cabecera.
 //
 // P.S. También les podés dar estilos al nuevo nodo que creaste.
 
+let paisResidencia;
+paisResidencia = prompt('por favor ingrese su país de residencia','Argentina');
 
+const nodoHeader = document.querySelector('header');
+const logo_arg_progr = document.createElement('img');
+logo_arg_progr.src = "img/logo_argentina_programa.jpg";
+nodoHeader.appendChild(logo_arg_progr);
+console.log(logo_arg_progr);
 
+console.log('usted está viviendo en ' + paisResidencia);
 
 
 

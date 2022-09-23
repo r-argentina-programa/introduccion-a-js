@@ -40,6 +40,7 @@
 
 // Tarea: Ahora te toca a vos! Acá abajo escribí una alerta que diga "Hola mundo!"
 
+//alert('Hola, mundo, estamos aprendiendo a usar Java Script!')
 
 // Tarea: Una vez que la alerta funcione, comentala poniendo '//' en la línea donde está el código y guardá los cambios.
 // Una vez que recargás la página, ya no debería aparecer más.
@@ -47,6 +48,7 @@
 
 // Tarea: Ahora probá hacer un console.log de un mensaje que queramos.
 
+console.log('hola mundo');
 
 // Consejo: Para recargar el navegador podemos apretar 'CMD + R' en Mac y 'CTRL + R' en
 //      Windows.
@@ -55,6 +57,7 @@
 // Consejo: El atajo del teclado para guardar cambios a un archivo es 'CMD + S' en Mac y 'CTRL + S' en
 //      Windows.
 
+//alert('hola mundo');
 
 /*
     Variables
@@ -102,6 +105,10 @@
 
 // TAREA: Creá 2 variables indefinidas, llamadas numeroUno y numeroDos.
 
+/*
+let mi_nombre = "Ivan";
+console.log("mi nombre es " + mi_nombre);
+*/
 
 /*
     Podés usar el nombre de tus variables pare representar qué información tienen adentro, por ejemplo:
@@ -115,6 +122,9 @@
 // Crear 2 variables nuevas, una con tu nombre, la segunda con tu edad. Dales un nombre apropriado y
 // mostralas con un alert.
 
+let mi_nombre = 'Ivan';
+let mi_edad = 37;
+//alert("mi nombre es " + mi_nombre + " y tengo " + mi_edad + "  años");
 
 // Consejo: para mostrar 2 variables de texto al mismo tiempo, las podés unir usando el signo '+'. Ejemplo:
 
@@ -149,7 +159,9 @@
 */
 
 // TAREA: Crear una constante y mostrarla con un alert
+ const dni_ivan = 31037338;
 
+// alert(dni_ivan);
 
 // TAREA: Intentar asignar un valor a una constante y ver qué pasa (mirar la consola)
 
@@ -182,7 +194,10 @@
 // * 3ra variable llamada resultadoMultiplicacion que va a ser igual a
 // la 1ra variable multiplicada (con el operador *) por la 2nda variable.
 // Mostrar el valor de resultadoMultiplicacion con un alert o un console.log
-
+let  num01 = 10;
+let num02 = 3;
+let result = num01*num02;
+//alert(result);
 
 /*
     Funciones
@@ -235,15 +250,22 @@
 // TAREA: Es tu turno de crear una función!
 
 // Creá una función llamada 'sumar'
+function sumar(num1,num2){
+    return num1+num2;
+}
 // Escribí código para que acepte 2 argumentos (numero1 y numero2)
 // Escribí código para que devuelva (return) la suma de numero1 y numero2
 // Ejecutá la función sumar y mostrá su resultado en la consola
+//console.log(sumar(num01,num02));
 
 
 // TAREA: Ahora creemos otra función llamada 'restar'
 //       Que acepte 2 números como parámetro y los reste, y que devuelva ese valor.
+function restar(num1,num2){
+    return num1-num2;
+}
 // Ejecutá la función con los números 5 y 1 y mostralos con console.log
-
+//console.log(restar(5,1));
 
 // Consejo: Sabías que en vez de pasar los números directamente a tu función podés crear variables con esos números
 // y pasarlos como parámetros? Probalo!
@@ -318,9 +340,22 @@
 //      Si no, vamos a usar la función para restar.
 //
 // Paso 1 - Crear una variable llamada 'operador' y asignarle el valor '+'.
+let operador = "*";
 // Paso 2 - Crear 2 variables que contengan 2 números cualquiera.
+let a = 34;
+let b = 30;
 // Paso 3 - Crear una condición if/else basada en el operador que tenemos.
-//
+
+
+/*
+if(operador==="+"){
+    console.log("la suma da " + sumar(a,b))
+} else {
+    console.log("estamos haciendo una resta y da " + restar(a,b));
+}
+*/
+
+
 // Si tenemos un operador igual a '+', llamamos la función 'sumar' con nuestros números (las variables del paso 2).
 // Si no, tenemos que llamar la función 'restar', con nuestros números (las variables del paso 2).
 //
@@ -360,9 +395,13 @@
 
 // TAREA: Creemos 2 funciones más: dividir y multiplicar.
 
+function dividir(dividendo,divisor){
+    return dividendo/divisor;
+}
 
-
-
+function multiplicar(num1,num2){
+    return num1*num2;
+}
 
 // TAREA: Reescribamos el if-else que teníamos y extendámolos, agregando:
 //       'else if' el 'operador' es igual a '-' - llamar a la función 'restar'
@@ -370,8 +409,21 @@
 //       'else if' el 'operador' es igual a '*' - llamar a la función 'multiplicar'.
 //       else console.log - "Perdón, no conozco ese operador".
 
+/*
+operador = "i";
 
-
+if(operador==="+"){
+    console.log(sumar(a,b));
+} else if(operador==="-"){
+    console.log(restar(a,b)); 
+} else if(operador==="*"){
+    console.log(multiplicar(a,b)); 
+}  else if(operador==="/"){
+    console.log(dividir(a,b)); 
+} else {
+    console.log("no conozco ese operador");
+}
+*/
 
 
 /*
@@ -400,6 +452,9 @@
 
 // TAREA: usando el operador !, Intentá invertir una variable (de true a false, o de false a true) e imprimí el
 // resultado en la consola.
+
+let bool01 = 5>2;
+console.log(!bool01);
 
 
 ////////////////////////////////////////////////////////////////////////////
