@@ -1,4 +1,4 @@
-i// Nivel 3
+// Nivel 3
 
 /*
     Introducción
@@ -54,7 +54,7 @@ i// Nivel 3
 
     lla regla general es que primero:
      se carga el html 
-     leugo el css y
+     lUEgo el css y
      despues JavaScript
 
 
@@ -162,12 +162,10 @@ tambien por su ID
     No te preocupés, no hace falta recordar todo esto ahora mismo!
 */
 
-
 /*
     Uff, muchas cosas nuevas! Volvamos a JavaScript y veamos como podemos
     interactuar con HTML.
 */
-
 
 /*
     Elementos de Acceso
@@ -185,7 +183,7 @@ tambien por su ID
     Ejemplo:
 
     const nuestroTwitter = document.querySelector('.twitter');//aca llama al selector .twitter
-     y esat diciendo dame el querySelectrod del primer elemento que tenga clase twitter
+     y esta diciendo dame el querySelector del primer elemento que tenga clase twitter
 
     Podemos guardar elementos de la página en variables, al igual que como cualquier otro valor!
     De todas formas, fijate que un elemento de página es un objeto,
@@ -201,12 +199,10 @@ tambien por su ID
 const nuestroTitulo = document.querySelector('h1');
 console.log(nuestroTitulo);
 console.log(nuestroTitulo.innerText);
-nuestroTitulo.innerText = 'Hola r/Argentina programa!'
+nuestroTitulo.innerText = 'Hola r/Argentina programa!';
 nuestroTitulo.textContent;
 console.log(nuestroTitulo.textContent);
 ///Esto espara obtener 1 solo elemento
-
-
 
 /*
     Obteniendo elementos similares.
@@ -229,9 +225,9 @@ console.log(nuestroTitulo.textContent);
 const mediaLinks = document.querySelectorAll('li');
 console.log(mediaLinks);
 
-setInterval(function(){
+setInterval(function () {
     nuestroTitulo.innerText = String(Math.random());
-}, 1000)
+}, 1000);
 
 for (let i = 0; i < mediaLinks.length; i++) {
     console.log(mediaLinks[i].innerText);
@@ -261,17 +257,12 @@ html
 
 */
 
-
 //estos cambios se hacen en tiempo de ejecucion es decir en la memoria
 
-
-
-
-// TAREA: Ahora utilizá console.log para ver la cantidad de 
+// TAREA: Ahora utilizá console.log para ver la cantidad de
 // elementos li que hay con mediaLinks.length
 
-
-console.log(mediaLinks.length)
+console.log(mediaLinks.length);
 
 /* 
 si en la consaola del desarrollador devtools ingresamos 
@@ -300,10 +291,6 @@ Nos va devolver en este caso "sebastian"
 
 */
 
-
-
-
-
 // TAREA: ¿Te acordás de los bucles del nivel 2? Usando lo que sabés de ellos, realizá iteraciones
 //      sobre cada item de mediaLinks y mostralos en pantalla con console.log
 
@@ -311,12 +298,10 @@ for (let i = 0; i < mediaLinks.length; i++) {
     console.log(mediaLinks[i]);
 }
 
-
 /* for (let i = 0; i < mediaLinks.length; i++) {
     console.log(mediaLinks[i].innerText);
     mediaLinks[i].innerText = 'Hola';
  */
-
 
 /*
     Propiedades de los elementos
@@ -340,10 +325,6 @@ console.log(nuestroH1);
 nuestroTitulo.textContent;
 console.log(nuestroH1.textContent);
 
-
-
-
-
 /*
     Editar el contenido de la página
     ====================
@@ -360,13 +341,8 @@ console.log(nuestroH1.textContent);
 
 // TAREA: Hagamos un nuevo título! Cambiá el contenido de nuestro 'h1' y ponele lo que quieras.
 
-
 nuestroH1.textContent = ' Hola r Argentina  Programa';
 console.log(nuestroH1.textContent);
-
-
-
-
 
 /*
     Editando atributos
@@ -382,10 +358,8 @@ console.log(nuestroH1.textContent);
 
 // TAREA: Actualizá el valor del atributo 'src' de nuestra etiqueta 'img' a "img/kittens.jpg".
 
-
 const img = document.querySelector('img');
-img.src = "img/kittens.jpeg"
-
+img.src = 'img/kittens.jpeg';
 
 /*
     Editando estilos
@@ -407,14 +381,11 @@ img.src = "img/kittens.jpeg"
 
 // Tarea: Obtené cualquier elemento de la página y cambiale algunos estilos.
 
-const h2 = document.querySelector('h2'); 
+const h2 = document.querySelector('h2');
 h2.style.color = 'blue';
 
 const h1 = document.querySelector('h1');
-h1.style.border = 'Solid 1px blue'
-
-
-
+h1.style.border = 'Solid 1px blue';
 
 /*
    Creando nuevos nodos (Elementos)
@@ -441,17 +412,11 @@ h1.style.border = 'Solid 1px blue'
 //
 // P.S. También les podés dar estilos al nuevo nodo que creaste.
 
-
 const nuevaImagen = document.createElement('img');
-img.src = "img/logo_r_argentinaprograma.jpg"
+img.src = 'img/logo_r_argentinaprograma.jpg';
 
 document.querySelector('header').appendChild(img);
 const Imagen = document.querySelector('img');
-
-
-
-
-
 
 ////////////////////////////////////////////////////////////////////////////
 // ¡Felicidades! ¡Has terminado el Nivel 3 de JavaScript Básico!          //
@@ -459,24 +424,22 @@ const Imagen = document.querySelector('img');
 // ¡Creo que esto amerita un festejo!                                     //
 ////////////////////////////////////////////////////////////////////////////
 
-
 const $botonIngreso = document.querySelector('#ingresar');
 
 //aveces lo que se hace para marcar que esto es un elemento se le agrega un signo $ adelante
 //para saber que es un elemento de HTMLy no una variable comun y corriente
 
-
-$botonIngreso.onclick = function(){
+$botonIngreso.onclick = function () {
     const edadUsuario = Number(document.querySelector('#edad-usuario').value);
     let textoResultado;
     if (edadUsuario >= 18) {
         textoResultado = 'Podes ingresar';
-    }else{
+    } else {
         textoResultado = 'No podes ingresar';
     }
-    
+
     document.querySelector('#resultado').innerText = textoResultado;
     return false;
-}
+};
 //Evento // este evento onclick es una propiedad que espera una funcion
 // y lo que tenemos que ahcer aca es crear una funcion anonima como ya vimos antes

@@ -17,8 +17,7 @@ document.querySelector('#calcular-promedio').onclick = function () {
     document.querySelector(
         '.suma-numeros-total',
     ).innerText = `La suma total de todos los numeros es: ${sumaNumerosTotal}`;
-    
-    
+
     function calcularPromedio(listaDeNumeros) {
         let resultado = 0;
         let promedio = 0;
@@ -29,39 +28,42 @@ document.querySelector('#calcular-promedio').onclick = function () {
         return promedio;
     }
     document.querySelector('.numero-promedio').innerText = `El promedio es: ${calcularPromedio(listaDeNumeros)}`;
-    
+
     function encontrarNumeroMinimo(listaDeNumeros) {
         let numeroMinimo = listaDeNumeros[0];
         for (let i = 0; i < listaDeNumeros.length; i++) {
-            if (listaDeNumeros[i] < numeroMinimo){
+            if (listaDeNumeros[i] < numeroMinimo) {
                 numeroMinimo = listaDeNumeros[i];
             }
-            return numeroMinimo
+            return numeroMinimo;
         }
         console.log(numeroMinimo);
     }
-    document.querySelector('.numero-pequenio').innerText = `El numeor minimo es ${encontrarNumeroMinimo(listaDeNumeros)}`;
+    document.querySelector('.numero-pequenio').innerText = `El numeor minimo es ${encontrarNumeroMinimo(
+        listaDeNumeros,
+    )}`;
 
-    function encontrarNumeroMaximo(listaDeNumeros){
+    function encontrarNumeroMaximo(listaDeNumeros) {
         let numeroMaximo = listaDeNumeros[0];
         for (let i = 0; i < listaDeNumeros.length; i++) {
-            if(listaDeNumeros[i] > numeroMaximo){
-                numeroMaximo = listaDeNumeros[i]
+            if (listaDeNumeros[i] > numeroMaximo) {
+                numeroMaximo = listaDeNumeros[i];
             }
         }
-        return numeroMaximo
+        return numeroMaximo;
     }
     document.querySelector('.numero-mayor').innerText = `El numero maximo es ${encontrarNumeroMaximo(listaDeNumeros)}`;
 
-    function encontrarNumeroFrecuente(listaDeNumeros){
+    function encontrarNumeroFrecuente(listaDeNumeros) {
         let numeroFrecuente = listaDeNumeros[0];
         for (let i = 0; i < listaDeNumeros.length; i++) {
-            if (listaDeNumeros[i] === listaDeNumeros[i +1]  && listaDeNumeros[i] !== numeroFrecuente[i]) {
+            if (listaDeNumeros[i] === listaDeNumeros[i + 1] && listaDeNumeros[i] !== numeroFrecuente[i]) {
             }
-            numeroFrecuente = listaDeNumeros[i]
-            
+            numeroFrecuente = listaDeNumeros[i];
         }
-        return numeroFrecuente
+        return numeroFrecuente;
     }
-    document.querySelector('.numero-repetido').innerText = `El numero mas frecuente es ${encontrarNumeroFrecuente(listaDeNumeros)}`;
+    document.querySelector('.numero-repetido').innerText = `El numero mas frecuente es ${encontrarNumeroFrecuente(
+        listaDeNumeros,
+    )}`;
 };
