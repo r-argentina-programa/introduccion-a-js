@@ -1,4 +1,4 @@
-function obtenerLaMayorEdad(edadesIntegrantes) {
+function obtenerEdadMayorEdad(edadesIntegrantes) {
     let mayorEdad = edadesIntegrantes[0];
     for (let i = 0; i < edadesIntegrantes.length; i++) {
         if (edadesIntegrantes[i] > mayorEdad) {
@@ -8,7 +8,7 @@ function obtenerLaMayorEdad(edadesIntegrantes) {
     return mayorEdad;
 }
 
-function obtenerLaMenorEdad(edadesIntegrantes) {
+function obtenerEdadMenorEdad(edadesIntegrantes) {
     let edadMinima = edadesIntegrantes[0];
     for (let i = 0; i < edadesIntegrantes.length; i++) {
         if (edadesIntegrantes[i] < edadMinima) {
@@ -20,10 +20,8 @@ function obtenerLaMenorEdad(edadesIntegrantes) {
 
 function calcularPromedio(edadesIntegrantes) {
     let resultado = 0;
-    let promedio = 0;
     for (let i = 0; i < edadesIntegrantes.length; i++) {
         resultado = resultado + edadesIntegrantes[i];
-        promedio = resultado / edadesIntegrantes.length;
     }
-    return promedio;
+    return (promedio = resultado / edadesIntegrantes.length);
 }
