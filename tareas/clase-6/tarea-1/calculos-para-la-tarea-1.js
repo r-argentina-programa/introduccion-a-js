@@ -23,5 +23,5 @@ function calcularPromedio(edadesIntegrantes) {
     for (let i = 0; i < edadesIntegrantes.length; i++) {
         resultado = resultado + edadesIntegrantes[i];
     }
-    return (promedio = resultado / edadesIntegrantes.length);
+    return resultado / edadesIntegrantes.length;
 }
