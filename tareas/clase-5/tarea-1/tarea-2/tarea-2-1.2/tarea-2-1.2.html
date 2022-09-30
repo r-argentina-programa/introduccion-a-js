@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Tarea 2 clase #5 2.2</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+</head>
+
+<body>
+    <h2>Tarea 2 clase #5 2.2</h2>
+    <p>TAREA: En otro archivo html (no Index) y otro archivo js (no tarea-clase-5.js)</p>
+    <p>Creá un formulario que capture el primer nombre, segundo nombre, apellido/s y edad del usuario</p>
+    <p>También vamos a crear un <strong>h1</strong> que diga Bienvenido!</p>
+    <p>Vas a crear un botón de acción que una vez que lo apretás, va a
+        mostrar toda la información junta en un campo de texto
+        y va a cambiar el
+        <strong>h1</strong> para decir "Bienvenido, nombreDeUsuario"!
+    </p>
+    <h1 id="bienvenido"></h1>
+    <form id="datos-del-usuario" onsubmit="return false;">
+        <label for="primer-nombre-usuario">Primer Nombre:</label>
+        <input type="text" id="primer-nombre-usuario" placeholder="Ingrese su primer nombre">
+
+        <label for="segundo-nombre-usuario">Segundo Nombre:</label>
+        <input type="text" id="segundo-nombre-usuario" placeholder="Ingrese su segundo nombre">
+
+        <label for="apellidos-usuario">Apellido/s</label>
+        <input type="text" id="apellidos-usuario" placeholder="Ingrese apellido/s">
+
+        <label for="edad-usuario">Edad:</label>
+        <input type="number" id="edad-usuario" placeholder="Ingrese su edad ej: 27">
+
+        <button id="mostrar-informacion-usuario">Mostrar Información</button>
+        <button type="reset" id="borrar">Borrar</button>
+    </form>
+    <script src='tarea-2-1.2.js'></script>
+</body>
+
+</html>
