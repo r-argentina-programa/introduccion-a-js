@@ -192,6 +192,9 @@ tambien por su ID
     pero no la variable en sí misma. Vas a ver esto en acción ahora mismo.
 */
 
+const nuestroTwitter = document.querySelector('.twitter');
+console.log(nuestroTwitter);
+
 // TAREA: Ahora te toca a vos! — Obtené la etiqueta h1 de la página y guardala en una variable
 //       variable llamada nuestroTitulo.
 //       Utilizá console.log para ver lo que obtuviste!
@@ -216,7 +219,7 @@ console.log(nuestroTitulo.textContent);
 
     Ejemplo:
 
-    // Esto obtendrá todos los <li> de la página.
+    Esto obtendrá todos los <li> de la página.
     const mediaLinks = document.querySelectorAll('li');
 */
 
@@ -253,6 +256,10 @@ html
 -------- li.twitter
  Esto es como un arbol
 
+for (let i = 0; i < mediaLinks.length; i++) {
+    console.log(mediaLinks[i].innerText);
+    mediaLinks[i].innerText = 'Hola!';
+}
 
 
 */
@@ -336,7 +343,7 @@ console.log(nuestroH1.textContent);
 
     nuestroTwitter.textContent = '@ButenkoMe';
     console.log(nuestroTwitter.textContent);
-    // Adiviná que es lo que vamos a ver en la página y en la consola!
+     Adiviná que es lo que vamos a ver en la página y en la consola!
 */
 
 // TAREA: Hagamos un nuevo título! Cambiá el contenido de nuestro 'h1' y ponele lo que quieras.
@@ -393,17 +400,17 @@ h1.style.border = 'Solid 1px blue';
 
     El objeto "document" también nos da maneras de crear nodos desde cero.
 
-    document.createElement('div'); // crea un nuevo elemento llamado 'div'.
+    let x = document.createElement('div'); // crea un nuevo elemento llamado 'div'.//lo creamos en memoria
     document.createTextNode('foobar'); // crea un nuevo texto que contiene 'foobar'
     existingNode.appendChild(newNode); // agrega un newNode al final de existingNode.
 
     Ejemplo:
 
-    const nodoPagina = document.querySelector('body');
-    const nuevoParrafo = document.createElement('p');
-    const textoParrafo = document.createTextNode('Yeeee!');
-    nuevoParrafo.appendChild(textoParrafo);
-    nodoPagina.appendChild(nuevoParrafo);
+    const nodoPagina = document.querySelector('body');// <body>...........</body>
+    const nuevoParrafo = document.createElement('p');//<p></p>
+    const textoParrafo = document.createTextNode('Yeeee!');//"Siiii"
+    nuevoParrafo.appendChild(textoParrafo);<p>Siiiiii</p>
+    nodoPagina.appendChild(nuevoParrafo);///<body>.........<p>Siiiii</p></body>
 */
 
 // Tarea: Todavía seguís teniendo a los gatitos en tu pantalla? A mí me gusta el logo y los gatitos.

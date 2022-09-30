@@ -114,7 +114,17 @@ footer a {
 footer a:hover {
     color:white;
 }
+#titulo{
+    background-color: red;
+}
 
+.importante{
+    background-color: red;
+}
+
+p{
+    background-color: blue;
+}
 #surprise {
     color: red;
     font-size: 2.25rem;
