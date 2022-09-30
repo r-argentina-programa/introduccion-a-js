@@ -27,9 +27,9 @@ $botonCalcular.onclick = function () {
     }
 
     const $numeroMayor = document.querySelector('#mayor-edad');
-    $numeroMayor.textContent = `${obtenerEdadMayorEdad(edadesIntegrantes)}`;
+    $numeroMayor.textContent = `${obtenerMayorEdad(edadesIntegrantes)}`;
     const $numeroMenor = document.querySelector('#menor-edad');
-    $numeroMenor.textContent = `${obtenerEdadMenorEdad(edadesIntegrantes)}`;
+    $numeroMenor.textContent = `${obtenerMenorEdad(edadesIntegrantes)}`;
     const $promedio = document.querySelector('#promedio-edad');
     $promedio.textContent = `${calcularPromedio(edadesIntegrantes)}`;
 };
