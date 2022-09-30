@@ -1,4 +1,4 @@
-function obtenerEdadMayorEdad(edadesIntegrantes) {
+function obtenerMayorEdad(edadesIntegrantes) {
     let mayorEdad = edadesIntegrantes[0];
     for (let i = 0; i < edadesIntegrantes.length; i++) {
         if (edadesIntegrantes[i] > mayorEdad) {
@@ -8,7 +8,7 @@ function obtenerEdadMayorEdad(edadesIntegrantes) {
     return mayorEdad;
 }
 
-function obtenerEdadMenorEdad(edadesIntegrantes) {
+function obtenerMenorEdad(edadesIntegrantes) {
     let edadMinima = edadesIntegrantes[0];
     for (let i = 0; i < edadesIntegrantes.length; i++) {
         if (edadesIntegrantes[i] < edadMinima) {
