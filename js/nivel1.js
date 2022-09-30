@@ -183,6 +183,17 @@
 // la 1ra variable multiplicada (con el operador *) por la 2nda variable.
 // Mostrar el valor de resultadoMultiplicacion con un alert o un console.log
 
+/* 
+
+let diez = 10
+let tres = 3
+let resultadoMultiplicacion = diez * tres
+
+console.log(
+    resultadoMultiplicacion
+)
+
+*/
 
 /*
     Funciones
@@ -239,10 +250,29 @@
 // Escribí código para que devuelva (return) la suma de numero1 y numero2
 // Ejecutá la función sumar y mostrá su resultado en la consola
 
+function sumar(numero1, numero2) {
+    return numero1 + numero2
+}
+
+/*
+console.log(
+    sumar(10, 30)
+)
+ */
 
 // TAREA: Ahora creemos otra función llamada 'restar'
 //       Que acepte 2 números como parámetro y los reste, y que devuelva ese valor.
 // Ejecutá la función con los números 5 y 1 y mostralos con console.log
+
+function restar(numero1, numero2) {
+    return numero1 - numero2
+}
+
+/*
+console.log(
+    restar(numero1 - numero2)
+)
+ */
 
 
 // Consejo: Sabías que en vez de pasar los números directamente a tu función podés crear variables con esos números
@@ -327,6 +357,24 @@
 // No se olviden de hacer un console.log para ver el resultado!
 //
 
+/* 
+let operador = '-'
+let numero1 = 10
+let numero2 = 20
+
+if (operador === '+') {
+    console.log(
+        sumar(numero1, numero2)
+    )
+} else if (operador === '-') {
+    console.log(
+        restar(numero1, numero2)
+    )
+}
+*/
+
+
+
 // TAREA: Cambiar el operador a '-', y fijarse que llame a la función 'restar' en vez de a la de 'sumar'.
 
 
@@ -341,7 +389,7 @@
         //algo
     else
         //algo que va a pasar si no se cumple ningún otra condición
-        
+
 
     Ejemplo:
 
@@ -354,13 +402,19 @@
         console.log('Nuestro número es igual a 7');
     }
 
-    Consejo: Podemos usar la cantidad de 'else if' que queramos uno después del otro, 
+    Consejo: Podemos usar la cantidad de 'else if' que queramos uno después del otro,
     el primero que es 'verdadero' es el único que pasa.
 */
 
 // TAREA: Creemos 2 funciones más: dividir y multiplicar.
 
+function dividir(numero1, numero2){
+    return numero1 / numero2
+}
 
+function multiplicar(numero1, numero2){
+    return numero1 * numero2
+}
 
 
 
@@ -370,6 +424,27 @@
 //       'else if' el 'operador' es igual a '*' - llamar a la función 'multiplicar'.
 //       else console.log - "Perdón, no conozco ese operador".
 
+let operador = '*'
+let numero1 = 20
+let numero2 = 2
+
+if (operador === '+') {
+    console.log(
+        sumar(numero1, numero2)
+    )
+} else if (operador === '-') {
+    console.log(
+        restar(numero1, numero2)
+    )
+} else if (operador === '/'){
+    console.log(
+        dividir(numero1, numero2)
+    )
+} else if(operador === '*'){
+    console.log(
+        multiplicar(numero1, numero2)
+    )
+}
 
 
 
@@ -379,7 +454,7 @@
     =================
     Poner un signo de exclamación (!) antes de un valor Booleano nos da el valor OPUESTO.
     Este operador ! se llama el operador "not".
-    
+
     El resultado de una comparación es un valor Booleano, lo podemos guardar en una variable así:
 
     const bool = (1 < 2);
@@ -401,6 +476,112 @@
 // TAREA: usando el operador !, Intentá invertir una variable (de true a false, o de false a true) e imprimí el
 // resultado en la consola.
 
+let bool = (1 > 10)
+
+console.log(bool)
+console.log(!bool)
+
+
+//////////////////////////////
+// INTERPOLACIÓN DE STRINGS //
+//////////////////////////////
+
+let saludo = 'Hola'
+let nombre = 'Cristian'
+//Pueden usarse las comillas invertidas y dentro para cada String usamos la siguiente
+//estructura: ${nombre del String} (espacio) ${nombre del String}... y así las veces que
+//necesitemos
+
+console.log(
+    `${saludo} ${nombre}`
+)
+
+//String vacio '' no es lo mismo que null.
+
+//////////////////
+//Metodo .trim()//
+//////////////////
+
+//Este metodo sirve para borrarle los espacios vacios de los costados a un String. Por
+//ejemplo:
+
+'     Hola amigo  '.trim()
+
+// Queda así:
+
+'Hola amigo'
+
+//Otra cosa que se puede hacer es pedir el length luego de aplicar el metodo .trim()
+//Por ejemplo:
+
+'Hola amigo '.trim().length
+
+//Me daría: 10
+
+// Así tambien se pueden aplicar diversas funciones consecutivamente segun lo que 
+// necesitemos
+
+//////Minuto 18:37//////
+
+////////////////////////
+///Operadores Lógicos///
+////////////////////////
+
+
+//Revisar en este Link el título 'Operadores Lógicos', hay un cuadro que explica los
+//3 tipos de operadores lógicos que tiene JS: ||(OR), &&(AND) y !(NOT)
+
+//https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Expressions_and_Operators#operadores_l%C3%B3gicos
+
+//Si por ejemplo hacemos 1 || 1
+//Obtenemos 1
+//1 || 2
+//1
+//1 || 3
+//1
+
+//Para entender esto debemos saber que:
+
+//false == 0 (false es mas o menos igual a 0, no exactamente igual)Falsy
+
+//true == 1 (true es mas o menos igual a 1 no exactamente igual)Truthy
+
+//Hay valores que son mas o menos true y otros mas o menos false.
+
+//Mas o menos false:
+
+//0, -0, null, false(false, no falsy), NaN(Not a Number), undefined, String vacio('')
+
+//Esto podemos aplicarlo en el caso de los prompts, donde le pedimos al usuario que
+//ingrese un nombre. El usuario puede apretar Escape, en cuyo caso devuelve null o bien
+//podría apretar enter devolviendo un String vacio("").
+
+//Entonces en este caso:
+
+let nombreDeUsuario = prompt('Cual es tu nombre?').toLowerCase()
+
+//El usuario podría apretar escape devolviendo null en el prompt, y como no es un
+//String nos daría error al querer aplicar el .toLowerCase().
+
+//Para que esto no ocurra podemos hacer lo siguiente:
+
+nombreDeUsuario = (prompt('Cual es tu nombre?') || '').toLowerCase()
+
+//Entonces acá si llega a apretar Escape nos da false (Boolean()) y devuelve el
+//String vacio, porque lo hace de forma automática, si evalúa que el prompt es false
+//inmediatamente devuelve el otro valor, en este caso ''. Lo mismo pasa si el primer
+//valor, es decir el que esta a la izquierda, es true devuelve ese valor y ni se fija
+//en el valor que esta a la derecha del ||.
+
+//Los operadores siempre leen de izquierda a derecha, esto se llama 'Lazy evaluation'.
+
+///////////////////
+//Minuto 01:00:00//
+///////////////////
+
+// Un tema interesante y útil son las funciones recursivas, que son aquellas que se
+// se llaman a sí mismas. En el siguiente link se habla acerca de las mismas:
+// https://developer.mozilla.org/es/docs/Glossary/Recursion
 
 ////////////////////////////////////////////////////////////////////////////
 // Felicitaciones! Terminaste el Nivel 1 de la introducción a JavaScript! //
