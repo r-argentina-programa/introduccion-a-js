@@ -89,12 +89,10 @@
     No te preocupés, no hace falta recordar todo esto ahora mismo!
 */
 
-
 /*
     Uff, muchas cosas nuevas! Volvamos a JavaScript y veamos como podemos
     interactuar con HTML.
 */
-
 
 /*
     Elementos de Acceso
@@ -113,21 +111,24 @@
 
     const nuestroTwitter = document.querySelector('.twitter');
 
-    // Podemos guardar elementos de la página en variables, al igual que como cualquier otro valor!
-    // De todas formas, fijate que un elemento de página es un objeto,
-    // el cual es un "tipo de referencia", así como los arrays (mirá el nivel 2).
-    // Eso quiere decir que se pueden cambiar los atributos y propiedades del elemento,
-    // pero no la variable en sí misma. Vas a ver esto en acción ahora mismo.
+     Podemos guardar elementos de la página en variables, al igual que como cualquier otro valor!
+     De todas formas, fijate que un elemento de página es un objeto,
+     el cual es un "tipo de referencia", así como los arrays (mirá el nivel 2).
+     Eso quiere decir que se pueden cambiar los atributos y propiedades del elemento,
+     pero no la variable en sí misma. Vas a ver esto en acción ahora mismo.
 */
+
+const nuestroTwitter = document.querySelector('.twitter');
+console.log(nuestroTwitter);
 
 // TAREA: Ahora te toca a vos! — Obtené la etiqueta h1 de la página y guardala en una variable
 //       variable llamada nuestroTitulo.
 //       Utilizá console.log para ver lo que obtuviste!
 
-
-
-
-
+const nuestroTitulo = document.querySelector('h1');
+console.log(nuestroTitulo);
+console.log(nuestroTitulo.innerText);
+nuestroTitulo.innerText = 'Hola r/Argentina programa';
 
 /*
     Obteniendo elementos similares.
@@ -140,32 +141,34 @@
 
     Ejemplo:
 
-    // Esto obtendrá todos los <li> de la página.
+    Esto obtendrá todos los <li> de la página.
     const mediaLinks = document.querySelectorAll('li');
 */
 
 // TAREA: Obtené todos los elementos <li> de la página en una variable llamada mediaLinks.
 
+const mediaLinks = document.querySelectorAll('li');
+console.log(mediaLinks);
 
+for (let i = 0; i < mediaLinks.length; i++) {
+    console.log(mediaLinks[i].innerText);
+    mediaLinks[i].innerText = 'Hola!';
+}
 
-
-
-
-// TAREA: Ahora utilizá console.log para ver la cantidad de 
+// TAREA: Ahora utilizá console.log para ver la cantidad de
 // elementos li que hay con mediaLinks.length
-
-
-
-
-
 
 // TAREA: ¿Te acordás de los bucles del nivel 2? Usando lo que sabés de ellos, realizá iteraciones
 //      sobre cada item de mediaLinks y mostralos en pantalla con console.log
 
+for (let i = 0; i < mediaLinks.length; i++) {
+    console.log(mediaLinks[i]);
+}
 
-
-
-
+let contador = 0;
+for (let i = 0; i < mediaLinks.length; i++) {
+    console.log((contador += mediaLinks[i].textContent));
+}
 
 /*
     Propiedades de los elementos
@@ -184,10 +187,9 @@
 // TAREA: Obtené el contenido de nuestro elemento 'h1'
 // y utilizá console.log para mostrarlo.
 
-
-
-
-
+console.log(titulo.textContent); //Este siempre nos va mostrar o dar solo el contenido de texto que halla en ese elemento//Es conveniente usar este
+console.log(titulo.innerText); //En este solo vamos aver el texto qeu se este mostrando en la pagina//calcula que elementos estan visibles y si no estan visibles no nos da el texto
+console.log(titulo.innerHTML); // este nos da el pedaso de codigo de html que esta dentro del elemento que pido
 
 /*
     Editar el contenido de la página
@@ -200,14 +202,15 @@
 
     nuestroTwitter.textContent = '@ButenkoMe';
     console.log(nuestroTwitter.textContent);
-    // Adiviná que es lo que vamos a ver en la página y en la consola!
+     Adiviná que es lo que vamos a ver en la página y en la consola!
 */
 
 // TAREA: Hagamos un nuevo título! Cambiá el contenido de nuestro 'h1' y ponele lo que quieras.
 
+//En algunso casos en las tareas se pide que hagamso esto:
 
-
-
+const nombreUsuario = prompt('Cómo te llamas?');
+nuestroTitulo.textContent = 'Hola! ' + nombreUsuario;
 
 /*
     Editando atributos
@@ -223,10 +226,7 @@
 
 // TAREA: Actualizá el valor del atributo 'src' de nuestra etiqueta 'img' a "img/kittens.jpeg".
 
-
-
-
-
+document.querySelector('img').src = 'img/kittens.jpeg';
 
 /*
     Editando estilos
@@ -248,10 +248,8 @@
 
 // Tarea: Obtené cualquier elemento de la página y cambiale algunos estilos.
 
-
-
-
-
+nuestroTitulo.style.backgroundColor = 'blue';
+nuestroTitulo.style.fontSize = '150px';
 
 /*
    Creando nuevos nodos (Elementos)
@@ -259,17 +257,17 @@
 
     El objeto "document" también nos da maneras de crear nodos desde cero.
 
-    document.createElement('div'); // crea un nuevo elemento llamado 'div'.
+    let x = document.createElement('div'); // crea un nuevo elemento llamado 'div'.//lo creamos en memoria
     document.createTextNode('foobar'); // crea un nuevo texto que contiene 'foobar'
     existingNode.appendChild(newNode); // agrega un newNode al final de existingNode.
 
     Ejemplo:
 
-    const nodoPagina = document.querySelector('body');
-    const nuevoParrafo = document.createElement('p');
-    const textoParrafo = document.createTextNode('Yeeee!');
-    nuevoParrafo.appendChild(textoParrafo);
-    nodoPagina.appendChild(nuevoParrafo);
+    const nodoPagina = document.querySelector('body');// <body>...........</body>
+    const nuevoParrafo = document.createElement('p');//<p></p>
+    const textoParrafo = document.createTextNode('Yeeee!');//"Siiii"
+    nuevoParrafo.appendChild(textoParrafo);<p>Siiiiii</p>
+    nodoPagina.appendChild(nuevoParrafo);///<body>.........<p>Siiiii</p></body>
 */
 
 // Tarea: Todavía seguís teniendo a los gatitos en tu pantalla? A mí me gusta el logo y los gatitos.
@@ -278,13 +276,44 @@
 //
 // P.S. También les podés dar estilos al nuevo nodo que creaste.
 
+const nodoImagen = document.createElement('img'); //<img>
+nodoImagen.src = 'img/woman_bw.jpg'; //hasata que no lo pongamos en un nodo que ya exite nova pasar nada
+document.querySelector('header').appendChild(nodoImagen);
 
+/* 
+<header>
+    <h1 id="titulo">Hola!</h1>
+    <h2 class="importante">Escribamos un poco de código el día de hoy!</h2>
+    <img src="img/woman_bw.jpg"
+</header>
+ESto lo vamos a necesitar en la clase 6
 
-
-
+*/
 
 ////////////////////////////////////////////////////////////////////////////
 // ¡Felicidades! ¡Has terminado el Nivel 3 de JavaScript Básico!          //
 // Levántate, estira las piernas y celebra tu logro.                      //
 // ¡Creo que esto amerita un festejo!                                     //
 ////////////////////////////////////////////////////////////////////////////
+
+const botonIngreso =
+    document.querySelector('#Ingresar'); /* En este caso pedimos el elemento que tiene el id ingresar */
+/* evento onclick, es una propiedad que espera una funcion*/
+/* Entonces lo que tenemos que ahcer es declarar una funcion anonima */
+botonIngreso.onclick = function () {
+    /* Entonces aca vamosd a decir que va pasar cuando hagamos un click */
+    const edadUsuario = Number(document.querySelector('#edad-usuario').value);
+    /* si lo queremos validad hacemos */
+    let textoresultado;
+    if (edadUsuario >= 18) {
+        textoresultado = 'Podés ingresar';
+    } else {
+        textoresultado = 'No podés ingresar';
+    }
+    document.querySelector('#resultado').innerText = textoresultado;
+    return false;
+};
+
+/* Aveces lo que se ahce es agregar un signo $ para dejar en claro quee es un elemento de html y no un avariable comun y corriente*/
+
+/* ahora lo que podemos hacer e spreguntar por nombre y edad para ver si alguien puede entrar o no al bar */
