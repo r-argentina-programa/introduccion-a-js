@@ -1,5 +1,96 @@
 // Nivel 3
 
+
+/////////////
+///CLASE 5///
+/////////////
+
+//Estos links son teoría sobre Git, GitHub y GitHub Desktop:
+
+// https://github.com/r-argentina-programa/traducciones/blob/master/src/github.md
+
+// http://tomasdelvechio.github.io/old/440/
+
+// Este último es sobre renderización de navegadores:
+
+// https://github.com/r-argentina-programa/traducciones/blob/master/src/renderizacion-navegadores.md
+
+///////////////////////////////// Parametros por default
+
+// Podemos asignar a una función un parametro por default en caso de no recibir
+// ningún valor, por ejemplo:
+
+function preguntarColorPreferido(color = 'azul') {
+    console.log('Mi color preferido es ' + color)
+}
+
+// Entonces en caso de no ingresar ningún 'color' el parametro por default será
+// 'azul' y en la consola dirá 'Mi color preferido es azul'
+
+
+///////////////////////////////// Operador ternario
+
+
+// Es como if-else pero en una sola línea. Primero tenemos la condición y luego un
+// signo de interrogación ? seguido de lo que ocurre al cumplirse dicha condición,
+// después los 2 puntos : y a su derecha lo que ocurre de no cumplirse la misma
+// condición. Por ejemplo:
+
+function verificarEdadEntrada(edad) {
+    edad >= 18 ? console.log('Podes ingresar') : console.log('No podes ingresar')
+}
+
+///////////////////////////////// ++variable o variable++
+
+// A estos conceptos los vemos con el siguiente ejemplo:
+
+function testClase5() {
+    let x = 0;
+    let y = ++x; //aca se suma 1 al valor de x y luego se asigna el valor a x
+    let z = x++; //aca se asigna el valor a x y luego se le suma 1
+}
+
+testClase5()
+
+///////////////////////////////// Expresiones de función (Function Expressions)
+
+// Nosotros podemos asignarle una función a una variable, por ejemplo:
+
+let sumar = function (n1, n2) {
+    return console.log(
+        `El resultado es ${n1 + n2}`
+    )
+}
+
+// Esta variable llamada sumar tiene type "function", porque le hemos asignado una
+// función y eso nos permite ejecutar esta variable llamandola del siguiente modo:
+
+sumar(10, 20)
+
+// Ahora, cual es la utilidad de esta funcionalidad de JavaScript
+
+let restar = function (n1, n2) {
+    console.log(
+        n1 - n2
+    )
+}
+
+function tareaOperador (funcionOperador, numero1, numero2){
+    console.log(funcionOperador(numero1,numero2))
+}
+// Entonces ahora funcionOperador es un parametro que espera una función cuyos
+// parametros son n1 y n2.
+
+// La función tareaOperador espera una función, numero1 y numero2.
+
+tareaOperador(restar, 100, 70)
+
+// Sería incorrecto llamar a la función de esta forma:
+// tareaOperador(restar, 100, 70)
+
+///////////////////////
+/////Minuto 44:19//////
+///////////////////////
 /*
     Introducción
     ============
@@ -125,6 +216,9 @@
 //       Utilizá console.log para ver lo que obtuviste!
 
 
+let nuestroTitulo = document.querySelector('h1').textContent
+
+console.log(nuestroTitulo)
 
 
 
@@ -147,30 +241,30 @@
 // TAREA: Obtené todos los elementos <li> de la página en una variable llamada mediaLinks.
 
 
-
+let mediaLinks = document.querySelectorAll('li')
 
 
 
 // TAREA: Ahora utilizá console.log para ver la cantidad de 
 // elementos li que hay con mediaLinks.length
 
-
-
-
+//console.log(mediaLinks)
 
 
 // TAREA: ¿Te acordás de los bucles del nivel 2? Usando lo que sabés de ellos, realizá iteraciones
 //      sobre cada item de mediaLinks y mostralos en pantalla con console.log
 
 
-
+for (let i = 0; i < (mediaLinks.length - 1); i++) {
+    console.log(mediaLinks[i])
+}
 
 
 
 /*
     Propiedades de los elementos
     ==================
-    
+
     Ok, hasta acá todo bien. Peeeroo, ¿que pasa si queremos obtener SOLO el texto
     de nuestra etiqueta 'h1'?
     Los elementos de página tienen una propiedad para esto: '.textContent'.
@@ -193,7 +287,7 @@
     Editar el contenido de la página
     ====================
 
-    Podemos simplemente cambiar el contenido de las étiquetas utilizando la propiedad que 
+    Podemos simplemente cambiar el contenido de las étiquetas utilizando la propiedad que
     vimos recién, '.textContent'.
 
     Ejemplo:
@@ -212,7 +306,7 @@
 /*
     Editando atributos
     ==================
-    
+
     También podemos cambiar y establecer atributos en nuestros elementos.
 
     Ejemplo:
