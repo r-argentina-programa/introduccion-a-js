@@ -44,10 +44,6 @@
 
 
 
-
-
-
-
 /*
     Tamaño del Array
     ================
@@ -100,7 +96,7 @@
     =========================
 
     También podemos reemplazar los valores dentro de los arrays asignando un nuevo valor a
-    un índice específico.
+    un índice específico.
 
     Ejemplo:
 
@@ -134,7 +130,7 @@
     ============
 
     Si deseas agregar nuevos valores a un array existente, podes usar el método
-     '.push()'. Push agregará un nuevo valor al final del array.
+     '.push()'. Push agregará un nuevo valor al final del array.
 
     Ejemplo:
 
@@ -163,8 +159,8 @@
     =============================
 
     Un array es lo que se conoce como un "tipo de referencia". Lo que esto significa es que
-    incluso si un array se declara (crea) usando 'const', los valores *dentro* del
-    array todavía se pueden cambiar; el array en sí no se puede sobrescribir.
+    incluso si un array se declara (crea) usando 'const', los valores *dentro* del
+    array todavía se pueden cambiar; el array en sí no se puede sobrescribir.
 
     Ejemplo:
 
@@ -201,7 +197,7 @@
     ======
     
     ¡La gente siempre ha sido perezosa, pero a veces avanza! A nosotros
-    no nos gusta repetir las mismas aburridas acciones una y otra vez, 
+    no nos gusta repetir las mismas aburridas acciones una y otra vez, 
     así que buscamos formas de evitarlo.
 
     La programación es igual. Por ejemplo, si quiero imprimir 10 veces 'JavaScript 
@@ -212,13 +208,13 @@
     Para esto usamos bucles.
 
     Cada ciclo debe tener tres cosas principales:
-     - un punto de partida
-     - una condición (punto final)
-     - un contador (un paso)
+     - un punto de partida
+     - una condición (punto final)
+     - un contador (un paso)
 
-     Si te olvidas uno de estos, ¡podes entrar en un bucle infinito!
+     Si te olvidas uno de estos, ¡podes entrar en un bucle infinito!
 
-     Veamos diferentes estructuras de bucle.
+     Veamos diferentes estructuras de bucle.
 
 */
 
@@ -246,9 +242,15 @@
 // TAREA: Usando un bucle 'while', decile a tu computadora que registre los números de
 //       diez a uno.
 
+/* 
+let numero = 10
 
-
-
+while (numero >= 1) {
+    console.log(
+        numero--
+    )
+}
+*/
 
 
 /*
@@ -256,7 +258,7 @@
     ==========
 
     Los bucles for son muy similares al 'bucle while'. En un bucle for
-    se declara un contador en la declaración.
+    se declara un contador en la declaración.
 
     Ejemplo:
 
@@ -269,6 +271,13 @@
 // TAREA: Imprimí cada 3er número del 3 al 22 usando un 'bucle for'.
 
 
+/*
+for (let i = 3; i <= 22; i = i + 3) {
+    console.log(
+        i
+    )
+}
+*/
 
 
 
@@ -278,10 +287,10 @@
     ===========================
 
     Ahora que conocemos los bucles, vamos a usar cada valor de mi lista de animales
-    y expresar mi amor por cada uno ¿Cómo lo voy a hacer?
+    y expresar mi amor por cada uno ¿Cómo lo voy a hacer?
 
-    Podemos usar un 'bucle for' para iterar a través de nuestro array y obtener cada valor
-    de eso.
+    Podemos usar un 'bucle for' para iterar a través de nuestro array y obtener cada valor
+    de eso.
 
     Nota: i++ es otra forma de expresar i = i + 1.
 
@@ -297,6 +306,15 @@
 // TAREA: Probalo con tu comidasFavoritas array.
 
 
+/* 
+let procesadoresPreferidos = ['Intel i5', 'Intel i7', 'Ryzen 5 5600g', 'Ryzen 7']
+
+for (let i = 0; i < procesadoresPreferidos.length; i++) {
+    console.log(
+        `El procesador ${procesadoresPreferidos[i]} me parece muy bueno`
+    )
+}
+*/
 
 
 
@@ -304,13 +322,13 @@
 /*
     Bucles y Logica
     ===============
-    
+
     Traigamos bucles junto con las declaraciones if / else que aprendimos en
-    nivel 1, y hagamos algo interesante.
+    nivel 1, y hagamos algo interesante.
 
 
-    Contemos de 10 a 0 e imprimamos todos los números. Pero cuando lleguemos al
-    medio (5) imprimimos 'Estamos en el medio!'.
+    Contemos de 10 a 0 e imprimamos todos los números. Pero cuando lleguemos al
+    medio (5) imprimimos 'Estamos en el medio!'.
 
     Ejemplo:
 
@@ -338,6 +356,18 @@
 // 10% 3 = 1 - en 10 tenemos 3 * 3 + 1
 // 16% 4 = 0 - en 16 tenemos 4 * 4
 // 19% 4 = 3 - en 19 tenemos 4 * 4 + 3, etc.
+
+for (let i = 1; i <= 50; i++) {
+    if (i % 3 === 0 && i % 5 !== 0) {
+        console.log('Fizz')
+    } else if (i % 5 === 0 && i % 3 !== 0) {
+        console.log('Buzz')
+    } else if (i % 3 === 0 && i % 5 === 0) {
+        console.log('FizzBuzz')
+    } else {
+        console.log(i)
+    }
+}
 
 
 
