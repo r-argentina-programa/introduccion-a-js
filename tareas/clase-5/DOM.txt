@@ -1,0 +1,181 @@
+Este es un repaso de DOM(Apuntes, Notas importantes);
+
+
+en JavaScript tenemos el DOM que es el Document Objet Model(DOM)
+
+### El DOM es un Objeto que sabe todo lo que esta cargado en una pagina o en la pagina web en la cual fue incluido
+
+ejemplo: en estge caso:
+
+<script src="js/nivel3.js"></script> 
+
+Entonces asi el DOM va saber todos los elementos que eatn cargados en esa pagina
+ 
+
+ Sabe de Html, sabe del head, sabe del title, sabe link de form, etc
+
+ Entonces nos dice que usando la funcion document.querySelector osea querySelector del objeto Document podemos agarrar entre "" distintos elementos que hya en el HTML  por ejemplo:
+
+ const nuestroTwitter = document.querySelector('.twitter');
+
+ aca ('.twitter') funciona de la misma manera que en CSS, funciona como los selectores
+
+## esta diciendo dame el querySelector del elemento o mejor dicho del primer elemento que tenga clase twitter('.twitter')
+
+Entonces en index.html vamos y  buscamos esto va decir
+
+<li class="twitter"></li>
+
+// TAREA: Ahora te toca a vos! — Obtené la etiqueta h1 de la página y guardala en una variable
+//       variable llamada nuestroTitulo.
+//       Utilizá console.log para ver lo que obtuviste!
+
+const nuestroTitulo = document.querySelector('h1');
+//Este es para obtener 1 solo elemento
+console.log(nuestroTitulo);
+
+aca el h1 solo es h1 no usa ni punto ni numeral por que es un elemento
+
+si h1 fura con id seria #h1('#h1')
+si h1 fuera con clase seria .h1('.h1')
+
+y en la consola vamos aver
+
+ <h1 class="subtitulo" id="titulo">Hola!</h1>
+
+ lo que podes hacer en esta parte lo cual se pone mas interesante es:
+
+ console.log(nuestroTitulo.innerText);
+ y nos devulve HOla! y si nos fijamos ya podemos empezar a interactuar con la pagina
+
+ tambien podemos hacer esto:
+
+ nuestroTitulo.innerText = 'Hola r/Argentina programa';
+
+ osea lo cambiamos de Hola! a 'Hola r/Argentina programa';
+
+ le asignamos 'Hola r/Argentina programa'
+
+ cunaod lo corremos de vuelta vemos que nos cambio el HTML
+ y este es el verdadero poder de de javascript en el contexto del frontEnd
+
+### podemos manipular una pagina web estatica
+
+
+
+/*
+    Obteniendo elementos similares.
+    ========================
+
+    También podemos obtener todos los elementos con la misma etiqueta. En nuestro
+    pie de página tenemos una lista desordenada (<ul>), con tres elementos de lista (<li>) adentro.
+    Obtengamoslos todos con un array de los elementos de la página. Cuando querramos obtener multiples elementos,
+    podemos utilizar el método '.querySelectorAll', el cual nos dará una lista con las coincidencias.
+
+    Ejemplo:
+
+    // Esto obtendrá todos los <li> de la página.
+    const mediaLinks = document.querySelectorAll('li');
+*/
+Este metodo se usa para optener muchos elementos similares
+
+// TAREA: Obtené todos los elementos <li> de la página en una variable llamada mediaLinks.
+
+
+//Esto dice dame todos los li
+const mediaLinks = document.querySelectorAll('li');
+console.log(mediaLinks);
+
+como esto va devolver muchos elementos nos va devolver un array, va guardaR TODAS las li en un array 
+
+NodeList(5) [li.website, li.twitter, li.facebook, li.website, li.email]
+0: li.website = class .-....
+1: li.twitter = classs twitter
+2: li.facebook
+3: li.website
+4: li.email
+length: 5
+[[Prototype]]: NodeList
+
+en si no es un array pero es parecido(por el moento solo sabemos esa parte "es un array")
+
+y como es un array lo podemos usar como un array y decir:
+
+for (let i = 0; i < mediaLinks.length; i++) {
+    console.log(mediaLinks[i]);
+    
+}
+
+li.website
+li.twitter
+li.facebook
+li.website
+li.email
+
+tambiuen podemos pedirles el innerText que tienen adentro
+
+for (let i = 0; i < mediaLinks.length; i++) {
+    console.log(mediaLinks[i].innerText);
+    
+}
+
+GitHub github.com/r-argentina-programa
+Twitter: @MusesCodeJSSyd @MusesCodeJSMelb @MCJSHobart @MCJSPerth @BrisMuses
+Facebook: MusesCodeJS
+ Website: musescodejs.org
+e-mail: info@musescodejs.org
+
+y nos dice que por cada esta 5 cosas , nos muestra el titulo que tiene adentro
+
+tambien podemos cambiarlo
+for (let i = 0; i < mediaLinks.length; i++) {
+    console.log(mediaLinks[i].innerText);
+    mediaLinks[i].innerText = 'Hola'
+}
+
+y aca vemos que cambio todo a hola!
+
+devuelve un array por que estamos pidiendo muchas cosas y la forma de representar muchas cosas es atravez de un array
+
+un array es una lista de cosas
+
+entonces si decimos dame todos los elementos que cumplan con bla nos va dar una lista de todos esos elementos qeu cumplan con bla y la forma de reprsentar esto es con un array
+
+
+otra cosa que al cambiar los elementos no sobre escribe el html, el html siempre esat igual osea el codigo
+lo que se cambia es el HTMl en tiempo de ejecucion, osea para lo que conoce el browser, osea lo cambiamos en memoria
+
+
+ <form action="">
+      <input type="text"  id="nombre-usuario" placeholder="Ingresa tu nombre"><!-- Para poder identificar este imput le ponemos un id -->
+      <input type="number" id="edad-usuario" placeholder="Ingresa tu edad">
+    </form>
+
+    esta tecnbica se usa muchisimo y es crear un elemento que al principio este vacio ejemplo
+
+<div id="resultado"></div>
+
+
+si en la consola dev o la devs tools hacemos:
+
+document.querySelector('#edad-usuario')
+nos va devolver el input 
+<input type="number" id="edad-usuario" placeholder="Ingresá tu edad">
+
+si preguntamos por el .value
+document.querySelector('#edad-usuario').value
+es una propiedad especifica de los input
+esto nos va dar vacio "" por que no hay nada , no le pasamos ningun valor
+
+si le pasamos valor eejmplo 27
+nos devuleve el string de 27 osea "27"
+
+entonces apra que esto nos tome un numero devemos meterle un number
+
+Number(document.querySelector('#edad-usuario').value)
+y nos da 27 en numero
+
+
+y lo mismo pasaria con nombre de usuario
+document.querySelector('#nombre-usuario').value
+'sebastian'

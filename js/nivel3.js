@@ -113,17 +113,21 @@
 
     const nuestroTwitter = document.querySelector('.twitter');
 
-    // Podemos guardar elementos de la página en variables, al igual que como cualquier otro valor!
-    // De todas formas, fijate que un elemento de página es un objeto,
-    // el cual es un "tipo de referencia", así como los arrays (mirá el nivel 2).
-    // Eso quiere decir que se pueden cambiar los atributos y propiedades del elemento,
-    // pero no la variable en sí misma. Vas a ver esto en acción ahora mismo.
+     Podemos guardar elementos de la página en variables, al igual que como cualquier otro valor!
+     De todas formas, fijate que un elemento de página es un objeto,
+     el cual es un "tipo de referencia", así como los arrays (mirá el nivel 2).
+     Eso quiere decir que se pueden cambiar los atributos y propiedades del elemento,
+     pero no la variable en sí misma. Vas a ver esto en acción ahora mismo.
 */
 
 // TAREA: Ahora te toca a vos! — Obtené la etiqueta h1 de la página y guardala en una variable
 //       variable llamada nuestroTitulo.
 //       Utilizá console.log para ver lo que obtuviste!
 
+const nuestroTitulo = document.querySelector('h1');
+console.log(nuestroTitulo);
+console.log(nuestroTitulo.innerText);
+nuestroTitulo.innerText = 'Hola r/Argentina programa';
 
 
 
@@ -145,6 +149,14 @@
 */
 
 // TAREA: Obtené todos los elementos <li> de la página en una variable llamada mediaLinks.
+
+const mediaLinks = document.querySelectorAll('li');
+console.log(mediaLinks);
+
+for (let i = 0; i < mediaLinks.length; i++) {
+    console.log(mediaLinks[i].innerText);
+    mediaLinks[i].innerText = 'Hola!'
+}
 
 
 
@@ -288,3 +300,25 @@
 // Levántate, estira las piernas y celebra tu logro.                      //
 // ¡Creo que esto amerita un festejo!                                     //
 ////////////////////////////////////////////////////////////////////////////
+
+
+const botonIngreso = document.querySelector('#Ingresar');/* En este caso pedimos el elemento que tiene el id ingresar */
+/* evento onclick, es una propiedad que espera una funcion*/
+/* Entonces lo que tenemos que ahcer es declarar una funcion anonima */
+botonIngreso.onclick = function(){/* Entonces aca vamosd a decir que va pasar cuando hagamos un click */
+    const edadUsuario = Number(document.querySelector('#edad-usuario').value);
+    /* si lo queremos validad hacemos */
+    let textoresultado;
+    if(edadUsuario >= 18){
+        textoresultado = 'Podés ingresar';
+    }else{
+        textoresultado = 'No podés ingresar';
+    }
+    document.querySelector('#resultado').innerText = textoresultado;
+    return false;
+}
+
+
+/* Aveces lo que se ahce es agregar un signo $ para dejar en claro quee es un elemento de html y no un avariable comun y corriente*/
+
+/* ahora lo que podemos hacer e spreguntar por nombre y edad para ver si alguien puede entrar o no al bar */
