@@ -25,3 +25,4 @@ function calcularPromedio(edadesIntegrantes) {
     }
     return resultado / edadesIntegrantes.length;
 }
+
