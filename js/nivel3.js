@@ -91,6 +91,38 @@ tareaOperador(restar, 100, 70)
 ///////////////////////
 /////Minuto 44:19//////
 ///////////////////////
+
+//////////////////// Git, GitHub y GitHub Desktop
+
+// Para escribir correctamente un mensaje de commit, el título debe estar en
+// imperativo y en la descripción debemos aclarar porque estamos haciendo
+// dichos cambios y no como ya que esto se puede ver directamente en las lineas
+// de código.
+
+// Para trabajar sobre las distintas funcionalidades, vamos creando diferentes ramas
+// o branches.
+
+// En el ejemplo creamos el repositorio "hola-mundo" y trabajando dentro del branch
+// "master" que sería el principal, creamos un archivo "hola-mundo.txt" a modo de 
+// ejemplo. Luego cuando se desea agregar una nueva funcionalidad a nuestra pagina
+// web, ahí creamos un nuevo "branch" y comenzamos a trabajar sobre el mismo
+// en las funcionalidades que querramos agregar y una vez las tenemos listas, con
+// todos los commits, hacemos un pull request para unir el branch a master.
+
+// Podemos crear un pedacito de codigo HTML con CTRL + ESPACIO.
+
+// Cuando publicamos el branch en Github.com, se dice en el ambiente de la
+// programación que "pusheamos" el branch, es un termino que usa fabricio en la
+// clase 5.
+
+// Luego de publicar este branch para poder incorporar los cambios a master
+// debemos hacer un "pull request".
+
+// Si en el pull request esta todo bien y ya fue revisado correctamente, hacemos un
+// "Merge pull request" y unimos todo al Branch Master.
+
+
+
 /*
     Introducción
     ============
