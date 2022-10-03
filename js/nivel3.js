@@ -171,10 +171,28 @@ tareaOperador(restar, 100, 70)
 
     Cascading Style Sheets (CSS)
     ----------------------------
+    Se llama así porque las cosas se aplican "en cascada" donde lo mas específico pisa
+    a lo más general. Por ejemplo:
+
+    html {
+        background-color: black;
+    }
+
+    body {
+        background-color: blue;
+    }
+
+    footer {
+        background-color: green;
+    }
+
+    Entonces todo el HTML será con fondo rojo excepto el body que tendrá fondo azul
+    y dentro del body el footer tendrá fondo verde.
+
     CSS describe como se ven los elementos HTML.
 
     Los archivos CSS consisten en "bloques de declaración". Cada bloque de
-    declaración está compuesto de un "selector" y de un conjunto de reglas de estilo
+    declaración está compuesto de un "selector"(concepto muy importante) y de un conjunto de reglas de estilo
     visuales. Una declaración se ve así:
     
     [selector] {
@@ -186,6 +204,13 @@ tareaOperador(restar, 100, 70)
     Los selectores especifican sobre que elementos son aplicados los
     estilos visuales.
 
+    Cuando queremos seleccionar todos los elementos de nuestra página usamos
+    el asterisco:
+
+    * {
+        background-color: blue;
+    }
+
     Los selectores más básicos se refieren a los elementos mediante su nombre de etiqueta,
     se ven algo así:
 
@@ -193,9 +218,20 @@ tareaOperador(restar, 100, 70)
       background-color: white;
     }
 
+    h1 {
+        font-size: 20px;
+    }
+
     Los selectores pueden también referirse a los elementos mediante su atributo
     de "clase", como esto:
 
+    En el HTML vemos este div con clase "settings"
+                 [
+    <div class="settings">
+    </div>
+                ]
+
+    En el archivo CSS lo modificaríamos así:
     .settings {
       margin: 0;
     }
@@ -206,11 +242,46 @@ tareaOperador(restar, 100, 70)
       text-align: center;
     }
 
+    Si tenemos 2 atributos con la misma class pero diferentes características,
+    se van a terminar mezclando, por ejemplo:
+
+    .televisores {
+        font-size: 20px
+    }
+
+    .televisores {
+        background-color: red
+    }
+
+    ----------------------------------------------------------------------------
+
+    Como dijimos siempre ganará el atributo mas específico, por ejemplo:
+
+    h1 {
+        background-color: white
+    }
+
+    .h1 {
+        background-color: blue
+    }
+
+    En este caso es mas específico el atributo ".h1" ya que es una clase.
+
+    Los órdenes de especificidad de mas a menos específico son:
+
+    * ID
+    * Class
+    * Selector (h1,h2,body,etc.)
+
     La lista de las propiedades de CSS es muy grande, podés leer más acá:
     https://www.w3.org/TR/CSS21/propidx.html
 
     No te preocupés, no hace falta recordar todo esto ahora mismo!
 */
+/////////////////////////////////
+//////////Minuto 2:03:26/////////
+/////////////////////////////////
+
 
 
 /*
