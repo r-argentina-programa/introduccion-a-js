@@ -75,8 +75,8 @@ let restar = function (n1, n2) {
     )
 }
 
-function tareaOperador (funcionOperador, numero1, numero2){
-    console.log(funcionOperador(numero1,numero2))
+function tareaOperador(funcionOperador, numero1, numero2) {
+    console.log(funcionOperador(numero1, numero2))
 }
 // Entonces ahora funcionOperador es un parametro que espera una función cuyos
 // parametros son n1 y n2.
@@ -278,9 +278,7 @@ tareaOperador(restar, 100, 70)
 
     No te preocupés, no hace falta recordar todo esto ahora mismo!
 */
-/////////////////////////////////
-//////////Minuto 2:03:26/////////
-/////////////////////////////////
+
 
 
 
@@ -303,6 +301,16 @@ tareaOperador(restar, 100, 70)
 
     Obtengamos nuestro link de Twitter desde la página.
 
+    En general usaremos la estructura:
+
+    let nombreDeElemento = document.querySelector('')
+
+    Dentro del parentesis y comillas podemos poner el atributo o nombre del tag HTML:
+
+    * Para clases un punto y el nombre de la clase. Ej: .instagram
+    * Para ID el signo numeral y el nombre del ID. Ej: #fondo
+    * Para tags: div, h1, h2, p, etc. 
+
     Ejemplo:
 
     const nuestroTwitter = document.querySelector('.twitter');
@@ -324,8 +332,6 @@ let nuestroTitulo = document.querySelector('h1').textContent
 console.log(nuestroTitulo)
 
 
-
-
 /*
     Obteniendo elementos similares.
     ========================
@@ -339,13 +345,18 @@ console.log(nuestroTitulo)
 
     // Esto obtendrá todos los <li> de la página.
     const mediaLinks = document.querySelectorAll('li');
+
+    En este caso como son varios elementos serán recibidos en algo que es parecido a
+    un array, lo cual es un Node List. Que es como si fuera un array ya que
+    tiene varios elementos que se inicializan en la posición 0.
+
 */
 
 // TAREA: Obtené todos los elementos <li> de la página en una variable llamada mediaLinks.
 
+const mediaLinks = document.querySelectorAll('li')
 
-let mediaLinks = document.querySelectorAll('li')
-
+console.log(mediaLinks)
 
 
 // TAREA: Ahora utilizá console.log para ver la cantidad de 
@@ -357,11 +368,101 @@ let mediaLinks = document.querySelectorAll('li')
 // TAREA: ¿Te acordás de los bucles del nivel 2? Usando lo que sabés de ellos, realizá iteraciones
 //      sobre cada item de mediaLinks y mostralos en pantalla con console.log
 
-
-for (let i = 0; i < (mediaLinks.length - 1); i++) {
-    console.log(mediaLinks[i])
+for (let i = 0; i < mediaLinks.length; i++) {
+    console.log(mediaLinks[i].innerText)
+    mediaLinks[i].innerText = 'Estos son los medialinks XD'
 }
 
+// Acá cabe aclarar que en estas modificaciones que hacemos nunca modificamos lo que
+// está en el HTML sinó que lo sobreescribimos en tiempo de ejecución.
+
+//////////////////////////////
+//////Minuto 2:18:29//////////
+//////////////////////////////
+
+// En el caso de que querramos obtener un elemento dentro de otro, por ejemplo
+// el footer dentro de un body, lo que escribiriamos sería:
+
+let footer = document.querySelectorAll("body footer")
+
+// En este caso dentro del elemento body seleccionamos el elemento footer.
+// De esta forma: body (espacio) footer. Esto m¿ismo podemos usarlo
+// perfectamente con otros elementos del HTML.
+
+// Ahora vamos a ver un ejemplo practico del DOM:
+
+// En nuestro index.html creamos los siguientes elementos dentro
+// del body:
+
+/*
+<body>
+
+  <form>
+    <input type="text" placeholder="Ingresá tu nombre" id="nombre-usuario">
+    <input type="text" placeholder="Ingresá tu edad" id="edad-usuario">
+    <button id="ingresar">Ingresar al bar</button>
+  </form>
+
+  <div id="resultado">
+
+  </div>
+*/
+
+// Luego hacemos lo siguiente:
+
+Number(document.querySelector("#edad-usuario").value)
+
+// A esto lo encerramos en un number porque por defecto
+// el input devuelve un String y en el caso de edad usuario
+// necesitamos un number.
+
+const $botonIngreso = document.querySelector("#ingresar")
+
+
+
+// Muchas veces lo que se hace para diferenciar una variable que 
+// corresponde a un elemento de HTML es colocar un signo peso
+// al inicio del nombre de la variable como en este caso:
+// $botonIngreso.
+
+////////////////////////////////////////////////////////////////////
+///////////////////////////EVENT LISTENERS//////////////////////////
+////////////////////////////////////////////////////////////////////
+
+///////////////////       //////////////// 
+//////////////////ONCLICK////////////////
+/////////////////       /////////////////
+
+// Este event es una propiedad que espera una función. Veamos el siguiente
+// ejemplo:
+
+$botonIngreso.onclick = function () {
+    const edadUsuario = Number(document.querySelector("#edad-usuario").value)
+    let textoResultado
+
+    if(edadUsuario >= 18){
+        textoResultado = 'Podes ingresar al bar'
+    } else {
+        textoResultado = 'No podes ingresar al bar'
+    }
+
+
+ document.querySelector("#resultado").innerText = textoResultado
+
+ return false
+}
+
+// Algo importante que debemos tener en cuenta es que si nosotros apretamos el
+// boton "Ingresar al bar" que creamos se va a intentar hacer un submit y se van
+// a resetear todos los datos que ingresamos.
+
+// Para evitar que esto ocurra debemos cambiar el type del Boton que creamos
+// que por defecto es "submit" a "button" de este modo lograremos que los
+// cambios que queremos hacer a traves del DOM con JS se muestren en pantalla.
+
+// Otra de las formas para evitar que esto ocurra es escribiendo un "return false"
+// al final del event ONCLICK, de ese modo evitaremos que se haga el submit y se
+// mostraran los cambios del DOM en pantalla.
 
 
 /*
@@ -377,6 +478,9 @@ for (let i = 0; i < (mediaLinks.length - 1); i++) {
     nuestroTwitter.textContent;
     // Obtendremos el texto: 'Twitter: @MusesCodeJSSyd @MusesCodeJSMelb @MCJSHobart @MCJSPerth @BrisMuses'.
 */
+
+
+
 
 // TAREA: Obtené el contenido de nuestro elemento 'h1'
 // y utilizá console.log para mostrarlo.
