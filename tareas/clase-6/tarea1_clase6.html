@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
@@ -7,24 +8,28 @@
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href="tarea1_clase6.css">
 </head>
+
 <body>
     <h1>Integrantes de la familia</h1>
     <br>
-    <label>Ingresa el numero de integrantes de tu familia:</label>
-    <input type="number" id="numero-de-familiares" >
-    <button type="button" id="aceptar">Aceptar</button>
-    <button type="button" class="ocultar" id="limpiar">Limpiar</button>
-    <br>
-    <div id="integrantes">
+    <form name="integrantes-de-la-familia">
+        <label>Ingresa el numero de integrantes de tu familia:</label>
+        <input type="number" id="numero-de-familiares">
+        <button type="button" id="aceptar">Aceptar</button>
+        <button type="button" class="ocultar" id="limpiar">Limpiar</button>
+        <ul class="ocultar" id="errores-numero-familiares">El campo numero de familiares no puede ser menor o igual a 0 ni vacio</ul>
+        <div id="integrantes">
 
-    </div>
-    
-    <br>
-    <button type="button" class="ocultar" id="calcular">Calcular</button>
-    <br>
-    <strong id="resultados"></strong>
+        </div>
+        <ul class="ocultar" id="errores-integrantes">El campo edad no puede ser 0 ni vacio</ul>
 
+        <br>
+        <button type="button" class="ocultar" id="calcular">Calcular</button>
+        <br>
+        <strong id="resultados"></strong>
+    </form>
     <script src="calculos_tarea1_clase6.js"></script>
     <script src='tarea1_clase6.js'></script>
 </body>
+
 </html>
