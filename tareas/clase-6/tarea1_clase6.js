@@ -1,42 +1,85 @@
 const botonAceptar = document.querySelector("#aceptar")
 const botonLimpiar = document.querySelector("#limpiar")
 const botonCalcular = document.querySelector("#calcular")
+
 const divIntegrantes = document.querySelector("#integrantes")
 const resultados = document.querySelector("#resultados")
-let numeroDeFamiliares = Number(document.querySelector("#numero-de-familiares").value)
+
+const erroresFamiliares = document.querySelector("#errores-numero-familiares")
+const erroresEdades = document.querySelector("#errores-integrantes")
+let inputIntegrantes = document.querySelector("#numero-de-familiares")
 
 botonAceptar.onclick = function () {
-    numeroDeFamiliares = Number(document.querySelector("#numero-de-familiares").value)
-    agregarTodosLosIntegrantes(numeroDeFamiliares)
-    deshabilitarBoton("#aceptar")
-    mostrarBoton(botonCalcular)
-    mostrarBoton(botonLimpiar)
+    let numeroDeFamiliares = Number(inputIntegrantes.value)
+    let errorFamiliares = validarNumeroDeFamiliares(numeroDeFamiliares)
+    console.log(numeroDeFamiliares)
 
+    if (errorFamiliares) {
+        mostrarElemento(erroresFamiliares)
+        inputIntegrantes.className = "error"
+    } else {
+        inputIntegrantes.className = ""
+        erroresFamiliares.textContent = ""
+        agregarTodosLosIntegrantes(numeroDeFamiliares)
+        deshabilitarBoton("#aceptar")
+        mostrarElemento(botonCalcular)
+        mostrarElemento(botonLimpiar)
+    }
 
 }
 
 botonCalcular.onclick = function () {
     let listaEdades = document.querySelectorAll("#integrantes input")
-    let arrayEdades = obtenerArrayEdades(listaEdades)
+    let errorEdades = validarEdades(listaEdades)
 
-    let mayorEdad = obtenerMayorEdad(arrayEdades)
-    let menorEdad = obtenerMenorEdad(arrayEdades)
-    let promedio = obtenerPromedio(arrayEdades)
+    if (errorEdades) {
+        mostrarElemento(erroresEdades)
+    } else {
 
-    mostrarResultados(mayorEdad, menorEdad, promedio)
+        ocultarElemento(erroresEdades)
 
+        let arrayEdades = obtenerArrayEdades(listaEdades)
+
+
+        let mayorEdad = obtenerMayorEdad(arrayEdades)
+        let menorEdad = obtenerMenorEdad(arrayEdades)
+        let promedio = obtenerPromedio(arrayEdades)
+
+        mostrarResultados(mayorEdad, menorEdad, promedio)
+    }
 
 }
 
 botonLimpiar.onclick = function () {
+    let numeroDeFamiliares = Number(inputIntegrantes.value)
     removerIntegrantes(numeroDeFamiliares)
     habilitarBoton("#aceptar")
     resultados.textContent = ""
-    ocultarBoton(botonLimpiar)
-    ocultarBoton(botonCalcular)
+    ocultarElemento(botonLimpiar)
+    ocultarElemento(botonCalcular)
 
 }
 
+function validarEdades(nodeEdades) {
+    let contadorErrores = 0
+
+    nodeEdades.forEach(function (edad) {
+        if ((Number(edad.value)) <= 0) {
+            edad.className = "error"
+            contadorErrores++
+        } else {
+            edad.className = ""
+        }
+    })
+    return contadorErrores
+}
+
+function validarNumeroDeFamiliares(numeroDeFamiliares) {
+    if (numeroDeFamiliares <= 0) {
+        return 'El campo numero de familiares no puede ser menor o igual a 0 ni vacio'
+    } else {
+        return ''
+    }
 }
 
 function mostrarElemento(elemento) {
