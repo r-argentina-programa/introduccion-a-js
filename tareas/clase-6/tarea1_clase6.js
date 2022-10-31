@@ -37,12 +37,14 @@ botonLimpiar.onclick = function () {
 
 }
 
-function mostrarBoton(boton) {
-    boton.className = "mostrar"
 }
 
-function ocultarBoton(boton) {
-    boton.className = "ocultar"
+function mostrarElemento(elemento) {
+    elemento.className = ""
+}
+
+function ocultarElemento(elemento) {
+    elemento.className = "ocultar"
 }
 
 function habilitarBoton(id) {
