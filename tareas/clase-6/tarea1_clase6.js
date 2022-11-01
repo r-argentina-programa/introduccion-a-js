@@ -12,7 +12,7 @@ let inputIntegrantes = document.querySelector("#numero-de-familiares")
 botonAceptar.onclick = function () {
     let numeroDeFamiliares = Number(inputIntegrantes.value)
     let errorFamiliares = validarNumeroDeFamiliares(numeroDeFamiliares)
-    console.log(numeroDeFamiliares)
+    
 
     if (errorFamiliares) {
         mostrarElemento(erroresFamiliares)
@@ -30,8 +30,10 @@ botonAceptar.onclick = function () {
 
 botonCalcular.onclick = function () {
     let listaEdades = document.querySelectorAll("#integrantes input")
-    let errorEdades = validarEdades(listaEdades)
-
+    marcarErroresDeEdades(listaEdades)
+    let arrayEdades = crearArrayEdades(listaEdades)
+    let errorEdades = validarEdades(arrayEdades)
+    
     if (errorEdades) {
         mostrarElemento(erroresEdades)
     } else {
@@ -60,18 +62,44 @@ botonLimpiar.onclick = function () {
 
 }
 
-function validarEdades(nodeEdades) {
-    let contadorErrores = 0
+function crearArrayEdades(listaEdades) {
+    let arrayEdades = []
+
+    listaEdades.forEach(function(edad){
+        arrayEdades.push(Number(edad.value))
+    })
+
+    return arrayEdades
+}
+
+function marcarErroresDeEdades(nodeEdades) {
 
     nodeEdades.forEach(function (edad) {
         if ((Number(edad.value)) <= 0) {
             edad.className = "error"
-            contadorErrores++
         } else {
             edad.className = ""
         }
     })
-    return contadorErrores
+}
+
+function validarEdades(arrayEdades){
+    let contadorErrores = 0
+
+    arrayEdades.forEach(function(edad){
+        if (edad <= 0){
+            contadorErrores++
+        }
+    })
+
+    let mensaje = ''
+
+    if (contadorErrores > 0){
+        mensaje = 'El campo edad no puede ser menor o igual a 0 ni vacio'
+    }
+
+    return mensaje
+
 }
 
 function validarNumeroDeFamiliares(numeroDeFamiliares) {
