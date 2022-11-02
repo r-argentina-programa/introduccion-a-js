@@ -104,7 +104,7 @@ function crearIntegrante() {
 function crearLabelIntegrante(id) {
     let labelIntegrante = document.createElement("label")
     labelIntegrante.id = "label-" + id
-    labelIntegrante.textContent = "Edad de Integrante N° " + id
+    labelIntegrante.textContent = "Salario de integrante N° " + id
 
     return labelIntegrante
 }
