@@ -92,13 +92,12 @@ function validarEdades(arrayEdades){
         }
     })
 
-    let mensaje = ''
 
     if (contadorErrores > 0){
-        mensaje = 'El campo edad no puede ser menor o igual a 0 ni vacio'
+        return 'El campo edad no puede ser menor o igual a 0 ni vacio'
+    } else {
+        return ''
     }
-
-    return mensaje
 
 }
 
