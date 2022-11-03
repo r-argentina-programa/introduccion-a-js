@@ -29,18 +29,17 @@ botonQuitar.onclick = function () {
 botonCalcular.onclick = function () {
 
     let listaSalarios = document.querySelectorAll("#integrantes input")
-    let arraySalarios = []
+    marcarErroresEnSalarios(listaSalarios)
+    let arraySalarios = crearArraySalarios(listaSalarios)
+    let errorSalarios = validarSalarios(arraySalarios)
 
-    for (let i = 0; i < listaSalarios.length; i++) {
-        let salario = Number(listaSalarios[i].value)
 
-        if (salario !== 0 && salario !== null) {
-            arraySalarios.push(salario)
-        }
-    }
 
-    if (arraySalarios.length >= 2) {
-
+    if (errorSalarios) {
+        mostrarElemento($erroresSalarios)
+        resultados.textContent = ''
+    } else {
+        ocultarElemento($erroresSalarios)
         let mayorSalario = obtenerMayorSalario(arraySalarios)
         let menorSalario = obtenerMenorSalario(arraySalarios)
         let promedio = obtenerPromedio(arraySalarios)
@@ -66,6 +65,41 @@ botonLimpiar.onclick = function() {
     ocultarBoton(botonLimpiar)
     ocultarBoton(botonCalcular)
     ocultarBoton(botonQuitar)
+function validarSalarios(arraySalarios) {
+    let contadorErrores = 0
+
+    arraySalarios.forEach(function (salario) {
+        if (salario <= 0) {
+            contadorErrores++
+        }
+    })
+
+    if (contadorErrores) {
+        return 'El campo salario no puede ser menor o igual a 0 ni vacio'
+    } else {
+        return ''
+    }
+}
+
+function crearArraySalarios(listaSalarios) {
+    let arraySalarios = []
+
+    listaSalarios.forEach(function (salario) {
+        let valorSalario = Number(salario.value)
+        arraySalarios.push(valorSalario)
+    })
+
+    return arraySalarios
+}
+
+function marcarErroresEnSalarios(inputsSalarios) {
+    inputsSalarios.forEach(function (input) {
+        if (input.value <= 0 || input.value === null) {
+            input.className = "error"
+        } else {
+            input.className = ''
+        }
+    })
 }
 
 function mostrarResultados(mayor, menor, promedioA, promedioM) {
