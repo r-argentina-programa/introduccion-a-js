@@ -2,6 +2,6 @@
     display: none;
 }
 
-.mostrar {
-    display: "";
+.error {
+    border-color: red;
 }
