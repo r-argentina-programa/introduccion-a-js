@@ -4,6 +4,7 @@ const botonCalcular = document.querySelector("#calcular")
 const divIntegrantes = document.querySelector("#integrantes")
 const resultados = document.querySelector("#resultados")
 const botonLimpiar = document.querySelector("#limpiar")
+const $erroresSalarios = document.querySelector("#error-salarios")
 
 let numeroIntegrantes = 0
 
