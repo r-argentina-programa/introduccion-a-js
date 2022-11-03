@@ -12,8 +12,8 @@ botonAgregar.onclick = function () {
     agregarIntegrante()
     agregarLabelIntegrante(numeroIntegrantes)
     agregarInputIntegrante(numeroIntegrantes)
-    mostrarBoton(botonQuitar)
-    mostrarBoton(botonCalcular)
+    mostrarElemento(botonQuitar)
+    mostrarElemento(botonCalcular)
 
 }
 
@@ -21,8 +21,8 @@ botonQuitar.onclick = function () {
     removerIntegrante()
 
     if (numeroIntegrantes === 0) {
-        ocultarBoton(botonCalcular)
-        ocultarBoton(botonQuitar)
+        ocultarElemento(botonCalcular)
+        ocultarElemento(botonQuitar)
     }
 }
 
@@ -47,24 +47,23 @@ botonCalcular.onclick = function () {
 
         mostrarResultados(mayorSalario, menorSalario, promedio, salarioMensualPromedio)
 
-        mostrarBoton(botonLimpiar)
-
-    } else {
-        alert("Ingrese al menos 2 valores")
+        mostrarElemento(botonLimpiar)
     }
 
 }
 
-botonLimpiar.onclick = function() {
+botonLimpiar.onclick = function () {
     resultados.textContent = ""
 
     for (let i = numeroIntegrantes; i >= 1; i--) {
         removerIntegrante()
     }
 
-    ocultarBoton(botonLimpiar)
-    ocultarBoton(botonCalcular)
-    ocultarBoton(botonQuitar)
+    ocultarElemento(botonLimpiar)
+    ocultarElemento(botonCalcular)
+    ocultarElemento(botonQuitar)
+}
+
 function validarSalarios(arraySalarios) {
     let contadorErrores = 0
 
@@ -108,11 +107,11 @@ function mostrarResultados(mayor, menor, promedioA, promedioM) {
         + promedioM
 }
 
-function mostrarBoton(boton) {
-    boton.className = "mostrar"
+function mostrarElemento(boton) {
+    boton.className = ""
 }
 
-function ocultarBoton(boton) {
+function ocultarElemento(boton) {
     boton.className = "ocultar"
 }
 
