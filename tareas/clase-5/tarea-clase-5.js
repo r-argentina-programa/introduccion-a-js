@@ -17,10 +17,23 @@ $botonCalcular.onclick = function()
 }
 */
 
+
 //TAREA: completar tareas/clase-5/index.html para que incluya tarea-clase-5.js
 //TAREA: crear un formulario donde un usuario pueda ingresar su salario anual.
 //cuando el usuario haga click en el botón "calcular", mostrar el salario mensual
 // en una caja de texto deshabilitada. --> <input type="text" disabled id="salario-mensual"/>
+
+const $botonCalcular = document.querySelector("#calcular-salario-mensual")
+
+const $salarioAnual = document.querySelector("#salario-anual")
+const $salarioMensual = document.querySelector("#salario-mensual")
+
+
+$botonCalcular.onclick = function(){
+  $salarioMensual.value = $salarioAnual.value/12
+
+  return false;
+}
 
 //TAREA: En otro archivo html (no Index) y otro archivo js (no tarea-clase-5.js),
 // creá un formulario que capture el primer nombre, segundo nombre, apellido/s y edad del usuario
@@ -28,6 +41,8 @@ $botonCalcular.onclick = function()
 // vas a crear un botón de acción que una vez que lo apretás, va a
 // mostrar toda la información junta en un campo de texto
 // Y va a cambiar el <h1> para decir "Bienvenido, nombreDeUsuario"!
+
+//HECHO EN INDEX-MIO-HTML Y TAREA 1 CLASE 5 MIO.JS
 
 /*
 Ejemplo form:
