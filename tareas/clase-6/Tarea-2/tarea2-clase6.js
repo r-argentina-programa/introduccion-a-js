@@ -104,8 +104,8 @@ function marcarErroresEnSalarios(inputsSalarios) {
 
 function mostrarResultados(mayor, menor, promedioA, promedioM) {
     resultados.textContent = "El mayor salario es $" + mayor + " el menor salario es $"
-        + menor + " el salario anual promedio es $" + promedioA + " el salario mensual promedio es $"
-        + promedioM
+        + menor + " el salario anual promedio es $" + Math.round(promedioA) + " el salario mensual promedio es $"
+        + Math.round(promedioM)
 }
 
 function mostrarElemento(boton) {

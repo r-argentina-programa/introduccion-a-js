@@ -30,18 +30,18 @@ function obtenerPromedio(arraySalarios) {
         sumatoriaDeSalarios += arraySalarios[i]
     }
 
-    let promedio = Math.round(sumatoriaDeSalarios / arraySalarios.length)
+    return sumatoriaDeSalarios / arraySalarios.length
 
-    return promedio
+     
 }
 
 function obtenerSalarioMensualPromedio(arraySalarios) {
-    let arraySalariosMensuales = []
+    let salariosMensuales = []
 
     for (let i = 0; i < arraySalarios.length; i++) {
         let mesesEnUnAnio = 12
-        arraySalariosMensuales.push(arraySalarios[i]/mesesEnUnAnio)
+        salariosMensuales.push(arraySalarios[i]/mesesEnUnAnio)
     }
 
-    return obtenerPromedio(arraySalariosMensuales)
+    return obtenerPromedio(salariosMensuales)
 }
