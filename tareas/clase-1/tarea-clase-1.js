@@ -47,15 +47,15 @@ console.log('Tu salario diario es ' + calcularSalarioDiario(salarioAnual));
 /// SCOPE
 
 // Variable hoisting -> izar
-// console.log(hola); //Falla porque no está definida
+//console.log(hola); //Falla porque no está definida
 
-// console.log(mensaje); //No falla, pero muestra undefined... por qué?
-// var mensaje = 'Hola, mundo';
-// console.log(mensaje); //Hola, mundo
+//console.log(mensaje); //No falla, pero muestra undefined... por qué?
+//var mensaje = 'Hola, mundo';
+//console.log(mensaje); //Hola, mundo
 
 // Y con let?
-// let mensaje = 'Hola, mundo';
-// console.log(mensaje); //error
+//let mensaje = 'Hola, mundo';
+//console.log(mensaje); //error
 
 // function hoisting
 
@@ -67,8 +67,8 @@ function pruebaHoisting(){
 //pruebaHoisting();
 */
 
-/*
-var a = 1; //global
+
+/* var a = 1; //global
 let b = 2; //global
 
 function prueba(c) { //c es un parámetro de la función prueba. LOCAL.
@@ -94,7 +94,7 @@ function prueba(c) { //c es un parámetro de la función prueba. LOCAL.
     // console.log('f dentro de la funcion pero fuera del if, vale: ' + f); // error
 }
 
-prueba(3);
+prueba();
 
 console.log('a vale: ' + a); // 1
 console.log('b vale: ' + b); // 2
@@ -102,4 +102,29 @@ console.log('b vale: ' + b); // 2
 // console.log('d vale: ' + d); // error
 // console.log('e vale: ' + e); // error
 // console.log('f vale: ' + f); // error
-*/
+
+ */
+
+
+/* function calcularMesesVividos(mesesVividos){//LOCAL
+    console.log('mesesVividos vale:' + mesesVividos);
+    console.log('anioNacimiento vale:' + anioNacimiento);
+    console.log('mesNacimiento val:' + mesNacimiento);
+    return (2019 - anioNacimiento * 12 + mesNacimiento);
+}
+
+let mesesVividos; //undefined;
+let anioNacimiento = Number(prompt('En que año naciste?'));//Iun numero;
+let mesNacimiento = Number(prompt('En que mes naciste'));//un numero;
+
+console.log("Tenes " + calculaMesesVividos(mesesVividos) + " meses vividos"); */ //ejemplo clase 2
+
+//Refactor
+
+/* function calculaMesesVividos(anioNacimiento,mesesVividos){
+    return (2019 - anioNacimiento) * 12 + mesNacimiento;
+}
+let anioNacimiento = Number(prompt('En que año naciste?'));//Iun numero;
+let mesNacimiento = Number(prompt('En que mes naciste'));//un numero;
+
+console.log("Tenes " + calcularMesesvividos(anioNacimiento, mesNacimiento) + " meses vividos"); */

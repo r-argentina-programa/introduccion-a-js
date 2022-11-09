@@ -2,7 +2,7 @@ function obtenerSalarioMayor(salariosIntegrantes) {
     let salarioMayor = salariosIntegrantes[0];
     for (let i = 0; i < salariosIntegrantes.length; i++) {
         if (salariosIntegrantes[i] > salarioMayor) {
-            mayorEdad = salariosIntegrantes[i];
+            salarioMayor = salariosIntegrantes[i];
         }
     }
     return salarioMayor;

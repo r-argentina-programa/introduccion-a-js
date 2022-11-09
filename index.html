@@ -11,7 +11,14 @@
 
 <body>
   <header>
-    <h1 class="subtitulo" id="titulo">Hola!</h1>
+    <h1>Hola!</h1>
+    <form id="entrada-bar" onsubmit="return false">
+      <input type="text" placeholder="Ingresá tu nombre" id="nombre-usuario"/>
+      <input type="number" placeholder="Ingresá tu edad" id="edad-usuario">
+      <!-- <button id="ingresar">Ingresar al bar</button> -->
+      <input type="submit" value="Ingresar" id="ingresar">
+    </form>
+    <div id="resultado"></div>
     <h2>Escribamos un poco de código el día de hoy!</h2>
     <form action="">
       <input type="text"  id="nombre-usuario" placeholder="Ingresá tu nombre"><!-- Para poder identificar este imput le ponemos un id -->
