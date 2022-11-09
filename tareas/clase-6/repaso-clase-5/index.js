@@ -9,7 +9,5 @@ $calcularSalarioMensual.onclick = function () {
     const salarioMensual = calcularSalarioMensual(salarioAnual);
     document.querySelector('#salario-mensual').value = salarioMensual;
 
-    console.log(salarioMensual);
-
     return false;
 };

@@ -8,7 +8,7 @@ $botonSiguiente.onclick = function () {
         const label = document.createElement('label');
         label.textContent = 'Edad deIntegrante #' + (i + 1);
         contenedor.appendChild(label);
-        const input = document.createElement('input');
+        const input = document.createElement('input'); 
         input.type = 'number';
         input.className = 'edad-integrante';
         contenedor.appendChild(input);
