@@ -1,6 +1,6 @@
 function probarValidarSalarioAnualUsuario() {
   console.assert(
-    validarSalarioAnualUsuario(0) ===
+    validarSalarioAnualUsuario("") ===
       "El campo Salario Anual no puede estar vacio",
     "validar salario anual usuario no valido que el campo sea vacio"
   );
@@ -18,13 +18,8 @@ function probarValidarSalarioAnualUsuario() {
 
 function probarValidarFuncionCalcularSalarioMensual() {
   console.assert(
-    validarFuncionCalcularSalarioMensual(0) ===
-      "No se puede obtener el resultado, si no ingresa un valor en el campo salario Anual",
-    "la funcion calcular salario mensual no valido que el campo este en 0"
-  );
-  console.assert(
-    validarFuncionCalcularSalarioMensual("48963") === "",
-    "la funcion validar fallo con un resultado valido"
+    calcularSalarioMensual(12, 12) === 1,
+    "El calculo de la funcion calcularSalarioMensual no dio 1"
   );
 }
 
