@@ -12,19 +12,35 @@ function validarSalarioAnualUsuario(salarioAnual) {
   return "";
 }
 
-const $calcularSalarioMensual = document.querySelector(
+/* const $calcularSalarioMensual = document.querySelector(
   "#calcular-salario-mensual"
 );
-const $form = document.querySelector("#calculadora-salario-mensual");
-$form.onclick = validarFormulario;
 
 $calcularSalarioMensual.onclick = function (event) {
+  event.preventDefault();
   const salarioAnual = document.querySelector("#salarioAnualUsuario").value;
   const salarioMensual = calcularSalarioMensual(salarioAnual);
   document.querySelector("#salario-mensual").value = salarioMensual;
 };
+ */
+
+const $calcularSalarioMensual = document.querySelector(
+  "#calcular-salario-mensual"
+);
+$calcularSalarioMensual.onclick = function (event) {
+  event.preventDefault();
+  const salarioAnual = document.querySelector("#salarioAnualUsuario").value;
+  const salarioMensual = calcularSalarioMensual(salarioAnual);
+  document.querySelector("#salario-mensual").value = salarioMensual;
+};
+
+document.querySelector("#reset").onclick = function (event) {
+  $form.reset();
+};
+
 function validarFormulario(event) {
   event.preventDefault();
+  const $form = document.querySelector("#calculadora-salario-mensual");
 
   const salarioAnualUsuario = $form["salarioAnualUsuario"].value;
 
@@ -58,3 +74,6 @@ function manejarErrores(errores) {
     }
   });
 }
+
+const $form = document.querySelector("#calculadora-salario-mensual");
+$form.onclick = validarFormulario;

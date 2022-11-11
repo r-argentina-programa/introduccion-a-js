@@ -28,7 +28,7 @@ document.querySelector("#calcular").onclick = function (event) {
   event.preventDefault();
 };
 
-document.querySelector("#resetear").onclick = resetear;
+document.getElementById('#calculadora-salario-mensual').reset();.onclick = resetear;
 
 function borrarIntegrantesAnteriores() {
   const $integrantes = document.querySelectorAll(".integrante");
