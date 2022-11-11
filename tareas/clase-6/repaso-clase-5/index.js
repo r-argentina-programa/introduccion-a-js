@@ -15,6 +15,7 @@ function validarSalarioAnualUsuario(salarioAnual) {
 const $calcularSalarioMensual = document.querySelector('#calcular-salario-mensual');
 $calcularSalarioMensual.onclick = function (event) {
     event.preventDefault();
+    borrarIntegrantesAnteriores();
     const salarioAnual = document.querySelector('#salario-anual-usuario').value;
     const salarioMensual = calcularSalarioMensual(salarioAnual);
     document.querySelector('#salario-mensual').value = salarioMensual;
@@ -22,6 +23,7 @@ $calcularSalarioMensual.onclick = function (event) {
 
 document.querySelector('#reset').onclick = function (event) {
     $form.reset();
+    borrarIntegrantesAnteriores();
 };
 
 function validarFormulario(event) {
@@ -43,6 +45,13 @@ function validarFormulario(event) {
     }
 }
 
+function borrarIntegrantesAnteriores() {
+    const $erroresLi = document.querySelectorAll('li');
+    for (let i = 0; i < $erroresLi.length; i++) {
+        $erroresLi[i].remove();
+    }
+}
+
 function manejarErrores(errores) {
     const keys = Object.keys(errores);
     const $errores = document.querySelector('#errores');
@@ -56,6 +65,8 @@ function manejarErrores(errores) {
             const $error = document.createElement('li');
             $error.innerText = error;
             $errores.appendChild($error);
+        } else {
+            $form[key].className = 'exito';
         }
     });
 }
