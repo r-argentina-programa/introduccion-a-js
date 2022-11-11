@@ -12,24 +12,12 @@ function validarSalarioAnualUsuario(salarioAnual) {
   return "";
 }
 
-/* const $calcularSalarioMensual = document.querySelector(
-  "#calcular-salario-mensual"
-);
-
-$calcularSalarioMensual.onclick = function (event) {
-  event.preventDefault();
-  const salarioAnual = document.querySelector("#salarioAnualUsuario").value;
-  const salarioMensual = calcularSalarioMensual(salarioAnual);
-  document.querySelector("#salario-mensual").value = salarioMensual;
-};
- */
-
 const $calcularSalarioMensual = document.querySelector(
   "#calcular-salario-mensual"
 );
 $calcularSalarioMensual.onclick = function (event) {
   event.preventDefault();
-  const salarioAnual = document.querySelector("#salarioAnualUsuario").value;
+  const salarioAnual = document.querySelector("#salario-anual-usuario").value;
   const salarioMensual = calcularSalarioMensual(salarioAnual);
   document.querySelector("#salario-mensual").value = salarioMensual;
 };
@@ -42,7 +30,7 @@ function validarFormulario(event) {
   event.preventDefault();
   const $form = document.querySelector("#calculadora-salario-mensual");
 
-  const salarioAnualUsuario = $form["salarioAnualUsuario"].value;
+  const salarioAnualUsuario = $form["salario-anual-usuario"].value;
 
   const errorSalarioAnualUsuario =
     validarSalarioAnualUsuario(salarioAnualUsuario);
