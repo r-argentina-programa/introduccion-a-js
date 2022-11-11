@@ -1,17 +1,17 @@
 .error {
-  border: 2px solid red;
+    border: 2px solid red;
 }
 
 #exito {
-  margin-top: 30px;
+    margin-top: 30px;
 }
 
 #exito strong {
-  display: block;
-  margin: 23px;
-  font-size: 30px;
+    display: block;
+    margin: 23px;
+    font-size: 30px;
 }
 
 .oculto {
-  display: none;
+    display: none;
 }
