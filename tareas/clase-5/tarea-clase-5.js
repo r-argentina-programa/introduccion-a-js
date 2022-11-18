@@ -56,3 +56,17 @@ Ejemplo form:
 // 2. obtener el número más pequeño y mostrarlo en un <em> pre-creado con el texto "El número más pequeño es..."
 // 3. obtener el número más grande y mostrarlo en un <em> pre-creado con el texto "El número más grande es..."
 // 4. obtener el número que más se repite y mostrarlo en un <em> pre-creado con el texto "El número más frecuente es..."
+
+
+//TAREA 1:
+
+const boton = document.querySelector("#boton-calcular");
+
+boton.onclick = function(){
+    const salarioAnual = Number(document.querySelector("#salario-anual").value);
+    const salarioMensual = salarioAnual/12;
+    document.querySelector("#salario-mensual").value = salarioMensual;
+
+    return false;
+
+}
