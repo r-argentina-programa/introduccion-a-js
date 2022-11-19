@@ -61,10 +61,11 @@ Ejemplo form:
 //TAREA 1:
 
 const boton = document.querySelector("#boton-calcular");
+const $MESES_EN_UN_ANIO = 12;
 
 boton.onclick = function(){
     const salarioAnual = Number(document.querySelector("#salario-anual").value);
-    const salarioMensual = salarioAnual/12;
+    const salarioMensual = salarioAnual/$MESES_EN_UN_ANIO;
     document.querySelector("#salario-mensual").value = salarioMensual;
 
     return false;
