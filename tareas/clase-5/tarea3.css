@@ -1,0 +1,35 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.content {
+  margin: 15px 0 0 15px;
+}
+
+.form {
+  margin: 0 0 10px 0;
+}
+
+.form__fieldset {
+  border-style: none;
+  padding: 0;
+  margin: 0 0 15px;
+}
+
+.form__label {
+  margin: 0 15px 0 0;
+}
+
+.form__minute {
+  margin: 0 5px 0 5px;
+}
+
+.form__button {
+  padding: 10px;
+  border-radius: 10px;
+}
