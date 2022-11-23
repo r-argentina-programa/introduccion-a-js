@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="en">
-
+<source>
 <head>
   <meta charset="UTF-8">
   <title>r/Argentina programa | Intro a JavaScript</title>
@@ -12,10 +12,23 @@
 <body>
   <header>
     <h1>Hola!</h1>
+    <form id="entrada-bar" onsubmit="return false">
+      <input type="text" placeholder="Ingresá tu nombre" id="nombre-usuario"/>
+      <input type="number" placeholder="Ingresá tu edad" id="edad-usuario">
+      <!-- <button id="ingresar">Ingresar al bar</button> -->
+      <input type="submit" value="Ingresar" id="ingresar">
+    </form>
+    <div id="resultado"></div>
     <h2>Escribamos un poco de código el día de hoy!</h2>
+    <form action="">
+      <input type="text"  id="nombre-usuario" placeholder="Ingresá tu nombre"><!-- Para poder identificar este imput le ponemos un id -->
+      <input type="number" id="edad-usuario" placeholder="Ingresá tu edad">
+      <button id="Ingresar">Ingresar al bar</button>
+    </form>
+    <div id="resultado"></div>
   </header>
 
-  <main>
+  <main class="importante">
     <div>
       <p>En <a href="https://www.google.com/chrome/">Chrome</a> y <a href="https://www.mozilla.org/en-GB/firefox/new/">Firefox</a>,
         para abrir la <i>Consola del navegador</i>, click derecho en esta página y seleccionen <i>'Inspect'</i>. La consola va a aparecer
@@ -25,7 +38,7 @@
     </div>
 
     <div id="logo">
-      <img src="img/woman_bw.jpg" alt="Welcome to Muses Code JS">
+      <img src="img/woman_bw.jpg" alt="Foto en blanco y negro de una mujer sosteniendo una laptop">
     </div>
   </main>
 
@@ -69,6 +82,6 @@
     </div>
   </footer>
 
-  <script src="js/nivel1.js"></script>
+  <script src="js/nivel3.js"></script>
 </body>
 </html>
