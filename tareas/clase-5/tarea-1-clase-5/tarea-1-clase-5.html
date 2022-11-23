@@ -5,18 +5,22 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="/tareas/clase-5/tarea-1-clase-5/css/stylos.css">
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.css">
     <title>Tarea 1  Clase #5</title>
 </head>
 <body>
 
 <form action="" class="form">
-    <label class="label" for="salario-anual">Salario anual:</label>
-    <input type="number" id="salario-anual" placeholder="ej: 1000000">
-    <label class="label" for="salario-anual">Salario mensual:</label>
-    <input type="number" disabled id="salario-mensual">
-    <button  type="button" id="calcular-salario-mensual">Calcular</button>
-    <button  type="reset">Limpiar</button>
+    <div class="container">
+        <label class="label" for="salario-anual">Salario anual:</label>
+        <input type="number" class="form-control" id="salario-anual" placeholder="ej: 1000000">
+        <label class="label" for="salario-anual">Salario mensual:</label>
+        <input type="number" class="form-control" disabled id="salario-mensual">
+       <div  class="mx-auto" style="width: 200px;"><br>
+         <button  type="button" class="btn btn-primary" id="calcular-salario-mensual">Calcular</button>
+         <button  type="reset" class="btn btn-primary">Limpiar</button>
+       </div>
+    </div>
 </form>
 
 
