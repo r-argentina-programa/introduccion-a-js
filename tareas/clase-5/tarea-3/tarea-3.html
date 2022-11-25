@@ -6,33 +6,49 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Tarea3 clase 5</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.css.map">
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
 </head>
 
 <body>
-    <h1>Tarea 3 Clase 5</h1>
-    <p>
-        TAREA: En otro archivo distinto</p>
-    <p>Por cada clase de r/argentina programa existente, vamos a pedir:
-        horas, minutos y segundos de cada video.</p>
-    <p> Ej. Si un video dura
-        2 horas, 38 minutos y 20 segundos, vamos a rellenar 3 campos de texto con
-        cada dato.</p>
-    <p>al apretar el botón "Calcular tiempo total", debe mostrar en un
-        <strong> pre-creado el tiempo total de los videos.
-    </p>
-    <h3>Calculadora de Videos</h3><br>
+<div class="container">
+    <div class="row">
+        <div class="col">a</div>
+        <div class="col">b</div>
+    </div>
+<div class="row">
+    <div class="col">c</div>
+    <div class="col">d</div>
+    <div class="col">f</div>
+</div>
+</div>
+    <div>
+        <h1>Tarea 3 -  Clase 5</h1>
+        <p class="h4">
+            TAREA: En otro archivo distinto</p>
+        <p class="text-muted">Por cada clase de r/argentina programa existente, vamos a pedir:
+            horas, minutos y segundos de cada video.</p>
+        <p class="text-muted"> Ej. Si un video dura
+            2 horas, 38 minutos y 20 segundos, vamos a rellenar 3 campos de texto con
+            cada dato.</p>
+        <p class="text-muted">al apretar el botón "Calcular tiempo total", debe mostrar en un
+            <strong> pre-creado el tiempo total de los videos.
+        </p>
+        <h3>Calculadora de Videos</h3><br>
+    </div>
     <form id="duracion-videos" onsubmit="return false;">
         <h3>Clase 1</h3>
 
         <div class="clase">
             <label for="horas-video">Horas:</label>
-            <input type="number" class="horas-video" placeholder="ej: 2">
+            <input type="number" class="horas-video"  placeholder="ej: 2">
             <label for="minutos-video">Minutos:</label>
             <input type="number" class="minutos-video" placeholder="ej: 30">
             <label for="segundos-video">Segundos:</label>
             <input type="number" class="segundos-video" placeholder="ej: 50">
         </div>
-
+<!-- 
         <h3>Clase 2</h3>
         <div class="clase">
             <label for="horas-video">Horas:</label>
@@ -113,7 +129,7 @@
             <input type="number" class="minutos-video" placeholder="ej: 30">
             <label for="segundos-video">Segundos:</label>
             <input type="number" class="segundos-video" placeholder="ej: 50">
-        </div><br>
+        </div><br> -->
 
         <button id="calcular-tiempo-total">Calcular tiempo total</button>
         <button type="reset" id="borrar">Borrar</button>

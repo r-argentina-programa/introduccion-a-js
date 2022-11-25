@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Practica Bootstrap Grid Breakpoints</title>
+        <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.css" />
+        <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css" />
+        <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+        <style>
+            .row{
+                background-color: orange;
+                border: 3px solid rgb(110, 73, 5);
+                padding: 5px;
+                margin: 10px;
+            }
+            
+            .columna{
+                color: white;
+                font-size: 25px;
+                background-color: #05077b;
+                border: 5px solid white;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container text-center">
+            <div class="row">
+                <div class="col-sm-4  col-lg-6 columna">
+                    .col-sm-4 .col-lg-6
+                </div>
+                <div class="col-sm-8 col-lg-6 columna">
+                    .col-sm-8 .col-lg-6
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
