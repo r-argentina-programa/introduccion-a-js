@@ -1,8 +1,8 @@
 #integrantes {
-    display: grid;
-    justify-content: start;
+	display: grid;
+	justify-content: start;
 }
 
 #cantidad-integrantes {
-    margin-top: 5px;
+	margin-top: 5px;
 }

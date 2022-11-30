@@ -308,7 +308,7 @@ console.log(duplicar(100)); */
 // Ejecutá la función sumar y mostrá su resultado en la consola
 
 function sumar(numero1, numero2) {
-    return numero1 + numero2;
+	return numero1 + numero2;
 }
 
 console.log(sumar(1, 10));
@@ -318,7 +318,7 @@ console.log(sumar(1, 10));
 // Ejecutá la función con los números 5 y 1 y mostralos con console.log
 
 function restar(numero1, numero2) {
-    return numero1 - numero2;
+	return numero1 - numero2;
 }
 
 console.log(restar(10, 5));
@@ -620,11 +620,11 @@ if(operador === "+"){
 // TAREA: Creemos 2 funciones más: dividir y multiplicar.
 
 function dividir(numero1, numero2) {
-    return numero1 / numero2;
+	return numero1 / numero2;
 }
 
 function multiplicar(numero1, numero2) {
-    return numero1 * numero2;
+	return numero1 * numero2;
 }
 
 // TAREA: Reescribamos el if-else que teníamos y extendámolos, agregando:
@@ -633,27 +633,32 @@ function multiplicar(numero1, numero2) {
 //       'else if' el 'operador' es igual a '*' - llamar a la función 'multiplicar'.
 //       else console.log - "Perdón, no conozco ese operador".
 
+const operador = prompt('Ingrese un operador artimetico(+, -, /, *)');
+const numero1 = Number(prompt('Ingrese un numero cualquiera'));
+const numero2 = Number(prompt('Ingrese otro numero al azar'));
 
-const operador = prompt("Ingrese un operador artimetico(+, -, /, *)");
-const numero1 = Number(prompt("Ingrese un numero cualquiera"));
-const numero2 = Number(prompt("Ingrese otro numero al azar"))
-
-if (operador === "+") {
-    console.log(`EL resultado de la operacion ${operador}: (${numero1} ${operador} ${numero2}) es = a ${sumar(numero1,numero2)}`);
-} else if (operador === "-") {
-    console.log(`EL resultado de la operacion ${operador}: (${numero1} ${operador} ${numero2}) es = a ${restar(numero1,numero2)}`);
-} else if (operador === "*") {
-    console.log(`EL resultado de la operacion ${operador}: (${numero1} ${operador} ${numero2}) es = a ${multiplicar(numero1,numero2)}`);
-} else if (operador === "/") {
-    console.log(`EL resultado de la operacion ${operador}: (${numero1} ${operador} ${numero2}) es = a ${dividir(numero1,numero2)}`);
+if (operador === '+') {
+	console.log(
+		`EL resultado de la operacion ${operador}: (${numero1} ${operador} ${numero2}) es = a ${sumar(numero1, numero2)}`,
+	);
+} else if (operador === '-') {
+	console.log(
+		`EL resultado de la operacion ${operador}: (${numero1} ${operador} ${numero2}) es = a ${restar(numero1, numero2)}`,
+	);
+} else if (operador === '*') {
+	console.log(
+		`EL resultado de la operacion ${operador}: (${numero1} ${operador} ${numero2}) es = a ${multiplicar(
+			numero1,
+			numero2,
+		)}`,
+	);
+} else if (operador === '/') {
+	console.log(
+		`EL resultado de la operacion ${operador}: (${numero1} ${operador} ${numero2}) es = a ${dividir(numero1, numero2)}`,
+	);
 } else {
-    console.log("Disculpa no ingresaste ningun operador, las opciones son (+, -, /, *)");
+	console.log('Disculpa no ingresaste ningun operador, las opciones son (+, -, /, *)');
 }
-
-
-
-
-
 
 /*
     Operadores Booleanos
@@ -681,10 +686,10 @@ if (operador === "+") {
 // TAREA: usando el operador !, Intentá invertir una variable (de true a false, o de false a true) e imprimí el
 // resultado en la consola.
 
-let miVariable =true;
-console.log(miVariable)//true
-console.log(!miVariable)//false
-console.log(!!miVariable)//true
+let miVariable = true;
+console.log(miVariable); //true
+console.log(!miVariable); //false
+console.log(!!miVariable); //true
 ////////////////////////////////////////////////////////////////////////////
 // Felicitaciones! Terminaste el Nivel 1 de la introducción a JavaScript! //
 // El siguiente nivel es el que está en nivel2.js                         //

@@ -35,7 +35,6 @@
     Ejemplo:
 */
 
-
 /*
     la primer  posicion de un array es la posicion  0
 
@@ -66,7 +65,7 @@
 // TAREA: Crea tu propio array, llamado comidasFavoritas, y escribi dentro algunas
 //       cosas que te gustan.
 
-const comidasFavoritas = ["milanesas","pescado", "mariscos", "pastas","asado"]//length del array 4
+const comidasFavoritas = ['milanesas', 'pescado', 'mariscos', 'pastas', 'asado']; //length del array 4
 //l aposicion que este el indice siempre es 1 menos
 
 /* 
@@ -76,10 +75,6 @@ posicion 3 indice 2
 posicion 4 indice 3
 
 */
-
-
-
-
 
 /*
     Tamaño del Array
@@ -97,12 +92,8 @@ posicion 4 indice 3
 // TAREA: Verifique cuántos valores tiene en su array comidasFavoritas.
 // imprimi utilizando console.log el resultado.
 
-
 console.log(comidasFavoritas.length);
-console.log(["milanesas","pescado", "mariscos", "pastas","asado"].length);
-
-
-
+console.log(['milanesas', 'pescado', 'mariscos', 'pastas', 'asado'].length);
 
 /*
     Uso del Array
@@ -127,10 +118,6 @@ console.log(["milanesas","pescado", "mariscos", "pastas","asado"].length);
 
 console.log(comidasFavoritas[2]);
 
-
-
-
-
 /*
     Cambio de Valores en Arrays
     =========================
@@ -153,19 +140,9 @@ console.log(comidasFavoritas[2]);
 console.log(comidasFavoritas);
 comidasFavoritas[0] = 'Ravioles';
 
-
-
-
-
 // TAREA: console.log todo el array para verificar.
 
 console.log(comidasFavoritas);
-
-
-
-
-
-
 
 // TIP: ¡No te olvides que las posiciones de índice comienzan desde 0!
 
@@ -188,19 +165,9 @@ console.log(comidasFavoritas);
 console.log(comidasFavoritas);
 comidasFavoritas.push('pizza');
 
-
-
-
-
-
 // TAREA: console.log todo el array para verificar.
 
 console.log(comidasFavoritas);
-
-
-
-
-
 
 /*
     Nota acerca Arrays constantes
@@ -225,33 +192,24 @@ console.log(comidasFavoritas);
 
 // TAREA: Intenta crear un array como una constante y modifica los valores que contiene.
 
-
-const a = [1,2,3];
+const a = [1, 2, 3];
 console.log(a);
-a[0] = 4;//[4,2,3];
+a[0] = 4; //[4,2,3];
 console.log(a);
 
 //Esto no nose puede hacer decir que a es otro array distinto por mas que tenga los mismo valores
-
-
-
-
-
-
 
 // TAREA: Observa lo que sucede si agregas algo con.push(), cambias algo
 //       con notación de corchetes (array[1]) y
 //       asigna un nuevo array completamente nuevo a la constante
 
-const x = [1,2,3];
+const x = [1, 2, 3];
 console.log(x);
-x[0] = 4;//[4,2,3];
+x[0] = 4; //[4,2,3];
 console.log(x);
 
 x.push(6);
 console.log(x);
-
-
 
 /*
     Bucles
@@ -309,11 +267,10 @@ en otros casoa vamos a decrementar el contador en 1
     }
 */
 
+let numero = 0; //contador o acumulador
 
-let numero = 0;//contador o acumulador
-
-while(numero < 10){
-    numero += 1;
+while (numero < 10) {
+	numero += 1;
 }
 
 //TAREA
@@ -323,14 +280,9 @@ while(numero < 10){
 
 let numero2 = 10;
 
-while(numero2 < 0){
-    numero -= 1;
+while (numero2 < 0) {
+	numero -= 1;
 }
-
-
-
-
-
 
 /*
     Bucles for (para)
@@ -352,32 +304,28 @@ for (asi arranco(i = 0; i) if(<= 5;) contador(i++))
 */
 
 let i;
-for (let i = 0; i <=5; i++) {
-    console.log(`Hola ${i}`);
-    
+for (let i = 0; i <= 5; i++) {
+	console.log(`Hola ${i}`);
 }
 
 // TAREA: Imprimí cada 3er número del 3 al 22 usando un 'bucle for'.
 
-for (let i = 3; i < 23; i+=3) {
-    console.log(i);
-    
+for (let i = 3; i < 23; i += 3) {
+	console.log(i);
 }
 
 //Ejercicio
 
+const notaParciales = [10, 4, 5, 6];
 
-const notaParciales = [10,4,5,6];
-
-let totalNotas = 0;//los acumuladores siempre van afuera
-for(let i=0; i < notaParciales.length; i++){
-    totalNotas = totalNotas + notaParciales[i];
+let totalNotas = 0; //los acumuladores siempre van afuera
+for (let i = 0; i < notaParciales.length; i++) {
+	totalNotas = totalNotas + notaParciales[i];
 }
- console.log('El promedio es ' + totalNotas / notaParciales.length);
+console.log('El promedio es ' + totalNotas / notaParciales.length);
 
-
- //TAREA: Hacer una funcion que se llame calcualr promedio
- //que tome como parametro un array
+//TAREA: Hacer una funcion que se llame calcualr promedio
+//que tome como parametro un array
 
 /*
     Iterando a traves de Arrays
@@ -402,13 +350,9 @@ for(let i=0; i < notaParciales.length; i++){
 
 // TAREA: Probalo con tu comidasFavoritas array.
 
-for (let i = 0; i <comidasFavoritas.length; i++) {
-    console.log('Me gusta ' + comidasFavoritas[i]);
-    
+for (let i = 0; i < comidasFavoritas.length; i++) {
+	console.log('Me gusta ' + comidasFavoritas[i]);
 }
-
-
-
 
 /*
     Bucles y Logica
@@ -434,25 +378,19 @@ for (let i = 0; i <comidasFavoritas.length; i++) {
 
 //10,9,8,7,6, estamos en el medio!, 4,3,2,1,0
 for (let i = 10; i >= 0; i--) {
-    if(i === 5){
-        console.log('Estamos en el medio!');
-    }else{
-        console.log(i);
-    }
-    
+	if (i === 5) {
+		console.log('Estamos en el medio!');
+	} else {
+		console.log(i);
+	}
 }
 for (let i = 0; i <= 10; i++) {
-    if(i === 5){
-        console.log('Estamos en el medio!');
-    }else{
-        console.log(i);
-    }
-    
+	if (i === 5) {
+		console.log('Estamos en el medio!');
+	} else {
+		console.log(i);
+	}
 }
-
-
-
-
 
 // TAREA: Ha llegado el momento de un ejercicio clásico: 'FizzBuzz'.
 
@@ -470,21 +408,17 @@ for (let i = 0; i <= 10; i++) {
 // 16% 4 = 0 - en 16 tenemos 4 * 4
 // 19% 4 = 3 - en 19 tenemos 4 * 4 + 3, etc.
 
-
-for (let i = 1; i <=50; i++) {
-    if(i%3 === 0 && i%5 === 0){
-        console.log("FizzBuzz");
-    }else if(i%3 === 0){
-        console.log("Fizz");
-    }else if(i%5 === 0){
-        console.log("Buzz");
-    }else{
-        console.log(i);
-    }
-    
+for (let i = 1; i <= 50; i++) {
+	if (i % 3 === 0 && i % 5 === 0) {
+		console.log('FizzBuzz');
+	} else if (i % 3 === 0) {
+		console.log('Fizz');
+	} else if (i % 5 === 0) {
+		console.log('Buzz');
+	} else {
+		console.log(i);
+	}
 }
-
-
 
 //////////////////////////////////////////////////////////////////////////////
 // ¡Felicidades! ¡Has terminado el Nivel 2 de JavaScript Básico!            //

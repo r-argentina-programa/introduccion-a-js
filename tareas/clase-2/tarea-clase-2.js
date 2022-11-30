@@ -19,11 +19,11 @@
 // TAREA: Cambiar el operador a '-', y fijarse que llame a la función 'restar' en vez de a la de 'sumar'.
 
 function sumar(numero1, numero2) {
-    return numero1 + numero2;
+	return numero1 + numero2;
 }
 
 function restar(numero1, numero2) {
-    return numero1 - numero2;
+	return numero1 - numero2;
 }
 
 const operador = prompt('Ingrese + o -');
@@ -32,13 +32,10 @@ const numero2 = 2;
 
 let resultado;
 if (operador === '+') {
-    resultado = sumar(numero1, numero2);
+	resultado = sumar(numero1, numero2);
 } else {
-    resultado = restar(numero1, numero2);
+	resultado = restar(numero1, numero2);
 }
 
 //https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/template_strings
-console.log(
-    `El resultado de ${numero1} ${operador} ${numero2} es ${resultado}`
-);
-
+console.log(`El resultado de ${numero1} ${operador} ${numero2} es ${resultado}`);

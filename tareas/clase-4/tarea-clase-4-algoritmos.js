@@ -11,12 +11,12 @@ Desafío de programación #1: Imprimí los números del 1 al 10
  Resultado: 10 9 8 7 6 5 4 3 2 1
 */
 
-for(let i=1; i <=10; i++){
-  console.log(i);
+for (let i = 1; i <= 10; i++) {
+	console.log(i);
 }
 
-for(let i=10; i >0; i--){
-  console.log(i);
+for (let i = 10; i > 0; i--) {
+	console.log(i);
 }
 
 /*
@@ -25,35 +25,33 @@ for(let i=10; i >0; i--){
  1 3 5 ... 99
 */
 
-for(let i=0; i<=100; i++){
-  if(i%2 !== 0){
-    console.log(`Impar ${i}`);
-  }else{
-    console.log(i);
-  }
-  
+for (let i = 0; i <= 100; i++) {
+	if (i % 2 !== 0) {
+		console.log(`Impar ${i}`);
+	} else {
+		console.log(i);
+	}
 }
 
 /* pares */
 
-for (let i=0; i <=100; i++){
-  if(i%2 === 0){
-    console.log(`Par ${i}`);
-  }else{
-    console.log(i);
-  }
+for (let i = 0; i <= 100; i++) {
+	if (i % 2 === 0) {
+		console.log(`Par ${i}`);
+	} else {
+		console.log(i);
+	}
 }
 
 /* pares e impares */
 
- for(let i=0; i <=150; i++){
-  if (i%2 === 0) {
-    console.log(`Par ${i}`);
-  }else{
-    console.log(`Impar ${i}`);
-  }
-} 
-
+for (let i = 0; i <= 150; i++) {
+	if (i % 2 === 0) {
+		console.log(`Par ${i}`);
+	} else {
+		console.log(`Impar ${i}`);
+	}
+}
 
 /*
 Desafío de programación #3: Imprimí la tabla de multiplicación del 7
@@ -65,14 +63,11 @@ Desafío de programación #3: Imprimí la tabla de multiplicación del 7
 
  */
 
- console.log('- Tabla del 7 -');
+console.log('- Tabla del 7 -');
 
-for(let i=0; i<=10; i++){
-  console.log(`7 x ${i} = ${7*i} `);
+for (let i = 0; i <= 10; i++) {
+	console.log(`7 x ${i} = ${7 * i} `);
 }
-
-
-
 
 /*
 
@@ -89,12 +84,10 @@ Desafío de programación #4: Imprimí todas las tablas de multiplicación del 1
  9x9 = 81
 */
 
-for(let i=0; i<=9; i++)
-for (let j = 0; j <=10; j++){
-  console.log(`Tabla del ${i}: ${i} X ${j} = ${i*j}`);
-
-}
-
+for (let i = 0; i <= 9; i++)
+	for (let j = 0; j <= 10; j++) {
+		console.log(`Tabla del ${i}: ${i} X ${j} = ${i * j}`);
+	}
 
 /*
 Desafío de programación #5: Calcula el resultado de la suma de los numeros del 1 al 10 en un array.
@@ -103,30 +96,26 @@ Desafío de programación #5: Calcula el resultado de la suma de los numeros del
  1 + 2 + 3 + ... + 10 = ? //hacerlo con un array y un bucle
 */
 
-let numeros = [1,2,3,4,5,6,7,8,9,10];
+let numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
 let contador = 0;
 
 for (let i = 0; i < numeros.length; i++) {
-  contador += numeros[i];
+	contador += numeros[i];
 }
 console.log(`El resultado de la suma de los numeros ${numeros} es: ${contador}`);
 
-
 /* sumar puntos */
 
-let puntosPorPartida = [10,20,8,22,14,17,22,27];
+let puntosPorPartida = [10, 20, 8, 22, 14, 17, 22, 27];
 
 let contador2 = 0;
 
 for (let i = 0; i < puntosPorPartida.length; i++) {
-  contador2 += puntosPorPartida[i]; 
+	contador2 += puntosPorPartida[i];
 }
 
 console.log(`Los puntos de tu partida fueron ${puntosPorPartida} acumulaste un total de ${contador2} felicitaciones!`);
-
-
-
 
 /*
 Desafío de programación #6: Calcula 10! (10 factorial)
@@ -134,61 +123,56 @@ Desafío de programación #6: Calcula 10! (10 factorial)
  10 * 9 * 8 * ... * 1
  */
 
- let resultadoFactorial = 1;
+let resultadoFactorial = 1;
 for (let i = 10; i > 1; i--) {
-  resultadoFactorial *= i;
+	resultadoFactorial *= i;
 }
 console.log(`El factorial de 10 (10!) es: ${resultadoFactorial}`);
 
 let calculoDelFactorial = 1;
 
 for (let i = 10; i > 1; i--) {
-    calculoDelFactorial *= i;
+	calculoDelFactorial *= i;
 }
 
 console.log(`10! es: ${calculoDelFactorial}`);
 
-
- /*
+/*
 Desafío de programación #7: Calcula la suma de todos los números impares mayores que 10 y menores que 30
 */
 
 let sumaTotal = 0;
 
 for (let i = 10; i < 30; i++) {
-  if(i%2 !== 0){
-    sumaTotal  += i;
-  }
+	if (i % 2 !== 0) {
+		sumaTotal += i;
+	}
 }
 console.log(`La suma total de todos los numeros impares es ${sumaTotal} `);
 
-
-
-function sumarNumerosImpares(numerosParaSumar){
-  let sumaTotal = 0;
-  for(let i = 10; i < numerosParaSumar.length; i++){
-    if(i%2 !== 0){
-      sumaTotal += numerosParaSumar[i];
-    }
-  }
-  return sumaTotal;
+function sumarNumerosImpares(numerosParaSumar) {
+	let sumaTotal = 0;
+	for (let i = 10; i < numerosParaSumar.length; i++) {
+		if (i % 2 !== 0) {
+			sumaTotal += numerosParaSumar[i];
+		}
+	}
+	return sumaTotal;
 }
 
-let numerosParaSumar = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30];
+let numerosParaSumar = [
+	0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30,
+];
 console.log(`total suma ${sumarNumerosImpares(numerosParaSumar)}`);
-
-
-
 
 /*
 Desafío de programación #8: Crea una función que convierta de Celsius a Fahrenheit
 */
 
-function convertirCelsiusAFahrenheit(celsius){
-  const fahrenheit = (celsius * 1.8) + 32;
-    return fahrenheit
-  }
-
+function convertirCelsiusAFahrenheit(celsius) {
+	const fahrenheit = celsius * 1.8 + 32;
+	return fahrenheit;
+}
 
 const celsius = Number(prompt('Ingresa los grados Celsius a convertir a Fahrenheit'));
 console.log(`Tus grados Celsius(Cº) pasados a Fahrenheit(Fº) son: ${convertirCelsiusAFahrenheit(celsius)}º Fahrenheit`);
@@ -197,14 +181,15 @@ console.log(`Tus grados Celsius(Cº) pasados a Fahrenheit(Fº) son: ${convertirC
 Desafío de programación #9: Crea una función que conviert  de Fahrenheit a Celsius
 */
 
-function convertirFahrenheitACelsius(fahrenheit){
-  const celsius =(fahrenheit - 32) / 1.8;
-  return celsius
+function convertirFahrenheitACelsius(fahrenheit) {
+	const celsius = (fahrenheit - 32) / 1.8;
+	return celsius;
 }
 
 const fahrenheit = Number(prompt('Ingresa los grados Fahrenheit para convertirlos a Celsius'));
-console.log(`Tus grados Fahrenheit(Fº) convertidos a Celsius(Cº) son: ${convertirFahrenheitACelsius(fahrenheit)}º Celsius`);
-
+console.log(
+	`Tus grados Fahrenheit(Fº) convertidos a Celsius(Cº) son: ${convertirFahrenheitACelsius(fahrenheit)}º Celsius`,
+);
 
 /*
 Desafío de programación #10: Calcula la suma de todos los números en un array de números
@@ -266,28 +251,22 @@ console.log(`los numeros positivos dentro del array son: ${devolverArrayPositivo
 const array = [2,-3,-2,-5,20,25];
 console.log(`Los numeros negativos delntro del array son: ${devolverArrayNegativo(array)}`); */
 
-
-
-
 /*
 Desafío de programación #13: Find the maximum number in an array of numbers
 */
 
-
-function devolverNumeroMaximo(array){
-  let numeroMaximo = 0;
-  for (let i = 0; i < array.length; i++) {
-    if(numeroMaximo < array[i]){
-    numeroMaximo = array[i];
-    }
-    
-  }
-  return numeroMaximo;
+function devolverNumeroMaximo(array) {
+	let numeroMaximo = 0;
+	for (let i = 0; i < array.length; i++) {
+		if (numeroMaximo < array[i]) {
+			numeroMaximo = array[i];
+		}
+	}
+	return numeroMaximo;
 }
 
-const array = [1000,3,4,-3,-8,2225,5];
+const array = [1000, 3, 4, -3, -8, 2225, 5];
 console.log(`${devolverNumeroMaximo(array)}`);
-
 
 /*
 Desafío de programación #14: Imprimir los primeros 10 dígitos de Fibonacci sin recursión
@@ -296,18 +275,15 @@ Fibonacci (lo buscan en google si no lo saben o no se acuerdan)
 El resultado debería ser: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55
 */
 
-
- function fibonacci(numero){
-  const fibonacci = [0, 1];//Estos son los dos primeros terminos del Fibonacci
-  for (let i = 2; i < numero; i++) {
-   fibonacci[i] = fibonacci[i - 1] + fibonacci[i - 2] //n = n-1 + n-2. formula del fibonacci
-    
-  }
-  return fibonacci
+function fibonacci(numero) {
+	const fibonacci = [0, 1]; //Estos son los dos primeros terminos del Fibonacci
+	for (let i = 2; i < numero; i++) {
+		fibonacci[i] = fibonacci[i - 1] + fibonacci[i - 2]; //n = n-1 + n-2. formula del fibonacci
+	}
+	return fibonacci;
 }
 
-console.log(fibonacci(2)); 
-
+console.log(fibonacci(2));
 
 /* function fibonacci(num) {
   const fib = [0,1]
@@ -320,7 +296,6 @@ console.log(fibonacci(2));
 }
 
 fibonacci(2); */
-
 
 /*
 Desafío de programación #15: Crear una función que encuentre el número n de Fibonacci usando recursión

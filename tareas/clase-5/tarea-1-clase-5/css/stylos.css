@@ -1,24 +1,24 @@
-*{
-    background-color: aquamarine;
+* {
+	background-color: aquamarine;
 }
 
-.form{
-    display: grid;
-    justify-content: center;
+.form {
+	display: grid;
+	justify-content: center;
 }
 
-.form .label{
-    margin: 10px 0 10px;
+.form .label {
+	margin: 10px 0 10px;
 }
 
-.form #calcular-salario-mensual{
-    margin: 30px 0 15px;
+.form #calcular-salario-mensual {
+	margin: 30px 0 15px;
 }
 
-.form input{
-    font-size: 24px;
-    border-radius: 5px;
+.form input {
+	font-size: 24px;
+	border-radius: 5px;
 }
-.form label{
-    font-weight: bold;
+.form label {
+	font-weight: bold;
 }

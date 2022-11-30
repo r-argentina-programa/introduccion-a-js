@@ -1,16 +1,16 @@
 #cantidad-integrantes {
-    margin-top: 5px;
+	margin-top: 5px;
 }
 
 #contenedor-pre-existente .pre-existente {
-    display: grid;
-    margin: 0 0 15px;
+	display: grid;
+	margin: 0 0 15px;
 }
 #calcular {
-    margin-bottom: 20px;
-    margin-top: 10px;
+	margin-bottom: 20px;
+	margin-top: 10px;
 }
 
 #integrantes .salario-integrante {
-    margin-bottom: 15px;
+	margin-bottom: 15px;
 }

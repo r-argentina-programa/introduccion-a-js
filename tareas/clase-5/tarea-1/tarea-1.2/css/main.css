@@ -1,0 +1,23 @@
+h1 {
+	font-family: 'Roboto Condensed', sans-serif;
+	font-weight: bold;
+	margin: 10px;
+	border: solid 3px gray;
+}
+
+p {
+	font-family: 'Roboto Condensed', sans-serif;
+}
+
+#paragraph {
+	margin-top: 20px;
+}
+
+form {
+	font-family: 'Roboto Condensed', sans-serif;
+	font-weight: bold;
+}
+
+#buttons {
+	margin-top: 50px;
+}

@@ -4,11 +4,11 @@
 // Ejecutar la función con estos datos
 // Impriman el resultado en la consola
 function calcularEdad(anioActual, anioNacimiento) {
-    return anioActual - anioNacimiento;
+	return anioActual - anioNacimiento;
 }
 
-const anioActual = Number(prompt("Cuál es el año actual?"));
-const anioNacimiento = Number(prompt("En qué año naciste?"));
+const anioActual = Number(prompt('Cuál es el año actual?'));
+const anioNacimiento = Number(prompt('En qué año naciste?'));
 
 console.log('Tenés ' + calcularEdad(anioActual, anioNacimiento) + ' años');
 
@@ -17,23 +17,23 @@ console.log('Tenés ' + calcularEdad(anioActual, anioNacimiento) + ' años');
 // diario... semanal, por hora. etc.
 
 function calcularSalarioAnual(salarioMensual) {
-    const cantidadMesesEnUnAnio = 12;
-    return salarioMensual * cantidadMesesEnUnAnio;
+	const cantidadMesesEnUnAnio = 12;
+	return salarioMensual * cantidadMesesEnUnAnio;
 }
 
 function calcularSalarioMensual(salarioAnual) {
-    const cantidadMesesEnUnAnio = 12;
-    return salarioAnual / cantidadMesesEnUnAnio;
+	const cantidadMesesEnUnAnio = 12;
+	return salarioAnual / cantidadMesesEnUnAnio;
 }
 
 function calcularSalarioSemanal(salarioAnual) {
-    const cantidadSemanasEnUnAnio = 52;
-    return salarioAnual / cantidadSemanasEnUnAnio;
+	const cantidadSemanasEnUnAnio = 52;
+	return salarioAnual / cantidadSemanasEnUnAnio;
 }
 
 function calcularSalarioDiario(salarioAnual) {
-    const cantidadDiasEnUnAnio = 365;
-    return salarioAnual / cantidadDiasEnUnAnio;
+	const cantidadDiasEnUnAnio = 365;
+	return salarioAnual / cantidadDiasEnUnAnio;
 }
 
 const salarioMensual = Number(prompt('Cuál es tu salario mensual?'));
@@ -66,7 +66,6 @@ function pruebaHoisting(){
 }
 //pruebaHoisting();
 */
-
 
 /* var a = 1; //global
 let b = 2; //global
@@ -104,7 +103,6 @@ console.log('b vale: ' + b); // 2
 // console.log('f vale: ' + f); // error
 
  */
-
 
 /* function calcularMesesVividos(mesesVividos){//LOCAL
     console.log('mesesVividos vale:' + mesesVividos);

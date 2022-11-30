@@ -7,22 +7,19 @@
 // Imprimir "Hola " y el nombre, " te llamás igual que mi ..."
 // Si no, simplemente imprimir "Hola " + nombre!
 
-const nombreUsuario = (prompt("¿Como te llamas?") || "").toLowerCase();
-const MI_NOMBRE = "jose";
-const NOMBRE_HIJO = "benjamin";
+const nombreUsuario = (prompt('¿Como te llamas?') || '').toLowerCase();
+const MI_NOMBRE = 'jose';
+const NOMBRE_HIJO = 'benjamin';
 
-if(MI_NOMBRE === nombreUsuario){
-    console.log(`Hola, Tocayo! Yo también me llamo ${nombreUsuario}` );
-}else if(NOMBRE_HIJO === nombreUsuario){
-    console.log(`Hola ${nombreUsuario} te llamas igual que mi hijo`);
-}else if(nombreUsuario.trim().length === 0){
-    console.log('No ingresaste ningun nombre');
-}else {
-    console.log(`Hola ${nombreUsuario}`);
+if (MI_NOMBRE === nombreUsuario) {
+	console.log(`Hola, Tocayo! Yo también me llamo ${nombreUsuario}`);
+} else if (NOMBRE_HIJO === nombreUsuario) {
+	console.log(`Hola ${nombreUsuario} te llamas igual que mi hijo`);
+} else if (nombreUsuario.trim().length === 0) {
+	console.log('No ingresaste ningun nombre');
+} else {
+	console.log(`Hola ${nombreUsuario}`);
 }
-
-
-
 
 //Tarea 2:
 // Preguntar la edad del usuario
@@ -56,19 +53,18 @@ if (MI_EDAD === edadUsuario) {
 }else{
     console.log("No entendi tu edad");
 } */
-const edadUsuario = Number(prompt("¿Cuantos años tenes?"));
+const edadUsuario = Number(prompt('¿Cuantos años tenes?'));
 const MI_EDAD = 27;
 
 if (MI_EDAD === edadUsuario) {
-    console.log("Mira vos che, tenemos la misma edad");
-}else if (MI_EDAD < edadUsuario) {
-    console.log("Sos mas grande que yo");
-}else if(MI_EDAD > edadUsuario){
-    console.log("Soy mas grande que vos");
-}else{
-    console.log("No entendi tu edad");
+	console.log('Mira vos che, tenemos la misma edad');
+} else if (MI_EDAD < edadUsuario) {
+	console.log('Sos mas grande que yo');
+} else if (MI_EDAD > edadUsuario) {
+	console.log('Soy mas grande que vos');
+} else {
+	console.log('No entendi tu edad');
 }
-
 
 //Tarea 3:
 // Preguntarle al usuario si tiene documento, y que conteste con "si" o "no".
@@ -81,24 +77,23 @@ if (MI_EDAD === edadUsuario) {
 
 // "Fabricio" === "fabricio"
 
-const usuarioTieneDocumento = (prompt("¿Tenes el comumento?") || "").toLowerCase();
-const RESPUESTA_AFIRMATIVA = "si";
-const RESPUESTA_NEGATIVA = "no";
+const usuarioTieneDocumento = (prompt('¿Tenes el comumento?') || '').toLowerCase();
+const RESPUESTA_AFIRMATIVA = 'si';
+const RESPUESTA_NEGATIVA = 'no';
 const EDAD_MINIMA_PARA_ENTRAR = 18;
 
-if(RESPUESTA_AFIRMATIVA === usuarioTieneDocumento){
-    const edadDelUsuario = Number(prompt("¿Cuantos años tenes?"));
+if (RESPUESTA_AFIRMATIVA === usuarioTieneDocumento) {
+	const edadDelUsuario = Number(prompt('¿Cuantos años tenes?'));
 
-    if(edadDelUsuario >= 18){
-        console.log("Sos mayor de edad,pasa tranquilo");
-    }else if(edadDelUsuario < 18){
-        console.log("No compremetas al personal pibe, sos menor de edad, no te puedo dejar pasar");
-    }else{
-        console.log("no se te entiende");
-    }
-    
-}else if(RESPUESTA_NEGATIVA === usuarioTieneDocumento){
-    console.log("No compremetas al personal pibe, sin documento no te puedo dejar pasar");
-}else{
-    console.log("no se te entiende");
+	if (edadDelUsuario >= 18) {
+		console.log('Sos mayor de edad,pasa tranquilo');
+	} else if (edadDelUsuario < 18) {
+		console.log('No compremetas al personal pibe, sos menor de edad, no te puedo dejar pasar');
+	} else {
+		console.log('no se te entiende');
+	}
+} else if (RESPUESTA_NEGATIVA === usuarioTieneDocumento) {
+	console.log('No compremetas al personal pibe, sin documento no te puedo dejar pasar');
+} else {
+	console.log('no se te entiende');
 }

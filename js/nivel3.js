@@ -229,12 +229,12 @@ const mediaLinks = document.querySelectorAll('li');
 console.log(mediaLinks);
 
 setInterval(function () {
-    nuestroTitulo.innerText = String(Math.random());
+	nuestroTitulo.innerText = String(Math.random());
 }, 1000);
 
 for (let i = 0; i < mediaLinks.length; i++) {
-    console.log(mediaLinks[i].innerText);
-    mediaLinks[i].innerText = 'Hola';
+	console.log(mediaLinks[i].innerText);
+	mediaLinks[i].innerText = 'Hola';
 }
 
 /* 
@@ -302,7 +302,7 @@ Nos va devolver en este caso "sebastian"
 //      sobre cada item de mediaLinks y mostralos en pantalla con console.log
 
 for (let i = 0; i < mediaLinks.length; i++) {
-    console.log(mediaLinks[i]);
+	console.log(mediaLinks[i]);
 }
 
 /* for (let i = 0; i < mediaLinks.length; i++) {
@@ -437,16 +437,16 @@ const $botonIngreso = document.querySelector('#ingresar');
 //para saber que es un elemento de HTMLy no una variable comun y corriente
 
 $botonIngreso.onclick = function () {
-    const edadUsuario = Number(document.querySelector('#edad-usuario').value);
-    let textoResultado;
-    if (edadUsuario >= 18) {
-        textoResultado = 'Podes ingresar';
-    } else {
-        textoResultado = 'No podes ingresar';
-    }
+	const edadUsuario = Number(document.querySelector('#edad-usuario').value);
+	let textoResultado;
+	if (edadUsuario >= 18) {
+		textoResultado = 'Podes ingresar';
+	} else {
+		textoResultado = 'No podes ingresar';
+	}
 
-    document.querySelector('#resultado').innerText = textoResultado;
-    return false;
+	document.querySelector('#resultado').innerText = textoResultado;
+	return false;
 };
 //Evento // este evento onclick es una propiedad que espera una funcion
 // y lo que tenemos que ahcer aca es crear una funcion anonima como ya vimos antes

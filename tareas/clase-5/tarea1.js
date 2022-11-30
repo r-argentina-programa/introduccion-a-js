@@ -1,12 +1,12 @@
 document.querySelector('#calcular-salario-mensual').onclick = function () {
-    const salarioAnual = Number(document.querySelector('#salario-anual').value);
-    const salarioMensual = calcularSalarioMensual(salarioAnual);
+	const salarioAnual = Number(document.querySelector('#salario-anual').value);
+	const salarioMensual = calcularSalarioMensual(salarioAnual);
 
-    document.querySelector('#salario-mensual').value = salarioMensual;
+	document.querySelector('#salario-mensual').value = salarioMensual;
 
-    return false;
+	return false;
 };
 
 function calcularSalarioMensual(salarioAnual) {
-    return salarioAnual / 12;
+	return salarioAnual / 12;
 }

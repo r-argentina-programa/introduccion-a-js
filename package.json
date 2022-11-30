@@ -1,7 +1,10 @@
 {
-  "dependencies": {
-    "bootstrap": "^5.2.3",
-    "bootstrap-icons": "^1.10.2",
-    "jquery": "^3.6.1"
-  }
+	"dependencies": {
+		"bootstrap": "^5.2.3",
+		"bootstrap-icons": "^1.10.2",
+		"jquery": "^3.6.1"
+	},
+	"devDependencies": {
+		"prettier": "2.8.0"
+	}
 }

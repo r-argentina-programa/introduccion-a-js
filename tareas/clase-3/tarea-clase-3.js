@@ -19,34 +19,34 @@ if(nombreUsuario === miNombre){
     console.log(`Hola ${nombreUsuario}`);
 } */
 
-
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 /* Ejemplos realizados por fabricio */
 
-const MI_NOMBRE = "fabricio";// Las constante que definimos nosotros y enj el codigo refleja su valor, por buenas practicas devemos ponerlas con mayusculas
-const NOMBRE_MADRE = "teresa";
+const MI_NOMBRE = 'fabricio'; // Las constante que definimos nosotros y enj el codigo refleja su valor, por buenas practicas devemos ponerlas con mayusculas
+const NOMBRE_MADRE = 'teresa';
 // a diferencia de esta otra que el valor inicial nos va a venir del prompt
 
-const nombreUsuario = (prompt("Como te llamas ?") || "").toLowerCase();
+const nombreUsuario = (prompt('Como te llamas ?') || '').toLowerCase();
 // en este caso  null || '' prefiere el valor de la derecha
-//Este prompt no es que valga null si no que vale un string vacio 
+//Este prompt no es que valga null si no que vale un string vacio
 //En este caso va dar null en caso de que el usuario toque la tecla ESC. en prompt nos va devolver null
 // y nos da un valor nuevo que es NULL
 
-let x; // va ser undefined por que no le asignamos un valor 
-//pero tambien la ausencia de valor se indica con null 
+let x; // va ser undefined por que no le asignamos un valor
+//pero tambien la ausencia de valor se indica con null
 
 /* cuando vayas a pasar este usar el and */
 
-if(MI_NOMBRE === nombreUsuario){
-    console.log(`Hola, tocayo! Yo tambien me llamo ${MI_NOMBRE}`);
-}else if(NOMBRE_MADRE === nombreUsuario){
-    console.log(`Hola ${nombreUsuario}, te llamás igual que mi mamá!`);
-}else if(nombreUsuario.trim().length === 0){ // esto '' y esto 0 es exactamente lo mismo
-    console.log('No ingresaste ningun nombre.');
-}else{
-    console.log(`Hola ${nombreUsuario}`);
+if (MI_NOMBRE === nombreUsuario) {
+	console.log(`Hola, tocayo! Yo tambien me llamo ${MI_NOMBRE}`);
+} else if (NOMBRE_MADRE === nombreUsuario) {
+	console.log(`Hola ${nombreUsuario}, te llamás igual que mi mamá!`);
+} else if (nombreUsuario.trim().length === 0) {
+	// esto '' y esto 0 es exactamente lo mismo
+	console.log('No ingresaste ningun nombre.');
+} else {
+	console.log(`Hola ${nombreUsuario}`);
 }
 
 /* Tambien podriamos hacer
@@ -79,10 +79,8 @@ no se calienta en seguir buscando evalua a false y termina
 
 //nombreUsuario.trim().length esta funcion saca todos los espacion que tiene demas
 
-
 // cada distinto tipo de objetos tienen propiedades o metodos ejemplo (toLowerCase)(.trim)(.length)
 //el .length cuenta la cantidad de caracteres y espacios
-
 
 // OPERADORES LOGICOS ##########
 //https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Expressions_and_Operators#logico
@@ -90,7 +88,6 @@ no se calienta en seguir buscando evalua a false y termina
 /* AND Lógico (&&) */
 /* expr1 && expr2 */
 /* Devuelve expr1 si se puede convertir a false; de lo contrario, devuelve expr2. Por lo tanto, cuando se usa con valores booleanos, && devuelve true si ambos operandos son true; de lo contrario, devuelve false. */
-
 
 /* OR lógico (||) */
 /* expr1 || expr2 */
@@ -106,7 +103,6 @@ flase || true = true
 true || true = true
 false || true || false || false = true
 */
-
 
 /* true &&  true = true;
 true && flase  = false 
@@ -167,8 +163,6 @@ undefined es mas o menos false
 string("") es mas o menos false
 */
 
-
-
 //Tarea 2:
 // Preguntar la edad del usuario
 // Hacerle saber si tiene más, menos ó la misma edad que nosotros.
@@ -192,7 +186,7 @@ if(edadUsuario === miEdad){
 
 //Tarea 2:
 
-const MI_EDAD = 32;//la constante va en mayuscula por que estamos definiendo el valor en el codigo
+const MI_EDAD = 32; //la constante va en mayuscula por que estamos definiendo el valor en el codigo
 /* otro truco podria ser 
 
 const TEXTO_PREGUNTA_EDAD = "Que edads tenes?"
@@ -200,23 +194,19 @@ let edadUsuario = Number(prompt(TEXTO_PREGUNTA_EDAD));
 
 estos nos sirve para no andar cambiano todo el codigo osea la logica
 */
-let edadUsuario = Number(prompt("Qué edad tenés?"));
+let edadUsuario = Number(prompt('Qué edad tenés?'));
 //concepto de NaN
 //let edadUsuario = Number(prompt("Veinte")); NaN nos va devover falso cuando lo compares con cualquier tipo de numero
 
-if (edadUsuario === MI_EDAD){
-    console.log('tenemos la misma edad!');
-}else if(edadUsuario > MI_EDAD){
-    console.log('Sos más grande que yo');
-}else if(edadUsuario < MI_EDAD){
-    console.log('Sos mas chico que yo');
-}else{
-    console.log('No entendi la respuesta.');
+if (edadUsuario === MI_EDAD) {
+	console.log('tenemos la misma edad!');
+} else if (edadUsuario > MI_EDAD) {
+	console.log('Sos más grande que yo');
+} else if (edadUsuario < MI_EDAD) {
+	console.log('Sos mas chico que yo');
+} else {
+	console.log('No entendi la respuesta.');
 }
-
-
-
-
 
 //Tarea 3:
 // Preguntarle al usuario si tiene documento, y que conteste con "si" o "no".
@@ -257,25 +247,24 @@ if(documentoUsuario === respuestaSi){
 
 //Tarea 3:
 
-
 const EDAD_MINIMA_PARA_ENTRAR = 18;
-const RESPUESTA_SI = "si";
-const RESPUESTA_NO = "no";
+const RESPUESTA_SI = 'si';
+const RESPUESTA_NO = 'no';
 
-const usuarioTieneDocumento = (prompt("Tenes documento?") || '').toLowerCase();
+const usuarioTieneDocumento = (prompt('Tenes documento?') || '').toLowerCase();
 
-if(usuarioTieneDocumento === RESPUESTA_SI){
-    const edadUsuario = Number(prompt("cuantos años tenes?"));
-    
-    if (edadUsuario >= EDAD_MINIMA_PARA_ENTRAR){
-        console.log("Bienvenidos al bar!");
-    }else if(edadUsuario < EDAD_MINIMA_PARA_ENTRAR){
-        console.log("No podés entrar al bar.");
-    }else{
-        console.log('No entendí la respuesta.');
-    }
-}else if (usuarioTieneDocumento === RESPUESTA_NO){
-    console.log("Se necesita documento para pasar al bar.");
-}else{
-    console.log("no entendí la respuesta");
+if (usuarioTieneDocumento === RESPUESTA_SI) {
+	const edadUsuario = Number(prompt('cuantos años tenes?'));
+
+	if (edadUsuario >= EDAD_MINIMA_PARA_ENTRAR) {
+		console.log('Bienvenidos al bar!');
+	} else if (edadUsuario < EDAD_MINIMA_PARA_ENTRAR) {
+		console.log('No podés entrar al bar.');
+	} else {
+		console.log('No entendí la respuesta.');
+	}
+} else if (usuarioTieneDocumento === RESPUESTA_NO) {
+	console.log('Se necesita documento para pasar al bar.');
+} else {
+	console.log('no entendí la respuesta');
 }
