@@ -22,6 +22,19 @@ $botonCalcular.onclick = function()
 //cuando el usuario haga click en el botón "calcular", mostrar el salario mensual
 // en una caja de texto deshabilitada. --> <input type="text" disabled id="salario-mensual"/>
 
+let $salarioMensualUsuario = document.querySelector('#salario-mensual')
+let $salarioAnualUsuario = Number(
+    document.querySelector('#sueldo-anual-usuario').value
+);
+let boton= document.querySelector("#boton-calculador")
+
+boton.onclick = function calcularSalarioMensualUsuario() {
+	const mesesEnUnAño = 12;
+	let resultadoSalarioMensual = $salarioAnualUsuario / mesesEnUnAño;
+	$salarioMensualUsuario.value= resultadoSalarioMensual;
+	return false;
+}
+
 //TAREA: En otro archivo html (no Index) y otro archivo js (no tarea-clase-5.js),
 // creá un formulario que capture el primer nombre, segundo nombre, apellido/s y edad del usuario
 // también vamos a crear un <h1> que diga Bienvenido!
