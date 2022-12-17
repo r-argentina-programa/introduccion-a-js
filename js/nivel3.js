@@ -124,8 +124,10 @@
 //       variable llamada nuestroTitulo.
 //       Utilizá console.log para ver lo que obtuviste!
 
-
-
+// const nuestroTitulo = document.querySelector('h1');
+// console.log(nuestroTitulo);
+// console.log(nuestroTitulo.innerText)
+// nuestroTitulo.innerText = 'hola everybody'
 
 
 
@@ -146,7 +148,13 @@
 
 // TAREA: Obtené todos los elementos <li> de la página en una variable llamada mediaLinks.
 
+const mediaLinks = document.querySelectorAll('li');
+// console.log(mediaLinks);
 
+// for(let i=0; i < mediaLinks.length; i++){
+//     console.log(mediaLinks[i].innerText);
+//     mediaLinks[i].innerText = "Hi";
+// }
 
 
 
@@ -155,6 +163,7 @@
 // elementos li que hay con mediaLinks.length
 
 
+//console.log(mediaLinks.length)
 
 
 
@@ -163,7 +172,9 @@
 //      sobre cada item de mediaLinks y mostralos en pantalla con console.log
 
 
-
+// for(let i=0; i < mediaLinks.length; i++){
+//     console.log(mediaLinks[i].innerText);
+// }
 
 
 
@@ -184,7 +195,8 @@
 // TAREA: Obtené el contenido de nuestro elemento 'h1'
 // y utilizá console.log para mostrarlo.
 
-
+const titulo = document.querySelector('h1');
+console.log(titulo.innerText)
 
 
 
@@ -206,7 +218,7 @@
 // TAREA: Hagamos un nuevo título! Cambiá el contenido de nuestro 'h1' y ponele lo que quieras.
 
 
-
+titulo.textContent = "YA ES VIERNES"
 
 
 /*
@@ -288,3 +300,23 @@
 // Levántate, estira las piernas y celebra tu logro.                      //
 // ¡Creo que esto amerita un festejo!                                     //
 ////////////////////////////////////////////////////////////////////////////
+
+const botonIngreso = document.querySelector('#ingresar');
+
+
+
+
+botonIngreso.onclick = function(evento){
+    const edadUsuario = Number(document.querySelector('#edad-usuario').value);
+    let textoResultado;
+    if(edadUsuario >= 10){
+        textoResultado = 'podes Ingresar';
+
+    }else{
+        textoResultado = 'NO podes Ingresar';
+    }
+
+    document.querySelector('#resultado').innerText = textoResultado;
+
+    return false;
+}
