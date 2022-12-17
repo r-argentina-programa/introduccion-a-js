@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Formulario de Bienvenida! :)</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    
+    
+</head>
+<body>
+
+        <div class="container-fluid">
+
+                <div class="row">
+
+                        <div class="col-sm">
+                        <h1 id="titulo">Bienvenido!</h1>
+                        </div>
+                        
+                </div>
+
+                <div class="row">
+                        <div class="col-sm-8">
+                                <form id="formulario" class="form">
+                                        <div class="form-group">
+                                                <label for="primer-nombre">Primer Nombre:</label>
+                                                <input type="text" id="primer-nombre" placeholder="Primer Nombre"/>
+                                        </div>
+                                        <div class="form-group">
+                                                <label for="segundo-nombre">Segundo Nombre:</label>
+                                                <input type="text" id="segundo-nombre" placeholder="Segundo Nombre"/>
+                                        </div>
+                                        <div class="form-group">
+                                                <label for="apellido(s)">Apellido:</label>
+                                                <input type="text" id="apellidos" placeholder="Apellido(s)"/>
+                                        </div>
+                                        <div class="form-group">
+                                                <label for="edad">Edad:</label>
+                                                <input type="number" id="edad" placeholder="edad"/>
+                                        </div>
+                                        <div class="form-group">
+                                                <input type="text" disabled id="mostrar-informacion"  readonly/>
+                                                
+                                        </div>
+                                        <div class="form-group">
+                                                <button type="button" class="btn btn-primary" id="procesar-informacion">Procesar</button>
+                                        </div>
+                                
+                                </form>
+                        </div>
+                </div>
+        </div>
+        
+    <script type="text/javascript" src="tarea2.js"></script>
+</body>
+</html>
