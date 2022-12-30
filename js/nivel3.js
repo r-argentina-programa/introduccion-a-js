@@ -176,6 +176,9 @@ const mediaLinks = document.querySelectorAll('li');
 //     console.log(mediaLinks[i].innerText);
 // }
 
+for(let i= 0; i < mediaLinks.length; i++){
+    console.log(mediaLinks[i]);
+}
 
 
 /*
@@ -196,7 +199,10 @@ const mediaLinks = document.querySelectorAll('li');
 // y utilizá console.log para mostrarlo.
 
 const titulo = document.querySelector('h1');
-console.log(titulo.innerText)
+//console.log(titulo.innerText)
+
+console.log(titulo.textContent);
+console.log(titulo.innerText);
 
 
 
@@ -217,8 +223,9 @@ console.log(titulo.innerText)
 
 // TAREA: Hagamos un nuevo título! Cambiá el contenido de nuestro 'h1' y ponele lo que quieras.
 
+// const nombre = prompt('como te llamas?');
 
-titulo.textContent = "YA ES VIERNES"
+//titulo.textContent = "YA ES SABADO: " + nombre;
 
 
 /*
@@ -235,7 +242,7 @@ titulo.textContent = "YA ES VIERNES"
 
 // TAREA: Actualizá el valor del atributo 'src' de nuestra etiqueta 'img' a "img/kittens.jpeg".
 
-
+document.querySelector('img').src = 'img/kittens.jpeg';
 
 
 
@@ -260,6 +267,9 @@ titulo.textContent = "YA ES VIERNES"
 
 // Tarea: Obtené cualquier elemento de la página y cambiale algunos estilos.
 
+
+titulo.style.backgroundColor = 'blue';
+titulo.style.fontSize = '100px';
 
 
 
@@ -290,6 +300,10 @@ titulo.textContent = "YA ES VIERNES"
 //
 // P.S. También les podés dar estilos al nuevo nodo que creaste.
 
+
+const nodoImagen = document.createElement('img'); //<img>
+nodoImagen.src = 'img/woman_bw.jpg'
+document.querySelector('header').appendChild(nodoImagen);
 
 
 
