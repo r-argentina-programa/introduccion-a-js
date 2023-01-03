@@ -89,12 +89,10 @@
     No te preocupés, no hace falta recordar todo esto ahora mismo!
 */
 
-
 /*
     Uff, muchas cosas nuevas! Volvamos a JavaScript y veamos como podemos
     interactuar con HTML.
 */
-
 
 /*
     Elementos de Acceso
@@ -124,11 +122,11 @@
 //       variable llamada nuestroTitulo.
 //       Utilizá console.log para ver lo que obtuviste!
 
+const nuestroTitulo = document.querySelector(`h1`);
 
-
-
-
-
+console.log(nuestroTitulo);
+console.log(nuestroTitulo.innerText);
+nuestroTitulo.innerText = "Hola r/Argentina";
 /*
     Obteniendo elementos similares.
     ========================
@@ -146,26 +144,18 @@
 
 // TAREA: Obtené todos los elementos <li> de la página en una variable llamada mediaLinks.
 
+const mediaLinks = document.querySelectorAll("li");
+console.log(mediaLinks);
 
+for (i = 0; i < mediaLinks.length; i = i + 1) {
+  console.log(mediaLinks[i].innerText);
+}
 
-
-
-
-// TAREA: Ahora utilizá console.log para ver la cantidad de 
+// TAREA: Ahora utilizá console.log para ver la cantidad de
 // elementos li que hay con mediaLinks.length
-
-
-
-
-
 
 // TAREA: ¿Te acordás de los bucles del nivel 2? Usando lo que sabés de ellos, realizá iteraciones
 //      sobre cada item de mediaLinks y mostralos en pantalla con console.log
-
-
-
-
-
 
 /*
     Propiedades de los elementos
@@ -184,11 +174,6 @@
 // TAREA: Obtené el contenido de nuestro elemento 'h1'
 // y utilizá console.log para mostrarlo.
 
-
-
-
-
-
 /*
     Editar el contenido de la página
     ====================
@@ -205,10 +190,6 @@
 
 // TAREA: Hagamos un nuevo título! Cambiá el contenido de nuestro 'h1' y ponele lo que quieras.
 
-
-
-
-
 /*
     Editando atributos
     ==================
@@ -222,11 +203,6 @@
 */
 
 // TAREA: Actualizá el valor del atributo 'src' de nuestra etiqueta 'img' a "img/kittens.jpeg".
-
-
-
-
-
 
 /*
     Editando estilos
@@ -247,11 +223,6 @@
 */
 
 // Tarea: Obtené cualquier elemento de la página y cambiale algunos estilos.
-
-
-
-
-
 
 /*
    Creando nuevos nodos (Elementos)
@@ -278,13 +249,24 @@
 //
 // P.S. También les podés dar estilos al nuevo nodo que creaste.
 
-
-
-
-
-
 ////////////////////////////////////////////////////////////////////////////
 // ¡Felicidades! ¡Has terminado el Nivel 3 de JavaScript Básico!          //
 // Levántate, estira las piernas y celebra tu logro.                      //
 // ¡Creo que esto amerita un festejo!                                     //
 ////////////////////////////////////////////////////////////////////////////
+
+const $botonIngreso = document.querySelector(`#ingresar`);
+
+$botonIngreso.onclick = function (e) {
+  const edadUsuario = Number(document.querySelector(`#edad-usuario`).value)
+  let textoResultado
+  if (edadUsuario >= 18){
+    textoResultado = `Podes ingresar`
+  } else {
+    textoResultado = `No podes ingresar`
+  }
+
+
+  document.querySelector(`#resultado`).innerText = textoResultado
+  return false
+};

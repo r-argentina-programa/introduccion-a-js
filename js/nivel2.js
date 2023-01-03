@@ -42,11 +42,7 @@
 // TAREA: Crea tu propio array, llamado comidasFavoritas, y escribi dentro algunas
 //       cosas que te gustan.
 
-
-
-
-
-
+const comidasFavorita = [`helado`, `asado`, `bondiola`, `salame`];
 
 /*
     Tamaño del Array
@@ -63,11 +59,8 @@
 
 // TAREA: Verifique cuántos valores tiene en su array comidasFavoritas.
 // imprimi utilizando console.log el resultado.
-
-
-
-
-
+/*
+console.log(comidasFavorita.length);
 
 /*
     Uso del Array
@@ -89,11 +82,8 @@
 */
 
 // TAREA: Obtené el tercer elemento de tu array comidasFavoritas e imprimilo utilizando console.log.
-
-
-
-
-
+/*
+console.log(comidasFavorita[3]);
 
 /*
     Cambio de Valores en Arrays
@@ -114,18 +104,10 @@
 
 // TAREA: Toma tu array de comidasFavoritas y reemplaza el primer valor
 // con cualquier otra cosa.
-
-
-
-
-
-
+/*
+comidasFavorita[0] = `Patos`;
+console.log(comidasFavorita);
 // TAREA: console.log todo el array para verificar.
-
-
-
-
-
 
 // TIP: ¡No te olvides que las posiciones de índice comienzan desde 0!
 
@@ -145,19 +127,10 @@
 */
 
 // TAREA: Extendamos tu lista de comidasFavoritas y agreguemos un valor más.
-
-
-
-
-
-
+/*comidasFavorita.push(`Alfajores`);
 // TAREA: console.log todo el array para verificar.
-
-
-
-
-
-
+console.log(comidasFavorita);
+*/
 /*
     Nota acerca Arrays constantes
     =============================
@@ -180,22 +153,19 @@
  */
 
 // TAREA: Intenta crear un array como una constante y modifica los valores que contiene.
-
-
-
-
-
-
-
+/*
+const animales = [`pato`, `cocodrilo`, `elefante`]
+console.log(animales)
+*/
 // TAREA: Observa lo que sucede si agregas algo con.push(), cambias algo
 //       con notación de corchetes (array[1]) y
 //       asigna un nuevo array completamente nuevo a la constante
-
-
-
-
-
-
+/*
+animales.push(`vaca`)
+console.log(animales)
+animales[0] = `pata`
+console.log(animales)
+*/
 /*
     Bucles
     ======
@@ -243,12 +213,23 @@
     }
 */
 
+/*
+let numero = 0
+
+while (numero < 10){
+    numero = numero + 1
+}
+
+
 // TAREA: Usando un bucle 'while', decile a tu computadora que registre los números de
 //       diez a uno.
 
+let numero = 10
 
-
-
+while (numero >= 1){
+    console.log (numero)
+    numero = numero - 1
+}
 
 
 /*
@@ -267,11 +248,10 @@
 */
 
 // TAREA: Imprimí cada 3er número del 3 al 22 usando un 'bucle for'.
-
-
-
-
-
+/*
+for (i = 3; i <= 22; i = i + 3) {
+  console.log(i);
+}
 
 /*
     Iterando a traves de Arrays
@@ -295,11 +275,6 @@
 */
 
 // TAREA: Probalo con tu comidasFavoritas array.
-
-
-
-
-
 
 /*
     Bucles y Logica
@@ -339,13 +314,13 @@
 // 16% 4 = 0 - en 16 tenemos 4 * 4
 // 19% 4 = 3 - en 19 tenemos 4 * 4 + 3, etc.
 
-
-
-
-
-
 //////////////////////////////////////////////////////////////////////////////
 // ¡Felicidades! ¡Has terminado el Nivel 2 de JavaScript Básico!            //
 // Levántate, estira las piernas y celebra tu logro.                        //
 // El siguiente paso será seguir las instrucciones en el archivo nivel3.js. //
-//////////////////////////////////////////////////////////////////////////////
+const Fibonacci = [0, 1]
+
+for (i = 2; i<= 10; i = i + 1){
+  Fibonacci[i] = Fibonacci[i - 1 ] + Fibonacci [i - 2]
+}
+console.log (Fibonacci)
