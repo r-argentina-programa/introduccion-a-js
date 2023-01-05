@@ -7,11 +7,7 @@ document.querySelector("#siguiente-paso").onclick = function(){
 
     crearIntegrantes(cantidadIntegrantes);
 
-    
-    
-
     return false;
-
 }
 
 document.querySelector("#calcular").onclick = function(){
@@ -28,15 +24,15 @@ document.querySelector("#resetear").onclick = resetear;
 function resetear(){
 
   borrarIntegrantesAnteriores();
-  ocultarResultados();
-  ocultarBotonCalculo();
+  ocultarElemento('analisis');
+  ocultarElemento('calcular');
 
 }
 
 function crearIntegrantes(cantidadIntegrantes) {
 
     if (cantidadIntegrantes !== 0) {
-      mostrarBotonCalcular();
+      mostrarElemento('calcular');
     } else {
       resetear();
     }
@@ -56,33 +52,29 @@ function crearIntegrantes(cantidadIntegrantes) {
   }
 
 
-  function mostrarBotonCalcular() {
-    document.querySelector('#calcular').className = '';
+  function mostrarElemento(nombreElemento) {
+    document.querySelector(`#${nombreElemento}`).className = '';
   }
-  function ocultarBotonCalculo() {
-    document.querySelector('#calcular').className = 'oculto';
+  function ocultarElemento(nombreElemento) {
+    document.querySelector(`#${nombreElemento}`).className = 'oculto';
   }
 
   function ocultarResultados() {
     document.querySelector('#analisis').className = 'oculto';
-  }
-  
-  function mostrarResultados() {
-    document.querySelector('#analisis').className = '';
   }
 
   function mostrarEdades(edadesIntegrantes) {
     document.querySelector('#mayor-edad').textContent = obtenerMayorNumero(edadesIntegrantes);
     document.querySelector('#menor-edad').textContent = obtenerMenorNumero(edadesIntegrantes);
     document.querySelector('#promedio-edad').textContent = obtenerPromedioNumeros(edadesIntegrantes);
-    mostrarResultados();
+    mostrarElemento('analisis');
   }
 
 
   function crearIntegrante(indice) {
 
-    const $div = document.createElement('div');
-    $div.className = 'integrante';
+    const $integrante = document.createElement('div');
+    $integrante.className = 'integrante';
   
     const $label = document.createElement('label');
     $label.textContent = `Edad del integrante #${indice + 1}: `;
@@ -113,8 +105,6 @@ function crearIntegrantes(cantidadIntegrantes) {
       return edadesIntegrantes;
 
   }
-
-// funciones de calculo:
 
   function obtenerMayorNumero(numeros) {
     let mayorNumero = numeros[0];
@@ -147,13 +137,8 @@ function crearIntegrantes(cantidadIntegrantes) {
     return (promedios/numeros.length).toFixed(2);
   }
 
-
-  // pruebas unitarias:
-
-
   function validarCantidadIntegrantes(cantidad){
-
-    // haciendo expresiones regulares:
+    
     if(!/^\d+$/.test(cantidad)){
         return "el campo cantidad solo acepta numeros enteros, no decimales";
     }
