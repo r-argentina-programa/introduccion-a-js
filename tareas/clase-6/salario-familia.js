@@ -3,14 +3,10 @@ document.querySelector("#boton-agregar").onclick = function(){
     const $cantidadIntegrantes = document.querySelector("#salario-anual-integrante");
     const salarioIntegrante = Number($cantidadIntegrantes.value);
 
-    //borrarIntegrantesAnteriores();
-
     crearIntegrante(salarioIntegrante);
 
     document.querySelector("#salario-anual-integrante").value = '';
     
-
-
     return false;
 
 }
@@ -113,16 +109,9 @@ document.querySelector("#boton-quitar").onclick = function(){
         }
 
     }
-
-    
-
-      console.log(salariosIntegrantes);
-
       return salariosIntegrantes;
 
   }
-
-// funciones de calculo:
 
   function obtenerMayorSalarioAnual(salarios) {
     let mayorSalario = salarios[0];
@@ -153,10 +142,12 @@ document.querySelector("#boton-quitar").onclick = function(){
     }
 
   
-    return (promedios/salariosAnuales.length);
+    return promedios/salariosAnuales.length;
   }
 
   function obtenerPromedioSalarioMensual(salariosAnuales) {
+
+    const CANTIDAD_MESES_EN_UN_ANIO = 12;
 
     let promedios = 0;
     salariosMensuales = [];
@@ -164,19 +155,8 @@ document.querySelector("#boton-quitar").onclick = function(){
 
     for (let i = 0; i < salariosAnuales.length; i++) {
         
-      promedios += salariosAnuales[i]/12;
+      promedios += salariosAnuales[i]/CANTIDAD_MESES_EN_UN_ANIO;
     }
 
-    
-
-      
-  
-    return (promedios/salariosAnuales.length).toFixed(2);
+    return promedios/salariosAnuales.length
   }
-  
-  
-
-
-
-
-
