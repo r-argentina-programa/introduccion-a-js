@@ -124,8 +124,10 @@
 //       variable llamada nuestroTitulo.
 //       Utilizá console.log para ver lo que obtuviste!
 
-
-
+// const nuestroTitulo = document.querySelector('h1');
+// console.log(nuestroTitulo);
+// console.log(nuestroTitulo.innerText)
+// nuestroTitulo.innerText = 'hola everybody'
 
 
 
@@ -146,7 +148,13 @@
 
 // TAREA: Obtené todos los elementos <li> de la página en una variable llamada mediaLinks.
 
+const mediaLinks = document.querySelectorAll('li');
+// console.log(mediaLinks);
 
+// for(let i=0; i < mediaLinks.length; i++){
+//     console.log(mediaLinks[i].innerText);
+//     mediaLinks[i].innerText = "Hi";
+// }
 
 
 
@@ -155,6 +163,7 @@
 // elementos li que hay con mediaLinks.length
 
 
+//console.log(mediaLinks.length)
 
 
 
@@ -163,8 +172,13 @@
 //      sobre cada item de mediaLinks y mostralos en pantalla con console.log
 
 
+// for(let i=0; i < mediaLinks.length; i++){
+//     console.log(mediaLinks[i].innerText);
+// }
 
-
+for(let i= 0; i < mediaLinks.length; i++){
+    console.log(mediaLinks[i]);
+}
 
 
 /*
@@ -184,7 +198,11 @@
 // TAREA: Obtené el contenido de nuestro elemento 'h1'
 // y utilizá console.log para mostrarlo.
 
+const titulo = document.querySelector('h1');
+//console.log(titulo.innerText)
 
+console.log(titulo.textContent);
+console.log(titulo.innerText);
 
 
 
@@ -205,8 +223,9 @@
 
 // TAREA: Hagamos un nuevo título! Cambiá el contenido de nuestro 'h1' y ponele lo que quieras.
 
+// const nombre = prompt('como te llamas?');
 
-
+//titulo.textContent = "YA ES SABADO: " + nombre;
 
 
 /*
@@ -223,7 +242,7 @@
 
 // TAREA: Actualizá el valor del atributo 'src' de nuestra etiqueta 'img' a "img/kittens.jpeg".
 
-
+document.querySelector('img').src = 'img/kittens.jpeg';
 
 
 
@@ -248,6 +267,9 @@
 
 // Tarea: Obtené cualquier elemento de la página y cambiale algunos estilos.
 
+
+titulo.style.backgroundColor = 'blue';
+titulo.style.fontSize = '100px';
 
 
 
@@ -279,6 +301,10 @@
 // P.S. También les podés dar estilos al nuevo nodo que creaste.
 
 
+const nodoImagen = document.createElement('img'); //<img>
+nodoImagen.src = 'img/woman_bw.jpg'
+document.querySelector('header').appendChild(nodoImagen);
+
 
 
 
@@ -288,3 +314,23 @@
 // Levántate, estira las piernas y celebra tu logro.                      //
 // ¡Creo que esto amerita un festejo!                                     //
 ////////////////////////////////////////////////////////////////////////////
+
+const botonIngreso = document.querySelector('#ingresar');
+
+
+
+
+botonIngreso.onclick = function(evento){
+    const edadUsuario = Number(document.querySelector('#edad-usuario').value);
+    let textoResultado;
+    if(edadUsuario >= 10){
+        textoResultado = 'podes Ingresar';
+
+    }else{
+        textoResultado = 'NO podes Ingresar';
+    }
+
+    document.querySelector('#resultado').innerText = textoResultado;
+
+    return false;
+}

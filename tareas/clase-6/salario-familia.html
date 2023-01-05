@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="main.css"/>
+    <title>Tarea 06 - Calculo del salario en la familia</title>
+</head>
+<body>
+
+    <h1>Calculo del salario de la familia</h1>
+
+<form id="calculador-edades">
+    <label for="cantidad-integrantes">Ingrese el salario anual del integrante ($): </label>
+    <input type="number" id="salario-anual-integrante"/>
+    <button type="button" id="boton-agregar">Agregar</button>
+    <button type="button" id="boton-quitar">Quitar</button>
+    <p></p>
+    <p></p>
+
+    <div id="integrantes">
+
+    </div>
+    <p></p>
+
+    <button type="button" id="calcular" class="oculto">Calcular</button>
+
+    <div id="analisis" class="oculto">
+        <p>El mayor salario anual es: <strong id="mayor-salario-anual"></strong></p>
+        <p>El menor salario anual es: <strong id="menor-salario-anual"></strong></p>
+        <p>El promedio de salario anual: <strong id="promedio-salario-anual"></strong></p>
+        <p>El promedio de salario mensual: <strong id="promedio-salario-mensual"></strong></p>
+    </div>
+
+    <button type="reset" id="resetear">Reiniciar Consulta</button>
+</form>
+
+<script type="text/javascript" src="salario-familia.js"></script>
+</body>
+</html>
