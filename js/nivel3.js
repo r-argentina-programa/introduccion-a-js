@@ -118,6 +118,8 @@
     // pero no la variable en sí misma. Vas a ver esto en acción ahora mismo.
 */
 
+const nuestroTwitter = document.querySelector(`.twitter`);
+
 // TAREA: Ahora te toca a vos! — Obtené la etiqueta h1 de la página y guardala en una variable
 //       variable llamada nuestroTitulo.
 //       Utilizá console.log para ver lo que obtuviste!
@@ -147,15 +149,17 @@ nuestroTitulo.innerText = "Hola r/Argentina";
 const mediaLinks = document.querySelectorAll("li");
 console.log(mediaLinks);
 
-for (i = 0; i < mediaLinks.length; i = i + 1) {
-  console.log(mediaLinks[i].innerText);
-}
-
 // TAREA: Ahora utilizá console.log para ver la cantidad de
 // elementos li que hay con mediaLinks.length
 
+console.log(mediaLinks.length);
+
 // TAREA: ¿Te acordás de los bucles del nivel 2? Usando lo que sabés de ellos, realizá iteraciones
 //      sobre cada item de mediaLinks y mostralos en pantalla con console.log
+
+for (i = 0; i < mediaLinks.length; i = i + 1) {
+  console.log(mediaLinks[i].innerText);
+}
 
 /*
     Propiedades de los elementos
@@ -173,7 +177,7 @@ for (i = 0; i < mediaLinks.length; i = i + 1) {
 
 // TAREA: Obtené el contenido de nuestro elemento 'h1'
 // y utilizá console.log para mostrarlo.
-
+console.log(nuestroTitulo.textContent);
 /*
     Editar el contenido de la página
     ====================
@@ -204,6 +208,9 @@ for (i = 0; i < mediaLinks.length; i = i + 1) {
 
 // TAREA: Actualizá el valor del atributo 'src' de nuestra etiqueta 'img' a "img/kittens.jpeg".
 
+nuestroTitulo.textContent = "Hola thiago";
+
+document.querySelector(`img`).src = `img/kittens.jpeg`;
 /*
     Editando estilos
     ==============
@@ -223,6 +230,8 @@ for (i = 0; i < mediaLinks.length; i = i + 1) {
 */
 
 // Tarea: Obtené cualquier elemento de la página y cambiale algunos estilos.
+
+nuestroTitulo.style.backgroundColor = `blue`;
 
 /*
    Creando nuevos nodos (Elementos)
@@ -249,6 +258,10 @@ for (i = 0; i < mediaLinks.length; i = i + 1) {
 //
 // P.S. También les podés dar estilos al nuevo nodo que creaste.
 
+const nodoImagen = document.createElement(`img`);
+nodoImagen.src = `img/woman_bw.jpg`
+document.querySelector(`header`).appendChild(nodoImagen)
+
 ////////////////////////////////////////////////////////////////////////////
 // ¡Felicidades! ¡Has terminado el Nivel 3 de JavaScript Básico!          //
 // Levántate, estira las piernas y celebra tu logro.                      //
@@ -258,15 +271,14 @@ for (i = 0; i < mediaLinks.length; i = i + 1) {
 const $botonIngreso = document.querySelector(`#ingresar`);
 
 $botonIngreso.onclick = function (e) {
-  const edadUsuario = Number(document.querySelector(`#edad-usuario`).value)
-  let textoResultado
-  if (edadUsuario >= 18){
-    textoResultado = `Podes ingresar`
+  const edadUsuario = Number(document.querySelector(`#edad-usuario`).value);
+  let textoResultado;
+  if (edadUsuario >= 18) {
+    textoResultado = `Podes ingresar`;
   } else {
-    textoResultado = `No podes ingresar`
+    textoResultado = `No podes ingresar`;
   }
 
-
-  document.querySelector(`#resultado`).innerText = textoResultado
-  return false
+  document.querySelector(`#resultado`).innerText = textoResultado;
+  return false;
 };
