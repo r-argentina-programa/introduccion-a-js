@@ -28,11 +28,11 @@ function agregarMiembro(numeroMiembros) {
 }
 
 $botonCalcularEdad.onclick = function(){
-    const $edadIntegrante = document.querySelectorAll(`#edad-integrante`)
-    let guardarEdades = []
-    for (i = 0; $edadIntegrante.length; i = i + 1){
-        let edades = $edadIntegrante [i]
-        const totalEdades = edades.value
-        guardarEdades.push(totalEdades)
-    }
+  const $edadIntegrante = document.querySelectorAll(`#edad-integrante`)
+  let edadIntegrante = []
+  for (i = 0; i < $edadIntegrante.length; i = i + 1){
+    let nodos = $edadIntegrante[i]
+    const edades = Number(nodos.value)
+    edadIntegrante.push(edades)
+  }
 }
