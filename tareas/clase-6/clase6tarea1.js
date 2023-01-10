@@ -1,5 +1,6 @@
 const $botonAgregarMiembros = document.querySelector(`#agregar-miembro`);
 const $botonCalcularEdad = document.querySelector(`#calcular-edad`);
+const $botonRemover = document.querySelector(`#remover`);
 
 $botonAgregarMiembros.onclick = function () {
   const numeroMiembros = Number(
@@ -26,6 +27,22 @@ function agregarMiembro(numeroMiembros) {
     $formulario.appendChild(input);
   }
 }
+
+function limpiarInput(numeroMiembros) {
+  for (i = 0; i < numeroMiembros.length; i = i + 1) {
+    numeroMiembros[i].value = "";
+  }
+}
+
+$botonRemover.onclick = function () {
+  const $label = document.querySelectorAll(`#formulario`);
+  const $input = document.querySelectorAll(`#edad-integrante`);
+
+  $label[$label.length - 1].remove();
+  $input[$input.length - 1].remove();
+  limpiarInput($input);
+  return false;
+};
 
 $botonCalcularEdad.onclick = function () {
   const $edadIntegrante = document.querySelectorAll(`#edad-integrante`);
