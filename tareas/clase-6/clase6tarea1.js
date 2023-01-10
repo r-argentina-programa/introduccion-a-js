@@ -3,9 +3,7 @@ const $botonCalcularEdad = document.querySelector("#calcular-edad");
 const $botonRemover = document.querySelector("#remover");
 
 $botonAgregarMiembros.onclick = function () {
-  const Miembros = Number(
-    document.querySelector(`#miembros-familia`).value
-  );
+  const Miembros = Number(document.querySelector(`#miembros-familia`).value);
   if (Miembros > 0) {
     agregarMiembro(Miembros);
   } else {
@@ -48,7 +46,7 @@ $botonCalcularEdad.onclick = function () {
   const $edades = document.querySelectorAll(`#edad-integrante`);
   let edadIntegrante = [];
   for (let i = 0; i < $edades.length; i = i + 1) {
-    const edades= Number($edades[i].value);
+    const edades = Number($edades[i].value);
     edadIntegrante.push(edades);
   }
   const $mayorEdad = document.querySelector(`#mayor-edad`);
