@@ -82,12 +82,12 @@ function crearIntegrantes(cantidadIntegrantes) {
     $input.type = 'number';
   
     
-    $div.appendChild($label);
-    $div.appendChild($input);
+    $integrante.appendChild($label);
+    $integrante.appendChild($input);
     
   
     const $integrantes = document.querySelector('#integrantes');
-    $integrantes.appendChild($div);
+    $integrantes.appendChild($integrante);
   }
 
   function obtenerEdadesIntegrantes(){
