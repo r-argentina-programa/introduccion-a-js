@@ -1,0 +1,43 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+#root {
+  display: grid;
+  max-width: 300px;
+  margin: 10px auto 0 auto;
+}
+
+.form,
+.results {
+  margin: 0 10px 0 10px;
+}
+
+fieldset {
+  padding: 0;
+  border: none;
+}
+
+.form__fieldset-members {
+  display: grid;
+  margin: 0 0 15px 0;
+}
+
+.form__label-members,
+.form__input-members {
+  margin: 0 0 5px 0;
+}
+
+.form__cont-fieldsets-ages {
+  display: grid;
+  gap: 5px;
+  margin: 0 0 15px 0;
+}
+
+.form__label-age {
+  margin: 0 5px 0 0;
+}

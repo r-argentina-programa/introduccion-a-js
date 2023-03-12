@@ -1,0 +1,47 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+#root {
+  margin: 20px 0 0 20px;
+}
+
+fieldset {
+  padding: 0;
+  border: none;
+}
+
+.form__fieldset-members {
+  margin: 0 0 20px 0;
+}
+
+.form__cont-fieldsets-salaries {
+  display: grid;
+  gap: 10px;
+  margin: 0 0 20px 0;
+}
+
+.form__btn-calculate,
+.form__btn-reset {
+  display: none;
+}
+
+.results {
+  display: none;
+}
+
+span {
+  display: none;
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: initial;
+}

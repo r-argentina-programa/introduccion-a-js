@@ -1,0 +1,9 @@
+* {
+  box-sizing: border-box;
+}
+
+.form__fieldset {
+  border: 0;
+  padding: 0;
+  margin: 0 0 10px 0;
+}

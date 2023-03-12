@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="./calculations.js" defer></script>
+    <script src="./index.js" defer></script>
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <body>
+    <div id="root">
+      <form class="form">
+        <fieldset class="form__fieldset-members">
+          <label class="form__label-members"
+            >Ingrese cantidad de integrantes</label
+          >
+          <input class="form__input-members" type="number" />
+          <button class="form__btn-enter">Ingresar</button>
+        </fieldset>
+        <div class="form__cont-fieldsets-ages"></div>
+
+        <button class="form__btn-calculate">Calcular</button>
+        <button class="form__btn-reset">Empezar de nuevo</button>
+      </form>
+      <div class="results"></div>
+    </div>
+  </body>
+</html>

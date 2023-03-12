@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="main-mio.css"/>
+    <title>Tarea 6</title>
+</head>
+<body>
+
+<form id="calculador-edades">
+    <label for="cantidad-integrantes">Ingrese la cantidad de integrantes</label>
+    <input type="number" id="cantidad-integrantes"/>
+    <button type="submit" id="siguiente-paso">Siguiente</button>
+
+    <div id="integrantes">
+
+    </div>
+
+    <button type="button" id="calcular" class="oculto">Calcular</button>
+
+    <div id="analisis" class="oculto">
+        <p>La edad mayor es: <strong id="mayor-edad"></strong></p>
+        <p>La menor edad es: <strong id="menor-edad"></strong></p>
+        <p>El promedio de edad es: <strong id="promedio-edad"></strong></p>
+    </div>
+
+    <button type="reset" id="resetear">Resetear</button>
+</form>
+
+<script type="text/javascript" src="calculos-mio.js"></script>
+<script type="text/javascript" src="tarea-clase-6-mio.js"></script>
+</body>
+</html>
