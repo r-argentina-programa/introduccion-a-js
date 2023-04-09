@@ -124,8 +124,10 @@
 //       variable llamada nuestroTitulo.
 //       Utilizá console.log para ver lo que obtuviste!
 
-
-
+/*
+const nuestroTitulo = document.querySelector('h1')
+console.log(nuestroTitulo)
+*/
 
 
 
@@ -146,13 +148,15 @@
 
 // TAREA: Obtené todos los elementos <li> de la página en una variable llamada mediaLinks.
 
-
+//  const mediaLinks = document.querySelectorAll('li');
 
 
 
 
 // TAREA: Ahora utilizá console.log para ver la cantidad de 
 // elementos li que hay con mediaLinks.length
+
+// console.log(mediaLinks.length) (5)
 
 
 
@@ -162,8 +166,11 @@
 // TAREA: ¿Te acordás de los bucles del nivel 2? Usando lo que sabés de ellos, realizá iteraciones
 //      sobre cada item de mediaLinks y mostralos en pantalla con console.log
 
-
-
+/*
+for(let i = 0; i < mediaLinks.length; i++){
+    console.log(mediaLinks[i])
+}
+*/
 
 
 
@@ -184,10 +191,10 @@
 // TAREA: Obtené el contenido de nuestro elemento 'h1'
 // y utilizá console.log para mostrarlo.
 
-
-
-
-
+/*
+const nuestroTitulo = document.querySelector('h1').textContent
+console.log(nuestroTitulo)
+*/
 
 /*
     Editar el contenido de la página
@@ -205,9 +212,11 @@
 
 // TAREA: Hagamos un nuevo título! Cambiá el contenido de nuestro 'h1' y ponele lo que quieras.
 
-
-
-
+/*
+const nuestroTitulo = document.querySelector('h1')
+let nuevoMensaje = nuestroTitulo.textContent = "Hola, como les va?"
+console.log(nuevoMensaje)
+*/
 
 /*
     Editando atributos
@@ -223,9 +232,11 @@
 
 // TAREA: Actualizá el valor del atributo 'src' de nuestra etiqueta 'img' a "img/kittens.jpeg".
 
-
-
-
+/*
+let imagen = document.querySelector('img') 
+imagen.src = "img/kittens.jpeg"
+console.log(imagen)
+*/
 
 
 /*
@@ -248,10 +259,11 @@
 
 // Tarea: Obtené cualquier elemento de la página y cambiale algunos estilos.
 
-
-
-
-
+/*
+const nuestroTitulo = document.querySelector('h1')
+nuestroTitulo.style.color = 'white'
+nuestroTitulo.style.backgroundColor = 'gray'
+*/
 
 /*
    Creando nuevos nodos (Elementos)
@@ -278,8 +290,15 @@
 //
 // P.S. También les podés dar estilos al nuevo nodo que creaste.
 
+const nodoPagina = document.querySelector('body');
+const nuevoParrafo = document.createElement('p')
+const textoParrafo = document.createTextNode('Sitio web desarrollado por Argentina Programa - 2023');
+nuevoParrafo.appendChild(textoParrafo);
+nodoPagina.appendChild(nuevoParrafo);
 
-
+nuevoParrafo.style.fontSize = 'medium';
+nuevoParrafo.style.fontWeight = '600';
+;
 
 
 
