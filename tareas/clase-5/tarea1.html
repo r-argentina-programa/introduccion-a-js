@@ -5,17 +5,24 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Clase 5</title>
+    <title>Clase 5 | Tarea 1</title>
 </head>
 <body>
-    <form>
-        <label for="salario-anual">Salario anual:</label>
-        <input type="number" id="salario-anual" placeholder="Ej.: 100000"/>
-        <label for="salario-anual">Salario mensual:</label>
-        <input type="number" disabled id="salario-mensual"/>
-        <button type="button" id="calcular-salario-mensual">Calcular</button>
-        <button type="reset">Limpiar</button>
-    </form>
-    <script type="text/javascript" src="tarea1.js"></script>
+    <main class="flex justify-center">
+        <form class="text-white bg-teal-500 flex flex-col justify-center items-center w-80 h-[20rem]" onsubmit="return false;">
+            
+                <label for="salario_anual">Ingrese su salario anual</label>
+                <input class="p-1 mb-8 mt-2 text-black" type="number" placeholder="Ingrese su salario anual" id="salario_anual">
+            
+                <label for="salario_mensual">Su salario mensual es</label>
+                <input class="w-60 py-1 mb-4 mt-2 text-black text-center bg-teal-100" disabled type="text" id="salario_mensual"/>
+                
+                <button class="px-3 py-1 mt-2 bg-amber-600 rounded hover:bg-amber-700" type="submit" placeholder="Enviar" id="btn_salario">Calcular salario mensual</button>
+                <button class="px-3 py-1 mt-2 bg-amber-600 rounded hover:bg-amber-700" type="reset">Limpiar</button>
+            
+        </form>
+    </main>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./js/tarea-clase-5.js"></script>
 </body>
 </html>

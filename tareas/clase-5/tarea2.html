@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clase 5 | Tarea 2</title>
+</head>
+<body class="bg-orange-100">
+    <main class="flex flex-col items-center justify-center">
+
+        <h1 class="text-xl my-4 font-bold">Bienvenido!</h1>
+        <form class="flex flex-col items-center justify-around gap-4 bg-amber-700 rounded-sm w-[20rem] h-[21rem]" onsubmit="return false;">
+          <h3 class="text-white">Complete el formulario con sus datos</h3>
+          <input class="p-1 w-60" type="text" placeholder="Ingrese su nombre" id="nombre_user">
+          <input class="p-1 w-60" type="text" placeholder="Ingrese su segundo nombre" id="segundoNombre_user">
+          <input class="p-1 w-60" type="text" placeholder="Ingrese su apellido" id="apellido_user">
+          <input class="p-1 w-60" type="number" placeholder="Ingrese su edad" min="1" max="100" id="edad_user">
+          <div class="flex gap-2 mb-2">
+            <button class="px-2 py-1 text-white bg-orange-400 hover:bg-orange-500 rounded" id="btn" type="submit">Enviar</button>
+            <button class="px-2 py-1 text-white bg-orange-400 hover:bg-orange-500 rounded" type="reset">Limpiar</button>
+          </div>
+        </form>
+        <div id="resultado" class="font-bold mt-2"></div>
+    </main>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./js/tarea2.js"></script>
+</body>
+</html>
+
+
+    <!--
+//TAREA: En otro archivo html (no Index) y otro archivo js (no tarea-clase-5.js),
+// creá un formulario que capture el primer nombre, segundo nombre, apellido/s y edad del usuario
+// también vamos a crear un <h1> que diga Bienvenido!
+// vas a crear un botón de acción que una vez que lo apretás, va a
+// mostrar toda la información junta en un campo de texto
+// Y va a cambiar el <h1> para decir "Bienvenido, nombreDeUsuario"!
+
+Ejemplo form:
+  <form id="entrada-bar" onsubmit="return false;">
+    <input type="text" placeholder="Ingresá tu nombre" id="nombre-usuario"/>
+    <input type="number" placeholder="Ingresá tu edad" id="edad-usuario" />
+    <input type="submit" value="Ingresar" id="ingresar"/>
+  </form>
+
+  <div id="resultado">Hola</div>
+-->
