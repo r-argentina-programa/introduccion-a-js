@@ -195,12 +195,29 @@ Desafío de programación #15: Crear una función que encuentre el número n de 
 
 Desafío de programación #16: Crear una función que dado un número retorne un Boolean (true/false) dependiendo si es primo o no.
 
+/*
 Desafío de programación #17: Calcular la suma de los dígitos positivos de un número entero positivo
 Ejemplo:
    123 = 1 + 2 + 3 = 6
    2 = 2
    1234 = 1 + 2 + 3 + 4 = 10
 
+function calcularDigitosPositivos(numeros){
+let numToArray = numeros.toString().split("")
+let suma = 0
+  for (let num of numToArray){
+    suma += parseInt(num)
+  } return suma;
+}
+
+console.log(calcularDigitosPositivos(123)) //6
+console.log(calcularDigitosPositivos(1237)) //13
+console.log(calcularDigitosPositivos(12345)) //15
+console.log(calcularDigitosPositivos(123456)) //21
+console.log(calcularDigitosPositivos(123789)) //30
+
+*/
+/*
 Desafío de programación #18: Imprimir los primeros 100 números primos
 
 Desafío de programación #19: Crear una función que retorne un array con los primeros números "n-primos" mayores que un número particular definido "alComienzo"
