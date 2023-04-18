@@ -42,11 +42,7 @@
 // TAREA: Crea tu propio array, llamado comidasFavoritas, y escribi dentro algunas
 //       cosas que te gustan.
 
-
-
-
-
-
+// const comidasFavoritas = ["Milanesa", "Pizza", "Hamburguesa", "Asado"];
 
 /*
     Tamaño del Array
@@ -64,10 +60,7 @@
 // TAREA: Verifique cuántos valores tiene en su array comidasFavoritas.
 // imprimi utilizando console.log el resultado.
 
-
-
-
-
+// console.log(comidasFavoritas.length);
 
 /*
     Uso del Array
@@ -90,10 +83,10 @@
 
 // TAREA: Obtené el tercer elemento de tu array comidasFavoritas e imprimilo utilizando console.log.
 
-
-
-
-
+/*
+const tercerItem = comidasFavoritas[2];
+console.log(tercerItem);
+*/
 
 /*
     Cambio de Valores en Arrays
@@ -115,17 +108,14 @@
 // TAREA: Toma tu array de comidasFavoritas y reemplaza el primer valor
 // con cualquier otra cosa.
 
-
-
-
-
+/*
+console.log(comidasFavoritas);
+comidasFavoritas[0] = "Empanadas";
+*/
 
 // TAREA: console.log todo el array para verificar.
 
-
-
-
-
+// console.log(comidasFavoritas);
 
 // TIP: ¡No te olvides que las posiciones de índice comienzan desde 0!
 
@@ -146,17 +136,14 @@
 
 // TAREA: Extendamos tu lista de comidasFavoritas y agreguemos un valor más.
 
-
-
-
-
+/*
+console.log(comidasFavoritas);
+comidasFavoritas.push("Fugazzeta");
+*/
 
 // TAREA: console.log todo el array para verificar.
 
-
-
-
-
+// console.log(comidasFavoritas);
 
 /*
     Nota acerca Arrays constantes
@@ -181,20 +168,16 @@
 
 // TAREA: Intenta crear un array como una constante y modifica los valores que contiene.
 
-
-
-
-
-
+/*
+const x = [0, 1, 2, 3];
+console.log(x);
+x[0] = -1;
+console.log(x);
+*/
 
 // TAREA: Observa lo que sucede si agregas algo con.push(), cambias algo
 //       con notación de corchetes (array[1]) y
 //       asigna un nuevo array completamente nuevo a la constante
-
-
-
-
-
 
 /*
     Bucles
@@ -219,7 +202,6 @@
      Si te olvidas uno de estos, ¡podes entrar en un bucle infinito!
 
      Veamos diferentes estructuras de bucle.
-
 */
 
 /*
@@ -243,13 +225,19 @@
     }
 */
 
+// TAREA:
+
+// let index = 0;
+
+/*
+while (index < 10) {
+    index += 1;
+    console.log(index);
+}
+*/
+
 // TAREA: Usando un bucle 'while', decile a tu computadora que registre los números de
 //       diez a uno.
-
-
-
-
-
 
 /*
     Bucles for (para)
@@ -268,10 +256,11 @@
 
 // TAREA: Imprimí cada 3er número del 3 al 22 usando un 'bucle for'.
 
-
-
-
-
+/*
+for (let i = 0; i <= 5; i++) {
+    console.log("Hola!" + i);
+}
+*/
 
 /*
     Iterando a traves de Arrays
@@ -296,10 +285,16 @@
 
 // TAREA: Probalo con tu comidasFavoritas array.
 
+// const notas = [10, 7, 7, 7, 7, 8];
+// let suma = 0;
 
+/*
+for (let i = 0; i < notas.length; i++) {
+    suma += notas[i];
+}
+*/
 
-
-
+// console.log(`El promedio de ${notas} es ${suma / notas.length}`);
 
 /*
     Bucles y Logica
@@ -338,11 +333,6 @@
 // 10% 3 = 1 - en 10 tenemos 3 * 3 + 1
 // 16% 4 = 0 - en 16 tenemos 4 * 4
 // 19% 4 = 3 - en 19 tenemos 4 * 4 + 3, etc.
-
-
-
-
-
 
 //////////////////////////////////////////////////////////////////////////////
 // ¡Felicidades! ¡Has terminado el Nivel 2 de JavaScript Básico!            //

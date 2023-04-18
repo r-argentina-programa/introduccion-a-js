@@ -15,11 +15,10 @@
 // Este es un comentario de 1 sola línea. Simplemente agregar // a la izquierda de tu comentario.
 
 /*
-    ESte es un comentario multi-linea.
+    Este es un comentario multi-linea.
 
     Cuando estás escribiendo código que querés que la máquina ejecute, ponelos AFUERA de los bloques de comentario.
 */
-
 
 /*
     Mostrando texto
@@ -40,21 +39,21 @@
 
 // Tarea: Ahora te toca a vos! Acá abajo escribí una alerta que diga "Hola mundo!"
 
+// alert("¡Hola, Mundo!");
 
 // Tarea: Una vez que la alerta funcione, comentala poniendo '//' en la línea donde está el código y guardá los cambios.
 // Una vez que recargás la página, ya no debería aparecer más.
 
-
 // Tarea: Ahora probá hacer un console.log de un mensaje que queramos.
 
+// console.log("¡Hola, Mundo!");
 
-// Consejo: Para recargar el navegador podemos apretar 'CMD + R' en Mac y 'CTRL + R' en
-//      Windows.
+// Consejo: Para recargar el navegador podemos apretar 'CMD + R' en Mac y 'CTRL + R' en Windows.
 
+// Consejo: El atajo del teclado para guardar cambios a un archivo es 'CMD + S' en Mac y 'CTRL + S' en Windows.
 
-// Consejo: El atajo del teclado para guardar cambios a un archivo es 'CMD + S' en Mac y 'CTRL + S' en
-//      Windows.
-
+// let nombreDeVariable;
+// console.log("nombreDeVariable es " + nombreDeVariable);
 
 /*
     Variables
@@ -100,8 +99,13 @@
     a usar 'let' porque lleva a que tengamos menos errores de programación.
 */
 
+// let nombre = "Matias";
+// console.log("Mi nombre es " + nombre);
+
 // TAREA: Creá 2 variables indefinidas, llamadas numeroUno y numeroDos.
 
+// let numeroUno;
+// let numeroDos;
 
 /*
     Podés usar el nombre de tus variables pare representar qué información tienen adentro, por ejemplo:
@@ -115,6 +119,12 @@
 // Crear 2 variables nuevas, una con tu nombre, la segunda con tu edad. Dales un nombre apropriado y
 // mostralas con un alert.
 
+/*
+let nombre = "Matias";
+let edad = 21;
+
+alert("Mi nombre es " + nombre + " y tengo " + edad + " años");
+*/
 
 // Consejo: para mostrar 2 variables de texto al mismo tiempo, las podés unir usando el signo '+'. Ejemplo:
 
@@ -125,7 +135,6 @@
 * alert(nombre + apellido)
 *
 * */
-
 
 /*
     Constantes
@@ -150,6 +159,8 @@
 
 // TAREA: Crear una constante y mostrarla con un alert
 
+// const IVA = 21;
+// alert(IVA);
 
 // TAREA: Intentar asignar un valor a una constante y ver qué pasa (mirar la consola)
 
@@ -183,6 +194,12 @@
 // la 1ra variable multiplicada (con el operador *) por la 2nda variable.
 // Mostrar el valor de resultadoMultiplicacion con un alert o un console.log
 
+/*
+const diez = 10;
+const tres = 3;
+const resultadoMultiplicacion = diez * tres;
+console.log(resultadoMultiplicacion);
+*/
 
 /*
     Funciones
@@ -239,11 +256,25 @@
 // Escribí código para que devuelva (return) la suma de numero1 y numero2
 // Ejecutá la función sumar y mostrá su resultado en la consola
 
+/*
+function sumar(numeroUno, numeroDos) {
+    return numeroUno + numeroDos;
+}
+*/
+
+// console.log(sumar(5, 5));
 
 // TAREA: Ahora creemos otra función llamada 'restar'
 //       Que acepte 2 números como parámetro y los reste, y que devuelva ese valor.
 // Ejecutá la función con los números 5 y 1 y mostralos con console.log
 
+/*
+function restar(numeroUno, numeroDos) {
+    return numeroUno - numeroDos;
+}
+*/
+
+// console.log(restar(5, 1));
 
 // Consejo: Sabías que en vez de pasar los números directamente a tu función podés crear variables con esos números
 // y pasarlos como parámetros? Probalo!
@@ -329,7 +360,6 @@
 
 // TAREA: Cambiar el operador a '-', y fijarse que llame a la función 'restar' en vez de a la de 'sumar'.
 
-
 /*
     'If' - 'Else if' - 'Else'
     ===================
@@ -360,9 +390,17 @@
 
 // TAREA: Creemos 2 funciones más: dividir y multiplicar.
 
+/*
+function dividir(numeroUno, numeroDos) {
+    return numeroUno / numeroDos;
+}
+*/
 
-
-
+/*
+function multiplicar(numeroUno, numeroDos) {
+    return numeroUno * numeroDos;
+}
+*/
 
 // TAREA: Reescribamos el if-else que teníamos y extendámolos, agregando:
 //       'else if' el 'operador' es igual a '-' - llamar a la función 'restar'
@@ -370,9 +408,31 @@
 //       'else if' el 'operador' es igual a '*' - llamar a la función 'multiplicar'.
 //       else console.log - "Perdón, no conozco ese operador".
 
+// const operador = prompt("Ingresar 'Operador (+, -, /, *)': ");
+// const numeroUno = Number(prompt("Ingresar 'Número': "));
+// const numeroDos = Number(prompt("Ingresar 'Número': "));
 
+// let resultado;
 
+/*
+if (operador === "+") {
+    resultado = sumar(numeroUno, numeroDos);
+} else if (operador === "-") {
+    resultado = restar(numeroUno, numeroDos);
+} else if (operador === "/") {
+    resultado = dividir(numeroUno, numeroDos);
+} else if (operador === "*") {
+    resultado = multiplicar(numeroUno, numeroDos);
+} else {
+    console.log("Debe ingresar un operador correcto");
+}
+*/
 
+/*
+if (resultado || resultado === 0) {
+    console.log(`${numeroUno} ${operador} ${numeroDos} = ${resultado}`);
+}
+*/
 
 /*
     Operadores Booleanos
@@ -397,10 +457,14 @@
     let maradonaMejorQuePele = true;
 */
 
-
 // TAREA: usando el operador !, Intentá invertir una variable (de true a false, o de false a true) e imprimí el
 // resultado en la consola.
 
+// let variable = true;
+
+// console.log(variable);
+// console.log(!variable);
+// console.log(!!variable);
 
 ////////////////////////////////////////////////////////////////////////////
 // Felicitaciones! Terminaste el Nivel 1 de la introducción a JavaScript! //
