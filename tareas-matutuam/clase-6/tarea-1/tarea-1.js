@@ -1,0 +1,44 @@
+/*
+Tarea 1:
+
+- Preguntar cuánta gente hay en el grupo familiar
+- Crear tantos inputs + labels como gente haya para completar la edad de cada integrante
+- Al hacer click en "Calcular", mostrar en un elemento pre-existente la mayor edad, la menor edad y el promedio del grupo familiar
+- Punto Bonus: Crear un botón para empezar de nuevo el proceso, borrando los inputs ya creados
+*/
+
+const $botonEnviar = document.querySelector("#boton-enviar");
+$botonEnviar.onclick = function(event) {
+    const cantidadIntegrantes = Number(document.querySelector("#cantidad-integrantes").value);
+
+    if (cantidadIntegrantes > 0) {
+        crearIntegrantes(cantidadIntegrantes);
+    }
+
+    event.preventDefault();
+}
+
+function crearIntegrantes(cantidadIntegrantes) {
+
+    for (let i = 0; i < cantidadIntegrantes; i++) {
+        crearIntegrante(i);
+    }
+}
+
+function crearIntegrante(i) {
+    const $familiares = document.querySelector(".familiares");
+
+    const $nuevoIntegrante = document.createElement("div");
+    $nuevoIntegrante.className = "integrante";
+
+    const $labelNuevo = document.createElement("label");
+    $labelNuevo.textContent = `Integrante #${i + 1} - `;
+
+    const $nuevoInput = document.createElement("input");
+    $nuevoInput.id = `integrante-${i + 1}`;
+    $nuevoInput.type = "number";
+
+    $labelNuevo.appendChild($nuevoInput)
+    $nuevoIntegrante.appendChild($labelNuevo);
+    $familiares.appendChild($nuevoIntegrante);
+}
