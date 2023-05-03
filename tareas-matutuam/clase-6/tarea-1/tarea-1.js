@@ -23,7 +23,9 @@ $botonCalcular.onclick = function(event) {
     const $integrantes = document.querySelectorAll("#integrante");
     const edadIntegrantes = retornarEdadIntegrantes($integrantes);
 
-    console.log(edadIntegrantes);
+    document.querySelector("#edad-mayor").textContent = calcularEdadMayor(edadIntegrantes);
+    document.querySelector("#edad-menor").textContent = calcularEdadMenor(edadIntegrantes);
+    document.querySelector("#edad-promedio").textContent = calcularPromedioEdad(edadIntegrantes);
 
     event.preventDefault();
 }
@@ -63,4 +65,42 @@ function retornarEdadIntegrantes($integrantes) {
     }
 
     return edadIntegrantes;
+}
+
+function calcularEdadMayor(edadIntegrantes) {
+    let edadMayor = edadIntegrantes[0];
+
+    for (let i = 0; i < edadIntegrantes.length; i++) {
+        let edadComparar = edadIntegrantes[i];
+
+        if (edadComparar > edadMayor) {
+            edadMayor = edadComparar;
+        }
+    }
+
+    return edadMayor;
+}
+
+function calcularEdadMenor(edadIntegrantes) {
+    let edadMenor = edadIntegrantes[0];
+
+    for (let i = 0; i < edadIntegrantes.length; i++) {
+        let edadComparar = edadIntegrantes[i];
+
+        if (edadComparar < edadMenor) {
+            edadMenor = edadComparar;
+        }
+    }
+
+    return edadMenor;
+}
+
+function calcularPromedioEdad(edadIntegrantes) {
+    let sumaEdades = 0;
+
+    for (let i = 0; i < edadIntegrantes.length; i++) {
+        sumaEdades += edadIntegrantes[i];
+    }
+
+    return sumaEdades / edadIntegrantes.length;
 }
