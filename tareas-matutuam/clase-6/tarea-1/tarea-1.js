@@ -102,5 +102,5 @@ function calcularPromedioEdad(edadIntegrantes) {
         sumaEdades += edadIntegrantes[i];
     }
 
-    return sumaEdades / edadIntegrantes.length;
+    return Math.round(sumaEdades / edadIntegrantes.length);
 }
