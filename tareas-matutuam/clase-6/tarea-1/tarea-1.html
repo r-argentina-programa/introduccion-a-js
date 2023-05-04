@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <link rel="stylesheet" href="tarea-1.css" />
         <title>r/Argentina-Programa - Clase 6 - Tarea 1</title>
     </head>
     <body>
@@ -8,13 +9,14 @@
             <input id="cantidad-integrantes" type="number" placeholder="Cantidad Integrantes" />
             <button id="boton-enviar" type="submit">Enviar</button>
         </form>
-        <div class="familiares"></div>
-        <button id="boton-calcular" type="submit">Calcular</button>
-        <div id="resultados">
+        <div class="familiares oculto"></div>
+        <button id="boton-calcular" class="oculto" type="submit">Calcular</button>
+        <div id="resultados" class="oculto">
             <p>La edad mayor es <em id="edad-mayor"></em></p>
             <p>La edad menor es <em id="edad-menor"></em></p>
             <p>La edad promedio es <em id="edad-promedio"></em></p>
         </div>
+        <button id="boton-resetear" class="oculto" type="submit">Resetear</button>
         <script src="tarea-1.js"></script>
     </body>
 </html>

@@ -9,6 +9,10 @@ Tarea 1:
 
 const $botonEnviar = document.querySelector("#boton-enviar");
 $botonEnviar.onclick = function(event) {
+    mostrarFamiliares();
+    mostrarBotonCalcular();
+    mostrarBotonResetear();
+
     const cantidadIntegrantes = Number(document.querySelector("#cantidad-integrantes").value);
 
     if (cantidadIntegrantes > 0) {
@@ -26,6 +30,18 @@ $botonCalcular.onclick = function(event) {
     document.querySelector("#edad-mayor").textContent = calcularEdadMayor(edadIntegrantes);
     document.querySelector("#edad-menor").textContent = calcularEdadMenor(edadIntegrantes);
     document.querySelector("#edad-promedio").textContent = calcularPromedioEdad(edadIntegrantes);
+    mostrarResultados();
+
+    event.preventDefault();
+}
+
+const $botonResetear = document.querySelector("#boton-resetear");
+$botonResetear.onclick = function (event) {
+    const $integrantes = document.querySelectorAll("#integrante");
+    eliminarIntegrantes($integrantes);
+    ocultarResultados();
+    ocultarBotonCalcular();
+    ocultarBotonRestear();
 
     event.preventDefault();
 }
@@ -103,4 +119,44 @@ function calcularPromedioEdad(edadIntegrantes) {
     }
 
     return Math.round(sumaEdades / edadIntegrantes.length);
+}
+
+function eliminarIntegrantes($integrantes) {
+    for (let i = 0; i < $integrantes.length; i++) {
+        let $integrante = document.querySelector(`.integrante-${i + 1}`);
+
+        $integrante.remove();
+    }
+}
+
+function mostrarResultados() {
+    document.querySelector("#resultados").classList = "";
+}
+
+function mostrarFamiliares() {
+    document.querySelector(".familiares").classList = "familiares";
+}
+
+function mostrarBotonCalcular() {
+    document.querySelector("#boton-calcular").classList = "";
+}
+
+function mostrarBotonResetear() {
+    document.querySelector("#boton-resetear").classList = "";
+}
+
+function ocultarResultados() {
+    document.querySelector("#resultados").classList = "oculto";
+}
+
+function ocultarFamiliares() {
+    document.querySelector(".familiares").classList = "familiares oculto";
+}
+
+function ocultarBotonCalcular() {
+    document.querySelector("#boton-calcular").classList = "oculto";
+}
+
+function ocultarBotonRestear() {
+    document.querySelector("#boton-resetear").classList = "oculto";
 }
