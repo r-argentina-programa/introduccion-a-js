@@ -14,6 +14,8 @@ const $botonAgregar = document.querySelector("#boton-agregar");
 $botonAgregar.onclick = function(event) {
     contadorClicks++;
 
+    mostrarBotonCalcular();
+    mostrarIntegrantes();
     agregarIntegrante(contadorClicks);
 
     event.preventDefault();
@@ -38,6 +40,26 @@ $botonCalcular.onclick = function(event) {
     document.querySelector("#mayor-salario").textContent = calcularMayorSalario(salariosIntegrantes);
     document.querySelector("#menor-salario").textContent = calcularMenorSalario(salariosIntegrantes);
     document.querySelector("#salario-promedio").textContent = calcularSalarioPromedio(salariosIntegrantes);
+    mostrarResultados();
+    mostrarBotonResetear();
+    ocultarBotonAgregar();
+    ocultarBotonQuitar();
+    ocultarBotonCalcular();
+
+    event.preventDefault();
+}
+
+const $botonResetear = document.querySelector("#boton-resetear");
+
+$botonResetear.onclick = function(event) {
+    ocultarResultados();
+    eliminarIntegrantes(contadorClicks);
+
+    mostrarBotonAgregar();
+    mostrarBotonQuitar();
+    ocultarBotonResetear();
+
+    contadorClicks = 0;
 
     event.preventDefault();
 }
@@ -116,4 +138,60 @@ function calcularSalarioPromedio(salariosIntegrantes) {
     }
 
     return Math.round(sumaSalarios / salariosIntegrantes.length);
+}
+
+function mostrarBotonAgregar() {
+    $botonAgregar.className = "";
+}
+
+function ocultarBotonAgregar() {
+    $botonAgregar.className = "oculto";
+}
+
+function mostrarBotonQuitar() {
+    $botonQuitar.className = "";
+}
+
+function ocultarBotonQuitar() {
+    $botonQuitar.className = "oculto";
+}
+
+function mostrarBotonCalcular() {
+    $botonCalcular.className = "";
+}
+
+function ocultarBotonCalcular() {
+    $botonCalcular.className = "oculto";
+}
+
+function mostrarIntegrantes() {
+    document.querySelector(".integrantes").classList = "integrantes";
+}
+
+function ocultarIntegrantes() {
+    document.querySelector(".integrantes").classList.remove = "oculto";
+}
+
+function mostrarResultados() {
+    document.querySelector("#resultados").className = "";
+}
+
+function ocultarResultados() {
+    document.querySelector("#resultados").className = "oculto";
+}
+
+function mostrarBotonResetear() {
+    $botonResetear.className = "";
+}
+
+function ocultarBotonResetear() {
+    $botonResetear.className = "oculto";
+}
+
+function eliminarIntegrantes(contadorClicks) {
+    for (let i = 0; i < contadorClicks; i++) {
+        let $integrante = document.querySelector(`.integrante-${i + 1}`);
+
+        $integrante.remove();
+    }
 }
