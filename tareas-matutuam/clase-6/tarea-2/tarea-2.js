@@ -29,6 +29,19 @@ $botonQuitar.onclick = function(event) {
     event.preventDefault();
 }
 
+const $botonCalcular = document.querySelector("#boton-calcular");
+
+$botonCalcular.onclick = function(event) {
+    const $salariosIntengrantes = document.querySelectorAll("#integrante");
+    const salariosIntegrantes = obtenerSalariosIntegrantes($salariosIntengrantes);
+
+    document.querySelector("#mayor-salario").textContent = calcularMayorSalario(salariosIntegrantes);
+    document.querySelector("#menor-salario").textContent = calcularMenorSalario(salariosIntegrantes);
+    document.querySelector("#salario-promedio").textContent = calcularSalarioPromedio(salariosIntegrantes);
+
+    event.preventDefault();
+}
+
 function agregarIntegrante() {
     const $integrantes = document.querySelector(".integrantes");
 
@@ -53,4 +66,54 @@ function quitarIntegrante() {
             document.querySelector(`.integrante-${contadorClicks}`).remove();
         }
     }
+}
+
+function obtenerSalariosIntegrantes($salariosIntengrantes) {
+    const salariosIntegrantes = [];
+
+    for (let i = 0; i < $salariosIntengrantes.length; i++) {
+        if (Number($salariosIntengrantes[i].value) > 0) {
+            salariosIntegrantes.push(Number($salariosIntengrantes[i].value));
+        }
+    }
+
+    return salariosIntegrantes;
+}
+
+function calcularMayorSalario(salariosIntegrantes) {
+    let salarioMayor = salariosIntegrantes[0];
+
+    for (let i = 0; i < salariosIntegrantes.length; i++) {
+        let salarioComparar = salariosIntegrantes[i];
+
+        if (salarioComparar > salarioMayor) {
+            salarioMayor = salarioComparar;
+        }
+    }
+
+    return salarioMayor;
+}
+
+function calcularMenorSalario(salariosIntegrantes) {
+    let salarioMenor = salariosIntegrantes[0];
+
+    for (let i = 0; i < salariosIntegrantes.length; i++) {
+        let salarioComparar = salariosIntegrantes[i];
+
+        if (salarioComparar < salarioMenor) {
+            salarioMenor = salarioComparar;
+        }
+    }
+
+    return salarioMenor;
+}
+
+function calcularSalarioPromedio(salariosIntegrantes) {
+    let sumaSalarios = 0;
+
+    for (let i = 0; i < salariosIntegrantes.length; i++) {
+        sumaSalarios += salariosIntegrantes[i];
+    }
+
+    return Math.round(sumaSalarios / salariosIntegrantes.length);
 }
