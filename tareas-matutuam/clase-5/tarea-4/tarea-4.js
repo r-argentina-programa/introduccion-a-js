@@ -14,13 +14,12 @@ const $botonCalcular = document.querySelector("#boton-calcular");
 
 $botonCalcular.onclick = function(event) {
     const $li = document.querySelectorAll("li");
-    const arrayNumeros = obtenerValoresLista($li);
-    console.log(arrayNumeros);
+    const numeros = obtenerValoresLista($li);
 
-    document.querySelector("#promedio").innerText = calcularPromedio(arrayNumeros);
-    document.querySelector("#numero-mayor").innerText = calcularNumeroMayor(arrayNumeros);
-    document.querySelector("#numero-menor").innerText = calcularNumeroMenor(arrayNumeros);
-    document.querySelector("#numero-frecuente").innerText = calcularNumeroFrecuente(arrayNumeros);
+    document.querySelector("#promedio").innerText = calcularPromedio(numeros);
+    document.querySelector("#numero-mayor").innerText = calcularNumeroMayor(numeros);
+    document.querySelector("#numero-menor").innerText = calcularNumeroMenor(numeros);
+    document.querySelector("#numero-frecuente").innerText = calcularNumeroFrecuente(numeros);
 
     event.preventDefault();
 }
