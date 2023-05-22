@@ -12,11 +12,14 @@ $botonEnviar.onclick = function(event) {
     mostrarFamiliares();
     mostrarBotonCalcular();
     mostrarBotonResetear();
+    ocultarBotonEnviar();
 
     const cantidadIntegrantes = Number(document.querySelector("#cantidad-integrantes").value);
 
     if (cantidadIntegrantes > 0) {
         crearIntegrantes(cantidadIntegrantes);
+    } else {
+        ocultarBotonCalcular();
     }
 
     event.preventDefault();
@@ -24,6 +27,7 @@ $botonEnviar.onclick = function(event) {
 
 const $botonCalcular = document.querySelector("#boton-calcular");
 $botonCalcular.onclick = function(event) {
+    ocultarBotonCalcular();
     const $integrantes = document.querySelectorAll("#integrante");
     const edadIntegrantes = retornarEdadIntegrantes($integrantes);
 
@@ -42,6 +46,7 @@ $botonResetear.onclick = function (event) {
     ocultarResultados();
     ocultarBotonCalcular();
     ocultarBotonRestear();
+    mostrarBotonEnviar();
 
     event.preventDefault();
 }
@@ -145,6 +150,10 @@ function mostrarBotonResetear() {
     document.querySelector("#boton-resetear").classList = "";
 }
 
+function mostrarBotonEnviar() {
+    document.querySelector("#boton-enviar").classList = "";
+}
+
 function ocultarResultados() {
     document.querySelector("#resultados").classList = "oculto";
 }
@@ -159,4 +168,8 @@ function ocultarBotonCalcular() {
 
 function ocultarBotonRestear() {
     document.querySelector("#boton-resetear").classList = "oculto";
+}
+
+function ocultarBotonEnviar() {
+    document.querySelector("#boton-enviar").classList = "oculto";
 }
