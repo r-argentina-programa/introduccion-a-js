@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>r/Argentina-Programa - Clase 5 - Tarea 2</title>
+    </head>
+    <body>
+        <main>
+            <h1>Bienvenido!</h1>
+            <section>
+                <form id="formulario">
+                    <input id="nombre-usuario-1" type="text" placeholder="1er Nombre" />
+                    <input id="nombre-usuario-2" type="text" placeholder="2do Nombre" />
+                    <input id="apellido-usuario-1" type="text" placeholder="1er Apellido" />
+                    <input id="apellido-usuario-2" type="text" placeholder="2do Apellido (Opcional)" />
+                    <input id="edad-usuario" type="number" placeholder="Edad" />
+                    <button id="boton-enviar" type="submit">Enviar</button>
+                </form>
+            </section>
+            <section>
+                <div id="resultado">
+                    <h3>Información del Usuario</h3>
+                    <ul>
+                        <li><p>1er Nombre: <strong id="primer-nombre"></strong></p></li>
+                        <li><p>2do Nombre: <strong id="segundo-nombre"></strong></p></li>
+                        <li><p>1er Apellido: <strong id="primer-apellido"></strong></p></li>
+                        <li><p>2do Apellido: <strong id="segundo-apellido"></strong></p></li>
+                        <li><p>Edad: <strong id="edad"></strong></p></li>
+                    </ul>
+                </div>
+            </section>
+        </main>
+        <script src="./tarea-2.js"></script>
+    </body>
+</html>
