@@ -60,7 +60,7 @@ function crearIntegrante(i) {
     $nuevoIntegrante.className = `integrante-${i + 1}`;
 
     const $labelNuevo = document.createElement("label");
-    $labelNuevo.textContent = `Integrante #${i + 1} - `;
+    $labelNuevo.textContent = `Edad Integrante #${i + 1} - `;
 
     const $nuevoInput = document.createElement("input");
     $nuevoInput.id = `integrante`;
