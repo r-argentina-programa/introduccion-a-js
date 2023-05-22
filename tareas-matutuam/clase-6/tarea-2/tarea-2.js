@@ -16,7 +16,8 @@ $botonAgregar.onclick = function(event) {
 
     mostrarBotonCalcular();
     mostrarIntegrantes();
-    agregarIntegrante(contadorClicks);
+    agregarIntegrante();
+    mostrarBotonQuitar();
 
     event.preventDefault();
 }
@@ -24,9 +25,11 @@ $botonAgregar.onclick = function(event) {
 const $botonQuitar = document.querySelector("#boton-quitar");
 
 $botonQuitar.onclick = function(event) {
-    quitarIntegrante(contadorClicks);
-    
-    contadorClicks--;
+
+    if (contadorClicks > 0) {
+        quitarIntegrante();
+        contadorClicks--;
+    }
 
     event.preventDefault();
 }
@@ -37,10 +40,13 @@ $botonCalcular.onclick = function(event) {
     const $salariosIntengrantes = document.querySelectorAll("#integrante");
     const salariosIntegrantes = obtenerSalariosIntegrantes($salariosIntengrantes);
 
-    document.querySelector("#mayor-salario").textContent = calcularMayorSalario(salariosIntegrantes);
-    document.querySelector("#menor-salario").textContent = calcularMenorSalario(salariosIntegrantes);
-    document.querySelector("#salario-promedio").textContent = calcularSalarioPromedio(salariosIntegrantes);
-    mostrarResultados();
+    if (salariosIntegrantes.length > 0) {
+        document.querySelector("#mayor-salario").textContent = calcularMayorSalario(salariosIntegrantes);
+        document.querySelector("#menor-salario").textContent = calcularMenorSalario(salariosIntegrantes);
+        document.querySelector("#salario-promedio").textContent = calcularSalarioPromedio(salariosIntegrantes);
+        mostrarResultados();
+    }
+
     mostrarBotonResetear();
     ocultarBotonAgregar();
     ocultarBotonQuitar();
@@ -71,11 +77,12 @@ function agregarIntegrante() {
     $nuevoIntegrante.className = `integrante-${contadorClicks}`;
 
     const $labelNuevo = document.createElement("label");
-    $labelNuevo.textContent = `Integrante #${contadorClicks}`;
+    $labelNuevo.textContent = `Salarios del Integrante #${contadorClicks}`;
 
     const $nuevoInput = document.createElement("input");
     $nuevoInput.id = `integrante`;
     $nuevoInput.type = "number";
+    $nuevoInput.min = "0";
 
     $labelNuevo.appendChild($nuevoInput);
     $nuevoIntegrante.appendChild($labelNuevo);
