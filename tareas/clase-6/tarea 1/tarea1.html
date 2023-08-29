@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora de edades</title>
+  <link rel="stylesheet" href="tarea1.css">
+</head>
+
+<body>
+  <h1 class="title">Hola! Vamos a hacer algunos cálculos!</h1>
+  <form action="#" class="form">
+    <p class="paragraph">Primero que nada, decinnos cuánta gente vive en tu casa:</p>
+    <input type="number" class="input" id="cantidad-integrantes" placeholder="Integrantes en tu casa..."
+      aria-label="Cantidad de integrantes">
+    <button type="submit" class="button button--important" id="enviar-cantidad-integrantes">Enviar</button>
+  </form>
+
+  <form action="#" class="form" id="form-integrantes">
+    <div class="integrantes"></div>
+
+    <div class="controles hidden">
+      <button type="submit" class="button button--important" id="procesar-edades">Calcular</button>
+      <button type="button" class="button" id="borrar">Borrar todo</button>
+    </div>
+  </form>
+
+  <div class="resultados hidden">
+    <p class="resultado">Edad mayor: </p>
+    <p class="resultado" id="edad-mayor"></p>
+
+    <p class="resultado">Edad menor: </p>
+    <p class="resultado" id="edad-menor"></p>
+
+    <p class="resultado">Edad promedio: </p>
+    <p class="resultado" id="edad-promedio"></p>
+  </div>
+  <script src="tarea1.js"></script>
+</body>
+
+</html>
