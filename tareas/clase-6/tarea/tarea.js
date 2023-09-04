@@ -6,11 +6,17 @@ Al hacer click en "calcular", mostrar en un elemento pre-existente la mayor edad
 Punto bonus: Crear un botón para "empezar de nuevo" que empiece el proceso nuevamente, borrando los inputs ya creados (investigar cómo en MDN).
 */
 
-document.querySelector("#enviar-cantidad-integrantes").onclick = function () {
+document.querySelector("#enviar-cantidad-integrantes").onclick = function (event) {
     const $cantidadIntegrantes = document.querySelector("#cantidad-integrantes");
-    const cantidadIntegrantes = Number($cantidadIntegrantes.value)
+    const cantidadIntegrantes = Number($cantidadIntegrantes.value);
 
-    if (cantidadIntegrantes <= 0) return false;
+    const errorIntegrantesIngresados = validarIntegrantesIngresados(cantidadIntegrantes);
+
+    if (errorIntegrantesIngresados) {
+        console.log(errorIntegrantesIngresados);
+        return false;
+    }
+
 
     borrarIntegrantesAnteriores();
     crearIntegrantes(cantidadIntegrantes);
@@ -18,12 +24,12 @@ document.querySelector("#enviar-cantidad-integrantes").onclick = function () {
     ocultarResultados();
 
     $cantidadIntegrantes.value = "";
-    return false;
-}
+    event.preventDefault();
+};
 
 document.querySelector("#borrar").onclick = function () {
     resetear();
-}
+};
 
 function crearIntegrantes(cantidadIntegrantes) {
     for (let i = 0; i < cantidadIntegrantes; i++) {
@@ -32,7 +38,7 @@ function crearIntegrantes(cantidadIntegrantes) {
 }
 
 function borrarIntegrantesAnteriores() {
-    const $integrantesAnteriores = document.querySelectorAll(".integrante")
+    const $integrantesAnteriores = document.querySelectorAll(".integrante");
 
     for (let i = 0; i < $integrantesAnteriores.length; i++) {
         $integrantesAnteriores[i].remove();
@@ -48,14 +54,52 @@ function ocultarControles() {
     $divControles.classList.add("hidden");
 }
 
-// Recibe un NodeList de inputs de edades y devuelve true si alguna de las edades es inválida
-function validarInputsEdadesUsuario(inputsEdades) {
-    let tieneInputsInvalidos = false;
-    for (let i = 0; i < inputsEdades.length; i++) {
-        if (inputsEdades[i].value <= 0) tieneInputsInvalidos = true;
+function validarIntegrantesIngresados(integrantesIngresados) {
+    const INTEGRANTES_MAXIMOS = 99;
+
+    if (integrantesIngresados <= 0) {
+        return "La cantidad de integrantes ingresados debe ser mayor que 0";
     }
 
-    return tieneInputsInvalidos;
+    if (!/^[0-9]+$/.test(integrantesIngresados)) {
+        return "La cantidad de integrantes ingresados debe ser un numero válido";
+    }
+
+    if (integrantesIngresados > INTEGRANTES_MAXIMOS) {
+        return "La cantidad de integrantes ingresados no debe ser mayor a " + INTEGRANTES_MAXIMOS;
+    }
+
+    return "";
+}
+
+function validarEdad(edad) {
+    const EDAD_MAXIMA = 199;
+
+    if (edad <= 0) {
+        return "La edad debe ser mayor que 0";
+    }
+
+    if (!/^[0-9]+$/.test(edad)) {
+        return "La edad debe ser un número válido";
+    }
+
+    if (edad >= EDAD_MAXIMA) {
+        return "La edad no puede ser mayor que " + EDAD_MAXIMA;
+    }
+
+    return "";
+}
+
+function validarSalario(salario) {
+    if (salario <= 0) {
+        return "El salario debe ser mayor que 0";
+    }
+
+    if (!/^[0-9]+$/.test(edad)) {
+        return "El salario debe ser un monto válido";
+    }
+
+    return "";
 }
 
 function dameMayor(numeros) {
@@ -116,21 +160,25 @@ Punto bonus: si hay inputs vacíos, ignorarlos en el cálculo (no contarlos como
 
 document.querySelector("#calcular").onclick = function () {
     const $edadesIntegrantes = document.querySelectorAll(".edad-integrante");
-    const $salarioIntegrantes = document.querySelectorAll(".salario-integrante");
-
-    if (validarInputsEdadesUsuario($edadesIntegrantes)) return false;
-
+    const $salariosIntegrantes = document.querySelectorAll(".salario-integrante");
     const edadesIntegrantes = [];
-    for (let i = 0; i < $edadesIntegrantes.length; i++) {
-        edadesIntegrantes.push(Number($edadesIntegrantes[i].value));
-    }
+    const salariosIntegrantes = [];
 
-    const salarioIntegrantes = [];
-    for (let i = 0; i < $salarioIntegrantes.length; i++) {
-        if ($salarioIntegrantes[i].value > 0) {
-            salarioIntegrantes.push(Number($salarioIntegrantes[i].value));
+    $edadesIntegrantes.forEach(function ($edadIntegrante) {
+        // Cada integrante tiene una id "edad-integrante-n", por eso selecciono el ultimo elemento
+        const numeroIntegrante = $edadIntegrante.id.split("-").pop();
+        const edadIntegrante = $edadIntegrante.value;
+        const errorEdadIntegrante = validarEdad(edadIntegrante);
+
+        if (errorEdadIntegrante) {
+            console.log(`Para el integrante #${numeroIntegrante}, ${errorEdadIntegrante}`);
+        } else {
+            edadesIntegrantes.push(edadIntegrante);
         }
-    }
+    });
+
+    $salariosIntegrantes.forEach(function ($salarioIntegrante) {
+    });
 
     document.querySelector("#edad-mayor").textContent = dameMayor(edadesIntegrantes);
     document.querySelector("#edad-menor").textContent = dameMenor(edadesIntegrantes);
@@ -142,7 +190,7 @@ document.querySelector("#calcular").onclick = function () {
     mostrarResultados();
 
     return false;
-}
+};
 
 function crearIntegrante(indice) {
     const $div = document.createElement("div");
@@ -150,7 +198,7 @@ function crearIntegrante(indice) {
 
     const $h3 = document.createElement("h3");
     $h3.className = "h3";
-    $h3.textContent = `Integrante #${indice + 1}:`
+    $h3.textContent = `Integrante #${indice + 1}:`;
 
     const $label = document.createElement("label");
     $label.className = "label";
@@ -165,7 +213,7 @@ function crearIntegrante(indice) {
 
     const $label2 = document.createElement("label");
     $label2.className = "label";
-    $label2.htmlFor = `integrante-trabaja-${indice + 1}`
+    $label2.htmlFor = `integrante-trabaja-${indice + 1}`;
     $label2.textContent = "Tiene trabajo";
 
     const $inputChkbox = document.createElement("input");
@@ -176,7 +224,7 @@ function crearIntegrante(indice) {
     $inputChkbox.onclick = function () {
         generarSalarioIntegrante($inputChkbox);
         mostrarIngresarSalario($inputChkbox);
-    }
+    };
 
     $div.appendChild($h3);
     $div.appendChild($label);
