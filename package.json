@@ -1,5 +1,5 @@
 {
-  "name": "introduccion-a",
+  "name": "introduccion-a-js",
   "version": "1.0.0",
   "description": "Tarea para r/Argentina-programa",
   "main": "index.html",
@@ -7,6 +7,8 @@
     "doc": "doc"
   },
   "scripts": {
+    "start": "http-server",
+    "cypress-dev": "cypress open",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -18,8 +20,5 @@
   "bugs": {
     "url": "https://github.com/cvillar97/introduccion-a-js/issues"
   },
-  "homepage": "https://github.com/cvillar97/introduccion-a-js#readme",
-  "devDependencies": {
-    "cypress": "^13.1.0"
-  }
+  "homepage": "https://github.com/cvillar97/introduccion-a-js#readme"
 }
