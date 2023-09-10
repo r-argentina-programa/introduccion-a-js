@@ -1,0 +1,25 @@
+{
+  "name": "introduccion-a",
+  "version": "1.0.0",
+  "description": "Tarea para r/Argentina-programa",
+  "main": "index.html",
+  "directories": {
+    "doc": "doc"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cvillar97/introduccion-a-js.git"
+  },
+  "author": "Cristian Villar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cvillar97/introduccion-a-js/issues"
+  },
+  "homepage": "https://github.com/cvillar97/introduccion-a-js#readme",
+  "devDependencies": {
+    "cypress": "^13.1.0"
+  }
+}
