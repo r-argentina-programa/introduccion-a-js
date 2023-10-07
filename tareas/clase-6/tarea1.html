@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./main.css">
+    <title>Clase 6 - Tarea 1</title>
+</head>
+<body>
+    <form id="age-calculator">
+        <label for="members-amount">How many family memers do you have?</label>
+        <input type="number" id="members-amount">
+        <button type="submit" id="generate-members">Generate</button>
+        <div id="members">
+
+        </div>
+        <button type="button" id="calculate" class='hidden'>Calculate</button>
+        <button type="button" id="reset" class='hidden'>Reset</button>
+        <div id="results" class="hidden">
+            <p>The oldest is <strong id="oldest-age"></strong> years old.</p>
+            <p>The youngest is <strong id="youngest-age"></strong> years old.</p>
+            <p>The avarage age is <strong id="avarage-age"></strong></p>
+        </div>
+    </form>
+    <script src="tarea1.js"></script>
+</body>
+</html>
