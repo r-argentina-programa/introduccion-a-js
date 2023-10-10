@@ -45,6 +45,7 @@ function validateForm(event) {
   const name = $form.name.value;
   const city = $form.city.value;
   const giftDescription = $form["gift-description"].value;
+  saveInLocalStorage(giftDescription);
 
   const errorName = validateName(name);
   const errorCity = validateCity(city);
@@ -106,4 +107,10 @@ function removePreviousErrors() {
   for (error of $errores) {
     error.remove();
   }
+}
+
+
+function saveInLocalStorage(giftDescription){
+  const gifts = {gifts: giftDescription}
+  localStorage.setItem("gifts", JSON.stringify(gifts))
 }
