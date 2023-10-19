@@ -1,0 +1,133 @@
+.on-success {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    z-index: 98;
+}
+
+.on-success div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90vw;
+    height: 90vh;
+    max-width: 600px;
+    max-height: 500px;
+    border-radius: 2em;
+    text-align: center;
+    background: #333333;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+    z-index: 99;
+}
+
+.on-success div h1 {
+    color: white;
+}
+
+.error {
+    border: 2px solid red;
+}
+
+.errorsBlock {
+    font-size: 14px;
+    color: red;
+}
+
+.hiddenWindow {
+    display: none;
+}
+
+form {
+    background-color: #efefef;
+    width: calc(100% - 10em);
+    max-width: 640px;
+    min-height: 500px;
+    padding: 3em;
+    flex: 0;
+    text-align: center;
+    z-index: 2;
+}
+
+input,
+select,
+textarea {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    background: inherit;
+    border: 2px solid black;
+}
+
+input {
+    border: none;
+    border-bottom: 2px solid black;
+    padding: 0.5em;
+}
+
+input[type='file'] {
+    width: 60%;
+    border: none;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    padding: 1em 2em;
+}
+
+button {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    padding: 1em 2em;
+    margin: 1em;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 2em;
+    background: #20D7C0;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+    background: black;
+    color: #20D7C0;
+}
+
+@media all and (max-width: 640px) {
+    .on-success h1 {
+        font-size: 30px;
+    }
+
+    form {
+        font-size: 1em;
+    }
+
+    input[type=text],
+    textarea {
+        width: 50%;
+    }
+}
+
+
+#success {
+    margin-top: 30px;
+}
+
+#success strong {
+    display: block;
+    margin: 23px;
+    font-size: 30px;
+}
+
+
+.hidden {
+    display: none;
+}
