@@ -1,5 +1,5 @@
-const gifts = JSON.parse(localStorage.getItem("gifts"));
+const user = JSON.parse(localStorage.getItem("user"));
 
 const $wishlist = document.querySelector("#wishlist");
 
-$wishlist.textContent = gifts["gifts"];
+$wishlist.textContent = user["gift-description"];
