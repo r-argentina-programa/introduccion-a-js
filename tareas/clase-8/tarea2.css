@@ -1,0 +1,25 @@
+.hidden{
+    display: none;
+}
+
+.error{
+    border: 1px solid red;
+}
+
+#members:empty{
+    display: none;
+}
+
+#members:not(:empty) {
+    border: 1px solid black;
+    border-radius: 7px;
+    background-color: rgb(112, 111, 116);
+}
+
+input{
+    background-color: rgb(190, 186, 206);
+}
+
+label{
+    color: white;
+}

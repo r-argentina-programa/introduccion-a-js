@@ -1,0 +1,14 @@
+{
+  "name": "clase-8",
+  "version": "1.0.0",
+  "description": "Clase-8-Bootstrap",
+  "main": "tarea1.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^5.3.2"
+  }
+}

@@ -1,0 +1,40 @@
+.hidden{
+    display: none;
+}
+
+.error{
+    border: 1px solid red;
+}
+
+#get-members{
+    border: 1px solid black;
+    border-radius: 7px;
+    padding: 10px;
+    background-color: lightgray;
+}
+
+#members:empty{
+    border: transparent;
+}
+
+#members:not(:empty) {
+    border: 1px solid black;
+    border-radius: 7px;
+    padding-bottom: 10px;
+    background-color: lightgray;
+}
+
+.member{
+    padding: 10px;
+}
+
+#result-card:empty{
+    border: transparent;
+}
+
+#result-card:not(:empty) {
+    border: 1px solid black;
+    border-radius: 7px;
+    padding: 10px;
+    background-color: lightgray;
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./tarea1.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css
+    "
+    />
+    <title>Clase 6 - Tarea 1</title>
+  </head>
+  <body>
+    <form id="age-calculator">
+      <div
+        class="container text-center mt-4 d-flex justify-content-around"
+        id="get-members"
+      >
+        <label class="align-self-center" for="members-amount"
+          >How many family memers do you have?</label
+        >
+
+        <input
+          type="number"
+          id="members-amount"
+          class="w-25 form-control members-amount"
+        />
+
+        <button
+          type="button"
+          class="btn btn-warning btn-lg"
+          id="generate-members"
+        >
+          Generate
+        </button>
+      </div>
+
+      <div class="container text-center mt-4" id="members"></div>
+      <div id="buttons" class="hidden">
+        <div class="mt-4 d-flex justify-content-center gap-2">
+          <button type="button" id="calculate" class="btn btn-success">Calculate</button>
+
+          <button type="button" id="reset" class="btn btn-danger">Reset</button>
+        </div>
+      </div>
+
+      <div id="results" class="hidden">
+        <div class="container mt-4 d-flex justify-content-center">
+          <div class="row" id="result-card">
+            <div class="col">
+              <p>The oldest is <strong id="oldest-age"></strong> years old.</p>
+              <p>
+                The youngest is <strong id="youngest-age"></strong> years old.
+              </p>
+              <p>The avarage age is <strong id="avarage-age"></strong></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+    <div class="d-flex justify-content-center mt-4" id="errors"></div>
+    <script src="tarea1.js"></script>
+    <script src="pruebas1.js"></script>
+  </body>
+</html>
