@@ -46,6 +46,12 @@ function validateForm(event) {
   const city = $form.city.value;
   const giftDescription = $form["gift-description"].value;
 
+  const user = {
+    name: name,
+    city: city,
+    "gift-description": giftDescription
+  };
+
   const errorName = validateName(name);
   const errorCity = validateCity(city);
   const errorGiftDescription = validateGiftDescription(giftDescription);
@@ -59,6 +65,7 @@ function validateForm(event) {
   const isSuccess = handleErrors(errors) === 0;
 
   if (isSuccess) {
+    localStorage.setItem("user", JSON.stringify(user));
     $form.className = "hidden";
     document.querySelector("#success").className = "";
     setTimeout(() => {
@@ -107,3 +114,5 @@ function removePreviousErrors() {
     error.remove();
   }
 }
+
+
